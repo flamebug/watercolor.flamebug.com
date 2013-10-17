@@ -1,0 +1,30 @@
+/*
+=========================================
+flamebug:HeaderPanel
+=========================================
+*/
+
+.fb-headerpanel_container {
+	display: block;
+	border: solid 1px #CCCCCC;
+	background: #FFF;
+	overflow: auto;
+}
+
+.fb-headerpanel_header {
+	height: 2em;
+	padding: 0px 1em;
+
+	border-bottom: solid 1px #CCCCCC;
+
+	font: inherit;
+	color: inherit;
+	background: #EEE url(./image/controls/headerpanel_gradient_1x50_EEE.png) repeat-x;
+
+	vertical-align: middle;
+	line-height: 2em;
+}
+
+.fb-headerpanel_content {
+	padding: .3em;
+}

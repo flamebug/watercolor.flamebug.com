@@ -1,0 +1,54 @@
+//
+// Structural and Typographic Grid
+//
+
+$column-width: 3.5em;
+$gutter-width: 1.5em;
+
+$line-height:  1.625;
+
+//
+// Body Typography
+//
+
+$body-font-size: 100;
+$body-font-color: #6e787b;
+$body-font-family: 'Roboto', sans-serif;
+$body-font-weight: 300;
+$body-font-smoothing: subpixel-antialiased;
+$body-text-rendering: optimizeLegibility;
+
+
+
+//
+// Header Typography
+//
+
+$h1-font-size: 3.4375; //setting(flamebug/UI/Typography/H1FontSize);
+$h2-font-size: 2.625; //setting(flamebug/UI/Typography/H2FontSize);
+$h3-font-size: 2.125; //setting(flamebug/UI/Typography/H3FontSize);
+$h4-font-size: 1.625; //setting(flamebug/UI/Typography/H4FontSize);
+$h5-font-size: 1.3125; //setting(flamebug/UI/Typography/H5FontSize);
+$h6-font-size: 1; //setting(flamebug/UI/Typography/H6FontSize);
+$header-font-color: #4a5c62;
+$header-font-family: 'Roboto', sans-serif; //setting(flamebug/UI/Typography/HeaderFontFamily);
+$header-font-weight: 100;
+
+//
+// Monospace Typography
+//
+
+$mono-font-size: 1; //setting(flamebug/UI/Typography/MonoFontSize);
+$mono-font-color: #6e787b;
+$mono-font-family: monospace, sans-serif; //setting(flamebug/UI/Typography/MonoFontFamily);
+$mono-font-weight: normal;
+
+//
+// Common Styles
+//
+
+$border-color: #eee;
+$link-color: #25AAE1;
+$link-hover-color: #058Ac1;
+$input-color: #777;
+$input-focus-color: #000;

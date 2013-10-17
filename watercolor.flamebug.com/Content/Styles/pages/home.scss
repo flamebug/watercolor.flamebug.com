@@ -1,0 +1,92 @@
+﻿/*
+home.scss
+*/
+
+@import "../library/grid.scss";
+@import "../library/helpers.scss";
+
+//
+// Sections
+//
+
+section {
+	padding: $line-height * 2em 0;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+section:last-child {
+	border-bottom: 0;
+}
+
+section > header {
+	@include max-column();
+	text-align: center;
+}
+
+section > header h1 {
+	margin-top: 0;
+}
+
+//
+// Intro
+//
+
+#intro {
+	//background-color: #7d6;
+	//background: -webkit-radial-gradient(0 40px, circle cover, #e45, #ea5, #dd5, #9d5, #6c5, #9d5, #dd5, #ea5, #e45);
+	//background: -moz-radial-gradient(0 40px, circle cover, #e45, #ea5, #dd5, #9d5, #6c5, #9d5, #dd5, #ea5, #e45);
+	//background: -ms-radial-gradient(0 40px, circle cover, #e45, #ea5, #dd5, #9d5, #6c5, #9d5, #dd5, #ea5, #e45);
+	//background: radial-gradient(circle at 0 40px, #e45, #ea5, #dd5, #9d5, #6c5, #9d5, #dd5, #ea5, #e45);
+
+	background-color: #fc8d4d;
+	background-image: -webkit-linear-gradient(340deg, #0db2ac 0%, #0db2ac 20%, #f5dd7e 20%, #f5dd7e 40%, #fc8d4d 40%, #fc8d4d 60%, #fc694d 60%, #fc694d 80%, #faba32 80%, #faba32 100%);
+	background-image: linear-gradient(110deg, #0db2ac 0%, #0db2ac 20%, #f5dd7e 20%, #f5dd7e 40%, #fc8d4d 40%, #fc8d4d 60%, #fc694d 60%, #fc694d 80%, #faba32 80%, #faba32 100%);
+
+	padding: $line-height * 3em 0 $line-height * 1.5em 0;
+	border-bottom: 0;
+}
+
+#intro h1 {
+	margin-top: -.25em;
+	font-size: 3.5em;
+	letter-spacing: -2px;
+	color: #fff;
+}
+
+#intro img {
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+}
+
+#intro .fb-button {
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+	box-shadow: none;
+	text-shadow: none;
+	margin-top: 1em;
+	@include transition(all, .1s);
+}
+
+#intro .fb-button:hover {
+	background: white;
+	color: inherit;
+}
+
+/* 6 column layout */
+@media screen and (min-width: 30em) {
+
+	#intro {
+		padding: $line-height * 4em 0 $line-height * 2em 0;
+	}
+
+	#intro h1 {
+		font-size: 5.5em;
+		letter-spacing: -4px;
+	}
+
+	#intro img {
+		width: 280px;
+	}
+}

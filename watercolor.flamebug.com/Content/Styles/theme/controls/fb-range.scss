@@ -1,0 +1,54 @@
+/*
+=========================================
+flamebug:Range
+=========================================
+*/
+
+.fb-range {
+	position: relative;
+}
+
+.fb-range output { 
+	position: absolute;
+	background-color: #444;
+	padding: 0 .5em;
+	height: 24px; 
+	text-align: center; 
+	color: white; 
+	display: inline-block; 
+	font: bold 12px/24px Arial;
+	bottom: 125%;
+	left: 0;
+	min-width: 16px;
+	text-shadow: 1px 1px black;
+	opacity: .8;
+}
+
+.fb-range output:after { 
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 6px solid #444;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	top: 100%;
+	left: 50%;
+	margin-left: -6px;
+	margin-top: -1px;
+}
+
+.fb-range span { 
+	display: inline;
+	padding-left: .5em;
+	font-size: .675em;
+	font-weight: bold;
+}
+
+.fb-range span:before { 
+	content: "[ ";   //PARSER BUG IF ( or ) is used
+}
+
+.fb-range span:after { 
+	content: " ]";   //PARSER BUG IF ( or ) is used
+}

@@ -1,0 +1,416 @@
+﻿@{
+    ViewBag.Title = "";
+}
+
+@section Styles {
+	<link rel="stylesheet" href="@Url.Content("~/Styles/Pages/typography.scss")">
+}
+
+@section Scripts {
+		<script src="@Url.Content("~/Content/Scripts/prism.js")"></script>
+}
+
+<section id="typography-introduction" class="introduction">
+
+	<header class="container">
+
+		<h2>Typography</h2>
+
+		<p>
+			The typographic grid included in Watercolor establishes a vertical baseline for all text on the site, and takes most of the pain out of making your text content look great. Just set the <code>$line-height</code> variable and all of the hard work is taken care of for you, allowing you to focus on organizing your content rather than working with text styles.
+		</p>
+
+	</header>
+
+</section>
+
+<section id="text" class="container">
+
+	<article id="typographic-settings">
+
+		<h3>Typographic Settings</h3>
+
+		<p>Line height and other typographic settings are defined in <a href="/overview#global">global.scss</a> and are the basis for the typographic grid.  By default the line height is set as a close to golden-ratio <code>1.625</code>.</p>
+
+		<table class="bordered">
+
+			<thead>
+				<tr>
+					<th style="width: 25%">variable</th>
+					<th>description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td><code>$line-height</code></td>
+					<td>This defines the height of one line of text. This is useful for maintaining vertical rhythm when applying margin or padding to elements, or for standardizing the height of elements. Default value: <code>1.625</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$body-font-size</code></td>
+					<td>Size of body text in percent. The default browser font size at 100% is 16px. Default value: <code>100</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$body-font-color</code></td>
+					<td>Color of body text. Default value: <code>#6e787b</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$body-font-family</code></td>
+					<td>Font family stack used for body text. Default value: <code>'Roboto', sans-serif</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$body-font-weight</code></td>
+					<td>Font weight used for body text. Default value: <code>300</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$h1-font-size</code></td>
+					<td>Size of h1 header text in ems. Default value: <code>3.4375</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$h2-font-size</code></td>
+					<td>Size of h2 header text in ems. Default value: <code>2.625</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$h3-font-size</code></td>
+					<td>Size of h3 header text in ems. Default value: <code>2.125</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$h4-font-size</code></td>
+					<td>Size of h4 header text in ems. Default value: <code>1.625</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$h5-font-size</code></td>
+					<td>Size of h5 header text in ems. Default value: <code>1.3125</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$h6-font-size</code></td>
+					<td>Size of h6 header text in ems. Default value: <code>1</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$header-font-color</code></td>
+					<td>Color of header text. Default value: <code>#6e787b</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$header-font-family</code></td>
+					<td>Font family stack used for header text. Default value: <code>'Roboto', sans-serif</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$header-font-weight</code></td>
+					<td>Font weight used for header text. Default value: <code>100</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$mono-font-size</code></td>
+					<td>Size monospaced text, used in elements such as <code>pre</code> and <code>code</code>,in ems. Default value: <code>1</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$mono-font-color</code></td>
+					<td>Color of monospaced text, used in elements such as <code>pre</code> and <code>code</code>. Default value: <code>#6e787b</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$mono-font-family</code></td>
+					<td>Font family stack used for monospaced text. Default value: <code>monospace, sans-serif</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$mono-font-weight</code></td>
+					<td>Font weight used for monospaced text. Default value: <code>normal</code>.</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</article>
+
+	<article id="text-body">
+
+		<h3>Body Text</h3>
+		<p>Body text is defaulted to 100% font size, with a 1.625 &mdash; close-to-golden-ratio &mdash; line height.  The entire typographical grid is based on this line height, which will help your site keep a consistent vertical rhythm.</p>
+
+		<div class="example text-grid">
+
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;p&gt;
+   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+&lt;/p&gt;</code></pre>
+
+	</article>
+
+	<article id="text-headers">
+		
+		<h3>Headings</h3>
+		<p>Headings are set in progressively larger sizes. Each is given one line of margin above the header, while the header is centered within as few lines as possible. Note that the default <code>h1</code> header takes three lines with one line of top margin, while the <code>h2</code> can fit within two lines with one line of top margin. The calculations to make this work are handled within Watercolor automatically, all you need to do is set the header font size and it will be set up to look great.</p>
+
+		<div class="example text-grid">
+
+			<h1>Header 1</h1>
+			<h2>Header 2</h2>
+			<h3>Header 3</h3>
+			<h4>Header 4</h4>
+			<h5>Header 5</h5>
+			<h6>Header 6</h6>
+
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;h1&gt;Header 1&lt;/h1&gt;
+&lt;h2&gt;Header 2&lt;/h2&gt;
+&lt;h3&gt;Header 3&lt;/h3&gt;
+&lt;h4&gt;Header 4&lt;/h4&gt;
+&lt;h5&gt;Header 5&lt;/h5&gt;
+&lt;h6&gt;Header 6&lt;/h6&gt;</code></pre>
+
+	</article>
+
+	<article id="unordered-list">
+
+		<h3>Unordered List</h3>
+		<p>Unordered lists, <code>ul</code>, have margins set to maintain vertical rhythm. Sub-lists have margins to separate them visually from the containing list.</p>
+
+		<div class="example text-grid">
+
+			<ul>
+				<li>List Item 1</li>
+				<li>
+					List Item 1
+					<ul>
+						<li>List Item 2</li>
+						<li>List Item 2
+							<ul>
+								<li>List Item 3</li>
+								<li>List Item 3</li>
+							</ul>
+						</li>
+						<li>List Item 2</li>
+						<li>List Item 2</li>
+					</ul>
+				</li>
+				<li>List Item 1</li>
+				<li>List Item 1</li>
+			</ul>
+
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;ul&gt;
+	&lt;li&gt;List Item 1&lt;/li&gt;
+	&lt;li&gt;
+        List Item 1
+		&lt;ul&gt;
+			&lt;li&gt;List Item 2&lt;/li&gt;
+			&lt;li&gt;
+                List Item 2
+				&lt;ul&gt;
+					&lt;li&gt;List Item 3&lt;/li&gt;
+					&lt;li&gt;List Item 3&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li&gt;List Item 2&lt;/li&gt;
+			&lt;li&gt;List Item 2&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;List Item 1&lt;/li&gt;
+	&lt;li&gt;List Item 1&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+	</article>
+
+	<article id="ordered-list">
+
+		<h3>Ordered List</h3>
+		<p>Ordered lists, <code>ol</code>, have margins set to maintain vertical rhythm. Sub-lists have margins to separate them visually from the containing list.</p>
+
+		<div class="example text-grid">
+
+			<ol>
+				<li>List Item 1</li>
+				<li>
+					List Item 1
+					<ol>
+						<li>List Item 2</li>
+						<li>List Item 2
+							<ol>
+								<li>List Item 3</li>
+								<li>List Item 3</li>
+							</ol>
+						</li>
+						<li>List Item 2</li>
+						<li>List Item 2</li>
+					</ol>
+				</li>
+				<li>List Item 1</li>
+				<li>List Item 1</li>
+			</ol>
+
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;ol&gt;
+	&lt;li&gt;List Item 1&lt;/li&gt;
+	&lt;li&gt;
+        List Item 1
+		&lt;ol&gt;
+			&lt;li&gt;List Item 2&lt;/li&gt;
+			&lt;li&gt;
+                List Item 2
+				&lt;ol&gt;
+					&lt;li&gt;List Item 3&lt;/li&gt;
+					&lt;li&gt;List Item 3&lt;/li&gt;
+				&lt;/ol&gt;
+			&lt;/li&gt;
+			&lt;li&gt;List Item 2&lt;/li&gt;
+			&lt;li&gt;List Item 2&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/li&gt;
+	&lt;li&gt;List Item 1&lt;/li&gt;
+	&lt;li&gt;List Item 1&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+	</article>
+
+	<article id="definition-list">
+
+		<h3>Definition List</h3>
+		<p>Definition lists, <code>dl</code>, have margins set to maintain vertical rhythm. Definition terms show in <strong>bold</strong>, and descriptions are offset for visual separation. Definition terms preceeded by a description have a top margin.</p>
+
+		<div class="example text-grid">
+
+			<dl>
+				<dt>Definition term</dt>
+				<dd>Definition description</dd>
+
+				<dt>Definition term</dt>
+				<dd>Definition description</dd>
+				<dd>Definition description</dd>
+
+				<dt>Definition term</dt>
+				<dt>Definition term</dt>
+				<dd>Definition description</dd>
+			</dl>
+
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;dl&gt;
+	&lt;dt&gt;Definition term&lt;/dt&gt;
+	&lt;dd&gt;Definition description&lt;/dd&gt;
+	&lt;dt&gt;Definition term&lt;/dt&gt;
+	&lt;dd&gt;Definition description&lt;/dd&gt;
+	&lt;dd&gt;Definition description&lt;/dd&gt;
+	&lt;dt&gt;Definition term&lt;/dt&gt;
+	&lt;dt&gt;Definition term&lt;/dt&gt;
+	&lt;dd&gt;Definition description&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+	</article>
+
+	<article id="blockquotes">
+
+		<h3>Blockquotes</h3>
+		<p>Blockquotes are pulled to the right of the main text. Watercolor gives them slightly further distinction with a vertical left border that is common practice to better separate the quote from surrounding text.</p>
+
+		<div class="example text-grid">
+
+			<p>A quick quote from lorem ipsum:</p>
+			<blockquote>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</blockquote>
+			<p>Now that we're done with that lets move on.</p>
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;p&gt;A quick quote from lorem ipsum:&lt;/p&gt;
+&lt;blockquote&gt;
+   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+   Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+&lt;/blockquote&gt;
+&lt;p&gt;Now that we're done with that lets move on.&lt;/p&gt;</code></pre>
+
+	</article>
+
+	<article id="block-code">
+
+		<h3>Block Code</h3>
+		<p>Blocks of code should be wrapped in <code>&lt;pre&gt;&lt;code&gt;</code> tags.</p>
+
+		<div class="example text-grid">
+
+			<pre><code>code {
+   color: rgba(0,0,0,0.15);
+   text-shadow: none;
+   border: 1px solid rgba(0,0,0,0.1);
+   background-color: transparent;
+   vertical-align: middle;
+}</code></pre>
+
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;pre&gt;&lt;code&gt;code {
+   color: rgba(0,0,0,0.15);
+   text-shadow: none;
+   border: 1px solid rgba(0,0,0,0.1);
+   background-color: transparent;
+   vertical-align: middle;
+}&lt;/code&gt;&lt;/pre&gt;</code></pre>
+
+	</article>
+
+	<article id="inline-text">
+
+		<h3>Inline Text</h3>
+		<p>All inline text is styled to perserve vertical rhythm and give a consistent visual look across your site.</p>
+
+		<div class="example text-grid">
+
+			<p class="example-50-percent">
+				<a href="#">anchor link</a><br>
+				<abbr title="abbreviation title">abbreviation</abbr><br>
+				<b>bold text</b><br>
+				<cite>citation</cite><br>
+				<code>.code {visibility: hidden;}</code><br>
+				<del>deleted text</del><br>
+				<dfn title="definition term title">definition term</dfn><br>
+				<em>emphasisted text</em><br>
+				<i>alternate voice</i><br>
+				<ins>inserted text</ins><br>
+				<kbd>keyboard input text</kbd><br>
+			</p>
+
+			<p class="example-50-percent">
+				<mark>marked text</mark><br>
+				<q>short <q>quotation inside</q> of another quotation</q><br>
+				<s>incorrect text</s><br>
+				<samp>sample text</samp><br>
+				<small>small text</small><br>
+				<span>span text</span><br>
+				<strong>strong text</strong><br>
+				<sub>subscript text</sub><br>
+				<sup>superscript text</sup><br>
+				<u>underlined text</u><br>
+				<var>variable</var>
+			</p>
+
+		</div>
+
+		<pre class="example-code language-markup"><code class="language-markup"><xmp><p>
+   <a href="#">anchor link</a><br>
+   <abbr title="abbreviation title">abbreviation</abbr><br>
+   <b>bold text</b><br>
+   <cite>citation</cite><br>
+   <code>code {visibility: hidden;}</code><br>
+   <del>deleted text</del><br>
+   <dfn title="definition term title">definition term</dfn><br>
+   <em>emphasisted text</em><br>
+   <i>alternate voice</i><br>
+   <ins>inserted text</ins><br>
+   <kbd>keyboard input text</kbd><br>
+   <mark>marked text</mark><br>
+   <q>short <q>quotation inside</q> of another quotation</q><br>
+   <s>incorrect text</s><br>
+   <samp>sample text</samp><br>
+   <small>small text</small><br>
+   <span>span text</span><br>
+   <strong>strong text</strong><br>
+   <sub>subscript text</sub><br>
+   <sup>superscript text</sup><br>
+   <u>underlined text</u><br>
+   <var>variable</var>
+</p></xmp></code></pre>
+
+	</article>
+
+</section>

@@ -1,0 +1,348 @@
+﻿@{
+    ViewBag.Title = "Layout";
+}
+
+@section Styles {
+	<link rel="stylesheet" href="@Url.Content("~/Styles/Pages/layout.scss")">
+}
+
+@section Scripts {
+		<script src="@Url.Content("~/Content/Scripts/prism.js")"></script>
+}
+
+<section id="layout-introduction" class="introduction">
+
+	<header class="container">
+
+		<h2>Layout</h2>
+
+		<p>
+			Watercolor is based on an adaptive grid that allows a content-first approach to website design on a variety of screen sizes and devices.
+			Unlike traditional responsive grids, which have a fixed number of columns, adaptive grids allow columns to be added as additional
+			screen real estate becomes available. This flexibility allows the designer the ability to organize the content in a way that looks best
+			on different sized screens, rather than the one-size-fits-all approach of responsive grids.  Resize your browser, or change your device
+			orientation and watch the grid demo below to get an idea of how the adaptive grid works.
+		</p>
+
+	</header>
+
+</section>
+
+<section id="infinite-columns">
+
+	<figure>
+
+		<div class="col1"></div>
+		<div class="col2"></div>
+		<div class="col3"></div>
+		<div class="col4"></div>
+		<div class="col5"></div>
+		<div class="col6"></div>
+		<div class="col7"></div>
+		<div class="col8"></div>
+		<div class="col9"></div>
+		<div class="col10"></div>
+		<div class="col11"></div>
+		<div class="col12"></div>
+		<div class="col13"></div>
+		<div class="col14"></div>
+		<div class="col15"></div>
+		<div class="col16"></div>
+		<div class="col17"></div>
+		<div class="col18"></div>
+		<div class="col19"></div>
+		<div class="col20"></div>
+		<div class="col21"></div>
+		<div class="col22"></div>
+		<div class="col23"></div>
+		<div class="col24"></div>
+		<div class="col25"></div>
+		<div class="col26"></div>
+		<div class="col27"></div>
+		<div class="col28"></div>
+		<div class="col29"></div>
+		<div class="col30"></div>
+		<div class="col31"></div>
+		<div class="col32"></div>
+		<div class="col33"></div>
+		<div class="col34"></div>
+		<div class="col35"></div>
+		<div class="col36"></div>
+
+	</figure>
+
+</section>
+
+<section id="layout" class="container">
+	
+	<article id="grid-settings">
+
+		<h3>Grid Settings</h3>
+
+		<p>Default column and gutter sizes are defined in <a href="/overview#global">global.scss</a> and are the basis for the structural grid.  By default one column, including the gutter, is <code>5em</code> wide, or 80px at the default 100% body font size.</p>
+
+		<table class="bordered">
+
+			<thead>
+				<tr>
+					<th style="width: 25%">variable</th>
+					<th>description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td><code>$column-width</code></td>
+					<td>This defines the width of the column, excluding the gutter. Default value: <code>3.5em</code>.</td>
+				</tr>
+				<tr>
+					<td><code>$gutter-width</code></td>
+					<td>This defines the width of the gutter. Usually it looks best if the gutter is about half the width of the column. Default value: <code>1.5em</code>.</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</article>
+
+	<article id="column-breakpoint">
+
+		<h3>Container Breakpoints</h3>
+
+		<p>Default breakpoints are defined in <a href="/overview#container">container.scss</a> and provided to adapt to common devices, orientations, and resolutions.  The defaults are based on a default body font size of 100%, or 16px, which makes the math pretty easy as most common resolutions are a multiple of that in size.  If you change the base font size you'll want to adjust the default container definitions accordingly.</p>
+
+		<table class="bordered">
+
+			<thead>
+				<tr>
+					<th>cols</th>
+					<th>ems</th>
+					<th>pixels</th>
+					<th>device</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				<tr>
+					<td>4</td>
+					<td>20em</td>
+					<td>320px</td>
+					<td>Mobile Portrait</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>30em</td>
+					<td>480px</td>
+					<td>Mobile Landscape</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>40em</td>
+					<td>640px</td>
+					<td>Tablet Portrait</td>
+				</tr>
+				<tr>
+					<td>12</td>
+					<td>60em</td>
+					<td>960px</td>
+					<td>Tablet Landscape / Small Desktop</td>
+				</tr>
+				<tr>
+					<td>16</td>
+					<td>80em</td>
+					<td>1280px</td>
+					<td>Large Desktop</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</article>
+
+	<article id="mixins">
+
+		<h3>Grid Mixins</h3>
+
+		<p>The grid @@mixins are defined in <a href="/overview#grid">grid.scss</a> and provide two main @@mixins for sizing content.  The third @@mixin is used in <a href="/overview#container">container.scss</a> for defining the container breakpoints.</p>
+
+		<table class="bordered">
+
+			<thead>
+				<tr>
+					<th style="width: 25%">mixin</th>
+					<th>description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td><code>column($cols)</code></td>
+					<td>This is the main @@mixin for sizing content. The <code>$cols</code> parameter defines how many columns the content takes up in the grid.</td>
+				</tr>
+					<tr>
+					<td><code>max-column()</code></td>
+					<td>This @@mixin allows the content fill the entire grid, regardless of the number of columns. This would commonly be used as a default content size at smaller breakpoints, or for block elements that need to always fill the container width, such as headers and footers.</td>
+				</tr>
+				<tr>
+					<td><code>page-width($cols)</code></td>
+					<td>This @@mixin is used to size the <code>container</code> class at various breakpoints. The <code>$cols</code> parameter defines how many columns make up the container.</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</article>
+
+	<article id="example">
+
+		<header>
+			<h3>Example</h3>
+		</header>
+
+		<figure id="example-demo">
+
+			<header>
+				<h4>Header</h4>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+			</header>
+
+			<div class="main">
+				<h4>Main</h4>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+			</div>
+
+			<div class="aside">
+				<h4>Aside</h4>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore&hellip;</p>
+			</div>
+
+			<figure>
+				<img src="http://farm3.staticflickr.com/2823/9303613719_cb61d4ed31.jpg" />
+				<img src="http://farm6.staticflickr.com/5051/5535775910_aa311329f7.jpg" />
+				<img src="http://farm6.staticflickr.com/5538/9172542860_4faae13580.jpg" />
+				<img src="http://farm5.staticflickr.com/4116/4809483233_8421d106d0.jpg" />
+				<img src="http://farm6.staticflickr.com/5230/5638556900_d6f899cbd4.jpg" />
+				<img src="http://farm4.staticflickr.com/3187/5851956560_a356eba0d4.jpg" />
+				<img src="http://farm8.staticflickr.com/7268/7861949634_7d2a745b70.jpg" />
+				<img src="http://farm8.staticflickr.com/7231/6958988300_e8ec4826e5.jpg" />
+			</figure>
+
+			<footer>
+				<h4>Footer</h4>
+				<p>All Photos above are by <a href="http://www.flickr.com/photos/s-t-r-a-n-g-e/" target="_blank">Victor Bezrukov</a> and licensed via <a href="http://creativecommons.org/licenses/by/2.0/" target="_blank">Creative Commons</a> via <a href="http://www.flickr.com" target="_blank">Flickr</a>.</p>
+			</footer>
+
+		</figure>
+
+	</article>
+
+	<article id="example-code">
+
+		<header>
+			<h3>Example Code</h3>
+		</header>
+
+		<pre><code class="language-markup">&lt;div id="content" role="main"&gt;
+    &lt;section id="example" class="container"&gt;
+        &lt;article id="demo"&gt;
+            &lt;header&gt;
+                &lt;h4&gt;Header&lt;/h4&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet &hellip;&lt;/p&gt;
+            &lt;/header&gt;
+            &lt;div id="main"&gt;
+                &lt;h4&gt;Main Content&lt;/h4&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet &hellip;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div id="aside"&gt;
+                &lt;h4&gt;Additional Information&lt;/h4&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet &hellip;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;figure&gt;
+                &lt;img src="image.jpg" /&gt;
+                &lt;img src="image.jpg" /&gt;
+                &lt;img src="image.jpg" /&gt;
+                &lt;img src="image.jpg" /&gt;
+                &lt;img src="image.jpg" /&gt;
+                &lt;img src="image.jpg" /&gt;
+                &lt;img src="image.jpg" /&gt;
+                &lt;img src="image.jpg" /&gt;
+            &lt;/figure&gt;
+            &lt;footer&gt;
+                &lt;h4&gt;Footer&lt;/h4&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet &hellip;&lt;/p&gt;
+            &lt;/footer&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
+&lt;/div&gt;</code></pre>
+
+		<pre><code class="language-css">/*
+example.scss
+*/
+header, footer, #main, #aside, figure img {
+	box-sizing: border-box;
+	margin-top: $line-height * 1em;
+    padding: 0 $line-height * 1em;
+	background: #eee;
+	border: 1px solid #ccc;
+	@@include max-column();
+}
+header, footer {
+    clear: both;
+}
+figure {
+	@@include clear-children();
+    img {
+	    padding: 0;
+	    @@include column(2);
+    }
+}
+/*
+6 column layout
+*/
+@@media screen and (min-width: 30em) {
+	figure img {
+		@@include column(3);
+	}
+}
+/*
+8 column layout
+*/
+@@media screen and (min-width: 40em) {
+	figure img {
+		@@include column(2);
+	}
+}
+/*
+12 column layout
+*/
+@@media screen and (min-width: 60em) {
+	#main {
+		@@include column(8);
+	}
+	#aside {
+		@@include column(4);
+	}
+	figure img {
+		@@include column(3);
+	}
+}
+/*
+16 column layout
+*/
+@@media screen and (min-width: 60em) {
+	#main {
+		@@include column(10);
+	}
+	#aside {
+		@@include column(6);
+	}
+	figure img {
+		@@include column(4);
+	}
+}</code></pre>
+
+	</article>
+
+</section>
+

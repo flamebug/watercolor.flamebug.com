@@ -1,0 +1,201 @@
+/*
+=========================================
+flamebug:PopupPanel
+=========================================
+*/
+.fb-modal,
+.fb-modal-overlay,
+.fb-modal-container,
+.fb-modal-close {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.fb-modal {
+	display: inline-block;
+	box-sizing: border-box;
+	position: relative;
+	margin: 0 auto;
+	max-width: 100%;
+	border: 1px solid #ccc;
+	background-color: #fcfcfc;
+	background-color: rgba(255,255,255,0.95);
+	box-shadow: 0 0 25px rgba(0,0,0,0.5);
+	color: #222;
+	text-align: left;
+	vertical-align: middle;
+	cursor: auto;
+
+	-webkit-animation-duration: .25s;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-duration: .25s;
+	-moz-animation-delay: 0s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-fill-mode: both;
+	-ms-animation-duration: .25s;
+	-ms-animation-delay: 0s;
+	-ms-animation-timing-function: ease;
+	-ms-animation-fill-mode: both;
+	-o-animation-duration: .25s;
+	-o-animation-delay: 0s;
+	-o-animation-timing-function: ease;
+	-o-animation-fill-mode: both;
+	animation-duration: .25s;
+	animation-delay: 0s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+	
+	-webkit-animation-name: fade-out;
+	-moz-animation-name: fade-out;
+	-o-animation-name: fade-out;
+	animation-name: fade-out;
+}
+
+.fb-modal-overlay,
+.fb-modal-container {
+	display: block;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	margin-left: 100%;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+	cursor: pointer;
+}
+
+.fb-modal-container {
+	z-index: 9001;
+
+	/* delay hiding the container (until animations complete) */
+	-webkit-transition: all 0 .25s;
+	-moz-transition: all 0 .25s;
+	-o-transition: all 0 .25s;
+	transition: all 0 .25s;
+}
+
+.fb-modal-container:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.fb-modal-overlay {
+	z-index: 9000;
+	background: #0b0b0b;
+	opacity: 0;
+
+	/* animation to hide the overlay */
+	-webkit-transition: opacity .25s ease-in-out, margin-left 0s ease-in-out .25s;
+	-moz-transition: opacity 0.25s ease-in-out, margin-left 0s ease-in-out 0.25s;
+	-o-transition: opacity 0.25s ease-in-out, margin-left 0s ease-in-out 0.25s;
+	transition: opacity .25s ease-in-out, margin-left 0s ease-in-out .25s;
+}
+
+.fb-modal-close {
+	display: block;
+	position: absolute;
+	top: -14px;
+	right: -14px;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	cursor: pointer;
+	z-index: 1102;
+	line-height: 25px;
+	color: #fff;
+	font-size: 22px;
+	font-style: normal;
+	font-family: Arial,Baskerville,monospace;
+	text-decoration: none;
+	text-align: center;
+	opacity: .8;
+	background-color: #000;
+	border: 2px solid #fff;
+	border-radius: 14px;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+
+.fb-modal-close:hover {
+	background-color: #aaa;
+	color: #000;
+}
+
+/* Visible states */
+
+.fb-modal-container.visible {
+	overflow: auto;
+	margin-left: 0;
+
+	/* no delay showing the container */
+	-webkit-transition: all 0 0;
+	-moz-transition: all 0 0;
+	-o-transition: all 0 0;
+	transition: all 0 0;
+}
+
+.fb-modal-container.visible .fb-modal {
+	-webkit-animation-name: fade-in;
+	-moz-animation-name: fade-in;
+	-o-animation-name: fade-in;
+	animation-name: fade-in;
+}
+
+.fb-modal-overlay.visible {
+	margin-left: 0;
+	opacity: .6;
+
+	/* animation to show the overlay */
+	-webkit-transition: opacity 0.25s ease-in-out;
+	-moz-transition: opacity 0.25s ease-in-out;
+	-o-transition: opacity 0.25s ease-in-out;
+	transition: opacity 0.25s ease-in-out;
+}
+
+/* Animations */
+
+.fb-modal.slide {
+	-webkit-animation-name: slide-out-bottom, fade-out;
+	-moz-animation-name: slide-out-bottom, fade-out;
+	-o-animation-name: slide-out-bottom, fade-out;
+	animation-name: slide-out-bottom, fade-out;
+}
+
+.fb-modal-container.visible .slide {
+	-webkit-animation-name: slide-in-top, fade-in;
+	-moz-animation-name: slide-in-top, fade-in;
+	-o-animation-name: slide-in-top, fade-in;
+	animation-name: slide-in-top, fade-in;
+}
+
+.fb-modal.zoom {
+	-webkit-animation-name: zoom-out, fade-out;
+	-moz-animation-name: zoom-out, fade-out;
+	-o-animation-name: zoom-out, fade-out;
+	animation-name: zoom-out, fade-out;
+}
+
+.fb-modal-container.visible .zoom {
+	-webkit-animation-name: zoom-in, fade-in;
+	-moz-animation-name: zoom-in, fade-in;
+	-o-animation-name: zoom-in, fade-in;
+	animation-name: zoom-in, fade-in;
+}

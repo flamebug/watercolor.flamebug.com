@@ -1,0 +1,225 @@
+﻿@{
+    ViewBag.Title = "";
+}
+
+@section Styles {
+	<link rel="stylesheet" href="@Url.Content("~/Styles/Pages/tables.scss")">
+}
+
+@section Scripts {
+		<script src="@Url.Content("~/Content/Scripts/prism.js")"></script>
+}
+
+<section id="tables-introduction" class="introduction">
+
+	<header class="container">
+
+		<h2>Tables</h2>
+
+		<p>
+			Tables by default are set up with bold headers, horizontal row lines, and no outer border.
+			Additional classes are provided to add striping to the table: <code>striped</code>, or borders: <code>bordered</code>. These classes can also be combined for a striped and bordered table.
+		</p>
+
+	</header>
+
+</section>
+
+<section id="tables" class="container">
+
+	<article id="default-table">
+
+		<h3>Default Table</h3>
+		<p>Basic table style with padding, horizontal dividers, and bold headers.</p>
+
+		<div class="example">
+
+			<table class="table">
+
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Team</th>
+						<th>Division</th>
+						<th>Record</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Chicago</td>
+						<td>North</td>
+						<td>10-6</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Green Bay</td>
+						<td>North</td>
+						<td>9-7</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Detroit</td>
+						<td>North</td>
+						<td>8-8</td>
+					</tr>
+				</tbody>
+
+			</table>
+
+		</div>
+
+	</article>
+
+	<article id="striped-table">
+
+		<h3>Striped Table</h3>
+		<p>Add the <code>striped</code> class to any table to add alternating striped rows to the table body.</p>
+
+		<div class="example">
+
+			<table class="striped">
+
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Team</th>
+						<th>Division</th>
+						<th>Record</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Chicago</td>
+						<td>North</td>
+						<td>10-6</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Green Bay</td>
+						<td>North</td>
+						<td>9-7</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Detroit</td>
+						<td>North</td>
+						<td>8-8</td>
+					</tr>
+				</tbody>
+
+			</table>
+
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;table class="striped"&gt;
+   &#8230;
+&lt;/table&gt;
+</code></pre>
+
+	</article>
+
+	<article id="bordered-table">
+
+		<h3>Bordered Table</h3>
+		<p>Add the <code>bordered</code> class to any table to add borders.</p>
+
+		<div class="example">
+
+			<table class="bordered">
+
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Team</th>
+						<th>Division</th>
+						<th>Record</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Chicago</td>
+						<td>North</td>
+						<td>10-6</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Green Bay</td>
+						<td>North</td>
+						<td>9-7</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Detroit</td>
+						<td>North</td>
+						<td>8-8</td>
+					</tr>
+				</tbody>
+
+			</table>
+		
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;table class="bordered"&gt;
+   &#8230;
+&lt;/table&gt;
+</code></pre>
+
+	</article>
+
+	<article id="bordered-striped-table">
+
+		<h3>Bordered & Striped Table</h3>
+		<p>Add the <code>bordered</code> and <code>striped</code> classes to any table to give it borders and alternating striped rows.</p>
+
+		<div class="example">
+
+			<table class="bordered striped">
+
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Team</th>
+						<th>Division</th>
+						<th>Record</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Chicago</td>
+						<td>North</td>
+						<td>10-6</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Green Bay</td>
+						<td>North</td>
+						<td>9-7</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Detroit</td>
+						<td>North</td>
+						<td>8-8</td>
+					</tr>
+				</tbody>
+
+			</table>
+		
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;table class="bordered striped"&gt;
+   &#8230;
+&lt;/table&gt;
+</code></pre>
+
+	</article>
+
+</section>

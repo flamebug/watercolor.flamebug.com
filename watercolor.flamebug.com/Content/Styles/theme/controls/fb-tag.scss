@@ -1,0 +1,56 @@
+/*
+=========================================
+tag
+=========================================
+*/
+
+.fb-tag {
+	display: inline-block;
+	overflow: visible;
+	padding: .1em .75em;
+	
+	background-color: #999;
+	border-radius: 1em;
+
+	color: #FFF;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+	text-decoration: none;
+	font-size: .75em;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.fb-tag:empty {
+	display: none;
+}
+
+.fb-tag.primary {
+	background-color: #2a75d1;
+}
+
+a.fb-tag.primary:hover {
+	background-color: #3a85e1;
+}
+
+.fb-tag.positive {
+	background-color: #0eb249;
+}
+
+a.fb-tag.positive:hover {
+	background-color: #1ec259;
+}
+
+.fb-tag.warning {
+	background-color: #fb0;
+}
+
+a.fb-tag.warning:hover {
+	background-color: #fa1;
+}
+
+.fb-tag.negative {
+	background-color: #b44;
+}
+
+a.fb-tag.negative:hover {
+	background-color: #c55;
+}

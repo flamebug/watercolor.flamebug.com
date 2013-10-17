@@ -1,0 +1,205 @@
+/*
+base/typography.scss
+*/
+
+@import "../global.scss";
+@import "../library/grid.scss";
+@import "../library/helpers.scss";
+
+body {
+	font-size: $body-font-size * 1%;
+	line-height: $line-height;
+	text-rendering: $body-text-rendering;
+	-webkit-font-smoothing: $body-font-smoothing;
+	font-family: $body-font-family;
+	font-weight: $body-font-weight;
+	color: $body-font-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $header-font-family;
+	font-weight: $header-font-weight;
+	margin-bottom: 0;
+	color: $header-font-color;
+}
+
+h1 {
+	font-size: $h1-font-size * 1em;
+	@include font-line-height($h1-font-size);
+	@include font-margin-top($h1-font-size);
+}
+
+h2 {
+	font-size: $h2-font-size * 1em;
+	@include font-line-height($h2-font-size);
+	@include font-margin-top($h2-font-size);
+}
+
+h3 {
+	font-size: $h3-font-size * 1em;
+	@include font-line-height($h3-font-size);
+	@include font-margin-top($h3-font-size);
+}
+
+h4 {
+	font-size: $h4-font-size * 1em;
+	@include font-line-height($h4-font-size);
+	@include font-margin-top($h4-font-size);
+}
+
+h5 {
+	font-size: $h5-font-size * 1em;
+	@include font-line-height($h5-font-size);
+	@include font-margin-top($h5-font-size);
+}
+
+h6 {
+	font-size: $h6-font-size * 1em;
+	@include font-line-height($h6-font-size);
+	@include font-margin-top($h6-font-size);
+}
+
+p {
+	margin-top: $line-height * 1em;
+	margin-bottom: $line-height * 1em;
+}
+
+//
+// Link styles
+//
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	@include transition(all, 0.25s, linear);
+
+	&:hover {
+		color: $link-hover-color;
+	}
+}
+
+//
+// Lists
+//
+
+ul, ol, dl {
+	margin-top: $line-height * 1em;
+	margin-bottom: $line-height * 1em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd + dt {
+	margin-top: $line-height * 1em;
+}
+
+//
+// Quotes and Code
+//
+
+blockquote {
+	margin-top: $line-height * 1em;
+	padding-left: 1em;
+	border-left: .25em solid $border-color;
+}
+
+pre,
+code,
+kbd,
+samp,
+tt {
+	font-size: $mono-font-size * 1em;
+	font-family: $mono-font-family;
+	font-weight: $mono-font-weight;
+	color: $mono-font-color;
+
+	direction: ltr;
+	text-align: left;
+	word-spacing: normal;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+	// fix wierd bug with monospace text messing up line-height on pre elements
+	// ref: http://alexmansfield.com/css/font-size-line-height-pre-code-monospace
+	// if font size is less than 1 then go with vertical-align: middle
+	vertical-align: top; 
+}
+
+pre {
+	white-space: pre;
+	@include font-margin-top($mono-font-size, 1 / (($body-font-size / 100) * 16) * 1em);
+	@include font-margin-bottom($mono-font-size, 1 / (($body-font-size / 100) * 16) * 1em);
+	@include font-line-height($mono-font-size);
+
+	position: relative;
+	background: rgba(0,0,0,0.01);
+	border: 1px solid $border-color;
+	padding: 0 .5em;
+	overflow: auto;
+
+	code {
+		padding: 0;
+		border: 0;
+		background: transparent;
+	}
+
+	&[rel]:hover:before {
+		content: attr(rel);
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: .25em .75em;
+		background: rgba(0,0,0,0.02);
+		color: #aaa;
+		font-size: .75em;
+	}
+}
+
+code {
+	padding: .1666em .3333em;
+	background: rgba(0,0,0,0.01);
+	border: 1px solid $border-color;
+}
+
+//
+// Image and Dividers
+//
+
+img, hr {
+	border-color: $border-color;
+}
+
+//
+// Selection Highlighting
+//
+
+/*
+
+body {
+	-webkit-tap-highlight-color: rgba(170,225,37, 0.62);
+}
+
+::selection,
+::-moz-selection {
+	background: #AAE125;
+	color: white;
+}
+
+img::selection,
+img::-moz-selection {
+	background: transparent;
+}
+
+*/

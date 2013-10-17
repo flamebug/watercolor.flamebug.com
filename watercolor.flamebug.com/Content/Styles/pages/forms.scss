@@ -1,0 +1,22 @@
+﻿/*
+forms.scss
+*/
+
+@import "../library/grid.scss";
+@import "../library/helpers.scss";
+
+//
+// Introduction
+//
+
+#forms-introduction {
+	background-color: #4d72cc;
+}
+
+//
+// Articles
+//
+
+#forms > article {
+	@include max-column();
+}

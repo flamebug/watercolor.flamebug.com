@@ -1,0 +1,22 @@
+﻿/*
+overview.scss
+*/
+
+@import "../library/grid.scss";
+@import "../library/helpers.scss";
+
+//
+// Articles
+//
+
+article {
+	@include max-column();
+}
+
+//
+// Preformatted Code
+//
+
+pre {
+	max-height: 25em;
+}

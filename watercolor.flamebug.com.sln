@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "watercolor.flamebug.com", "watercolor.flamebug.com\watercolor.flamebug.com.csproj", "{D1C688B2-1E0D-46B1-9CDE-F82598D445B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1C688B2-1E0D-46B1-9CDE-F82598D445B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1C688B2-1E0D-46B1-9CDE-F82598D445B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1C688B2-1E0D-46B1-9CDE-F82598D445B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1C688B2-1E0D-46B1-9CDE-F82598D445B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

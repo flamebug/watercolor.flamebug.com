@@ -1,0 +1,23 @@
+﻿/*
+controls.scss
+*/
+
+@import "../library/grid.scss";
+@import "../library/helpers.scss";
+
+//
+// Introduction
+//
+
+#controls-introduction {
+	background-color: #fc694d;
+}
+
+//
+// Articles
+//
+
+article {
+	@include max-column();
+	margin-bottom: $line-height * 1em;
+}

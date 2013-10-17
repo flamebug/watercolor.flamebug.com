@@ -1,0 +1,166 @@
+/*
+base/forms.scss
+*/
+
+@import "../global.scss";
+@import "../library/grid.scss";
+@import "../library/helpers.scss";
+
+//
+// Basic Form Containers
+//
+
+form {
+	margin-bottom: $line-height * 1em;
+	@include clear-children();
+}
+
+fieldset {
+	margin: $line-height * 1em 0 0 0;
+	padding: 0 1em $line-height * 1em 1em;
+	border-color: $border-color;
+}
+
+legend {
+	margin-bottom: $line-height * -0.5em; // the legend normally adds half a line of padding at the top of the fieldset, lets remove that
+}
+
+//
+// Basic Form Inputs
+//
+
+textarea,
+select,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="color"],
+input[type="file"] {
+	font: inherit;
+	padding: .1875em .375em;
+	border: .0625em solid $border-color;
+	background-color: #fff;
+	color: $input-color;
+	border-radius: .2em;
+	@include box-sizing(border-box);
+}
+
+select {
+	padding-top: .375em;
+}
+
+textarea:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"],
+input[type="color"]:focus,
+input[type="file"]:focus,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+	color: $input-focus-color;
+}
+
+//
+// Block Form
+//
+
+.field,
+.block .field,
+div.field.block {
+	display: block;
+
+	& label {
+		float: none;
+		display: block;
+		width: auto;
+		margin-top: $line-height * 1em;
+	}
+
+	& input,
+	& select,
+	& textarea {
+		float: none;
+		display: block;
+		margin-top: 0;
+	}
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+//
+// Inline Form
+//
+
+.inline .field,
+div.field.inline {
+	float: left;
+	margin-right: $line-height * 1em;
+
+	& label {
+		float: none;
+		display: block;
+		width: auto;
+		margin-top: $line-height * 1em;
+	}
+
+	& input,
+	& select,
+	& textarea {
+		float: none;
+		display: block;
+		margin-top: 0;
+	}
+}
+
+//
+// Aligned Form
+//
+
+.align .field,
+div.field.align {
+	display: block;
+
+	& label {
+		float: left;
+		width: 25%;
+		margin-top: $line-height * 1em;
+	}
+
+	& input,
+	& select,
+	& textarea {
+		float: left;
+		margin-top: $line-height * 1em;
+	}
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+//
+// Buttons
+//
+
+form .buttons {
+	padding-top: $line-height * 1em;
+	text-align: left;
+	clear: both;
+}
+
+//
+// Clear Field
+//
+
+.field.clear {
+	clear: both;
+}

@@ -1,0 +1,186 @@
+/*
+=========================================
+Theme Layout
+=========================================
+*/
+
+@import "../library/grid.scss";
+@import "../library/helpers.scss";
+
+//
+// Resets
+//
+
+body, #content, #footer, #nav, #nav ul, #nav ui li {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	clear: both;
+}
+
+img {
+	max-width: 100%;
+}
+
+//
+// Body
+//
+
+body {
+	background-color: #fff;						//setting(flamebug/UI/Background/Color);
+	background-image: none;						//url("/System/Backgrounds/setting(flamebug/UI/Background/Image)");
+	background-repeat: repeat;					//setting(flamebug/UI/Background/Repeat);
+	background-attachment: scroll;				//setting(flamebug/UI/Background/Attachment);
+	background-position: center top;			//setting(flamebug/UI/Background/Position);
+	@include background-size(auto);				//setting(flamebug/UI/Background/Size);
+	@include background-origin(padding-box);	//setting(flamebug/UI/Background/Origin);
+	@include background-clip(border-box);		//setting(flamebug/UI/Background/Clip);
+}
+
+//
+// Content
+//
+
+#content {
+	@include clear-children();
+}
+
+//
+// Footer
+//
+
+#footer {
+	padding: $line-height * 2em 0;
+	background-color: rgba(0,0,0,0.03);
+	text-align: center;
+	@include clear-children();
+}
+
+//
+// Logo
+//
+
+#logo {
+	float: left;
+	padding: .5em 1.25em;
+	line-height: 3em;
+	vertical-align: middle;
+}
+
+#logo:hover {
+	background: rgba(0,0,0,0.03);
+}
+
+#logo img {
+	display: block;
+	height: 2em;
+	opacity: .8;
+}
+
+//
+// Navigation
+//
+
+#nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(255,255,255,0.95);
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	box-shadow: 0 1px 10px rgba(0,0,0,0.03);
+	z-index: 999;
+
+	@include clear-children();
+	@include transition(all, 0.25s);
+}
+
+#nav:hover {
+	box-shadow: 0 1px 12px rgba(0,0,0,0.07);
+}
+
+#nav ul {
+	list-style: none;
+	display: none;
+	clear: both;
+}
+
+#nav ul.open {
+	display: block;
+}
+
+#nav ul li {
+	border-top: 1px solid rgba(0,0,0,0.03);
+}
+
+#nav ul li a {
+	display: block;
+	height: 3em;
+	padding: 0 1.5em;
+	line-height: 3em;
+	color: #899;
+}
+
+#nav ul li a:hover {
+	background: rgba(0,0,0,0.03);
+}
+
+//
+// Navigation Button
+//
+
+#nav-button {
+	float: right;
+	width: 2em;
+	padding: .5em 0;
+	border: 0;
+	box-shadow: none;
+	background: transparent;
+	font-size: 1.5em;
+	color: #899;
+}
+
+#nav-button:hover {
+	background: rgba(0,0,0,0.03);
+}
+
+#nav-button i {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: 1em;
+	line-height: 1;
+	font-style: normal;
+	@include transition(all, 0.1s);
+}
+
+#nav-button i.open {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+//
+// Breakpoints
+//
+
+/* 8 column layout and greater */
+@media screen and (min-width: 40em) {
+
+	#nav-button {
+		display: none;
+	}
+
+	#nav ul {
+		display: block;
+		clear: none;
+
+		li {
+			display: inline-block;
+			border: 0;
+		}
+	}
+
+}

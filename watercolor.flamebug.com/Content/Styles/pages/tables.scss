@@ -1,0 +1,22 @@
+﻿/*
+tables.scss
+*/
+
+@import "../library/grid.scss";
+@import "../library/helpers.scss";
+
+//
+// Introduction
+//
+
+#tables-introduction {
+	background-color: #fc8d4d;
+}
+
+//
+// Articles
+//
+
+#tables > article {
+	@include max-column();
+}

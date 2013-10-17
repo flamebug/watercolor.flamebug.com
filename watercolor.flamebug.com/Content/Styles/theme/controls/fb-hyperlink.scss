@@ -1,0 +1,37 @@
+/*
+=========================================
+flamebug:HyperLink
+=========================================
+*/
+
+.fb-hyperlink {
+	line-height: 100%;
+	/*vertical-align:middle;*/   /* removed this because inline hyperlinks were showing up below normal text */
+	/* text-align: left; */
+}
+
+.fb-hyperlink:hover {
+}
+
+.fb-hyperlink img {
+	vertical-align: middle;
+	/*margin-bottom: 1px;*/
+}
+
+.fb-hyperlink span {
+	/*vertical-align: middle;*/ /* keep an eye on this, default from reset is baseline */
+}
+
+.fb-hyperlink img + span {
+	margin-left: .4em;
+}
+
+.fb-hyperlink:hover span {
+}
+
+.fb-hyperlink[disabled] {
+	opacity: 0.5;
+}
+
+.fb-hyperlink[disabled]:hover {
+}

@@ -1,0 +1,53 @@
+﻿@import "../global.scss";
+
+//
+// Structural Grid Mixins
+//
+
+@mixin page-width($cols) {
+	width: $cols * ($column-width + $gutter-width);
+}
+
+@mixin column($cols) {
+	display: inline;
+	float: left;
+	width: $cols * ($column-width + $gutter-width) - $gutter-width;
+	margin-left: $gutter-width / 2;
+	margin-right: $gutter-width / 2;
+}
+
+@mixin max-column() {
+	display: block;
+	float: none;
+	margin-left: $gutter-width / 2;
+	margin-right: $gutter-width / 2;
+}
+
+//
+// Prefix/Suffix Mixins (beta)
+//
+
+@mixin prefix($cols) {
+	margin-left: ($cols * ($column-width + $gutter-width)) + ($gutter-width / 2);
+}
+
+@mixin suffix($cols) {
+	margin-right: ($cols * ($column-width + $gutter-width)) + ($gutter-width / 2);
+}
+
+//
+// Typographic Grid Mixins
+//
+
+@mixin font-line-height($fontsize) {
+	$body-font-size-px: ($body-font-size / 100) * 16;
+	line-height: (ceiling(($body-font-size-px * $fontsize) / ($line-height * $body-font-size-px)) * ($line-height * $body-font-size-px)) / ($fontsize * $body-font-size-px);
+}
+
+@mixin font-margin-top($fontsize, $adjust: 0) {
+	margin-top: ($line-height / $fontsize - $adjust) * 1em;
+}
+
+@mixin font-margin-bottom($fontsize, $adjust: 0) {
+	margin-bottom: ($line-height / $fontsize - $adjust) * 1em;
+}

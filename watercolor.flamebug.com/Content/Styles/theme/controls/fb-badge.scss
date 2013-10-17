@@ -1,0 +1,102 @@
+/*
+=========================================
+fb-badge
+=========================================
+*/
+
+.fb-badge {
+	display: inline-block;
+	overflow: visible;
+	padding: 0 .5em;
+	
+	position: absolute;
+	top: -12px;
+	bottom: auto;
+	right: -12px;
+	left: auto;
+	z-index: 1;
+
+	background-color: #b50000;
+	border: 2px solid white;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.25);
+	border-radius: 1em;
+
+	color: #FFF !important;			/* prevent inheriting link colors */
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+	text-decoration: none;
+	font-size: .75em;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+.fb-badge:empty {
+	display: none;
+}
+
+.fb-badge.top-center {
+	position: absolute;
+	top: -12px;
+	bottom: auto;
+	right: auto;
+	left: 50%;
+	margin-left: -12px;
+}
+
+.fb-badge.bottom-center {
+	position: absolute;
+	top: auto;
+	bottom: -12px;
+	right: auto;
+	left: 50%;
+	margin-left: -12px;
+}
+
+.fb-badge.left-center {
+	position: absolute;
+	top: 50%;
+	bottom: auto;
+	right: auto;
+	left: -12px;
+	margin-top: -12px;
+}
+
+.fb-badge.right-center {
+	position: absolute;
+	top: 50%;
+	bottom: auto;
+	right: -12px;
+	left: auto;
+	margin-top: -12px;
+}
+
+.fb-badge.top-right {
+	position: absolute;
+	top: -12px;
+	bottom: auto;
+	right: -12px;
+	left: auto;
+}
+
+.fb-badge.top-left {
+	position: absolute;
+	top: -12px;
+	bottom: auto;
+	right: auto;
+	left: -12px;
+}
+
+.fb-badge.bottom-right {
+	position: absolute;
+	top: auto;
+	bottom: -12px;
+	right: -12px;
+	left: auto;
+}
+
+.fb-badge.bottom-left {
+	position: absolute;
+	top: auto;
+	bottom: -12px;
+	right: auto;
+	left: -12px;
+}

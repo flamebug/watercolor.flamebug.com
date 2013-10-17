@@ -1,0 +1,172 @@
+/*
+=========================================
+flamebug:TabView
+=========================================
+*/
+
+.fb-tabview-tabs {
+	background-color: #aaa;
+	list-style-type: none;
+	/*width: 212px;*/ /* (number of tabs x tab width (70px))px + (number of tabs -1)px */
+	height: 25px;
+	padding: 1px;
+	margin: 0 auto;
+    
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+    
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .05);
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .15);
+	box-shadow: 0 1px 0 rgba(0, 0, 0, .05);
+}
+
+.fb-tabview-tabs > li {
+	list-style-type: none;
+	background-color: #ccc;
+	float: left;
+	margin-left: 1px;
+}
+
+.fb-tabview-tabs > li {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .4)), to(rgba(255, 255, 255, 0)));
+	background-image: -moz-linear-gradient(0 0 -90deg, rgba(255, 255, 255, .4), rgba(255, 255, 255, 0));
+}
+
+.fb-tabview-tabs > li {
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1);
+	box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1);
+}
+
+.fb-tabview-tabs > li:first-child {
+	margin-left: 0;
+    
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.fb-tabview-tabs > li:last-child {
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.fb-tabview-tabs a,
+.fb-tabview-tabs a:link,
+.fb-tabview-tabs a:visited,
+.fb-tabview-tabs a:hover,
+.fb-tabview-tabs a:active {
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 24px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	/*width: 70px;*/
+	padding: 0 .75em;
+	height: 25px;
+
+	color: #565656;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+.fb-tabview-tabs > li:active {background-color: #525252;}
+
+.fb-tabview-tabs > li:active {
+	-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .15),
+				inset 0 0 5px rgba(0, 0, 0, .1);
+	-moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .15),
+				inset 0 0 5px rgba(0, 0, 0, .1);
+	box-shadow: inset 0 1px 4px rgba(0, 0, 0, .15),
+				inset 0 0 5px rgba(0, 0, 0, .1);
+}
+
+.fb-tabview-tabs > li:active a,
+.fb-tabview-tabs > li:active a:link,
+.fb-tabview-tabs > li:active a:visited,
+.fb-tabview-tabs > li:active a:hover,
+.fb-tabview-tabs > li:active a:active {
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+	position: relative;
+	top: 1px;
+}
+
+.fb-tabview-tabs > li:target,
+.fb-tabview-tabs > li.active {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .9)));
+	background-image: -moz-linear-gradient(0% 0% -90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .4));
+
+	background-color: #999;
+    
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1),
+				inset 0 0 5px rgba(0, 0, 0, .15);
+	-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1),
+				inset 0 0 5px rgba(0, 0, 0, .15);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1),
+				inset 0 0 5px rgba(0, 0, 0, .15);
+}
+
+.fb-tabview-tabs > li:target a,
+.fb-tabview-tabs > li:target a:link,
+.fb-tabview-tabs > li:target a:visited,
+.fb-tabview-tabs > li:target a:hover,
+.fb-tabview-tabs > li:target a:active
+.fb-tabview-tabs > li:active a,
+.fb-tabview-tabs > li:active a:link,
+.fb-tabview-tabs > li:active a:visited,
+.fb-tabview-tabs > li:active a:hover,
+.fb-tabview-tabs > li:active a:active {color: #fff; text-shadow: 0 1px 0 #444;}
+
+.fb-tabview-tabs > li:target:active,
+.fb-tabview-tabs > li.active:active {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .2)));
+	background-image: -moz-linear-gradient(0% 0% -90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2));
+
+    
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15),
+				inset 0 0 5px rgba(0, 0, 0, .15);
+	-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15),
+				inset 0 0 5px rgba(0, 0, 0, .15);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15),
+				inset 0 0 5px rgba(0, 0, 0, .15);
+}
+
+.fb-tabview-content {
+	list-style: none;
+	margin-top: -1em;
+	padding: 0;
+
+
+	background-color: rgba(0, 0, 0, .02);
+	/*width: 500px;*/
+
+	margin: -.875em auto 1em auto;
+    
+	border-width: 1px;
+	border-style: solid;
+	border-color: #aaa;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .05),
+			inset 0 1px 2px rgba(0, 0, 0, .1);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .05),
+			inset 0 1px 2px rgba(0, 0, 0, .1);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .05),
+			inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.fb-tabview-content > li {
+	display: block;
+	padding: 30px;
+}

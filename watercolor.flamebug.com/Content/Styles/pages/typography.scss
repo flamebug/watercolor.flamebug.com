@@ -1,0 +1,22 @@
+﻿/*
+typography.scss
+*/
+
+@import "../library/grid.scss";
+@import "../library/helpers.scss";
+
+//
+// Introduction
+//
+
+#typography-introduction {
+	background-color: #f5dd7e;
+}
+
+//
+// Articles
+//
+
+#text > article {
+	@include max-column();
+}
