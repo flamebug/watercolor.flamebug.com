@@ -62,6 +62,61 @@ input[type="radio"]:focus {
 }
 
 //
+// Hints
+//
+
+.hint {
+	display: none;
+	position: relative;
+	background: #ccc;
+	color: #fff;
+	padding: .25em .5em;
+	margin-left: .5em;
+}
+
+.hint:before {
+    content: "\25C0"; /* left point triangle in escaped unicode */
+    color: #ccc;
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+
+input:focus + .hint {
+	display: inline;
+}
+
+input:focus:invalid + .hint {
+	display: inline;
+	background: red;
+}
+
+input:focus:invalid + .hint:before {
+	color: red;
+}
+
+//input:focus:valid + .hint {
+//	display: inline;
+//	background: green;
+//}
+
+//input:focus:valid + .hint:before {
+//	color: green;
+//}
+
+//
+// Validation
+//
+
+input:invalid {
+	border-color: red;
+}
+
+//input:required:valid {
+//	border-color: green;
+//}
+
+//
 // Block Form
 //
 
@@ -81,7 +136,7 @@ div.field.block {
 	& select,
 	& textarea {
 		float: none;
-		display: block;
+		//display: block;
 		margin-top: 0;
 	}
 
@@ -113,7 +168,7 @@ div.field.inline {
 	& select,
 	& textarea {
 		float: none;
-		display: block;
+		//display: block;
 		margin-top: 0;
 	}
 }

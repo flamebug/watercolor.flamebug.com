@@ -491,4 +491,66 @@
 
 	</article>
 
+	<article id="form-validation">
+
+		<h3>Form Validation</h3>
+		<p>Invalid form fields are highlighted in re</p>
+
+		<div class="example">
+
+			<form>
+
+				<div class="field">
+					<label>First Name:</label>
+					<input type="text" placeholder="First Name" required />
+					<span class="hint">First name is required</span>
+				</div>
+
+				<div class="field">
+					<label>Last Name:</label>
+					<input type="text" placeholder="Last Name" required />
+					<span class="hint">Last name is required</span>
+				</div>
+
+				<div class="field">
+					<label>Email Address:</label>
+					<input type="email" placeholder="user@domain.com" required />
+					<span class="hint">Email address is required and must be in the format: user@@domain.com</span>
+				</div>
+
+				<div class="field">
+					<label>Email Address:</label>
+					<input type="email" placeholder="user@domain.com" />
+					<span class="hint">Email address must be in the format: user@@domain.com</span>
+				</div>
+												
+				<div class="buttons">
+					<input type="submit" class="fb-button primary" /> <input type="reset" class="fb-button" value="Reset" />
+				</div>
+
+			</form>
+
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;form&gt;
+   &lt;div class="field"&gt;
+      &lt;label&gt;First Name&lt;/label&gt;
+      &lt;input type="text" placeholder="First Name" required /&gt;
+   &lt;/div&gt;
+   &lt;div class="field"&gt;
+      &lt;label&gt;Last Name&lt;/label&gt;
+      &lt;input type="text" placeholder="Last Name" required /&gt;
+   &lt;/div&gt;
+   &lt;div class="field"&gt;
+      &lt;label&gt;Email Address&lt;/label&gt;
+      &lt;input type="email" placeholder="user@domain.com" required /&gt;
+   &lt;/div&gt;
+   &lt;div class="buttons"&gt;
+      &lt;input type="submit" class="fb-button primary" /&gt;
+      &lt;input type="reset" class="fb-button" value="Reset" /&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+	</article>
+
 </section>

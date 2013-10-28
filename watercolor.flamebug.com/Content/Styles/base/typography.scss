@@ -6,8 +6,12 @@ base/typography.scss
 @import "../library/grid.scss";
 @import "../library/helpers.scss";
 
+html {
+	font-size: $html-font-size * 1%;
+}
+
 body {
-	font-size: $body-font-size * 1%;
+	font-size: $body-font-size * 1em;
 	line-height: $line-height;
 	text-rendering: $body-text-rendering;
 	-webkit-font-smoothing: $body-font-smoothing;
@@ -24,7 +28,6 @@ h5,
 h6 {
 	font-family: $header-font-family;
 	font-weight: $header-font-weight;
-	margin-bottom: 0;
 	color: $header-font-color;
 }
 
@@ -32,41 +35,47 @@ h1 {
 	font-size: $h1-font-size * 1em;
 	@include font-line-height($h1-font-size);
 	@include font-margin-top($h1-font-size);
+	@include font-margin-bottom($h1-font-size);
 }
 
 h2 {
 	font-size: $h2-font-size * 1em;
 	@include font-line-height($h2-font-size);
 	@include font-margin-top($h2-font-size);
+	@include font-margin-bottom($h2-font-size);
 }
 
 h3 {
 	font-size: $h3-font-size * 1em;
 	@include font-line-height($h3-font-size);
 	@include font-margin-top($h3-font-size);
+	@include font-margin-bottom($h3-font-size);
 }
 
 h4 {
 	font-size: $h4-font-size * 1em;
 	@include font-line-height($h4-font-size);
 	@include font-margin-top($h4-font-size);
+	@include font-margin-bottom($h4-font-size);
 }
 
 h5 {
 	font-size: $h5-font-size * 1em;
 	@include font-line-height($h5-font-size);
 	@include font-margin-top($h5-font-size);
+	@include font-margin-bottom($h5-font-size);
 }
 
 h6 {
 	font-size: $h6-font-size * 1em;
 	@include font-line-height($h6-font-size);
 	@include font-margin-top($h6-font-size);
+	@include font-margin-bottom($h6-font-size);
 }
 
 p {
-	margin-top: $line-height * 1em;
-	margin-bottom: $line-height * 1em;
+	@include font-margin-top($body-font-size);
+	@include font-margin-bottom($body-font-size);
 }
 
 //
@@ -88,8 +97,8 @@ a {
 //
 
 ul, ol, dl {
-	margin-top: $line-height * 1em;
-	margin-bottom: $line-height * 1em;
+	@include font-margin-top($body-font-size);
+	@include font-margin-bottom($body-font-size);
 }
 
 dt {
@@ -97,7 +106,7 @@ dt {
 }
 
 dd + dt {
-	margin-top: $line-height * 1em;
+	@include font-margin-top($body-font-size);
 }
 
 //
@@ -105,7 +114,8 @@ dd + dt {
 //
 
 blockquote {
-	margin-top: $line-height * 1em;
+	@include font-margin-top($body-font-size);
+	@include font-margin-bottom($body-font-size);
 	padding-left: 1em;
 	border-left: .25em solid $border-color;
 }
@@ -139,8 +149,8 @@ tt {
 
 pre {
 	white-space: pre;
-	@include font-margin-top($mono-font-size, 1 / (($body-font-size / 100) * 16) * 1em);
-	@include font-margin-bottom($mono-font-size, 1 / (($body-font-size / 100) * 16) * 1em);
+	@include font-margin-top($mono-font-size, 1 / ($body-font-size * 16) * 1em);
+	@include font-margin-bottom($mono-font-size, 1 / ($body-font-size * 16) * 1em);
 	@include font-line-height($mono-font-size);
 
 	position: relative;
