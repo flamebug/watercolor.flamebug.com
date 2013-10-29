@@ -2,6 +2,8 @@
 site.scss
 */
 
+@import "./library/helpers.scss";
+
 //
 // Code Highlighting
 //
@@ -33,36 +35,36 @@ article h3:before {
 	padding: $line-height * 1.5em 0;
 	background-color: #f56;
 	color: #fff;
-}
 
-.introduction > header {
-	text-align: center;
-}
+	& > header {
+		text-align: center;
+	}
 
-.introduction h2 {
-	font-size: 4em;
-	font-weight: 100;
-	letter-spacing: -4px;
-	color: #fff;
-}
+	h2 {
+		font-size: 4em;
+		font-weight: 100;
+		letter-spacing: -4px;
+		color: #fff;
+	}
 
-.introduction code {
-	background-color: rgba(255,255,255,0.1);
-	border-color: rgba(255,255,255,0.3);
-	color: #fff;
-}
+	code {
+		background-color: rgba(255,255,255,0.1);
+		border-color: rgba(255,255,255,0.3);
+		color: #fff;
+	}
 
-.introduction p {
-	margin: 1.625em 0;
-}
+	p {
+		margin: 1.625em 0;
+	}
 
-.introduction a {
-	color: #fff;
-	text-decoration: underline;
-}
+	a {
+		color: #fff;
+		text-decoration: underline;
+	}
 
-.introduction a:hover {
-	color: rgba(255,255,255,0.5);
+	a:hover {
+		color: rgba(255,255,255,0.5);
+	}
 }
 
 /* 6 column layout */
@@ -83,27 +85,27 @@ article h3:before {
     padding: 0 1em;
 	border: 1px solid $border-color;
 	margin-top: $line-height * 1em;
-	overflow: hidden;
-}
+	@include clear-children();
 
-.example:after {
-	content: "Example";
-	position: absolute;
-	text-transform: uppercase;
-	top: -1px;
-	left: -1px;
-	padding: .25em .5em;
-	border: 1px solid $border-color;
-	background: rgba(0,0,0,0.01);
-	color: #cacaca;
-	font-size: 12px;
-	font-family: Helvetica, Arial, sans-serif;
-}
+	&:before {
+		content: "Example";
+		position: absolute;
+		text-transform: uppercase;
+		top: -1px;
+		left: -1px;
+		padding: .25em .5em;
+		border: 1px solid $border-color;
+		background: rgba(0,0,0,0.01);
+		color: #cacaca;
+		font-size: 12px;
+		font-family: Helvetica, Arial, sans-serif;
+	}
 
-.example + pre {
-	position: relative;
-	margin-top: 0;
-	border-top: 0;
+	& + pre {
+		position: relative;
+		margin-top: 0;
+		border-top: 0;
+	}
 }
 
 .example-50-percent {
@@ -127,5 +129,4 @@ article h3:before {
 	background-image: -o-linear-gradient(top, #f8f8f8 .05em, transparent .05em);
 	background-image: -ms-linear-gradient(top, #f8f8f8 .05em, transparent .05em);
 	background-image: linear-gradient(to bottom, #f8f8f8 .05em, transparent .05em);
-
 }

@@ -61,60 +61,9 @@ input[type="radio"]:focus {
 	color: $input-focus-color;
 }
 
-//
-// Hints
-//
-
-.hint {
-	display: none;
-	position: relative;
-	background: #ccc;
-	color: #fff;
-	padding: .25em .5em;
-	margin-left: .5em;
-}
-
-.hint:before {
-    content: "\25C0"; /* left point triangle in escaped unicode */
-    color: #ccc;
-    position: absolute;
-    top: 0;
-    left: -10px;
-}
-
-input:focus + .hint {
-	display: inline;
-}
-
-input:focus:invalid + .hint {
-	display: inline;
-	background: red;
-}
-
-input:focus:invalid + .hint:before {
-	color: red;
-}
-
-//input:focus:valid + .hint {
-//	display: inline;
-//	background: green;
-//}
-
-//input:focus:valid + .hint:before {
-//	color: green;
-//}
-
-//
-// Validation
-//
-
 input:invalid {
 	border-color: red;
 }
-
-//input:required:valid {
-//	border-color: green;
-//}
 
 //
 // Block Form
@@ -124,6 +73,7 @@ input:invalid {
 .block .field,
 div.field.block {
 	display: block;
+	position: relative;
 
 	& label {
 		float: none;
@@ -218,4 +168,97 @@ form .buttons {
 
 .field.clear {
 	clear: both;
+}
+
+//
+// Hints
+//
+
+.hint {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	display: inline-block;
+	visibility: hidden;
+	opacity: 0;
+	background: #444;
+	color: #fff;
+	padding: .25em .5em;
+	margin-left: .75em;
+	-webkit-transition: all .25s linear;
+	-moz-transition: all .25s linear;
+	-ms-transition: all .25s linear;
+	-o-transition: all .25s linear;
+	transition: all .25s linear;
+	z-index: 1;
+}
+
+.hint:before {
+    content: "\25C0"; /* left point triangle in escaped unicode */
+    color: #444;
+    position: absolute;
+    top: 0;
+    left: -.625em;
+	opacity: 0;
+	-webkit-transition: all .25s linear;
+	-moz-transition: all .25s linear;
+	-ms-transition: all .25s linear;
+	-o-transition: all .25s linear;
+	transition: all .25s linear;
+}
+
+input:invalid + .hint {
+	background: red;
+}
+
+input:invalid + .hint:before {
+	color: red;
+}
+
+input:focus + .hint {
+	visibility: visible;
+	opacity: 1;
+}
+
+input:focus + .hint:before {
+	opacity: 1;
+}
+
+input:indeterminate {
+	background-color: yellow;
+}
+
+//
+// Inline Hint
+//
+
+.inline { 
+
+	.hint {
+		position: absolute;
+		top: 100%;
+		margin: 0;
+		margin-top: .75em;
+		width: 100%;
+		text-align: center;
+	}
+
+	.hint:before {
+		content: "\25b2"; /* up point triangle in escaped unicode */
+		top: -1.2em;
+		left: 47%;
+	}
+
+}
+
+//
+// Aligned Hint
+//
+
+.align { 
+
+	.hint {
+		margin-top: 1.625em;
+	}
+
 }
