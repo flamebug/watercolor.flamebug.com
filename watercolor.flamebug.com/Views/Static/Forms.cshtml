@@ -24,11 +24,107 @@
 
 <section id="forms" class="container">
 
+	<article id="basic-form">
+
+		<h3>Basic Form</h3>
+		<p>To get started here is an example of a basic Watercolor form. This shows the basic structure of markup needed to work with the classes provided for styling the various form types. This example shows that each form field is enclosed in a <code>div</code> element with <code>field</code> class, and the form buttons are also enclosed in a <code>div</code> element with <code>buttons</code> class. Additionally, each field can have an optional <code>span</code> with class <code>hint</code> that pops up a field hint when the field is focused, and turns red if the field is invalid.</p>
+
+		<div class="example">
+
+			<form>
+
+				<div class="field">
+					<label>First Name:</label>
+					<input type="text" placeholder="First Name" value="" />
+					<span class="hint">Please enter your first name</span>
+				</div>
+
+				<div class="field">
+					<label>Last Name:</label>
+					<input type="text" placeholder="Last Name" value="" />
+					<span class="hint">Please enter your last name</span>
+				</div>
+				
+				<div class="field">
+					<label>Email:</label>
+					<input type="text" placeholder="user@domain.com" required />
+					<span class="hint">Email address is required and must be in the format: user@@domain.com</span>
+				</div>
+
+				<div class="buttons">
+					<input type="submit" class="fb-button primary" /> <input type="reset" class="fb-button" value="Reset" />
+				</div>
+
+			</form>
+
+			<form class="align">
+
+				<fieldset class="inline"><legend>Test</legend>
+
+					<div class="field block">
+						<label>First Name:</label>
+						<input type="text" placeholder="First Name" value="" />
+						<span class="hint">Please enter your first name</span>
+					</div>
+
+				</fieldset>
+
+				<fieldset class="align"><legend>Test</legend>
+
+					<div class="field inline">
+						<label>Last Name:</label>
+						<input type="text" placeholder="Last Name" value="" />
+						<span class="hint">Please enter your last name</span>
+					</div>
+
+				</fieldset>
+
+				<fieldset class="block"><legend>Test</legend>		
+
+					<div class="field align">
+						<label>Email:</label>
+						<input type="text" placeholder="user@domain.com" required />
+						<span class="hint">Email address is required and must be in the format: user@@domain.com</span>
+					</div>
+
+				</fieldset>
+
+				<div class="buttons">
+					<input type="submit" class="fb-button primary" /> <input type="reset" class="fb-button" value="Reset" />
+				</div>
+
+			</form>
+
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;form&gt;
+   &lt;div class="field"&gt;
+      &lt;label&gt;First Name&lt;/label&gt;
+      &lt;input type="text" placeholder="First Name" value="" /&gt;
+      &lt;span class="hint"&gt;Please enter your first name&lt;/span&gt;
+   &lt;/div&gt;
+   &lt;div class="field"&gt;
+      &lt;label&gt;Last Name&lt;/label&gt;
+      &lt;input type="text" placeholder="Last Name" value="" /&gt;
+      &lt;span class="hint"&gt;Please enter your last name&lt;/span&gt;
+   &lt;/div&gt;
+   &lt;div class="field"&gt;
+      &lt;label&gt;Email&lt;/label&gt;
+      &lt;input type="text" placeholder="user@domain.com" required /&gt;
+      &lt;span class="hint"&gt;Email address is required and must be in the format: user@@domain.com&lt;/span&gt;
+   &lt;/div&gt;
+   &lt;div class="buttons"&gt;
+      &lt;input type="submit" class="fb-button primary" /&gt;
+      &lt;input type="reset" class="fb-button" value="Reset" /&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+	</article>
+
 	<article id="form-types">
 
 		<h3>Form Types</h3>
-		<p>There are three basic form types: <code>block</code>, <code>inline</code>, or <code>align</code>. Each type of form you wish to use can be implemented, with the same markup, by simply adding the corresponding class to the <code>form</code> element, <code>fieldset</code> element, or at a field level on the field's containing <code>div</code> element.</p>
-		<p>To get started here is an example of a basic Watercolor form. This shows the basic structure of markup needed to work with the classes provided for styling the various form types. This example shows that each form field is enclosed in a <code>div</code> element with <code>field</code> class, and the form buttons are also enclosed in a <code>div</code> element with <code>buttons</code> class.</p>
+		<p>There are three basic form types: <code>block</code>, <code>inline</code>, or <code>align</code>. Each type of form you wish to use can be implemented, with the same markup, by simply adding the corresponding class to the <code>form</code> element, <code>fieldset</code> element, or at a field level on the field's containing <code>div</code> element. The default form type if no class is specified is <code>block</code>.</p>
 
 		<table class="bordered">
 
@@ -58,317 +154,28 @@
 
 	</article>
 
-	<article id="block-form">
+	<article id="form-type-example">
 
-		<h3>Block Form</h3>
-		<p>Block form type is the default form type in Watercolor if no form type class is provided. This format displays each field on a separate line, with labels above the field.  The buttons are displayed below the form on a separate line. To use this form type add class <code>block</code> to the <code>form</code>, <code>fieldset</code>, or directly on a field container.</p>
-
-		<div class="example">
-
-			<form>
-
-				<div class="field">
-					<label>First Name:</label>
-					<input type="text" placeholder="First Name" value="" />
-				</div>
-
-				<div class="field">
-					<label>Last Name:</label>
-					<input type="text" placeholder="Last Name" value="" />
-				</div>
-				
-				<div class="field">
-					<label>Email:</label>
-					<input type="text" placeholder="user@domain.com" required />
-					<span class="hint">Email address is required and must be in the format: user@@domain.com</span>
-				</div>
-
-				<div class="buttons">
-					<input type="submit" class="fb-button primary" /> <input type="reset" class="fb-button" value="Reset" />
-				</div>
-
-			</form>
-
-		</div>
-
-		<pre class="example-code"><code class="language-markup">&lt;form class="block"&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;First Name&lt;/label&gt;
-      &lt;input type="text" placeholder="First Name" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;Last Name&lt;/label&gt;
-      &lt;input type="text" placeholder="Last Name" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;Email&lt;/label&gt;
-      &lt;input type="text" placeholder="user@domain.com" required /&gt;
-      &lt;span class="hint"&gt;Email address is required and must be in the format: user@@domain.com&lt;/span&gt;
-   &lt;/div&gt;
-   &lt;div class="buttons"&gt;
-      &lt;input type="submit" class="fb-button primary" /&gt;
-      &lt;input type="reset" class="fb-button" value="Reset" /&gt;
-   &lt;/div&gt;
-&lt;/form&gt;</code></pre>
-
-	</article>
-
-	<article id="inline-form">
-
-		<h3>Inline Form</h3>
-		<p>Inline format displays each field side-by-side on one line, with labels above the field.  To move a field to the next line add a <code>clear</code> class to the field container &mdash; more on this <a href="#clear-form">below</a>. The buttons are displayed below the form on a separate line. To use this form type add class <code>inline</code> to the <code>form</code>, <code>fieldset</code>, or directly on a field container.</p>
-
-		<div class="example">
-
-			<form class="inline">
-
-				<div class="field">
-					<label>First Name:</label>
-					<input type="text" placeholder="First Name" value="" />
-				</div>
-
-				<div class="field">
-					<label>Last Name:</label>
-					<input type="text" placeholder="Last Name" value="" />
-				</div>
-
-				<div class="buttons">
-					<input type="submit" class="fb-button primary" /> <input type="reset" class="fb-button" value="Reset" />
-				</div>
-
-			</form>
-
-		</div>
-
-		<pre class="example-code"><code class="language-markup">&lt;form class="inline"&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;First Name&lt;/label&gt;
-      &lt;input type="text" placeholder="First Name" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;Last Name&lt;/label&gt;
-      &lt;input type="text" placeholder="Last Name" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="buttons"&gt;
-      &lt;input type="submit" class="fb-button primary" /&gt;
-      &lt;input type="reset" class="fb-button" value="Reset" /&gt;
-   &lt;/div&gt;
-&lt;/form&gt;</code></pre>
-
-	</article>
-
-	<article id="aligned-form">
-
-		<h3>Aligned Form</h3>
-		<p>Aligned format displays each field on its own line, with labels aligned to the left of the field input. The buttons are displayed below the form on a separate line. To use this form type add class <code>align</code> to the <code>form</code>, <code>fieldset</code>, or directly on a field container.</p>
-
-		<div class="example">
-
-			<form class="align">
-
-				<div class="field">
-					<label>First Name:</label>
-					<input type="text" placeholder="First Name" value="" />
-				</div>
-
-				<div class="field">
-					<label>Last Name:</label>
-					<input type="text" placeholder="Last Name" value="" />
-				</div>
-							
-				<div class="buttons">
-					<input type="submit" class="fb-button primary" /> <input type="reset" class="fb-button" value="Reset" />
-				</div>
-
-			</form>
-
-		</div>
-
-		<pre class="example-code"><code class="language-markup">&lt;form class="align"&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;First Name&lt;/label&gt;
-      &lt;input type="text" placeholder="First Name" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;Last Name&lt;/label&gt;
-      &lt;input type="text" placeholder="Last Name" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="buttons"&gt;
-      &lt;input type="submit" class="fb-button primary" /&gt;
-      &lt;input type="reset" class="fb-button" value="Reset" /&gt;
-   &lt;/div&gt;
-&lt;/form&gt;</code></pre>
-
-	</article>
-
-	<article id="hybrid-form">
-
-		<h3>Field Format Overrides</h3>
-		<p>Add class <code>block</code>, <code>inline</code>, or <code>align</code> to any field to override the specified parent form style. In this example we have an aligned form in which the "Email" and "Email (confirm)" fields are overridden with <code>inline</code> format, while the "Comments" field is overridden with <code>block</code> format. In most cases you wouldn't need to do something like this, but if you need to this is how it is done.</p>
-
-		<div class="example">
-
-			<form class="align">
-
-				<div class="field">
-					<label>First Name:</label>
-					<input type="text" placeholder="First Name" value="" />
-				</div>
-
-				<div class="field">
-					<label>Last Name:</label>
-					<input type="text" placeholder="Last Name" value="" />
-				</div>
-
-				<div class="field">
-					<label>Gender:</label>
-					<select>
-						<option>Male</option>
-						<option>Female</option>
-					</select>
-				</div>
-
-				<div class="field inline">
-					<label>Email:</label>
-					<input type="email" placeholder="user@domain.com" value="" />
-				</div>
-
-				<div class="field inline">
-					<label>Email (confirm):</label>
-					<input type="email" placeholder="user@domain.com" value="" />
-				</div>
-
-				<div class="field block">
-					<label>Comments:</label>
-					<textarea placeholder="Comments"></textarea>
-				</div>
-				
-				<div class="buttons">
-					<input type="submit" class="fb-button primary" /> <input type="reset" class="fb-button" value="Reset" />
-				</div>
-
-			</form>
-
-		</div>
-
-		<pre class="example-code"><code class="language-markup">&lt;form class="align"&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;First Name&lt;/label&gt;
-      &lt;input type="text" placeholder="First Name" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;Last Name&lt;/label&gt;
-      &lt;input type="text" placeholder="Last Name" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;Gender&lt;/label&gt;
-      &lt;select&gt;
-         &lt;option&gt;Male&lt;/option&gt;
-         &lt;option&gt;Female&lt;/option&gt;
-      &lt;/select&gt;
-   &lt;/div&gt;
-   &lt;div class="field inline"&gt;
-      &lt;label&gt;Email&lt;/label&gt;
-      &lt;input type="email" placeholder="user@domain.com" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="field inline"&gt;
-      &lt;label&gt;Email (confirm)&lt;/label&gt;
-      &lt;input type="email" placeholder="user@domain.com" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="field block"&gt;
-      &lt;label&gt;Comments&lt;/label&gt;
-      &lt;textarea placeholder="Comments"&gt;&lt;/textarea&gt;
-   &lt;/div&gt;
-   &lt;div class="buttons"&gt;
-      &lt;input type="submit" class="fb-button primary" /&gt;
-      &lt;input type="reset" class="fb-button" value="Reset" /&gt;
-   &lt;/div&gt;
-&lt;/form&gt;</code></pre>
-
-	</article>
-
-	<article id="clear-form">
-
-		<h3>Line Control</h3>
-		<p>When dealing with <code>inline</code> type forms you may need to force certain fields to the next line. To do this add class <code>clear</code> to any field that you would like to shift to the next line.</p>
-
-		<div class="example">
-
-			<form class="inline">
-
-				<div class="field">
-					<label>First Name:</label>
-					<input type="text" placeholder="First Name" value="" />
-				</div>
-
-				<div class="field">
-					<label>Last Name:</label>
-					<input type="text" placeholder="Last Name" value="" />
-				</div>
-
-				<div class="field clear">
-					<label>Email:</label>
-					<input type="email" placeholder="user@domain.com" value="" />
-				</div>
-				
-				<div class="field">
-					<label>Email (confirm):</label>
-					<input type="email" placeholder="user@domain.com" value="" />
-				</div>
-				
-				<div class="buttons">
-					<input type="submit" class="fb-button primary" /> <input type="reset" class="fb-button" value="Reset" />
-				</div>
-
-			</form>
-
-		</div>
-
-		<pre class="example-code"><code class="language-markup">&lt;form class="inline"&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;First Name&lt;/label&gt;
-      &lt;input type="text" placeholder="First Name" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;Last Name&lt;/label&gt;
-      &lt;input type="text" placeholder="Last Name" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="field clear"&gt;
-      &lt;label&gt;Email&lt;/label&gt;
-      &lt;input type="email" placeholder="user@domain.com" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;Email (confirm)&lt;/label&gt;
-      &lt;input type="email" placeholder="user@domain.com" value="" /&gt;
-   &lt;/div&gt;
-   &lt;div class="buttons"&gt;
-      &lt;input type="submit" class="fb-button primary" /&gt;
-      &lt;input type="reset" class="fb-button" value="Reset" /&gt;
-   &lt;/div&gt;
-&lt;/form&gt;</code></pre>
-
-	</article>
-
-	<article id="fieldsets">
-
-		<h3>Fieldsets</h3>
-		<p>When using fieldsets you have two options: you can place the class <code>block</code>, <code>inline</code>, or <code>align</code> on the form, or you can place the class on each fieldset and omit it from the form. If you place a class on both it could cause unintended behaviors.  Overriding at a field level works just fine in any case.</p>
+		<h3>Form Types Example</h3>
+		<p>Here is an example showing how to use each form type &ndash; it's pretty simple. Just add class  class <code>block</code>, <code>inline</code>, or <code>align</code> on the form element, or on the fieldset element. You can also override on a field level by adding a form type directly on a field container. Also note, on inline field types, you can add class <code>clear</code> to push a field to the next line.</p>
 
 		<div class="example">
 
 			<form>
 
 				<fieldset class="align">
-					<legend>Basic Information</legend>
+					<legend>Aligned Example</legend>
 
 					<div class="field">
 						<label>First Name:</label>
-						<input type="text" placeholder="First Name" value="" />
+						<input type="text" placeholder="First Name" />
+						<span class="hint">Please enter your first name</span>
 					</div>
 
 					<div class="field">
 						<label>Last Name:</label>
-						<input type="text" placeholder="Last Name" value="" />
+						<input type="text" placeholder="Last Name" />
+						<span class="hint">Please enter your last name</span>
 					</div>
 					
 					<div class="field">
@@ -377,31 +184,41 @@
 							<option value="1">Male</option>
 							<option value="2">Female</option>
 						</select>
+						<span class="hint">Please select your gender</span>
 					</div>
 
 				</fieldset>
 
 				<fieldset class="inline">
-					<legend>Contact Information</legend>
+					<legend>Inline Example</legend>
 
 					<div class="field">
 						<label>Email:</label>
-						<input type="email" placeholder="user@domain.com" value="" />
+						<input type="email" placeholder="user@domain.com" required />
+						<span class="hint">Email is required and must be in the format: user@@domain.com</span>
 					</div>
 				
 					<div class="field">
 						<label>Email (confirm):</label>
-						<input type="email" placeholder="user@domain.com" value="" />
+						<input type="email" placeholder="user@domain.com" required />
+						<span class="hint">Email (confirm) is required and must be in the format: user@@domain.com</span>
+					</div>
+
+					<div class="field clear">
+						<label>Your Website:</label>
+						<input type="url" placeholder="http://domain.com" />
+						<span class="hint">Please enter your website address in the format: http://domain.com</span>
 					</div>
 
 				</fieldset>
 
 				<fieldset class="block">
-					<legend>Additional Information</legend>
+					<legend>Block Example</legend>
 
 					<div class="field">
 						<label>Comments:</label>
-						<textarea>Comments</textarea>
+						<textarea placeholder="Comments"></textarea>
+						<span class="hint">Please enter any comments that you may have</span>
 					</div>
 
 				</fieldset>
@@ -416,14 +233,16 @@
 
 		<pre class="example-code"><code class="language-markup">&lt;form&gt;
    &lt;fieldset class="align"&gt;
-      &lt;legend&gt;Basic Information&lt;/legend&gt;
+      &lt;legend&gt;Aligned Example&lt;/legend&gt;
       &lt;div class="field"&gt;
          &lt;label&gt;First Name&lt;/label&gt;
-         &lt;input type="text" placeholder="First Name" value="" /&gt;
+         &lt;input type="text" placeholder="First Name" /&gt;
+         &lt;span class="hint"&gt;Please enter your first name&lt;/span&gt;
       &lt;/div&gt;
       &lt;div class="field"&gt;
          &lt;label&gt;Last Name&lt;/label&gt;
-         &lt;input type="text" placeholder="Last Name" value="" /&gt;
+         &lt;input type="text" placeholder="Last Name" /&gt;
+         &lt;span class="hint"&gt;Please enter your last name&lt;/span&gt;
       &lt;/div&gt;
       &lt;div class="field"&gt;
          &lt;label&gt;Gender&lt;/label&gt;
@@ -431,152 +250,35 @@
             &lt;option&gt;Male&lt;/option&gt;
             &lt;option&gt;Female&lt;/option&gt;
          &lt;/select&gt;
+         &lt;span class="hint"&gt;Please select your gender&lt;/span&gt;
       &lt;/div&gt;
    &lt;/fieldset&gt;
    &lt;fieldset class="inline"&gt;
-      &lt;legend&gt;Contact Information&lt;/legend&gt;
+      &lt;legend&gt;Inline Example&lt;/legend&gt;
       &lt;div class="field"&gt;
          &lt;label&gt;Email&lt;/label&gt;
-         &lt;input type="email" placeholder="user@domain.com" value="" /&gt;
+         &lt;input type="email" placeholder="user@domain.com" required /&gt;
+         &lt;span class="hint"&gt;Email is required and must be in the format: user@@domain.com&lt;/span&gt;
       &lt;/div&gt;
       &lt;div class="field"&gt;
          &lt;label&gt;Email (confirm)&lt;/label&gt;
-         &lt;input type="email" placeholder="user@domain.com" value="" /&gt;
+         &lt;input type="email" placeholder="user@domain.com" required /&gt;
+         &lt;span class="hint"&gt;Email (confirm) is required and must be in the format: user@@domain.com&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="field clear"&gt;
+         &lt;label&gt;Your Website&lt;/label&gt;
+         &lt;input type="url" placeholder="http://domain.com" /&gt;
+         &lt;span class="hint"&gt;Please enter your website address in the format: http://domain.com&lt;/span&gt;
       &lt;/div&gt;
    &lt;/fieldset&gt;
    &lt;fieldset class="block"&gt;
-      &lt;legend&gt;Additional Information&lt;/legend&gt;
+      &lt;legend&gt;Block Example&lt;/legend&gt;
       &lt;div class="field"&gt;
          &lt;label&gt;Comments&lt;/label&gt;
          &lt;textarea placeholder="Comments"&gt;&lt;/textarea&gt;
+         &lt;span class="hint"&gt;Please enter any comments you may have&lt;/span&gt;
       &lt;/div&gt;
    &lt;/fieldset&gt;
-   &lt;div class="buttons"&gt;
-      &lt;input type="submit" class="fb-button primary" /&gt;
-      &lt;input type="reset" class="fb-button" value="Reset" /&gt;
-   &lt;/div&gt;
-&lt;/form&gt;</code></pre>
-
-	</article>
-
-	<article id="form-validation">
-
-		<h3>Form Validation</h3>
-		<p>Invalid form fields are highlighted in re</p>
-
-		<div class="example">
-
-			<form class="block">
-
-				<div class="field">
-					<label>First Name:</label>
-					<input type="text" placeholder="First Name" required />
-					<span class="hint">First name is required</span>
-				</div>
-
-				<div class="field">
-					<label>Last Name:</label>
-					<input type="text" placeholder="Last Name" required />
-					<span class="hint">Last name is required</span>
-				</div>
-
-				<div class="field">
-					<label>Email Address:</label>
-					<input type="email" placeholder="user@domain.com" required />
-					<span class="hint">Email address is required and must be in the format: user@@domain.com</span>
-				</div>
-
-				<div class="field">
-					<label>Email Address:</label>
-					<input type="email" placeholder="user@domain.com" />
-					<span class="hint">Email address must be in the format: user@@domain.com</span>
-				</div>
-												
-				<div class="buttons">
-					<input type="submit" class="fb-button primary" /> <input type="reset" class="fb-button" value="Reset" />
-				</div>
-
-			</form>
-
-			<form class="align">
-
-				<div class="field">
-					<label>First Name:</label>
-					<input type="text" placeholder="First Name" required />
-					<span class="hint">First name is required</span>
-				</div>
-
-				<div class="field">
-					<label>Last Name:</label>
-					<input type="text" placeholder="Last Name" required />
-					<span class="hint">Last name is required</span>
-				</div>
-
-				<div class="field">
-					<label>Email Address:</label>
-					<input type="email" placeholder="user@domain.com" required />
-					<span class="hint">Email address is required and must be in the format: user@@domain.com</span>
-				</div>
-
-				<div class="field">
-					<label>Email Address:</label>
-					<input type="email" placeholder="user@domain.com" />
-					<span class="hint">Email address must be in the format: user@@domain.com</span>
-				</div>
-												
-				<div class="buttons">
-					<input type="submit" class="fb-button primary" /> <input type="reset" class="fb-button" value="Reset" />
-				</div>
-
-			</form>
-
-			<form class="inline">
-
-				<div class="field">
-					<label>First Name:</label>
-					<input type="text" placeholder="First Name" required />
-					<span class="hint">First name is required</span>
-				</div>
-
-				<div class="field">
-					<label>Last Name:</label>
-					<input type="text" placeholder="Last Name" required />
-					<span class="hint">Last name is required</span>
-				</div>
-
-				<div class="field">
-					<label>Email Address:</label>
-					<input type="email" placeholder="user@domain.com" required />
-					<span class="hint">Email address is required and must be in the format: user@@domain.com</span>
-				</div>
-
-				<div class="field">
-					<label>Email Address:</label>
-					<input type="email" placeholder="user@domain.com" />
-					<span class="hint">Email address must be in the format: user@@domain.com</span>
-				</div>
-												
-				<div class="buttons">
-					<input type="submit" class="fb-button primary" /> <input type="reset" class="fb-button" value="Reset" />
-				</div>
-
-			</form>
-
-		</div>
-
-		<pre class="example-code"><code class="language-markup">&lt;form&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;First Name&lt;/label&gt;
-      &lt;input type="text" placeholder="First Name" required /&gt;
-   &lt;/div&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;Last Name&lt;/label&gt;
-      &lt;input type="text" placeholder="Last Name" required /&gt;
-   &lt;/div&gt;
-   &lt;div class="field"&gt;
-      &lt;label&gt;Email Address&lt;/label&gt;
-      &lt;input type="email" placeholder="user@domain.com" required /&gt;
-   &lt;/div&gt;
    &lt;div class="buttons"&gt;
       &lt;input type="submit" class="fb-button primary" /&gt;
       &lt;input type="reset" class="fb-button" value="Reset" /&gt;

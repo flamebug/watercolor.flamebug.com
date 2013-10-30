@@ -34,6 +34,7 @@ select,
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="url"],
 input[type="color"],
 input[type="file"] {
 	font: inherit;
@@ -53,7 +54,8 @@ textarea:focus,
 select:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
-input[type="email"],
+input[type="email"]:focus,
+input[type="url"]:focus,
 input[type="color"]:focus,
 input[type="file"]:focus,
 input[type="checkbox"]:focus,
@@ -69,11 +71,22 @@ input:invalid {
 // Block Form
 //
 
+//							Specificity
+//.field					0	0	1	0		default field style with no class
+//.block .field				0	0	2	0		high level (form or fieldset)
+//fieldset.block .field		0	0	2	1		fieldset override
+//form div.field.block		0	0	2	2		field override
+
 .field,
 .block .field,
-div.field.block {
+fieldset.block .field,
+form div.field.block {
+	float: none;
 	display: block;
+	margin: 0;
 	position: relative;
+
+	background-color: green;
 
 	& label {
 		float: none;
@@ -86,7 +99,6 @@ div.field.block {
 	& select,
 	& textarea {
 		float: none;
-		//display: block;
 		margin-top: 0;
 	}
 
@@ -103,13 +115,16 @@ div.field.block {
 //
 
 .inline .field,
-div.field.inline {
+fieldset.inline .field,
+form div.field.inline {
 	float: left;
+	display: block;
 	margin-right: $line-height * 1em;
+
+	background-color: yellow;
 
 	& label {
 		float: none;
-		display: block;
 		width: auto;
 		margin-top: $line-height * 1em;
 	}
@@ -118,7 +133,6 @@ div.field.inline {
 	& select,
 	& textarea {
 		float: none;
-		//display: block;
 		margin-top: 0;
 	}
 }
@@ -128,8 +142,13 @@ div.field.inline {
 //
 
 .align .field,
-div.field.align {
+fieldset.align .field,
+form div.field.align {
+	float: none;
 	display: block;
+	margin: 0;
+
+	background-color: red;
 
 	& label {
 		float: left;
@@ -175,8 +194,7 @@ form .buttons {
 //
 
 .hint {
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	@include box-sizing(border-box);
 	position: absolute;
 	display: inline-block;
 	visibility: hidden;
@@ -194,12 +212,20 @@ form .buttons {
 }
 
 .hint:before {
-    content: "\25C0"; /* left point triangle in escaped unicode */
-    color: #444;
+    content: " ";
     position: absolute;
-    top: 0;
-    left: -.625em;
+    top: 50%;
+    left: -14px;
 	opacity: 0;
+	width: 0;
+	height: 0;
+	margin-top: -7px;
+	border-width: 7px;
+	border-style: solid;
+	border-color: #444;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
 	-webkit-transition: all .25s linear;
 	-moz-transition: all .25s linear;
 	-ms-transition: all .25s linear;
@@ -212,20 +238,20 @@ input:invalid + .hint {
 }
 
 input:invalid + .hint:before {
-	color: red;
+	border-right-color: red;
 }
 
-input:focus + .hint {
+input:focus + .hint,
+select:focus + .hint,
+textarea:focus + .hint {
 	visibility: visible;
 	opacity: 1;
 }
 
-input:focus + .hint:before {
+input:focus + .hint:before,
+select:focus + .hint:before,
+textarea:focus + .hint:before {
 	opacity: 1;
-}
-
-input:indeterminate {
-	background-color: yellow;
 }
 
 //
@@ -244,9 +270,19 @@ input:indeterminate {
 	}
 
 	.hint:before {
-		content: "\25b2"; /* up point triangle in escaped unicode */
-		top: -1.2em;
-		left: 47%;
+	    top: -14px;
+		left: 50%;
+		margin-top: 0;
+		margin-left: -7px;
+		border-top-color: transparent;
+		border-left-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: #444;
+	}
+
+	input:invalid + .hint:before {
+		border-right-color: transparent;
+		border-bottom-color: red;
 	}
 
 }

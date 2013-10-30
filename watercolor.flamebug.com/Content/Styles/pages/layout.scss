@@ -92,28 +92,28 @@ article:not(#example) {
 }
 
 /* 6 column layout */
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 30rem) {
 	.col1,.col2,.col3,.col19,.col20,.col21 {
 		background: #0db2ac !important;
 	}
 }
 
 /* 8 column layout */
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 40rem) {
 	.col1,.col2,.col3,.col4,.col19,.col20,.col21,.col22 {
 		background: #0db2ac !important;
 	}
 }
 
 /* 12 column layout */
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 60rem) {
 	.col1,.col2,.col3,.col4,.col5,.col6,.col19,.col20,.col21,.col22,.col23,.col24 {
 		background: #0db2ac !important;
 	}
 }
 
 /* 16 column layout */
-@media screen and (min-width: 80em) {
+@media screen and (min-width: 80rem) {
 	.col1,.col2,.col3,.col4,.col5,.col6,.col7,.col8,.col19,.col20,.col21,.col22,.col23,.col24,.col25,.col26 {
 		background: #0db2ac !important;
 	}
@@ -160,21 +160,21 @@ article:not(#example) {
 }
 
 /* 6 column layout */
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 30rem) {
 	#example-demo figure img {
 		@include column(3);
 	}
 }
 
 /* 8 column layout */
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 40rem) {
 	#example-demo figure img {
 		@include column(2);
 	}
 }
 
 /* 12 column layout */
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 60rem) {
 	#example-demo .main {
 		@include column(8);
 	}
@@ -189,7 +189,7 @@ article:not(#example) {
 }
 
 /* 16 column layout */
-@media screen and (min-width: 80em) {
+@media screen and (min-width: 80rem) {
 	#example-demo .main {
 		@include column(10);
 	}

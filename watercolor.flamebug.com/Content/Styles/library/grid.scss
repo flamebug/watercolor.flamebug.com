@@ -40,7 +40,7 @@
 //
 
 @mixin font-line-height($fontsize) {
-	$body-font-size-px: ($body-font-size) * 16;
+	$body-font-size-px: ($body-font-size) * ($base-font-size / 100) * 16;
 	line-height: (ceiling(($body-font-size-px * $fontsize) / ($line-height * $body-font-size-px)) * ($line-height * $body-font-size-px)) / ($fontsize * $body-font-size-px);
 }
 
