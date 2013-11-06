@@ -56,6 +56,44 @@
 
 	</article>
 
+	<article id="mixins">
+
+		<h3>Typographic Mixins</h3>
+
+		<p>The typographic @@mixins are defined in <a href="/overview#grid">grid.scss</a> and provide @@mixins for setting font sizes, margins, and line heights to fit the typographic baseline grid.</p>
+
+		<table class="bordered">
+
+			<thead>
+				<tr>
+					<th style="width: 25%">mixin</th>
+					<th>description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td><code>font-size($size)</code></td>
+					<td>This is a composite @@mixin that will set the font size, line height, and top/bottom margins all at once, provided the desired font size.</td>
+				</tr>
+					<tr>
+					<td><code>font-line-height($size)</code></td>
+					<td>This @@mixin will set the line height, given the font size, allowing it to fit the typographic baseline grid.</td>
+				</tr>
+				<tr>
+					<td><code>font-margin-top($size, $adjust)</code></td>
+					<td>This @@mixin will set the top margin, given the font size and an optional adjustment value, allowing it to fit the typographic baseline grid. The adjustment value is where you would input an adjustment amount, so the margin is reduced, for example, by the border size on the element. The <code>$adjust</code> parameter defaults to a value of <code>0</code> if it is not provided.</td>
+				</tr>
+				<tr>
+					<td><code>font-margin-bottom($size, $adjust)</code></td>
+					<td>This @@mixin will set the bottom margin, given the font size and an optional adjustment value, allowing it to fit the typographic baseline grid. The adjustment value is where you would input an adjustment amount, so the margin is reduced, for example, by the border size on the element. The <code>$adjust</code> parameter defaults to a value of <code>0</code> if it is not provided.</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</article>
+
 	<article id="text-body">
 
 		<h3>Body Text</h3>
@@ -106,7 +144,7 @@
 	<article id="text-headers">
 		
 		<h3>Headings</h3>
-		<p>Headings are set in progressively larger sizes. Each is given one line of margin above the header, while the header is centered within as few lines as possible. Note that the default <code>h1</code> header takes three lines with one line of top margin, while the <code>h2</code> can fit within two lines with one line of top margin. The calculations to make this work are handled within Watercolor automatically, all you need to do is set the header font size and it will be set up to look great.</p>
+		<p>Headings are set in progressively larger sizes. Each is given one line of margin above the header, while the header is centered within as few lines as possible. Note that the default <code>h1</code> header takes three lines with one line of margin on top of bottom, while the <code>h2</code> can fit within two lines with one line of margin on top of bottom. The calculations to make this work are handled within Watercolor automatically, all you need to do is set the header font size and it will be set up to look great.</p>
 
 		<table class="bordered">
 

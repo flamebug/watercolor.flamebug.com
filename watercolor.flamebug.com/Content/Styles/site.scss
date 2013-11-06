@@ -32,7 +32,8 @@ article h3:before {
 //
 
 .introduction {
-	padding: $line-height * 1.5em 0;
+	padding: $line-height * 2em 0;
+	padding-bottom: $line-height * 1em;
 	background-color: #f56;
 	color: #fff;
 
@@ -41,7 +42,7 @@ article h3:before {
 	}
 
 	h2 {
-		font-size: 4em;
+		@include font-size(4);
 		font-weight: 100;
 		letter-spacing: -4px;
 		color: #fff;
@@ -51,10 +52,6 @@ article h3:before {
 		background-color: rgba(255,255,255,0.1);
 		border-color: rgba(255,255,255,0.3);
 		color: #fff;
-	}
-
-	p {
-		margin: 1.625em 0;
 	}
 
 	a {
@@ -71,7 +68,7 @@ article h3:before {
 @media screen and (min-width: 30rem) {
 
 	.introduction h2 {
-		font-size: 5em;
+		@include font-size(5);
 	}
 
 }
@@ -82,7 +79,7 @@ article h3:before {
 
 .example {
 	position: relative;
-    padding: 0 1em;
+    padding: $line-height * 2em $line-height * 1em $line-height * 1em;
 	border: 1px solid $border-color;
 	margin-top: $line-height * 1em;
 	@include clear-children();

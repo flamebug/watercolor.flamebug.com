@@ -44,7 +44,7 @@
 			base.attachEvents();
 
 			base.$hidden.hide();
-			base.$input.focus().val("");
+			//base.$input.focus().val("");
 
 		};
 

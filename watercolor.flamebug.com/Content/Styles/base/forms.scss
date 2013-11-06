@@ -63,112 +63,9 @@ input[type="radio"]:focus {
 	color: $input-focus-color;
 }
 
-input:invalid {
+input:invalid,
+textarea:invalid {
 	border-color: red;
-}
-
-//
-// Block Form
-//
-
-//							Specificity
-//.field					0	0	1	0		default field style with no class
-//.block .field				0	0	2	0		high level (form or fieldset)
-//fieldset.block .field		0	0	2	1		fieldset override
-//form div.field.block		0	0	2	2		field override
-
-.field,
-.block .field,
-fieldset.block .field,
-form div.field.block {
-	float: none;
-	display: block;
-	margin: 0;
-	position: relative;
-
-	background-color: green;
-
-	& label {
-		float: none;
-		display: block;
-		width: auto;
-		margin-top: $line-height * 1em;
-	}
-
-	& input,
-	& select,
-	& textarea {
-		float: none;
-		margin-top: 0;
-	}
-
-	&:before,
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-}
-
-//
-// Inline Form
-//
-
-.inline .field,
-fieldset.inline .field,
-form div.field.inline {
-	float: left;
-	display: block;
-	margin-right: $line-height * 1em;
-
-	background-color: yellow;
-
-	& label {
-		float: none;
-		width: auto;
-		margin-top: $line-height * 1em;
-	}
-
-	& input,
-	& select,
-	& textarea {
-		float: none;
-		margin-top: 0;
-	}
-}
-
-//
-// Aligned Form
-//
-
-.align .field,
-fieldset.align .field,
-form div.field.align {
-	float: none;
-	display: block;
-	margin: 0;
-
-	background-color: red;
-
-	& label {
-		float: left;
-		width: 25%;
-		margin-top: $line-height * 1em;
-	}
-
-	& input,
-	& select,
-	& textarea {
-		float: left;
-		margin-top: $line-height * 1em;
-	}
-
-	&:before,
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
 }
 
 //
@@ -203,6 +100,7 @@ form .buttons {
 	color: #fff;
 	padding: .25em .5em;
 	margin-left: .75em;
+	text-align: center;
 	-webkit-transition: all .25s linear;
 	-moz-transition: all .25s linear;
 	-ms-transition: all .25s linear;
@@ -214,7 +112,7 @@ form .buttons {
 .hint:before {
     content: " ";
     position: absolute;
-    top: 50%;
+    top: 1em;
     left: -14px;
 	opacity: 0;
 	width: 0;
@@ -255,18 +153,96 @@ textarea:focus + .hint:before {
 }
 
 //
-// Inline Hint
+// Block Form
 //
 
-.inline { 
+//							Specificity
+//.field					0	0	1	0		default field style with no class
+//.block .field				0	0	2	0		high level (form or fieldset)
+//fieldset.block .field		0	0	2	1		fieldset override
+//form div.field.block		0	0	2	2		field override
+
+.field,
+.block .field,
+fieldset.block .field,
+form div.field.block {
+	float: none;
+	display: block;
+	margin: 0;
+	position: relative;
+
+	& label {
+		float: none;
+		display: block;
+		width: auto;
+		margin-top: $line-height * 1em;
+	}
+
+	& input,
+	& select,
+	& textarea {
+		float: none;
+		margin-top: 0;
+	}
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 
 	.hint {
-		position: absolute;
+		top: auto;
+		margin: 0;
+		margin-left: .75em;
+	}
+
+	.hint:before {
+	    top: 1em;
+		left: -14px;
+		margin-top: -7px;
+		margin-left: 0;		
+		border-top-color: transparent;
+		border-left-color: transparent;
+		border-right-color: #444;
+		border-bottom-color: transparent;
+	}
+
+	input:invalid + .hint:before {
+		border-right-color: red;
+		border-bottom-color: transparent;
+	}
+}
+
+//
+// Inline Form
+//
+
+.inline .field,
+fieldset.inline .field,
+form div.field.inline {
+	float: left;
+	display: block;
+	margin-right: $line-height * 1em;
+
+	& label {
+		float: none;
+		width: auto;
+		margin-top: $line-height * 1em;
+	}
+
+	& input,
+	& select,
+	& textarea {
+		float: none;
+		margin-top: 0;
+	}
+
+	.hint {
 		top: 100%;
 		margin: 0;
 		margin-top: .75em;
-		width: 100%;
-		text-align: center;
 	}
 
 	.hint:before {
@@ -284,17 +260,59 @@ textarea:focus + .hint:before {
 		border-right-color: transparent;
 		border-bottom-color: red;
 	}
-
 }
 
 //
-// Aligned Hint
+// Aligned Form
 //
 
-.align { 
+.align .field,
+fieldset.align .field,
+form div.field.align {
+	float: none;
+	display: block;
+	margin: 0;
+
+	& label {
+		float: left;
+		width: 25%;
+		margin-top: $line-height * 1em;
+	}
+
+	& input,
+	& select,
+	& textarea {
+		float: left;
+		margin-top: $line-height * 1em;
+	}
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 
 	.hint {
+		top: auto;
+		margin: 0;
+		margin-left: .75em;
 		margin-top: 1.625em;
 	}
 
+	.hint:before {
+	    top: 1em;
+		left: -14px;
+		margin-top: -7px;
+		margin-left: 0;		
+		border-top-color: transparent;
+		border-left-color: transparent;
+		border-right-color: #444;
+		border-bottom-color: transparent;
+	}
+
+	input:invalid + .hint:before {
+		border-right-color: red;
+		border-bottom-color: transparent;
+	}
 }

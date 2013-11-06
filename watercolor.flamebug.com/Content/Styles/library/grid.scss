@@ -39,15 +39,22 @@
 // Typographic Grid Mixins
 //
 
-@mixin font-line-height($fontsize) {
-	$body-font-size-px: ($body-font-size) * ($base-font-size / 100) * 16;
-	line-height: (ceiling(($body-font-size-px * $fontsize) / ($line-height * $body-font-size-px)) * ($line-height * $body-font-size-px)) / ($fontsize * $body-font-size-px);
+@mixin font-size($size) {
+	font-size: $size * 1em;
+	@include font-line-height($size);
+	@include font-margin-top($size);
+	@include font-margin-bottom($size);
 }
 
-@mixin font-margin-top($fontsize, $adjust: 0) {
-	margin-top: ($line-height / $fontsize - $adjust) * 1em;
+@mixin font-line-height($size) {
+	$body-font-size-px: (($body-font-size) * ($base-font-size / 100) * 16);
+	line-height: (ceiling(($body-font-size-px * $size) / ($line-height * $body-font-size-px)) * ($line-height * $body-font-size-px)) / ($size * $body-font-size-px);
 }
 
-@mixin font-margin-bottom($fontsize, $adjust: 0) {
-	margin-bottom: ($line-height / $fontsize - $adjust) * 1em;
+@mixin font-margin-top($size, $adjust: 0) {
+	margin-top: ($line-height / $size - $adjust) * 1em;
+}
+
+@mixin font-margin-bottom($size, $adjust: 0) {
+	margin-bottom: ($line-height / $size - $adjust) * 1em;
 }
