@@ -25,7 +25,7 @@
 		<h2>Controls</h2>
 
 		<p>
-			Watercolor provides controls and classes that allow your web application to have a consistent feel for your users.
+			Watercolor provides controls and classes that allow your web application to have a consistent feel for your users. Many controls can have additional class modifiers added to change behavior, such as: <code>primary</code> for default actions, <code>positive</code> for non-destructive actions such as add or save, <code>warning</code> for actions that require user attention, and <code>negative</code> for destructive or error conditions.
 		</p>
 
 	</header>
@@ -33,153 +33,6 @@
 </section>
 
 <section id="controls" class="container">
-
-	<article id="tag">
-
-		<h3>Tag</h3>
-		<p>Use tags to display additional information such as item counts or category names. Add class <code>fb-tag</code> to any span.</p>
-
-			<div class="example">
-
-				<span class="fb-tag">1 item</span>
-				<span class="fb-tag primary">2 new</span>
-				<span class="fb-tag positive">3 complete</span>
-				<span class="fb-tag warning">4 warnings</span>
-				<span class="fb-tag negative">5 errors</span>
-
-			</div>
-
-			<pre class="example-code"><code class="language-markup">&lt;span class="fb-tag"&gt;1 item&lt;/span&gt;
-&lt;span class="fb-tag primary"&gt;2 new&lt;/span&gt;
-&lt;span class="fb-tag positive"&gt;3 complete&lt;/span&gt;
-&lt;span class="fb-tag warning"&gt;4 warnings&lt;/span&gt;
-&lt;span class="fb-tag negative"&gt;5 errors&lt;/span&gt;</code></pre>
-
-	</article>
-
-	<article id="label">
-
-		<h3>Label</h3>
-		<p>Use labels to display required items, warnings, or other important information. Add class <code>fb-label</code> to any span.</p>
-
-		<div class="example">
-
-			<span class="fb-label">info</span>
-			<span class="fb-label primary">required</span>
-			<span class="fb-label positive">success</span>
-			<span class="fb-label warning">warning</span>
-			<span class="fb-label negative">error</span>
-
-		</div>
-
-		<pre class="example-code"><code class="language-markup">&lt;span class="fb-label"&gt;info&lt;/span&gt;
-&lt;span class="fb-label primary"&gt;required&lt;/span&gt;
-&lt;span class="fb-label positive"&gt;success&lt;/span&gt;
-&lt;span class="fb-label warning"&gt;warning&lt;/span&gt;
-&lt;span class="fb-label negative"&gt;error&lt;/span&gt;</code></pre>
-
-	</article>
-
-	<article id="badge">
-
-		<h3>Badge</h3>
-		<p>Use badges for notification counts. Add class <code>fb-badge</code> to any span inside a container with <code>position: relative</code>.</p>
-
-		<div class="example">
-
-			<span style="position: relative; display: inline-block; width: 96px; margin-right: 1em">
-				<span class="fb-badge">1</span>
-				<img src="/Content/Images/appicon.png" style="width: 100%; display: block;"/>
-			</span>
-
-			<span style="position: relative; display: inline-block; width: 96px;">
-				<span class="fb-badge bottom-right">2</span>
-				<img src="/Content/Images/appicon.png" style="width: 100%; display: block;"/>
-			</span>
-
-		</div>
-
-		<pre class="example-code"><code class="language-markup">&lt;span style="position: relative"&gt;
-   &lt;span class="fb-badge"&gt;1&lt;/span&gt;
-   &lt;img src="appicon.png"/&gt;
-&lt;/span&gt;
-&lt;span style="position: relative"&gt;
-   &lt;span class="fb-badge bottom-right"&gt;2&lt;/span&gt;
-   &lt;img src="appicon.png"/&gt;
-&lt;/span&gt;</code></pre>
-
-		<table class="bordered">
-
-			<thead>
-				<tr>
-					<th style="width: 150px;">example</th>
-					<th>location</th>
-				</tr>
-			</thead>
-
-			<tbody>
-				<tr>
-					<td rowspan="9">
-						<span style="position: relative; display: block; margin: 1em auto; width: 96px">
-							<span class="fb-badge">1</span>
-							<span class="fb-badge bottom-right">2</span>
-							<span class="fb-badge bottom-left">3</span>
-							<span class="fb-badge top-left">4</span>
-							<img src="/Content/Images/appicon.png" style="width: 100%; display: block;"/>
-						</span>
-					</td>
-					<td>1 - top right. Add class <code>top-right</code>. (default)</td>
-				</tr>
-				<tr>
-					<td>2 - bottom right. Add class <code>bottom-right</code>.</td>
-				</tr>
-				<tr>
-					<td>3 - bottom left. Add class <code>bottom-left</code>.</td>
-				</tr>
-				<tr>
-					<td>4 -top left. Add class <code>top-left</code>.</td>
-				</tr>
-			</tbody>
-
-		</table>
-
-	</article>
-
-	<article id="app-icon">
-
-		<h3>App Icon</h3>
-		<p>App Icons are immediately familiar to users as a source of navigation.  Use for navigation and content grouping.  Add a <code>span</code> around the image to add a badge to the app icon.</p>
-
-		<div class="example">
-
-			<a href="#app-icon" class="fb-app-icon" style="width: 96px">
-				<img src="/Content/Images/appicon.png"/>
-				<label>Blog Settings</label>
-			</a>
-
-			<a href="#app-icon" class="fb-app-icon" style="width: 96px; margin-right: 1.5em;">
-				<span>
-					<span class="fb-badge">50</span>
-					<img src="/Content/Images/appicon.png"/>
-				</span>
-				<label>Blog Posts</label>
-			</a>
-
-		</div>
-
-		<pre class="example-code"><code class="language-markup">&lt;a href="#app-icon" class="fb-app-icon" style="width: 96px"&gt;
-   &lt;img src="appicon.png" /&gt;
-   &lt;label&gt;Blog Settings&lt;/label&gt;
-&lt;/a&gt;
-&lt;a href="#app-icon" class="fb-app-icon" style="width: 96px"&gt;
-   &lt;span&gt;
-       &lt;span class="fb-badge"&gt;50&lt;/span&gt;
-       &lt;img src="appicon.png" /&gt;
-   &lt;/span&gt;
-   &lt;label&gt;Blog Posts&lt;/label&gt;
-&lt;/a&gt;</code></pre>
-
-	</article>
 
 	<article id="button">
 
@@ -273,6 +126,153 @@
 			</tbody>
 
 		</table>
+
+	</article>
+
+	<article id="tag">
+
+		<h3>Tag</h3>
+		<p>Use tags to display additional information such as item counts or categories. Add class <code>fb-tag</code> to any span. Add class <code>primary</code>, <code>positive</code>, <code>warning</code>, or <code>negative</code> to any tag to modify the emphasis.</p>
+
+			<div class="example">
+
+				<span class="fb-tag">1 item</span>
+				<span class="fb-tag primary">2 new</span>
+				<span class="fb-tag positive">3 complete</span>
+				<span class="fb-tag warning">4 warnings</span>
+				<span class="fb-tag negative">5 errors</span>
+
+			</div>
+
+			<pre class="example-code"><code class="language-markup">&lt;span class="fb-tag"&gt;1 item&lt;/span&gt;
+&lt;span class="fb-tag primary"&gt;2 new&lt;/span&gt;
+&lt;span class="fb-tag positive"&gt;3 complete&lt;/span&gt;
+&lt;span class="fb-tag warning"&gt;4 warnings&lt;/span&gt;
+&lt;span class="fb-tag negative"&gt;5 errors&lt;/span&gt;</code></pre>
+
+	</article>
+
+	<article id="label">
+
+		<h3>Label</h3>
+		<p>Use labels to display requirements, or other important information. Add class <code>fb-label</code> to any span. Add class <code>primary</code>, <code>positive</code>, <code>warning</code>, or <code>negative</code> to any label to modify the emphasis.</p>
+
+		<div class="example">
+
+			<span class="fb-label">info</span>
+			<span class="fb-label primary">required</span>
+			<span class="fb-label positive">success</span>
+			<span class="fb-label warning">warning</span>
+			<span class="fb-label negative">error</span>
+
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;span class="fb-label"&gt;info&lt;/span&gt;
+&lt;span class="fb-label primary"&gt;required&lt;/span&gt;
+&lt;span class="fb-label positive"&gt;success&lt;/span&gt;
+&lt;span class="fb-label warning"&gt;warning&lt;/span&gt;
+&lt;span class="fb-label negative"&gt;error&lt;/span&gt;</code></pre>
+
+	</article>
+
+	<article id="badge">
+
+		<h3>Badge</h3>
+		<p>Use badges for notification counts. Add class <code>fb-badge</code> to any container element with style <code>position: relative</code>.</p>
+
+		<div class="example">
+
+			<span class="badge-image">
+				<span class="fb-badge">1</span>
+				<img src="/Content/Images/appicon.png" />
+			</span>
+
+			<span class="badge-image">
+				<span class="fb-badge bottom-right">2</span>
+				<img src="/Content/Images/appicon.png" />
+			</span>
+
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;span style="position: relative"&gt;
+   &lt;span class="fb-badge"&gt;1&lt;/span&gt;
+   &lt;img src="appicon.png"/&gt;
+&lt;/span&gt;
+&lt;span style="position: relative"&gt;
+   &lt;span class="fb-badge bottom-right"&gt;2&lt;/span&gt;
+   &lt;img src="appicon.png"/&gt;
+&lt;/span&gt;</code></pre>
+
+		<table class="bordered">
+
+			<thead>
+				<tr>
+					<th style="width: 150px;">example</th>
+					<th>location</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td rowspan="9">
+						<span style="position: relative; display: block; margin: 1em auto; width: 96px">
+							<span class="fb-badge">1</span>
+							<span class="fb-badge bottom-right">2</span>
+							<span class="fb-badge bottom-left">3</span>
+							<span class="fb-badge top-left">4</span>
+							<img src="/Content/Images/appicon.png" style="width: 100%; display: block;"/>
+						</span>
+					</td>
+					<td>1 - top right. Add class <code>top-right</code>. (default)</td>
+				</tr>
+				<tr>
+					<td>2 - bottom right. Add class <code>bottom-right</code>.</td>
+				</tr>
+				<tr>
+					<td>3 - bottom left. Add class <code>bottom-left</code>.</td>
+				</tr>
+				<tr>
+					<td>4 -top left. Add class <code>top-left</code>.</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</article>
+
+	<article id="app-icon">
+
+		<h3>App Icon</h3>
+		<p>App Icons are immediately familiar to users as a source of navigation.  Use for navigation and content grouping.  Add a <code>span</code> around the image to add a badge to the app icon.</p>
+
+		<div class="example">
+
+			<a href="#app-icon" class="fb-app-icon" style="width: 104px">
+				<img src="/Content/Images/appicon.png"/>
+				<label>Blog Settings</label>
+			</a>
+
+			<a href="#app-icon" class="fb-app-icon" style="width: 104px; margin-right: 1.5em;">
+				<span>
+					<span class="fb-badge">50</span>
+					<img src="/Content/Images/appicon.png"/>
+				</span>
+				<label>Blog Posts</label>
+			</a>
+
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;a href="#app-icon" class="fb-app-icon" style="width: 104px"&gt;
+   &lt;img src="appicon.png" /&gt;
+   &lt;label&gt;Blog Settings&lt;/label&gt;
+&lt;/a&gt;
+&lt;a href="#app-icon" class="fb-app-icon" style="width: 104px"&gt;
+   &lt;span&gt;
+       &lt;span class="fb-badge"&gt;50&lt;/span&gt;
+       &lt;img src="appicon.png" /&gt;
+   &lt;/span&gt;
+   &lt;label&gt;Blog Posts&lt;/label&gt;
+&lt;/a&gt;</code></pre>
 
 	</article>
 

@@ -21,3 +21,23 @@ article {
 	@include max-column();
 	margin-bottom: $line-height * 1em;
 }
+
+//
+// Badge Image
+//
+
+.badge-image {
+	position: relative;
+	float: left;
+	width: 104px;
+	height: 104px;
+}
+
+.badge-image + .badge-image {
+	margin-left: $line-height * 1em;
+}
+
+.badge-image img {
+	display: block;
+	width: 100%;
+}

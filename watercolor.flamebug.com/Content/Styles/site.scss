@@ -84,6 +84,15 @@ article h3:before {
 	margin-top: $line-height * 1em;
 	@include clear-children();
 
+	background-position: center -1px;
+	background-size: 100% 26px;
+
+	background-image: -moz-linear-gradient(top, #f8f8f8 .05em, transparent .05em); 
+	background-image: -webkit-linear-gradient(top, #f8f8f8 .05em, transparent .05em);
+	background-image: -o-linear-gradient(top, #f8f8f8 .05em, transparent .05em);
+	background-image: -ms-linear-gradient(top, #f8f8f8 .05em, transparent .05em);
+	background-image: linear-gradient(to bottom, #f8f8f8 .05em, transparent .05em);
+
 	&:before {
 		content: "Example";
 		position: absolute;
@@ -118,12 +127,4 @@ article h3:before {
 .text-grid {
 	padding-top: 0;
 	padding-bottom: 0;
-	background-position: center -1px;
-	background-size: 100% 26px;
-
-	background-image: -moz-linear-gradient(top, #f8f8f8 .05em, transparent .05em); 
-	background-image: -webkit-linear-gradient(top, #f8f8f8 .05em, transparent .05em);
-	background-image: -o-linear-gradient(top, #f8f8f8 .05em, transparent .05em);
-	background-image: -ms-linear-gradient(top, #f8f8f8 .05em, transparent .05em);
-	background-image: linear-gradient(to bottom, #f8f8f8 .05em, transparent .05em);
 }
