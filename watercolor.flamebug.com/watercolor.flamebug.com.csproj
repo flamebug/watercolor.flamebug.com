@@ -124,7 +124,6 @@
     <Content Include="Content\Scripts\Controls\flamebug.background.js" />
     <Content Include="Content\Scripts\Controls\flamebug.disclosure.js" />
     <Content Include="Content\Scripts\Controls\flamebug.dropdown.js" />
-    <Content Include="Content\Scripts\Controls\flamebug.range.js" />
     <Content Include="Content\Scripts\Controls\flamebug.slider.js" />
     <Content Include="Content\Scripts\Controls\flamebug.slider.v1.js" />
     <Content Include="Content\Scripts\Controls\flamebug.tabview.js" />
@@ -298,7 +297,6 @@
     <Content Include="Content\Styles\controls\fb-menu.scss" />
     <Content Include="Content\Styles\controls\fb-notification.scss" />
     <Content Include="Content\Styles\controls\fb-radiobuttonlist.scss" />
-    <Content Include="Content\Styles\controls\fb-range.scss" />
     <Content Include="Content\Styles\controls\fb-selectionpanel.scss" />
     <Content Include="Content\Styles\controls\fb-slider.scss" />
     <Content Include="Content\Styles\controls\fb-tabview.scss" />

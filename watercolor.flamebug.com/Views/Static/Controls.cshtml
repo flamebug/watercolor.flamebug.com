@@ -315,21 +315,6 @@
 
 	</article>
 
-	<article id="range">
-
-		<h3>Range</h3>
-		<p>A range is a standard range <code>input</code>, but with a tooltip and label displaying the current value. Add class <code>.fb-range</code> to any range <code>input</code> to display the values.</p>
-			
-		<div class="example">
-
-	   		<input class="fb-range" type="range" min="0" max="80" step="1" value="50" data-unit="px">
-
-		</div>
-
-		<pre class="example-code"><code class="language-markup">&lt;input class="fb-range" type="range" min="0" max="80" step="1" value="50" data-unit="px"&gt;</code></pre>
-
-	</article>
-
 	<article id="disclosure">
 
 		<h3>Disclosure</h3>
@@ -337,15 +322,29 @@
 
 		<div class="example">
 
-	   		<a class="fb-disclosure" href="#disclosed">Show Lorem Ipsum</a>
-			<div id="disclosed" style="display: none">
+	   		<a class="fb-disclosure" href="#disclosed-1">Disclose Stuff</a>
+			<div id="disclosed-1" style="display: none">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis nunc sit amet urna porta iaculis pretium augue semper. Vestibulum rutrum, leo ut lobortis laoreet, sapien ante rhoncus purus, eu mattis urna massa id turpis. Quisque ut leo metus, fermentum fermentum justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 			</div>
 
 		</div>
 
-		<pre class="example-code"><code class="language-markup">&lt;a class="fb-disclosure" href="#disclosed"&gt;Show Lorem Ipsum&lt;/a&gt;
-&lt;div id="disclosed" style="display: none"&gt;...&lt;/div&gt;</code></pre>
+		<pre class="example-code"><code class="language-markup">&lt;a class="fb-disclosure" href="#disclosed"&gt;Disclose Stuff&lt;/a&gt;
+&lt;div id="disclosed" style="display: none"&gt;&hellip;&lt;/div&gt;</code></pre>
+
+		<p>You can also use a button for the disclosure link, depending on your use case.</p>
+
+		<div class="example">
+
+	   		<a class="fb-disclosure fb-button" href="#disclosed-2">Disclose Stuff</a>
+			<div id="disclosed-2" style="display: none">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis nunc sit amet urna porta iaculis pretium augue semper. Vestibulum rutrum, leo ut lobortis laoreet, sapien ante rhoncus purus, eu mattis urna massa id turpis. Quisque ut leo metus, fermentum fermentum justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+			</div>
+
+		</div>
+
+		<pre class="example-code"><code class="language-markup">&lt;a class="fb-disclosure" href="#disclosed"&gt;Disclose Stuff&lt;/a&gt;
+&lt;div id="disclosed" style="display: none"&gt;&hellip;&lt;/div&gt;</code></pre>
 
 	</article>
 
