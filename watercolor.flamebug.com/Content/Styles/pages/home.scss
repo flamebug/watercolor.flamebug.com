@@ -32,10 +32,15 @@ section > header h1 {
 //
 
 #intro {
-	background-color: #fc8d4d;
-	background-image: -webkit-linear-gradient(340deg, #0db2ac 0%, #0db2ac 20%, #f5dd7e 20%, #f5dd7e 40%, #fc8d4d 40%, #fc8d4d 60%, #fc694d 60%, #fc694d 80%, #faba32 80%, #faba32 100%);
-	background-image: linear-gradient(110deg, #0db2ac 0%, #0db2ac 20%, #f5dd7e 20%, #f5dd7e 40%, #fc8d4d 40%, #fc8d4d 60%, #fc694d 60%, #fc694d 80%, #faba32 80%, #faba32 100%);
-
+	//background-color: #fc8d4d;
+	//background-image: -webkit-linear-gradient(340deg, #0db2ac 0%, #0db2ac 20%, #f5dd7e 20%, #f5dd7e 40%, #fc8d4d 40%, #fc8d4d 60%, #fc694d 60%, #fc694d 80%, #faba32 80%, #faba32 100%);
+	//background-image: linear-gradient(110deg, #0db2ac 0%, #0db2ac 20%, #f5dd7e 20%, #f5dd7e 40%, #fc8d4d 40%, #fc8d4d 60%, #fc694d 60%, #fc694d 80%, #faba32 80%, #faba32 100%);
+	background-image:
+		radial-gradient(circle 12rem at 85% 15%, rgba(250, 186, 50, 0.7) 0%, rgba(250, 186, 50, 0.7) 99%, transparent 99%),	
+		radial-gradient(circle 12rem at 15% 15%, rgba(252, 141, 77, 0.7) 0%, rgba(252, 141, 77, 0.7) 99%, transparent 99%),
+		radial-gradient(circle 12rem at 85% 85%, rgba(245, 221, 126, 0.7) 0%, rgba(245, 221, 126, 0.7) 99%, transparent 99%),
+		radial-gradient(circle 12rem at 15% 85%, rgba(13, 178, 172, 0.7) 0%, rgba(13, 178, 172, 0.7) 99%, transparent 99%),
+		radial-gradient(circle 12rem at 50% 50%, rgba(252, 105, 77, 0.7) 0%, rgba(252, 105, 77, 0.7) 99%, transparent 99%);
 	padding: $line-height * 3em 0 $line-height * 1.5em 0;
 	border-bottom: 0;
 }
@@ -68,10 +73,51 @@ section > header h1 {
 	color: inherit;
 }
 
+//
+// Technology
+//
+
+#technology {
+	@include clear-children();
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		float: left;
+		width: 33.3%;
+		padding: 0 $line-height * .5em;
+		text-align: center;
+
+		img {
+			width: 192px;
+			opacity: 0.4;
+		}
+
+		h3 {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		p {
+			margin-top: 0;
+		}
+	}
+}
+
 /* 6 column layout */
 @media screen and (min-width: 30rem) {
 
 	#intro {
+		background-image:
+			radial-gradient(circle 18rem at 85% 10%, rgba(250, 186, 50, 0.7) 0%, rgba(250, 186, 50, 0.7) 99%, transparent 99%),	
+			radial-gradient(circle 18rem at 15% 10%, rgba(252, 141, 77, 0.7) 0%, rgba(252, 141, 77, 0.7) 99%, transparent 99%),
+			radial-gradient(circle 18rem at 85% 90%, rgba(245, 221, 126, 0.7) 0%, rgba(245, 221, 126, 0.7) 99%, transparent 99%),
+			radial-gradient(circle 18rem at 15% 90%, rgba(13, 178, 172, 0.7) 0%, rgba(13, 178, 172, 0.7) 99%, transparent 99%),
+			radial-gradient(circle 18rem at 50% 50%, rgba(252, 105, 77, 0.7) 0%, rgba(252, 105, 77, 0.7) 99%, transparent 99%);
 		padding: $line-height * 4em 0 $line-height * 2em 0;
 	}
 
@@ -82,5 +128,31 @@ section > header h1 {
 
 	#intro img {
 		width: 280px;
+	}
+}
+
+/* 8 column layout */
+@media screen and (min-width: 40rem) {
+
+	#intro {
+		background-image:
+			radial-gradient(circle 22rem at 85% 0%, rgba(250, 186, 50, 0.7) 0%, rgba(250, 186, 50, 0.7) 99%, transparent 99%),	
+			radial-gradient(circle 22rem at 15% 0%, rgba(252, 141, 77, 0.7) 0%, rgba(252, 141, 77, 0.7) 99%, transparent 99%),
+			radial-gradient(circle 22rem at 85% 100%, rgba(245, 221, 126, 0.7) 0%, rgba(245, 221, 126, 0.7) 99%, transparent 99%),
+			radial-gradient(circle 22rem at 15% 100%, rgba(13, 178, 172, 0.7) 0%, rgba(13, 178, 172, 0.7) 99%, transparent 99%),
+			radial-gradient(circle 22rem at 50% 50%, rgba(252, 105, 77, 0.7) 0%, rgba(252, 105, 77, 0.7) 99%, transparent 99%);
+	}
+}
+
+/* 12 column layout */
+@media screen and (min-width: 60rem) {
+
+	#intro {
+		background-image:
+			radial-gradient(circle 30rem at 85% -10%, rgba(250, 186, 50, 0.7) 0%, rgba(250, 186, 50, 0.7) 99%, transparent 99%),	
+			radial-gradient(circle 30rem at 15% -10%, rgba(252, 141, 77, 0.7) 0%, rgba(252, 141, 77, 0.7) 99%, transparent 99%),
+			radial-gradient(circle 30rem at 85% 110%, rgba(245, 221, 126, 0.7) 0%, rgba(245, 221, 126, 0.7) 99%, transparent 99%),
+			radial-gradient(circle 30rem at 15% 110%, rgba(13, 178, 172, 0.7) 0%, rgba(13, 178, 172, 0.7) 99%, transparent 99%),
+			radial-gradient(circle 30rem at 50% 50%, rgba(252, 105, 77, 0.7) 0%, rgba(252, 105, 77, 0.7) 99%, transparent 99%);
 	}
 }

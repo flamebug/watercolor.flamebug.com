@@ -70,7 +70,7 @@ $(function () {
 	hideAllContent();
 	selectAllFirstContent();
 
-	setTabContainerWidth();
+	//setTabContainerWidth();
 	selectAllFirstTabs();
 	registerTabClickEvent();
 

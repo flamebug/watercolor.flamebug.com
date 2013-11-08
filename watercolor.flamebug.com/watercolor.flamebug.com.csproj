@@ -95,7 +95,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Images\appicon.png" />
+    <Content Include="Content\Images\Badges\CSS3.svg" />
+    <Content Include="Content\Images\Badges\Sass.svg" />
     <Content Include="Content\Images\flamebug-Logo.png" />
+    <Content Include="Content\Images\Badges\HTML5.svg" />
     <Content Include="Content\Images\image.jpg" />
     <Content Include="Content\Scripts\Controls\flamebug.modal.js" />
     <Content Include="Content\Styles\controls\fb-app-icon.scss" />
@@ -137,34 +140,6 @@
     <Content Include="Content\Scripts\jquery-1.5.1.min.js" />
     <Content Include="Content\Scripts\modernizr-1.7.js" />
     <Content Include="Content\Scripts\modernizr-1.7.min.js" />
-    <Content Include="Content\Images\image\controls\background-content.png" />
-    <Content Include="Content\Images\image\controls\badge.png" />
-    <Content Include="Content\Images\image\controls\button_highlight.original.png" />
-    <Content Include="Content\Images\image\controls\button_highlight.png" />
-    <Content Include="Content\Images\image\controls\fb-disclosure-down.png" />
-    <Content Include="Content\Images\image\controls\fb-disclosure-right.png" />
-    <Content Include="Content\Images\image\controls\fb-popuppanel-close.png" />
-    <Content Include="Content\Images\image\controls\fb-slider-arrows - Copy.png" />
-    <Content Include="Content\Images\image\controls\fb-slider-arrows.png" />
-    <Content Include="Content\Images\image\controls\fb-tagbox-hover.png" />
-    <Content Include="Content\Images\image\controls\fb-tagbox.png" />
-    <Content Include="Content\Images\image\controls\gradient_1x25_EEE.png" />
-    <Content Include="Content\Images\image\controls\headerpanel_gradient_1x50_EEE.png" />
-    <Content Include="Content\Images\image\controls\menu_downarrow.gif" />
-    <Content Include="Content\Images\image\controls\menu_rightarrow.gif" />
-    <Content Include="Content\Images\image\controls\menu_tableft.png" />
-    <Content Include="Content\Images\image\controls\menu_tabright.png" />
-    <Content Include="Content\Images\image\controls\notification_exclamation.png" />
-    <Content Include="Content\Images\image\controls\notification_information.png" />
-    <Content Include="Content\Images\image\controls\progress.png" />
-    <Content Include="Content\Images\image\controls\segmented-control-selected.png" />
-    <Content Include="Content\Images\image\controls\segmented-control.png" />
-    <Content Include="Content\Images\image\controls\toolbar_gradient_1x100_EEE.png" />
-    <Content Include="Content\Images\image\controls\tooltip.png" />
-    <Content Include="Content\Images\image\toggle_down_dark.png" />
-    <Content Include="Content\Images\image\toggle_down_light.png" />
-    <Content Include="Content\Images\image\toggle_up_dark.png" />
-    <Content Include="Content\Images\image\toggle_up_light.png" />
     <Content Include="Content\Styles\base\normalize.css" />
     <Content Include="System\Icons\Base\add\add.png" />
     <Content Include="System\Icons\Base\admin\Dashboard.png" />
@@ -280,6 +255,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Images\image\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -307,7 +283,6 @@
     <Content Include="Content\Styles\controls\fb-toolbariconbutton.scss" />
     <Content Include="Content\Styles\controls\fb-tooltip.scss" />
     <Content Include="Content\Styles\global.scss" />
-    <None Include="Content\Images\image\controls\fb-slider-arrows.ai" />
     <Content Include="Content\Styles\theme\theme.scss" />
     <Content Include="Content\Styles\base\container.scss" />
     <Content Include="Content\Styles\theme\typography.scss" />
