@@ -1,11 +1,19 @@
-﻿@using flamebug.Web.Mvc;
+﻿@{
+	var SiteName = "Flamebug Watercolor";
+	  
+	if (ViewBag.Title == "")
+	{
+		ViewBag.Title = SiteName;
+	}
+	else
+	{
+		ViewBag.Title = ViewBag.Title + " - " + SiteName;
+	}			
+}
 
 <!DOCTYPE html>
 
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
 
 	<head>
 
@@ -15,15 +23,7 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		@if (@ViewBag.Title == "")
-		{
-			<title>Flamebug Watercolor</title>
-		}
-		else
-		{
-			<title>@ViewBag.Title - Flamebug Watercolor</title>
-		}
+		<title>@ViewBag.Title</title>
 
 		<!-- Sitemap, Favicon, and Apple Touch Icon -->
 		<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
@@ -36,12 +36,11 @@
 		<link rel="stylesheet" href="/Styles/style.scss">
 		@RenderSection("Styles", false)
 
-		<!-- Scripts -->
-		<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>-->
-        <!--<script>window.jQuery || document.write('<script src="/Content/Scripts/jquery-1.5.1.min.js"><\/script>')</script>-->
-		<script src="/Content/Scripts/jquery-1.5.1.min.js" type="text/javascript"></script>
-		<script src="/Content/Scripts/modernizr-1.7.min.js" type="text/javascript"></script>
-		@RenderSection("Scripts", false)
+		<!-- Modernizr -->
+		<script src="/Content/Scripts/modernizr-2.6.3.min.js" type="text/javascript"></script>
+
+		<!-- Startup Scripts -->
+		@RenderSection("Startup-Scripts", false)
 
     </head>
 
@@ -78,13 +77,17 @@
 
 		</footer>
 
+		<!-- jQuery -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/Content/Scripts/jquery-1.10.2.min.js"><\/script>')</script>
+
+		<!-- Scripts -->
+		@RenderSection("Scripts", false)
+
+		<!-- Responsive Menu Toggle -->
 		<script>
 
 			$(function () {
-
-				//
-				// Toggle the small-screen menu
-				//
 
 				$("#nav-button").click(function () {
 					$("#nav-button i").toggleClass("open");
@@ -96,12 +99,12 @@
 		</script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <!--<script>
+        <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>-->
+        </script>
 
     </body>
 

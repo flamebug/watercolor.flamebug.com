@@ -10,7 +10,7 @@ error.scss
 //
 
 #error-introduction {
-	background-color: red;
+	background-color: #f00;
 }
 
 //
@@ -19,4 +19,17 @@ error.scss
 
 #error > article {
 	@include max-column();
+	text-align: center;
+}
+
+//
+// Error Icon
+//
+
+#error img {
+	display: block;
+	width: 75%;
+	max-width: 20em;
+	margin: 0 auto;
+	opacity: 0.2;
 }
