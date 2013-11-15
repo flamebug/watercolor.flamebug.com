@@ -1,5 +1,5 @@
 ﻿/*
-error.scss
+typography.scss
 */
 
 @import "../library/grid.scss";
@@ -9,14 +9,24 @@ error.scss
 // Introduction
 //
 
-#error-introduction {
-	background-color: red;
+#typography-introduction {
+	background-color: #f5dd7e;
 }
 
 //
 // Articles
 //
 
-#error > article {
+#text > article {
 	@include max-column();
+}
+
+//
+// Formatting
+//
+
+.fifty-percent {
+	float: left;
+	width: 50%;
+	min-width: 16em;
 }

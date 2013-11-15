@@ -1,75 +1,29 @@
 /*
-base/forms.scss
+base/classes.scss
 */
 
 @import "../global.scss";
 @import "../library/grid.scss";
-@import "../library/helpers.scss";
+@import "../library/tables.scss";
 
 //
-// Basic Form Containers
+// Table Classes
 //
 
-form {
-	margin-bottom: $line-height * 1em;
-	@include clear-children();
+table.padded {
+	@include table-padded();
 }
 
-fieldset {
-	margin: $line-height * 1em 0 0 0;
-	padding: 0 1em $line-height * 1em 1em;
-	border-color: $border-color;
+table.bordered {
+	@include table-bordered();
 }
 
-legend {
-	margin-bottom: $line-height * -0.5em; // the legend normally adds half a line of padding at the top of the fieldset, lets remove that
+table.striped {
+	@include table-striped();
 }
 
 //
-// Basic Form Inputs
-//
-
-textarea,
-select,
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="url"],
-input[type="color"],
-input[type="file"] {
-	font: inherit;
-	padding: .1875em .375em;
-	border: .0625em solid $border-color;
-	background-color: #fff;
-	color: $input-color;
-	border-radius: .2em;
-	@include box-sizing(border-box);
-}
-
-select {
-	padding-top: .375em;
-}
-
-textarea:focus,
-select:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="color"]:focus,
-input[type="file"]:focus,
-input[type="checkbox"]:focus,
-input[type="radio"]:focus {
-	color: $input-focus-color;
-}
-
-input:invalid,
-textarea:invalid {
-	border-color: red;
-}
-
-//
-// Buttons
+// Form Classes
 //
 
 form .buttons {

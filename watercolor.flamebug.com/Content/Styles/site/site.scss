@@ -1,30 +1,40 @@
 ﻿/*
-site.scss
+site/site.scss
 */
 
-@import "./library/helpers.scss";
-
-//
-// Code Highlighting
-//
-
+@import "../global.scss";
+@import "../library/grid.scss";
+@import "../library/helpers.scss";
+@import "../library/tables.scss";
 @import "prism.css";
 
 //
-// Sections and Articles
+// Sections
 //
 
 section.container {
 	padding: $line-height * 2em 0;
 }
 
-// Make hash links to articles not be hidden by the navigation
-article h3:before { 
+//
+// Articles with ids for hash linking
+//
+
+article[id] h3:before { 
 	display: block;
 	content: " "; 
 	margin-top: -48px; 
 	height: 48px; 
 	visibility: hidden; 
+}
+
+//
+// Tables
+//
+
+table {
+	@include table-padded();
+	@include table-bordered();
 }
 
 //
@@ -57,41 +67,24 @@ article h3:before {
 	a {
 		color: #fff;
 		text-decoration: underline;
+
+		&:hover {
+			color: rgba(255,255,255,0.5);
+		}
 	}
-
-	a:hover {
-		color: rgba(255,255,255,0.5);
-	}
-}
-
-/* 6 column layout */
-@media screen and (min-width: 30rem) {
-
-	.introduction h2 {
-		@include font-size(5);
-	}
-
 }
 
 //
-// Example & Code
+// Example / Code
 //
 
 .example {
 	position: relative;
-    padding: $line-height * 2em $line-height * 1em $line-height * 1em;
+    padding: $line-height * 1em $line-height * 1em 0 $line-height * 1em;
 	border: 1px solid $border-color;
 	margin-top: $line-height * 1em;
+	@include typographic-grid();
 	@include clear-children();
-
-	background-position: center -1px;
-	background-size: 100% 26px;
-
-	background-image: -moz-linear-gradient(top, #f8f8f8 .05em, transparent .05em); 
-	background-image: -webkit-linear-gradient(top, #f8f8f8 .05em, transparent .05em);
-	background-image: -o-linear-gradient(top, #f8f8f8 .05em, transparent .05em);
-	background-image: -ms-linear-gradient(top, #f8f8f8 .05em, transparent .05em);
-	background-image: linear-gradient(to bottom, #f8f8f8 .05em, transparent .05em);
 
 	&:before {
 		content: "Example";
@@ -114,17 +107,15 @@ article h3:before {
 	}
 }
 
-.example-50-percent {
-	float: left;
-	width: 50%;
-	min-width: 16em;
-}
-
 //
-// Example Text Grid
+// Responsive Styles
 //
 
-.text-grid {
-	padding-top: 0;
-	padding-bottom: 0;
+/* 6 column layout */
+@media screen and (min-width: 30rem) {
+
+	.introduction h2 {
+		@include font-size(5);
+	}
+
 }

@@ -77,7 +77,9 @@ a {
 // Lists
 //
 
-ul, ol, dl {
+ul,
+ol,
+dl {
 	@include font-size($body-font-size);
 }
 
@@ -167,29 +169,118 @@ code {
 // Image and Dividers
 //
 
-img, hr {
+img {
+	max-width: 100%;
+}
+
+img,
+hr {
 	border-color: $border-color;
 }
 
 //
-// Selection Highlighting
+// Tables
 //
 
-/*
+table {
+	max-width: 100%;
+	width: 100%;
+	margin-top: $line-height * 1em;
+	margin-bottom: $line-height * 1em;
+	border-collapse: separate;
+	*border-collapse: collapse;
 
-body {
-	-webkit-tap-highlight-color: rgba(170,225,37, 0.62);
+	th,
+	td {
+		padding: 0 $line-height * 0.5em;
+		line-height: (($body-line-height-px - 1) / $body-line-height-px) * $line-height;
+		text-align: left;
+		vertical-align: top;
+		border-top: 1px solid $border-color;
+	}
+
+	th {
+		font-weight: bold;
+		vertical-align: bottom;
+	}
+
+	caption + thead tr:first-child th,
+	caption + thead tr:first-child td,
+	colgroup + thead tr:first-child th,
+	colgroup + thead tr:first-child td,
+	thead:first-child tr:first-child th,
+	thead:first-child tr:first-child td {
+		line-height: $line-height;
+		border-top: 0;
+	}
+
+	tbody + tbody {
+		border-top: 2px solid $border-color;
+	}
+
+	table {
+		background-color: #ffffff;
+	}
 }
 
-::selection,
-::-moz-selection {
-	background: #AAE125;
-	color: white;
+//
+// Forms
+//
+
+form {
+	margin-bottom: $line-height * 1em;
+	@include clear-children();
 }
 
-img::selection,
-img::-moz-selection {
-	background: transparent;
+fieldset {
+	margin: $line-height * 1em 0 0 0;
+	padding: 0 1em $line-height * 1em 1em;
+	border-color: $border-color;
 }
 
-*/
+legend {
+	margin-bottom: $line-height * -0.5em; // the legend normally adds half a line of padding at the top of the fieldset, lets remove that
+}
+
+//
+// Form Inputs
+//
+
+textarea,
+select,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="color"],
+input[type="file"] {
+	font: inherit;
+	padding: .1875em .375em;
+	border: .0625em solid $border-color;
+	background-color: #fff;
+	color: $input-color;
+	border-radius: .2em;
+	@include box-sizing(border-box);
+}
+
+select {
+	padding-top: .375em;
+}
+
+textarea:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="color"]:focus,
+input[type="file"]:focus,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+	color: $input-focus-color;
+}
+
+input:invalid,
+textarea:invalid {
+	border-color: red;
+}

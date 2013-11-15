@@ -89,10 +89,6 @@
 					<td>Watercolor uses <a href="#normalize">normalize.css</a> as a baseline for consistent styling across browsers.</td>
 				</tr>
 				<tr>
-					<td>base/container.scss</td>
-					<td>This is where the container breakpoints for the structural grid are defined.</td>
-				</tr>
-				<tr>
 					<td>base/typography.scss</td>
 					<td>All typographic base styles are defined in this file, most <code>@@import</code> settings from variables defined in <a href="#global">global.scss</a>.</td>
 				</tr>
@@ -103,6 +99,10 @@
 				<tr>
 					<td>base/tables.scss</td>
 					<td>All table related base styles are defined in this file.</td>
+				</tr>
+				<tr>
+					<td>base/container.scss</td>
+					<td>This is where the container breakpoints for the structural grid are defined.</td>
 				</tr>
 				<tr>
 					<td>library/grid.scss</td>
@@ -145,16 +145,6 @@
 
 	</article>
 
-	<article id="container">
-
-		<h3>base/container.scss</h3>
-
-		<p>This is where the container breakpoints for the structural grid are defined.</p>
-
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Base/container.scss")))</code></pre>
-
-	</article>
-
 	<article id="typography">
 
 		<h3>base/typography.scss</h3>
@@ -182,6 +172,16 @@
 		<p>All form related base styles are defined in this file.</p>
 
 		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Base/tables.scss")))</code></pre>
+
+	</article>
+
+	<article id="container">
+
+		<h3>base/container.scss</h3>
+
+		<p>This is where the container breakpoints for the structural grid are defined.</p>
+
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Base/container.scss")))</code></pre>
 
 	</article>
 

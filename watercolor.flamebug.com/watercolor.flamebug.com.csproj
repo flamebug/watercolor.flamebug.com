@@ -118,12 +118,11 @@
     <Content Include="Views\Static\Layout.cshtml" />
     <Content Include="Content\Styles\pages\home.scss" />
     <Content Include="Content\Styles\pages\controls.scss" />
-    <Content Include="Content\Styles\site.scss" />
+    <Content Include="Content\Styles\site\site.scss" />
     <Content Include="Content\Styles\controls\fb-modal.scss" />
     <Content Include="Content\Styles\controls\fb-modal-effects.scss" />
     <Content Include="Views\Static\Tables.cshtml" />
     <Content Include="Content\Styles\pages\tables.scss" />
-    <Content Include="Content\Styles\base\tables.scss" />
     <Content Include="Content\Styles\library\helpers.scss" />
     <Content Include="Content\Images\flamebug.png" />
     <Content Include="Content\Scripts\Controls\flamebug.background.js" />
@@ -135,7 +134,7 @@
     <Content Include="Content\Scripts\Controls\flamebug.tagbox.js" />
     <Content Include="Content\Scripts\Controls\flamebug.toggle.js" />
     <Content Include="Content\Scripts\prism.js" />
-    <Content Include="Content\Styles\prism.css" />
+    <Content Include="Content\Styles\site\prism.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Scripts\jquery-1.10.2.min.js" />
     <Content Include="Content\Styles\base\normalize.css" />
@@ -246,8 +245,6 @@
     <Content Include="System\Icons\Base\users\icon.config" />
     <Content Include="System\Icons\Base\visual\icon.config" />
     <Content Include="System\Icons\IconStyles\-none-\iconstyle.config" />
-    <Content Include="Content\Styles\controls.scss" />
-    <Content Include="Content\Styles\theme\layout.scss" />
     <Content Include="Content\Styles\base\typography.scss" />
     <Content Include="Content\Styles\style.scss" />
   </ItemGroup>
@@ -281,17 +278,21 @@
     <Content Include="Content\Styles\controls\fb-toolbariconbutton.scss" />
     <Content Include="Content\Styles\controls\fb-tooltip.scss" />
     <Content Include="Content\Styles\global.scss" />
-    <Content Include="Content\Styles\theme\theme.scss" />
-    <Content Include="Content\Styles\base\container.scss" />
-    <Content Include="Content\Styles\theme\typography.scss" />
+    <Content Include="Content\Styles\templates\template.scss" />
+    <Content Include="Content\Styles\container.scss" />
     <Content Include="Views\Static\Overview.cshtml" />
     <Content Include="Content\Styles\pages\overview.scss" />
     <Content Include="Views\Static\Forms.cshtml" />
     <Content Include="Content\Styles\pages\forms.scss" />
-    <Content Include="Content\Styles\base\forms.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Styles\pages\error.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\library\tables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\base\classes.scss" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

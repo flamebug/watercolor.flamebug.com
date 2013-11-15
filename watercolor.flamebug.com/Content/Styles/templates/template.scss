@@ -1,0 +1,185 @@
+/*
+Template Layout
+*/
+
+@import "../global.scss";
+@import "../library/helpers.scss";
+
+//
+// Resets
+//
+
+body,
+#content,
+#footer,
+#nav,
+#nav ul,
+#nav ui li {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	clear: both;
+}
+
+//
+// Body
+//
+
+body {
+	background-color: #fff;
+	background-image: none;
+	background-repeat: repeat;
+	background-attachment: scroll;
+	background-position: center top;
+	@include background-size(auto);
+	@include background-origin(padding-box);
+	@include background-clip(border-box);
+}
+
+//
+// Content
+//
+
+#content {
+	@include clear-children();
+}
+
+//
+// Footer
+//
+
+#footer {
+	padding: $line-height * 2em 0;
+	background-color: rgba(0,0,0,0.03);
+	text-align: center;
+	@include clear-children();
+}
+
+//
+// Logo
+//
+
+#logo {
+	float: left;
+	padding: .5em 1.25em;
+	line-height: 3em;
+	vertical-align: middle;
+
+	&:hover {
+		background: rgba(0,0,0,0.03);
+	}
+
+	img {
+		display: block;
+		height: 2em;
+		opacity: .8;
+	}
+}
+
+//
+// Navigation
+//
+
+#nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(255,255,255,0.95);
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	box-shadow: 0 1px 10px rgba(0,0,0,0.03);
+	z-index: 999;
+
+	@include clear-children();
+	@include transition(all, 0.25s);
+
+	&:hover {
+		box-shadow: 0 1px 12px rgba(0,0,0,0.07);
+	}
+
+	ul {
+		list-style: none;
+		display: none;
+		clear: both;
+	}
+
+	ul.open {
+		display: block;
+	}
+
+	ul li {
+		border-top: 1px solid rgba(0,0,0,0.03);
+	}
+
+	ul li a {
+		display: block;
+		height: 3em;
+		padding: 0 1.5em;
+		line-height: 3em;
+		color: #899;
+	}
+
+	ul li a:hover {
+		background: rgba(0,0,0,0.03);
+	}
+}
+
+//
+// Navigation Button
+//
+
+#nav-button {
+	float: right;
+	width: 2em;
+	padding: .5em 0;
+	border: 0;
+	box-shadow: none;
+	background: transparent;
+	font-size: 1.5em;
+	color: #899;
+
+	&:hover {
+		background: rgba(0,0,0,0.03);
+	}
+
+	i {
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		width: 1em;
+		line-height: 1;
+		font-style: normal;
+		@include transition(all, 0.1s);
+	}
+
+	i.open {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+}
+
+//
+// Breakpoints
+//
+
+/* 8 column layout and greater */
+@media screen and (min-width: 40rem) {
+
+	#nav-button {
+		display: none;
+	}
+
+	#nav ul {
+		display: block;
+		clear: none;
+
+		li {
+			display: inline-block;
+			border: 0;
+		}
+	}
+
+}
