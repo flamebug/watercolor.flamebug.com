@@ -18,7 +18,7 @@
 
 		<p>
 			Tables by default are set up with bold headers, horizontal row lines, and no outer border.
-			Additional classes are provided to customize the look of the table: <code>striped</code>, <code>bordered</code>, or <code>padded</code>. These classes can be combined for a striped, bordered, and padded table.
+			Mixins provided to customize the look of the table, and classes are provided for convenience.  These mixins and classes can be combined for a striped, bordered, and padded table.
 		</p>
 
 	</header>
@@ -26,6 +26,74 @@
 </section>
 
 <section id="tables" class="container">
+
+	<article id="mixins">
+
+		<h3>Table Mixins</h3>
+
+		<p>The table @@mixins are defined in <a href="/overview#tables">tables.scss</a> and provide @@mixins for styling tables depending on your site's needs.</p>
+
+		<table class="bordered">
+
+			<thead>
+				<tr>
+					<th style="width: 25%">mixin</th>
+					<th>description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td><code>table-striped()</code></td>
+					<td>Adds alternating striped lines to the target table.</td>
+				</tr>
+				<tr>
+					<td><code>table-bordered()</code></td>
+					<td>Adds borders to any table.</td>
+				</tr>
+				<tr>
+					<td><code>table-padded()</code></td>
+					<td>Adds extra padding to any table.</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</article>
+
+	<article id="classes">
+
+		<h3>Table Classes</h3>
+
+		<p>If you prefer to add classes to your markup instead of using @@mixins you can use the following to customize the look of your tables.</p>
+
+		<table class="bordered">
+
+			<thead>
+				<tr>
+					<th style="width: 25%">class</th>
+					<th>description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td><code>striped</code></td>
+					<td>Adds alternating striped lines to the target table.</td>
+				</tr>
+				<tr>
+					<td><code>bordered</code></td>
+					<td>Adds borders to any table.</td>
+				</tr>
+				<tr>
+					<td><code>padded</code></td>
+					<td>Adds extra padding to any table.</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</article>
 
 	<article id="default-table">
 
@@ -75,7 +143,7 @@
 	<article id="striped-table">
 
 		<h3>Striped Table</h3>
-		<p>Add the <code>striped</code> class to any table to add alternating striped rows to the table body.</p>
+		<p>Include the <code>table-striped()</code> @@mixin to your table style. This adds alternating striped lines to the target table.</p>
 
 		<div class="example">
 
@@ -115,17 +183,16 @@
 
 		</div>
 
-		<pre class="example-code"><code class="language-markup">&lt;table class="striped"&gt;
-   &#8230;
-&lt;/table&gt;
-</code></pre>
+		<pre><code class="language-css">table {
+   @@include table-striped();
+}</code></pre>
 
 	</article>
 
 	<article id="bordered-table">
 
 		<h3>Bordered Table</h3>
-		<p>Add the <code>bordered</code> class to any table to add borders.</p>
+		<p>Include the <code>table-bordered()</code> @@mixin to your table style. This adds borders to the target table.</p>
 
 		<div class="example">
 
@@ -165,17 +232,16 @@
 		
 		</div>
 
-		<pre class="example-code"><code class="language-markup">&lt;table class="bordered"&gt;
-   &#8230;
-&lt;/table&gt;
-</code></pre>
+		<pre><code class="language-css">table {
+   @@include table-bordered();
+}</code></pre>
 
 	</article>
 
 	<article id="padded-table">
 
 		<h3>Padded Table</h3>
-		<p>Add the <code>padded</code> class to any table to add extra padding to the table cells.</p>
+		<p>Include the <code>table-padded()</code> @@mixin to your table style. This adds extra padding to the target table's cells.</p>
 
 		<div class="example">
 
@@ -217,17 +283,16 @@
 
 		</div>
 
-		<pre class="example-code"><code class="language-markup">&lt;table class="padded"&gt;
-   &#8230;
-&lt;/table&gt;
-</code></pre>
+		<pre><code class="language-css">table {
+   @@include table-padded();
+}</code></pre>
 
 	</article>
 
 	<article id="striped-bordered-padded-table">
 
 		<h3>Striped, Bordered, & Padded Table</h3>
-		<p>Add the <code>striped</code>, <code>bordered</code>, and <code>padded</code> classes, in any combination, to customize the look of your table.</p>
+		<p>Include the <code>table-striped()</code>, <code>table-bordered()</code>, or <code>table-padded()</code> @@mixins to your table styles. These can be added in any combination to customize the look of your tables.</p>
 
 		<div class="example">
 
@@ -267,10 +332,11 @@
 		
 		</div>
 
-		<pre class="example-code"><code class="language-markup">&lt;table class="striped bordered padded"&gt;
-   &#8230;
-&lt;/table&gt;
-</code></pre>
+		<pre><code class="language-css">table {
+   @@include table-striped();
+   @@include table-bordered();
+   @@include table-padded();
+}</code></pre>
 
 	</article>
 

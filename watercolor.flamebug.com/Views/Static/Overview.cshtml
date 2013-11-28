@@ -93,16 +93,8 @@
 					<td>All typographic base styles are defined in this file, most <code>@@import</code> settings from variables defined in <a href="#global">global.scss</a>.</td>
 				</tr>
 				<tr>
-					<td>base/forms.scss</td>
-					<td>All form related base styles are defined in this file.</td>
-				</tr>
-				<tr>
-					<td>base/tables.scss</td>
-					<td>All table related base styles are defined in this file.</td>
-				</tr>
-				<tr>
-					<td>base/container.scss</td>
-					<td>This is where the container breakpoints for the structural grid are defined.</td>
+					<td>base/classes.scss</td>
+					<td>All non-semantic classes are found in this file.</td>
 				</tr>
 				<tr>
 					<td>library/grid.scss</td>
@@ -113,16 +105,24 @@
 					<td>The helpers library provides mixins mainly to simplify styles such as cross-browser prefixes.</td>
 				</tr>
 				<tr>
-					<td>theme/theme.scss</td>
-					<td>All themes should contain a <a href="#theme">theme.scss</a> file which includes all styles for the theme.</td>
+					<td>library/tables.scss</td>
+					<td>All table related mixins are defined in this file.</td>
+				</tr>
+				<tr>
+					<td>templates/template.scss</td>
+					<td>All templates should contain a <a href="#theme">template.scss</a> file which includes all styles for the template.</td>
+				</tr>
+				<tr>
+					<td>site/site.scss</td>
+					<td>This is where all site-wide common styles that are not related to the theme are stored.</td>
+				</tr>
+				<tr>
+					<td>container.scss</td>
+					<td>This is where the container breakpoints for the structural grid are defined.</td>
 				</tr>
 				<tr>
 					<td>global.scss</td>
 					<td>All globally referenced variables should be defined here. By default this contains variables for defining the structural and typographic grid, typographic elements, and other common variables that will be used throughout the site.</td>
-				</tr>
-				<tr>
-					<td>site.scss</td>
-					<td>This is where all site-wide common styles that are not related to the theme are stored.</td>
 				</tr>
 				<tr>
 					<td>style.scss</td>
@@ -157,31 +157,11 @@
 
 	<article id="forms">
 
-		<h3>base/forms.scss</h3>
+		<h3>base/classes.scss</h3>
 
-		<p>All form related base styles are defined in this file.</p>
+		<p>All non-semantic classes are found in this file.</p>
 
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Base/forms.scss")))</code></pre>
-
-	</article>
-
-	<article id="tables">
-
-		<h3>base/tables.scss</h3>
-
-		<p>All form related base styles are defined in this file.</p>
-
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Base/tables.scss")))</code></pre>
-
-	</article>
-
-	<article id="container">
-
-		<h3>base/container.scss</h3>
-
-		<p>This is where the container breakpoints for the structural grid are defined.</p>
-
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Base/container.scss")))</code></pre>
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Base/classes.scss")))</code></pre>
 
 	</article>
 
@@ -205,13 +185,43 @@
 
 	</article>
 
-	<article id="theme">
+	<article id="tables">
 
-		<h3>theme/theme.scss</h3>
+		<h3>library/tables.scss</h3>
 
-		<p>All themes should contain a theme.scss file which includes all styles for the theme.</p>
+		<p>All table related mixins are defined in this file.</p>
 
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Theme/theme.scss")))</code></pre>
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Library/tables.scss")))</code></pre>
+
+	</article>
+
+	<article id="template">
+
+		<h3>templates/template.scss</h3>
+
+		<p>All templates should contain a template.scss file which includes all styles for the template.</p>
+
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Templates/template.scss")))</code></pre>
+
+	</article>
+
+	<article id="site">
+
+		<h3>site/site.scss</h3>
+
+		<p>This is where all site-wide common styles that are not related to the theme are stored.</p>
+
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Site/site.scss")))</code></pre>
+
+	</article>
+
+	<article id="container">
+
+		<h3>container.scss</h3>
+
+		<p>This is where the container breakpoints for the structural grid are defined.</p>
+
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/container.scss")))</code></pre>
 
 	</article>
 
@@ -222,16 +232,6 @@
 		<p>All globally referenced variables should be defined here. By default this contains variables for defining the structural and typographic grid, typographic elements, and other common variables that will be used throughout the site.</p>
 
 		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/global.scss")))</code></pre>
-
-	</article>
-
-	<article id="site">
-
-		<h3>site.scss</h3>
-
-		<p>This is where all site-wide common styles that are not related to the theme are stored.</p>
-
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/site.scss")))</code></pre>
 
 	</article>
 

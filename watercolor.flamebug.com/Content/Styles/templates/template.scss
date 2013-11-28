@@ -107,11 +107,13 @@ body {
 		display: block;
 	}
 
-	ul li {
+	li {
+		position: relative;
 		border-top: 1px solid rgba(0,0,0,0.03);
 	}
 
-	ul li a {
+	li a {
+		position: relative;
 		display: block;
 		height: 3em;
 		padding: 0 1.5em;
@@ -119,8 +121,51 @@ body {
 		color: #899;
 	}
 
-	ul li a:hover {
+	li a:hover {
 		background: rgba(0,0,0,0.03);
+	}
+
+	li > a:after {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		display: block;
+		width: 0;
+		height: 0;
+		margin-left: -8px;
+		margin-top: -16px;
+		height: 0;
+		border: 8px solid transparent;
+		border-bottom-color: rgba(0,0,0,0.075);
+		content: "";
+	}
+
+	li > a:only-child:after {
+		border: 0;
+	}
+
+	li > ul {
+		display: none;
+	}
+
+	li:hover > a:after {
+		border-bottom-color: #fff;
+	}
+
+	li:hover > ul {
+		display: block;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		background-color: #fff;
+		width: 10em;
+		margin-left: -5em;
+		box-shadow: 0 6px 12px rgba(0,0,0,0.07);
+	}
+
+	li li {
+		display: block;
+		white-space:nowrap;
 	}
 }
 
@@ -176,10 +221,12 @@ body {
 		display: block;
 		clear: none;
 
-		li {
-			display: inline-block;
-			border: 0;
-		}
+
+	}
+
+	#nav li {
+		display: inline-block;
+		border: 0;
 	}
 
 }
