@@ -106,7 +106,6 @@
     <Content Include="Content\Styles\controls\fb-app-icon.scss" />
     <Content Include="Content\Styles\controls\fb-tag.scss" />
     <Content Include="Content\Styles\controls\fb-label.scss" />
-    <Content Include="Content\Styles\controls\fb-modal-original.scss" />
     <Content Include="Content\Styles\pages\typography.scss" />
     <Content Include="Content\Styles\library\grid.scss" />
     <Content Include="Content\Styles\pages\layout.scss" />
@@ -260,23 +259,23 @@
     <Content Include="Content\Styles\controls\fb-badge.scss" />
     <Content Include="Content\Styles\controls\fb-button.scss" />
     <Content Include="Content\Styles\controls\fb-disclosure.scss" />
-    <Content Include="Content\Styles\controls\fb-dropdown.scss" />
-    <Content Include="Content\Styles\controls\fb-help.scss" />
-    <Content Include="Content\Styles\controls\fb-icon.scss" />
-    <Content Include="Content\Styles\controls\fb-iconbutton.scss" />
-    <Content Include="Content\Styles\controls\fb-imagebutton.scss" />
-    <Content Include="Content\Styles\controls\fb-menu.scss" />
-    <Content Include="Content\Styles\controls\fb-notification.scss" />
-    <Content Include="Content\Styles\controls\fb-radiobuttonlist.scss" />
-    <Content Include="Content\Styles\controls\fb-selectionpanel.scss" />
-    <Content Include="Content\Styles\controls\fb-slider.scss" />
-    <Content Include="Content\Styles\controls\fb-tabview.scss" />
-    <Content Include="Content\Styles\controls\fb-tagbox.scss" />
-    <Content Include="Content\Styles\controls\fb-toggle.scss" />
-    <Content Include="Content\Styles\controls\fb-toolbar.scss" />
-    <Content Include="Content\Styles\controls\fb-toolbarbutton.scss" />
-    <Content Include="Content\Styles\controls\fb-toolbariconbutton.scss" />
-    <Content Include="Content\Styles\controls\fb-tooltip.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-dropdown.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-help.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-icon.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-iconbutton.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-imagebutton.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-menu.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-notification.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-radiobuttonlist.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-selectionpanel.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-slider.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-tabview.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-tagbox.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-toggle.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-toolbar.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-toolbarbutton.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-toolbariconbutton.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-tooltip.scss" />
     <Content Include="Content\Styles\global.scss" />
     <Content Include="Content\Styles\templates\template.scss" />
     <Content Include="Content\Styles\container.scss" />
@@ -296,6 +295,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Navigation.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\library\css3.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\library\forms.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\controls\beta\fb-animation.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\controls\fb-hint.scss" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

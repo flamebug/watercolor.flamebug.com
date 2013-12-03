@@ -16,13 +16,81 @@
 
 		<h2>Forms</h2>
 
-		<p>Forms in watercolor are pretty simple, yet tremendously flexible. Forms consist of a <code>form</code> tag containing <code>label</code>, <code>input</code>, and <code>button</code> elements. To keep things consistent and flexible each form field should be enclosed in a <code>div</code> with a <code>field</code> class. The form buttons should be enclosed in a <code>div</code> with a <code>buttons</code> class.  With that consistent code structure you can organize your form in a consistent manner that best fits the form content with a few simple classes that you can put on the <code>form</code> or on the field containers.</p>
+		<p>Forms in watercolor are pretty simple, yet tremendously flexible. Forms consist of a <code>form</code> tag containing <code>label</code>, <code>input</code>, and <code>button</code> elements. To keep things consistent and flexible each form field should be enclosed in a <code>div</code> with a <code>field</code> class. The form buttons should be enclosed in a <code>div</code> with a <code>buttons</code> class.  With that consistent code structure you can organize your form in a manner that best fits the form content with a few simple classes that you can put on the <code>form</code> or on the field containers.</p>
 
 	</header>
 
 </section>
 
 <section id="forms" class="container">
+
+	<article id="mixins">
+
+		<h3>Form Mixins</h3>
+
+		<p>The form @@mixins are defined in <a href="/overview#forms">forms.scss</a> and provide @@mixins for styling forms depending on your site's needs.</p>
+
+		<table>
+
+			<thead>
+				<tr>
+					<th style="width: 25%">mixin</th>
+					<th>description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td><code>field-block()</code></td>
+					<td>Each form field is displayed on a separate line, with the label above the field. This is the default form type if no class is specified.</td>
+				</tr>
+				<tr>
+					<td><code>field-inline()</code></td>
+					<td>Each form field is displayed in an inline manner, with the label above the field.  The buttons are displayed below the form on a separate line.</td>
+				</tr>
+				<tr>
+					<td><code>field-align()</code></td>
+					<td>Each form field is displayed on a separate line, with the field labels aligned to the left of the field.  The buttons are displayed below the form on a separate line.</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</article>
+
+	<article id="classes">
+
+		<h3>Form Classes</h3>
+
+		<p>If you prefer to add classes to your markup instead of using @@mixins you can use the following to customize the look of your forms.</p>
+
+		<table>
+
+			<thead>
+				<tr>
+					<th style="width: 25%">class</th>
+					<th>description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td><code>block</code></td>
+					<td>Each form field is displayed on a separate line, with the label above the field. This is the default form type if no class is specified.</td>
+				</tr>
+				<tr>
+					<td><code>inline</code></td>
+					<td>Each form field is displayed in an inline manner, with the label above the field.  The buttons are displayed below the form on a separate line.</td>
+				</tr>
+				<tr>
+					<td><code>align</code></td>
+					<td>Each form field is displayed on a separate line, with the field labels aligned to the left of the field.  The buttons are displayed below the form on a separate line.</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</article>
 
 	<article id="basic-form">
 

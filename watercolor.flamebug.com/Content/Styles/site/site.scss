@@ -75,7 +75,7 @@ table {
 }
 
 //
-// Example / Code
+// Example & Code
 //
 
 .example {
@@ -86,29 +86,48 @@ table {
 	@include typographic-grid();
 	@include clear-children();
 
-	&:before {
-		content: "Example";
-		position: absolute;
-		text-transform: uppercase;
-		top: -1px;
-		left: -1px;
-		padding: .25em .5em;
-		border: 1px solid $border-color;
-		background: rgba(0,0,0,0.01);
-		color: #cacaca;
-		font-size: 12px;
-		font-family: Helvetica, Arial, sans-serif;
+	~ pre {
+		position: relative;
+		margin: 0;
+		border-top: 0;
 	}
 
-	& + pre {
-		position: relative;
-		margin-top: 0;
-		border-top: 0;
+	~ pre:last-child {
+		margin-bottom: $line-height * 1em; 
 	}
 }
 
-.example-code {
-	margin: 0;
+pre.language-markup,
+pre.language-css {
+	position: relative;
+	padding-top: $line-height * 1em;
+}
+
+.example:before,
+pre.language-markup:before,
+pre.language-css:before {
+	position: absolute;
+	text-transform: uppercase;
+	top: -1px;
+	left: -1px;
+	padding: .25em .5em;
+	border: 1px solid $border-color;
+	background: rgba(0,0,0,0.01);
+	color: #cacaca;
+	font-size: 12px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.example:before {
+	content: "Example";
+}
+
+pre.language-css:before {
+	content: "CSS";
+}
+
+pre.language-markup:before {
+	content: "HTML";
 }
 
 //
