@@ -3,6 +3,7 @@ forms.scss
 */
 
 @import "../library/grid.scss";
+@import "../library/forms.scss";
 @import "../library/helpers.scss";
 
 //
@@ -19,4 +20,16 @@ forms.scss
 
 #forms > article {
 	@include max-column();
+}
+
+//
+// Form Examples
+//
+
+#inline-form .field {
+	@include field-inline;
+}
+
+#align-form .field {
+	@include field-align;
 }

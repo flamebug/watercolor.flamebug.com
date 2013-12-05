@@ -13,15 +13,15 @@ base/classes.scss
 //
 
 table.padded {
-	@include table-padded();
+	@include table-padded;
 }
 
 table.bordered {
-	@include table-bordered();
+	@include table-bordered;
 }
 
 table.striped {
-	@include table-striped();
+	@include table-striped;
 }
 
 //
@@ -42,7 +42,7 @@ table.striped {
 .block .field,
 fieldset.block .field,
 form div.field.block {
-	@include field-block();
+	@include field-block;
 }
 
 //
@@ -52,7 +52,7 @@ form div.field.block {
 .inline .field,
 fieldset.inline .field,
 form div.field.inline {
-	@include field-inline();
+	@include field-inline;
 }
 
 //
@@ -62,7 +62,7 @@ form div.field.inline {
 .align .field,
 fieldset.align .field,
 form div.field.align {
-	@include field-align();
+	@include field-align;
 }
 
 //
@@ -78,5 +78,5 @@ form div.field.align {
 //
 
 form .buttons {
-	@include form-buttons();
+	@include form-buttons;
 }

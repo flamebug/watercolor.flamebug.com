@@ -18,7 +18,7 @@
 
 		<p>
 			Tables by default are set up with bold headers, horizontal row lines, and no outer border.
-			Mixins provided to customize the look of the table, and classes are provided for convenience.  These mixins and classes can be combined for a striped, bordered, and padded table.
+			Mixins are provided to customize the look of the table, and classes are provided for convenience.  These mixins and classes can be combined for a striped, bordered, and padded table.
 		</p>
 
 	</header>
@@ -98,7 +98,7 @@
 	<article id="basic-table">
 
 		<h3>Basic Table</h3>
-		<p>Basic table style with horizontal dividers and bold headers. All below examples will use this same HTML markup, but with changes in the CSS.</p>
+		<p>This is a basic table, which is styled by default with horizontal dividers and bold headers. All below examples will use this same HTML markup, but with changes in the CSS.</p>
 
 		<div class="example">
 
@@ -174,7 +174,7 @@
 	<article id="striped-table">
 
 		<h3>Striped Table</h3>
-		<p>Include the <code>table-striped()</code> @@mixin to your table style, or add class <code>striped</code> to the table markup. This adds alternating striped lines to the target table.</p>
+		<p>Include the <code>table-striped</code> @@mixin to your table style, or add class <code>striped</code> to the table markup. This adds alternating striped lines to the target table.</p>
 
 		<div class="example">
 
@@ -215,7 +215,7 @@
 		</div>
 
 		<pre><code class="language-css">table {
-   @@include table-striped();
+   @@include table-striped;
 }</code></pre>
 
 	</article>
@@ -223,7 +223,7 @@
 	<article id="bordered-table">
 
 		<h3>Bordered Table</h3>
-		<p>Include the <code>table-bordered()</code> @@mixin to your table style, or add class <code>bordered</code> to the table markup. This adds borders to the target table.</p>
+		<p>Include the <code>table-bordered</code> @@mixin to your table style, or add class <code>bordered</code> to the table markup. This adds borders to the target table.</p>
 
 		<div class="example">
 
@@ -264,7 +264,7 @@
 		</div>
 
 		<pre><code class="language-css">table {
-   @@include table-bordered();
+   @@include table-bordered;
 }</code></pre>
 
 	</article>
@@ -272,7 +272,7 @@
 	<article id="padded-table">
 
 		<h3>Padded Table</h3>
-		<p>Include the <code>table-padded()</code> @@mixin to your table style, or add class <code>padded</code> to the table markup. This adds extra padding to the target table's cells.</p>
+		<p>Include the <code>table-padded</code> @@mixin to your table style, or add class <code>padded</code> to the table markup. This adds extra padding to the target table's cells.</p>
 
 		<div class="example">
 
@@ -315,7 +315,7 @@
 		</div>
 
 		<pre><code class="language-css">table {
-   @@include table-padded();
+   @@include table-padded;
 }</code></pre>
 
 	</article>
@@ -323,7 +323,7 @@
 	<article id="striped-bordered-padded-table">
 
 		<h3>Striped, Bordered, & Padded Table</h3>
-		<p>Include the <code>table-striped()</code>, <code>table-bordered()</code>, or <code>table-padded()</code> @@mixins to your table styles, or add the corresponding classes to the table markup. These can be added in any combination to customize the look of your tables.</p>
+		<p>Include the <code>table-striped</code>, <code>table-bordered</code>, or <code>table-padded</code> @@mixins to your table styles, or add the corresponding classes to the table markup. These can be added in any combination to customize the look of your tables.</p>
 
 		<div class="example">
 
@@ -366,9 +366,9 @@
 		</div>
 
 		<pre><code class="language-css">table {
-   @@include table-striped();
-   @@include table-bordered();
-   @@include table-padded();
+   @@include table-striped;
+   @@include table-bordered;
+   @@include table-padded;
 }</code></pre>
 
 	</article>
