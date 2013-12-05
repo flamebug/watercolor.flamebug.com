@@ -233,8 +233,8 @@ form {
 }
 
 fieldset {
-	margin: $line-height * 1em 0 0 0;
-	padding: 0 1em $line-height * 1em 1em;
+	margin: $line-height * 1em - (1 / ($body-font-size * 16) * 1em) 0;
+	padding: 0 $line-height * 1em;
 	border-color: $border-color;
 }
 
@@ -260,8 +260,9 @@ input[type="time"],
 input[type="url"],
 input[type="week"] {
 	font: inherit;
-	padding: .1875em .375em;
-	border: .0625em solid $border-color;
+	padding: 0 .375em;
+	margin: -1px 0;
+	border: 1px solid $border-color;
 	background-color: #fff;
 	color: $input-color;
 	border-radius: .2em;
@@ -278,7 +279,8 @@ textarea:invalid {
 }
 
 select {
-	padding-top: .375em;
+	//unlike other form inputs a select doesn't use line-height, we need to add padding to get it there
+	padding: (2 / ($body-font-size * 16) * 1em) 0 (1 / ($body-font-size * 16) * 1em) .375em;
 }
 
 //

@@ -8,13 +8,6 @@
 
 @section Scripts {
 		<script src="@Url.Content("~/Content/Scripts/prism.js")"></script>
-
-		<script>
-			$("input[type=range]").change(function () {
-				var newValue = $(this).val();
-				$(this).next().val(newValue + " years old");
-			});
-		</script>
 }
 
 <section id="forms-introduction" class="introduction">
@@ -107,6 +100,25 @@
 		<div class="example">
 
 			<form>
+
+				<fieldset>
+
+					<legend>Testing</legend>
+					<p>This is a basic Watercolor form</p>
+					<select>
+						<option value="1">Male</option>
+						<option value="2">Female</option>
+					</select>
+					<p>This is a basic Watercolor form</p>
+
+				</fieldset>
+				<fieldset>
+
+					<legend>Testing</legend>
+					<p>This is a basic Watercolor form</p>
+					<input type="email" placeholder="user@domain.com" />
+					<p>This is a basic Watercolor form</p>
+				</fieldset>
 
 				<fieldset>
 

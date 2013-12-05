@@ -25,7 +25,7 @@ table.striped {
 }
 
 //
-// Form Fields Specificity
+// Form Classes
 //
 
 //							Specificity
@@ -34,10 +34,6 @@ table.striped {
 //fieldset.block .field		0	0	2	1		fieldset override
 //form div.field.block		0	0	2	2		field override
 
-//
-// Block Field
-//
-
 .field,
 .block .field,
 fieldset.block .field,
@@ -45,19 +41,11 @@ form div.field.block {
 	@include field-block;
 }
 
-//
-// Inline Field
-//
-
 .inline .field,
 fieldset.inline .field,
 form div.field.inline {
 	@include field-inline;
 }
-
-//
-// Aligned Field
-//
 
 .align .field,
 fieldset.align .field,
@@ -65,17 +53,9 @@ form div.field.align {
 	@include field-align;
 }
 
-//
-// Clear Field
-//
-
 .field.clear {
 	clear: both;
 }
-
-//
-// Form Buttons
-//
 
 form .buttons {
 	@include form-buttons;
