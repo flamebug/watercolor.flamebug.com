@@ -178,3 +178,16 @@
     background-image: -ms-linear-gradient($origin, $start, $stop);
     background-image: linear-gradient($origin, $start, $stop);
 }
+
+//
+// user-select
+//
+
+@mixin user-select($select) {
+	-webkit-user-select: $select;
+	-khtml-user-select: $select;
+	-moz-user-select: $select;
+	-ms-user-select: $select;
+	user-select: $select;
+}
+

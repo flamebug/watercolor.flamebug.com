@@ -31,5 +31,14 @@ forms.scss
 }
 
 #align-form .field {
-	@include field-align;
+	@include field-block;
+}
+
+/*
+6 column layout
+*/
+@media screen and (min-width: 30rem) {
+	#align-form .field {
+		@include field-align;
+	}
 }

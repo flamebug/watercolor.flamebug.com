@@ -103,25 +103,6 @@
 
 				<fieldset>
 
-					<legend>Testing</legend>
-					<p>This is a basic Watercolor form</p>
-					<select>
-						<option value="1">Male</option>
-						<option value="2">Female</option>
-					</select>
-					<p>This is a basic Watercolor form</p>
-
-				</fieldset>
-				<fieldset>
-
-					<legend>Testing</legend>
-					<p>This is a basic Watercolor form</p>
-					<input type="email" placeholder="user@domain.com" />
-					<p>This is a basic Watercolor form</p>
-				</fieldset>
-
-				<fieldset>
-
 					<legend>Account Information</legend>
 
 					<div class="field">
@@ -132,7 +113,7 @@
 
 					<div class="field">
 						<label>Password:</label>
-						<input type="password" placeholder="password" required />
+						<input type="password" placeholder="Password" required />
 						<span class="hint">Password is required</span>
 					</div>
 
@@ -248,7 +229,7 @@
       &lt;/div&gt;
       &lt;div class="field"&gt;
          &lt;label&gt;Password:&lt;/label&gt;
-         &lt;input type="email" placeholder="password" required /&gt;
+         &lt;input type="password" placeholder="Password" required /&gt;
          &lt;span class="hint"&gt;Password is required&lt;/span&gt;
       &lt;/div&gt;
    &lt;/fieldset&gt;
@@ -312,7 +293,7 @@ be necessary if the default field type is overridden
 
 					<div class="field">
 						<label>Password:</label>
-						<input type="password" placeholder="password" required />
+						<input type="password" placeholder="Password" required />
 						<span class="hint">Password is required</span>
 					</div>
 
@@ -366,6 +347,7 @@ be necessary if the default field type is overridden
 
 		<h3>Aligned Form</h3>
 		<p>Each form field is displayed on a separate line, with the field labels aligned to the left of the field.  The buttons are displayed below the form on a separate line.</p>
+		<p>One issue with aligned forms is that they do not scale well to small screen sizes. To overcome that it is usually good practice to default the mobile view to block style and then enhance large screens with align mode using a media query.</p>
 
 		<div class="example">
 
@@ -383,7 +365,7 @@ be necessary if the default field type is overridden
 
 					<div class="field">
 						<label>Password:</label>
-						<input type="password" placeholder="password" required />
+						<input type="password" placeholder="Password" required />
 						<span class="hint">Password is required</span>
 					</div>
 
@@ -428,7 +410,15 @@ be necessary if the default field type is overridden
 		</div>
 
 		<pre><code class="language-css">.field {
-   @@include field-align;
+   @@include field-block;
+}
+/*
+6 column layout
+*/
+@@media screen and (min-width: 30rem) {
+   .field {
+      @@include field-align;
+   }
 }</code></pre>
 
 	</article>
