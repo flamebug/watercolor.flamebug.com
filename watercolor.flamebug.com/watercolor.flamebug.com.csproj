@@ -94,6 +94,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\document-basic.htm" />
     <Content Include="Content\Images\appicon.png" />
     <Content Include="Content\Images\Badges\CSS3.svg" />
     <Content Include="Content\Images\Badges\Sass.svg" />
@@ -307,6 +308,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Styles\controls\fb-hint.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\document-enhanced.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\pages\document.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Document-Enhanced.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Document-Basic.pdf" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
