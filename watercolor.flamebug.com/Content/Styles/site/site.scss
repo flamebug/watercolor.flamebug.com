@@ -74,6 +74,13 @@ table {
 	}
 }
 
+/* 6 column layout */
+@media screen and (min-width: 30rem) {
+	.introduction {
+		padding: $line-height * 4em 0;
+	}
+}
+
 //
 // Example & Code
 //

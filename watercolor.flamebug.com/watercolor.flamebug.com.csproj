@@ -98,10 +98,14 @@
     <Content Include="Content\Images\appicon.png" />
     <Content Include="Content\Images\Badges\CSS3.svg" />
     <Content Include="Content\Images\Badges\Sass.svg" />
+    <Content Include="Content\Images\chrome-flat-browser-1600.png" />
+    <Content Include="Content\Images\Document-Basic.png" />
+    <Content Include="Content\Images\Document-Enhanced.png" />
     <Content Include="Content\Images\error.svg" />
     <Content Include="Content\Images\flamebug-Logo.png" />
     <Content Include="Content\Images\Badges\HTML5.svg" />
     <Content Include="Content\Images\image.jpg" />
+    <Content Include="Content\Images\right-arrow.png" />
     <Content Include="Content\Scripts\Controls\flamebug.modal.js" />
     <Content Include="Content\Scripts\modernizr-2.6.3.min.js" />
     <Content Include="Content\Styles\controls\fb-app-icon.scss" />
@@ -250,7 +254,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\image\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
