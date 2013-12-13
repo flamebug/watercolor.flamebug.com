@@ -11,6 +11,10 @@ layout.scss
 
 #layout-introduction {
 	background-color: #0db2ac;
+
+	&:after {
+		border-top-color: #0db2ac;
+	}
 }
 
 //

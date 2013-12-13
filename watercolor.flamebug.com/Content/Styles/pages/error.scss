@@ -11,6 +11,10 @@ error.scss
 
 #error-introduction {
 	background-color: #f00;
+		
+	&:after {
+		border-top-color: #f00;
+	}
 }
 
 //

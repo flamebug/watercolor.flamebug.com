@@ -12,6 +12,10 @@ forms.scss
 
 #forms-introduction {
 	background-color: #4d72cc;
+		
+	&:after {
+		border-top-color: #4d72cc;
+	}
 }
 
 //

@@ -11,6 +11,10 @@ controls.scss
 
 #controls-introduction {
 	background-color: #fc694d;
+	
+	&:after {
+		border-top-color: #fc694d;
+	}
 }
 
 //

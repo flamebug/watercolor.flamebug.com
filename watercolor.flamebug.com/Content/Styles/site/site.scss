@@ -42,10 +42,23 @@ table {
 //
 
 .introduction {
+	position: relative;
 	padding: $line-height * 2em 0;
 	padding-bottom: $line-height * 1em;
 	background-color: #f56;
 	color: #fff;
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -50px;
+		left: 50%;
+		margin-left: -25px;
+		border-width: 25px;
+		border-style: solid;
+		border-color: transparent;
+		border-top-color: #fc8d4d;
+	}
 
 	& > header {
 		text-align: center;
@@ -78,6 +91,13 @@ table {
 @media screen and (min-width: 30rem) {
 	.introduction {
 		padding: $line-height * 4em 0;
+
+		&:after {
+			bottom: -100px;
+			left: 50%;
+			margin-left: -50px;
+			border-width: 50px;
+		}
 	}
 }
 

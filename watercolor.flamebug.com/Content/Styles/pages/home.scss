@@ -10,7 +10,6 @@ home.scss
 //
 
 section {
-	padding: $line-height * 1em 0;
 	border-bottom: 1px solid rgba(0,0,0,0.05);
 
 	&:last-child {
@@ -26,26 +25,21 @@ section {
 	}
 }
 
-/* 6 column layout */
-@media screen and (min-width: 30rem) {
-	section {
-		padding: $line-height * 2em 0;
-	}
-}
-
 //
 // Intro
 //
 
-#intro {
+#home-introduction {
+	border-bottom: 0;
 	background-color: #fc8d4d;
 	//background-image: -webkit-linear-gradient(340deg, #0db2ac 0%, #0db2ac 20%, #f5dd7e 20%, #f5dd7e 40%, #fc8d4d 40%, #fc8d4d 60%, #fc694d 60%, #fc694d 80%, #faba32 80%, #faba32 100%);
 	//background-image: linear-gradient(110deg, #0db2ac 0%, #0db2ac 20%, #f5dd7e 20%, #f5dd7e 40%, #fc8d4d 40%, #fc8d4d 60%, #fc694d 60%, #fc694d 80%, #faba32 80%, #faba32 100%);
-	background-image: -webkit-linear-gradient(340deg, #0db2ac, #f5dd7e, #fc8d4d, #fc694d, #faba32);
-	background-image: linear-gradient(110deg, #0db2ac, #8dc890, #f5dd7e, #fc8d4d, #fc694d, #faba32);
+	//background-image: -webkit-linear-gradient(340deg, #0db2ac, #f5dd7e, #fc8d4d, #fc694d, #faba32);
+	//background-image: linear-gradient(110deg, #0db2ac, #8dc890, #f5dd7e, #fc8d4d, #fc694d, #faba32);
 
-	padding: $line-height * 3em 0 $line-height * 1.5em 0;
-	border-bottom: 0;
+	&:after {
+		border-top-color: #fc8d4d;
+	}
 
 	h1 {
 		font-size: 3.5em;
@@ -55,29 +49,30 @@ section {
 
 	img {
 		display: block;
-		margin: 0 auto;
+		margin: $line-height * 1em auto 0 auto;
 		width: 200px;
 	}
 
 	a {
-		padding: 1em 1.5em;
-		background: white;
-		color: inherit;
+		display: block;
+		width: 10em;
+		margin: $line-height * 1em auto;
+		padding: .5em .75em;
+		background: #0db2ac;
+		text-decoration: none;
 
 		@include transition(all, .1s);
 
 		&:hover {
-			background: #0db2ac;
-			color: white;
+			background: #13b8b2;
+			color: inherit;
 		}
 	}
 }
 
 /* 6 column layout */
 @media screen and (min-width: 30rem) {
-	#intro {
-		padding: $line-height * 5em 0 $line-height * 3em 0;
-
+	#home-introduction {
 		h1 {
 			font-size: 4.5em;
 			letter-spacing: -4px;
@@ -90,12 +85,14 @@ section {
 
 /* 8 column layout */
 @media screen and (min-width: 40rem) {
-	#intro {
-		padding: $line-height * 7em 0 $line-height * 5em 0;
-
+	#home-introduction {
 		h1 {
 			font-size: 5.5em;
 			letter-spacing: -4px;
+		}
+
+		a {
+			padding: 1em 1.5em;
 		}
 	}
 }
@@ -121,7 +118,7 @@ section {
 		height: 100%;
 		width: $column-width;
 		margin-left: ($gutter-width / 2);
-		background: #faba32;
+		background: #fc8d4d;
 		@include transition(background-color, 0.3s, ease-out);
 		opacity: .1;
 
@@ -173,9 +170,6 @@ section {
 
 /* 6 column layout */
 @media screen and (min-width: 30rem) {
-	#infinite div {
-		background: #fc694d;
-	}
 	.col3,.col21 {
 		opacity: 1 !important;
 	}
@@ -186,9 +180,6 @@ section {
 	#infinite {
 		height: 30em;
 	}
-	#infinite div {
-		background: #fc8d4d;
-	}
 	.col4,.col22 {
 		opacity: 1 !important;
 	}
@@ -196,9 +187,6 @@ section {
 
 /* 12 column layout */
 @media screen and (min-width: 60rem) {
-	#infinite div {
-		background: #f5dd7e;
-	}
 	.col5,.col6,.col23,.col24 {
 		opacity: 1 !important;
 	}
@@ -206,9 +194,6 @@ section {
 
 /* 16 column layout */
 @media screen and (min-width: 80rem) {
-	#infinite div {
-		background: #0db2ac;
-	}
 	.col7,.col8,.col25,.col26 {
 		opacity: 1 !important;
 	}

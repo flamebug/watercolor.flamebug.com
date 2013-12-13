@@ -11,6 +11,10 @@ tables.scss
 
 #tables-introduction {
 	background-color: #fc8d4d;
+
+	&:after {
+		border-top-color: #fc8d4d;
+	}
 }
 
 //

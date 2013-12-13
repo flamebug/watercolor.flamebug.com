@@ -11,6 +11,10 @@ typography.scss
 
 #typography-introduction {
 	background-color: #f5dd7e;
+
+	&:after {
+		border-top-color: #f5dd7e;
+	}
 }
 
 //
