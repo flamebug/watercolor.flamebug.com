@@ -10,20 +10,27 @@ home.scss
 //
 
 section {
-	padding: $line-height * 2em 0;
+	padding: $line-height * 1em 0;
 	border-bottom: 1px solid rgba(0,0,0,0.05);
+
+	&:last-child {
+		border-bottom: 0;
+	}
+
+	> header {
+		text-align: center;
+
+		h1 {
+			margin-top: 0;
+		}
+	}
 }
 
-section:last-child {
-	border-bottom: 0;
-}
-
-section > header {
-	text-align: center;
-}
-
-section > header h1 {
-	margin-top: 0;
+/* 6 column layout */
+@media screen and (min-width: 30rem) {
+	section {
+		padding: $line-height * 2em 0;
+	}
 }
 
 //
@@ -32,52 +39,52 @@ section > header h1 {
 
 #intro {
 	background-color: #fc8d4d;
-	background-image: -webkit-linear-gradient(340deg, #0db2ac 0%, #0db2ac 20%, #f5dd7e 20%, #f5dd7e 40%, #fc8d4d 40%, #fc8d4d 60%, #fc694d 60%, #fc694d 80%, #faba32 80%, #faba32 100%);
-	background-image: linear-gradient(110deg, #0db2ac 0%, #0db2ac 20%, #f5dd7e 20%, #f5dd7e 40%, #fc8d4d 40%, #fc8d4d 60%, #fc694d 60%, #fc694d 80%, #faba32 80%, #faba32 100%);
+	//background-image: -webkit-linear-gradient(340deg, #0db2ac 0%, #0db2ac 20%, #f5dd7e 20%, #f5dd7e 40%, #fc8d4d 40%, #fc8d4d 60%, #fc694d 60%, #fc694d 80%, #faba32 80%, #faba32 100%);
+	//background-image: linear-gradient(110deg, #0db2ac 0%, #0db2ac 20%, #f5dd7e 20%, #f5dd7e 40%, #fc8d4d 40%, #fc8d4d 60%, #fc694d 60%, #fc694d 80%, #faba32 80%, #faba32 100%);
+	background-image: -webkit-linear-gradient(340deg, #0db2ac, #f5dd7e, #fc8d4d, #fc694d, #faba32);
+	background-image: linear-gradient(110deg, #0db2ac, #8dc890, #f5dd7e, #fc8d4d, #fc694d, #faba32);
 
 	padding: $line-height * 3em 0 $line-height * 1.5em 0;
 	border-bottom: 0;
-}
 
-#intro h1 {
-	font-size: 3.5em;
-	letter-spacing: -2px;
-	color: #fff;
-}
+	h1 {
+		font-size: 3.5em;
+		letter-spacing: -2px;
+		color: #fff;
+	}
 
-#intro img {
-	display: block;
-	margin: 0 auto;
-	width: 200px;
-}
+	img {
+		display: block;
+		margin: 0 auto;
+		width: 200px;
+	}
 
-#intro .fb-button {
-	background: transparent;
-	border: 1px solid #fff;
-	color: #fff;
-	box-shadow: none;
-	text-shadow: none;
-	@include transition(all, .1s);
-}
+	a {
+		padding: 1em 1.5em;
+		background: white;
+		color: inherit;
 
-#intro .fb-button:hover {
-	background: white;
-	color: inherit;
+		@include transition(all, .1s);
+
+		&:hover {
+			background: #0db2ac;
+			color: white;
+		}
+	}
 }
 
 /* 6 column layout */
 @media screen and (min-width: 30rem) {
 	#intro {
 		padding: $line-height * 5em 0 $line-height * 3em 0;
-	}
 
-	#intro h1 {
-		font-size: 4.5em;
-		letter-spacing: -4px;
-	}
-
-	#intro img {
-		width: 280px;
+		h1 {
+			font-size: 4.5em;
+			letter-spacing: -4px;
+		}
+		img {
+			width: 280px;
+		}
 	}
 }
 
@@ -85,11 +92,11 @@ section > header h1 {
 @media screen and (min-width: 40rem) {
 	#intro {
 		padding: $line-height * 7em 0 $line-height * 5em 0;
-	}
 
-	#intro h1 {
-		font-size: 5.5em;
-		letter-spacing: -4px;
+		h1 {
+			font-size: 5.5em;
+			letter-spacing: -4px;
+		}
 	}
 }
 
@@ -106,22 +113,22 @@ section > header h1 {
 	height: 20em;
 	margin: $line-height * 2em auto 0 auto;
 	overflow: hidden;
-}
 
-#infinite div {
-	position: absolute;
-	left: 50%;
-	top: 0;
-	height: 100%;
-	width: $column-width;
-	margin-left: ($gutter-width / 2);
-	background: #faba32;
-	@include transition(background-color, 0.3s, ease-out);
-	opacity: .1;
-}
+	div {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		height: 100%;
+		width: $column-width;
+		margin-left: ($gutter-width / 2);
+		background: #faba32;
+		@include transition(background-color, 0.3s, ease-out);
+		opacity: .1;
 
-#infinite div:hover {
-	opacity: .5;
+		&:hover {
+			opacity: .5;
+		}
+	}
 }
 
 .col2 { @include infinite-column-left(1); }
@@ -223,7 +230,7 @@ section > header h1 {
 		background: url(/Content/Images/chrome-flat-browser-1600.png) no-repeat;
 		padding-top: 44px;
 		border-radius: .4em;
-		box-shadow: 0 0 50px rgba(0,0,0,0.05);
+		box-shadow: 0 0 20px rgba(0,0,0,0.08);
 	}
 	#arrow {
 		width: 128px;
@@ -269,43 +276,6 @@ section > header h1 {
 		}
 		#arrow {
 			margin-top: $line-height * 14em;
-		}
-	}
-}
-
-//
-// Technology
-//
-
-#technology {
-	@include clear-children();
-
-	ul {
-		list-style: none;
-		padding: 0;
-	}
-
-	li {
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		float: left;
-		width: 33.3%;
-		padding: 0 $line-height * .5em;
-		text-align: center;
-
-		img {
-			width: 192px;
-			opacity: 0.3;
-			margin: 1em 0;
-		}
-
-		h3 {
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-
-		p {
-			margin-top: 0;
 		}
 	}
 }

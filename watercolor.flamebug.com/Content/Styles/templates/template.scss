@@ -49,10 +49,33 @@ body {
 //
 
 #footer {
-	padding: $line-height * 2em 0;
+	padding: $line-height * 1em 0;
 	background-color: rgba(0,0,0,0.03);
 	text-align: center;
 	@include clear-children();
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	li {
+		display: inline-block;
+		width: 48px;
+		margin: 0 1em;
+		text-align: center;
+
+		img {
+			opacity: 0.1;
+		}
+	}
+}
+
+/* 6 column layout */
+@media screen and (min-width: 30rem) {
+	section {
+		padding: $line-height * 2em 0;
+	}
 }
 
 //
