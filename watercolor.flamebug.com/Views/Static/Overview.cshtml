@@ -10,9 +10,9 @@
 		<script src="@Url.Content("~/Content/Scripts/prism.js")"></script>
 }
 
-<section id="overview-introduction" class="introduction">
+<header class="introduction">
 
-	<header class="container">
+	<div class="container">
 
 		<h2>Overview</h2>
 
@@ -20,14 +20,13 @@
 			Watercolor is built with <a href="http://sass-lang.com/">SCSS</a> to allow it to be modular, efficiently coded, and semantic.  All of the code is organized in modular pieces that minimize the amount of code that you need to write for each new site. Watercolor provides a built-in semantic adaptive grid, a typographic grid, default typographic styles to make your text look great, as well as built in styles for forms, tables, buttons, and a variety of other controls. The aim is to make it easy for you to bring up a new site, letting you focus on HTML semantics and content organization, allowing the site to look great with minimal effort.
 		</p>
 
+	</div>
 
-	</header>
-
-</section>
+</header>
 
 <section id="overview" class="container">
 
-	<article id="folders">
+	<section id="folders">
 
 		<h3>Folder Overview</h3>
 
@@ -65,9 +64,9 @@
 
 		</table>
 
-	</article>
+	</section>
 
-	<article id="files">
+	<section id="files">
 
 		<h3>File Overview</h3>
 
@@ -133,9 +132,9 @@
 
 		</table>
 
-	</article>
+	</section>
 
-	<article id="normalize">
+	<section id="normalize">
 
 		<h3>base/normalize.css</h3>
 
@@ -143,9 +142,9 @@
 
 		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Base/normalize.css")))</code></pre>
 
-	</article>
+	</section>
 
-	<article id="typography">
+	<section id="typography">
 
 		<h3>base/typography.scss</h3>
 
@@ -153,9 +152,9 @@
 
 		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Base/typography.scss")))</code></pre>
 
-	</article>
+	</section>
 
-	<article id="forms">
+	<section id="forms">
 
 		<h3>base/classes.scss</h3>
 
@@ -163,9 +162,9 @@
 
 		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Base/classes.scss")))</code></pre>
 
-	</article>
+	</section>
 
-	<article id="grid">
+	<section id="grid">
 
 		<h3>library/grid.scss</h3>
 
@@ -173,9 +172,9 @@
 
 		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Library/grid.scss")))</code></pre>
 
-	</article>
+	</section>
 
-	<article id="helpers">
+	<section id="helpers">
 
 		<h3>library/helpers.scss</h3>
 
@@ -183,9 +182,9 @@
 
 		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Library/helpers.scss")))</code></pre>
 
-	</article>
+	</section>
 
-	<article id="tables">
+	<section id="tables">
 
 		<h3>library/tables.scss</h3>
 
@@ -193,9 +192,9 @@
 
 		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Library/tables.scss")))</code></pre>
 
-	</article>
+	</section>
 
-	<article id="template">
+	<section id="template">
 
 		<h3>templates/template.scss</h3>
 
@@ -203,9 +202,9 @@
 
 		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Templates/template.scss")))</code></pre>
 
-	</article>
+	</section>
 
-	<article id="site">
+	<section id="site">
 
 		<h3>site/site.scss</h3>
 
@@ -213,9 +212,9 @@
 
 		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Site/site.scss")))</code></pre>
 
-	</article>
+	</section>
 
-	<article id="container">
+	<section id="container">
 
 		<h3>container.scss</h3>
 
@@ -223,9 +222,9 @@
 
 		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/container.scss")))</code></pre>
 
-	</article>
+	</section>
 
-	<article id="global">
+	<section id="global">
 
 		<h3>global.scss</h3>
 
@@ -233,9 +232,9 @@
 
 		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/global.scss")))</code></pre>
 
-	</article>
+	</section>
 
-	<article id="style">
+	<section id="style">
 
 		<h3>style.scss</h3>
 
@@ -243,7 +242,7 @@
 
 		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/style.scss")))</code></pre>
 
-	</article>
+	</section>
 
 </section>
 

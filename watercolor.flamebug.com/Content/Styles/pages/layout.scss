@@ -6,10 +6,18 @@ layout.scss
 @import "../library/helpers.scss";
 
 //
+// Sections
+//
+
+#layout > section:not(#example) {
+	@include max-column;
+}
+
+//
 // Introduction
 //
 
-#layout-introduction {
+.introduction {
 	background-color: #0db2ac;
 
 	&:after {
@@ -18,42 +26,42 @@ layout.scss
 }
 
 //
-// Articles
+// Layout Demo
 //
 
-article:not(#example) {
-	@include max-column();
+#layout-demo {
+	padding-bottom: 0;
+	border-bottom: 0;
 }
 
 //
-// Infinite Columns
+// Infinite
 //
 
 @mixin infinite-column-left($cols) {
 	margin-left: $cols * ($column-width + $gutter-width) + ($gutter-width / 2) !important;
 }
 
-#infinite-columns figure {
+#infinite {
 	position: relative;
 	height: 20em;
-	margin: $line-height * 2em auto 0 auto;
+	margin: $line-height * 1em auto 0 auto;
 	overflow: hidden;
-}
 
-#infinite-columns figure div {
-	position: absolute;
-	left: 50%;
-	top: 0;
-	height: 100%;
-	width: $column-width;
-	margin-left: ($gutter-width / 2);
-	background: #0db2ac;
-	@include transition(background-color, 0.3s, ease-out);
-	opacity: .1;
-}
+	div {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		height: 100%;
+		width: $column-width;
+		margin-left: ($gutter-width / 2);
+		background: #0db2ac;
+		opacity: .1;
 
-#infinite-columns figure div:hover {
-	opacity: .5;
+		&:hover {
+			opacity: .5;
+		}
+	}
 }
 
 .col2 { @include infinite-column-left(1); }
@@ -105,7 +113,7 @@ article:not(#example) {
 
 /* 8 column layout */
 @media screen and (min-width: 40rem) {
-	#infinite-columns figure {
+	#infinite {
 		height: 30em;
 	}
 	.col4,.col22 {

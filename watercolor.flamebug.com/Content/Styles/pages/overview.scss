@@ -6,18 +6,18 @@ overview.scss
 @import "../library/helpers.scss";
 
 //
-// Articles
+// Sections
 //
 
-article {
-	@include max-column();
+#overview > section {
+	@include max-column;
 }
 
 //
 // Introduction
 //
 
-#overview-introduction {
+.introduction {
 	background-color: #F56;
 
 	&:after {
