@@ -6,6 +6,14 @@ tables.scss
 @import "../library/helpers.scss";
 
 //
+// Sections
+//
+
+#tables > section {
+	@include max-column;
+}
+
+//
 // Introduction
 //
 
@@ -15,14 +23,6 @@ tables.scss
 	&:after {
 		border-top-color: #fc8d4d;
 	}
-}
-
-//
-// Articles
-//
-
-#tables > article {
-	@include max-column();
 }
 
 //

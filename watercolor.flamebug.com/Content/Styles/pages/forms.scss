@@ -7,6 +7,14 @@ forms.scss
 @import "../library/helpers.scss";
 
 //
+// Sections
+//
+
+#forms > section {
+	@include max-column;
+}
+
+//
 // Introduction
 //
 
@@ -16,14 +24,6 @@ forms.scss
 	&:after {
 		border-top-color: #4d72cc;
 	}
-}
-
-//
-// Articles
-//
-
-#forms > article {
-	@include max-column();
 }
 
 //

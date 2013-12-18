@@ -19,9 +19,9 @@
 	-->
 }
 
-<section id="controls-introduction" class="introduction">
+<header class="introduction">
 
-	<header class="container">
+	<div class="container">
 
 		<h2>Controls</h2>
 
@@ -29,13 +29,13 @@
 			Watercolor provides controls and classes that allow your web application to have a consistent feel for your users. Many controls can have additional class modifiers added to change behavior, such as: <code>primary</code> for default actions, <code>positive</code> for non-destructive actions such as add or save, <code>warning</code> for actions that require user attention, and <code>negative</code> for destructive or error conditions.
 		</p>
 
-	</header>
+	</div>
 
-</section>
+</header>
 
 <section id="controls" class="container">
 
-	<article id="button">
+	<section id="button">
 
 		<h3>Button</h3>
 		<p>Having consistent button elements throughout your app is important. Add class <code>fb-button</code> to any <code>a</code>, <code>input</code>, or <code>button</code> element.</p>
@@ -128,9 +128,9 @@
 
 		</table>
 
-	</article>
+	</section>
 
-	<article id="tag">
+	<section id="tag">
 
 		<h3>Tag</h3>
 		<p>Use tags to display additional information such as item counts or categories. Add class <code>fb-tag</code> to any span. Add class <code>primary</code>, <code>positive</code>, <code>warning</code>, or <code>negative</code> to any tag to modify the emphasis.</p>
@@ -151,9 +151,9 @@
 &lt;span class="fb-tag warning"&gt;4 warnings&lt;/span&gt;
 &lt;span class="fb-tag negative"&gt;5 errors&lt;/span&gt;</code></pre>
 
-	</article>
+	</section>
 
-	<article id="label">
+	<section id="label">
 
 		<h3>Label</h3>
 		<p>Use labels to display requirements, or other important information. Add class <code>fb-label</code> to any span. Add class <code>primary</code>, <code>positive</code>, <code>warning</code>, or <code>negative</code> to any label to modify the emphasis.</p>
@@ -174,9 +174,9 @@
 &lt;span class="fb-label warning"&gt;warning&lt;/span&gt;
 &lt;span class="fb-label negative"&gt;error&lt;/span&gt;</code></pre>
 
-	</article>
+	</section>
 
-	<article id="badge">
+	<section id="badge">
 
 		<h3>Badge</h3>
 		<p>Use badges for notification counts. Add class <code>fb-badge</code> to any container element with style <code>position: relative</code>.</p>
@@ -239,9 +239,9 @@
 
 		</table>
 
-	</article>
+	</section>
 
-	<article id="app-icon">
+	<section id="app-icon">
 
 		<h3>App Icon</h3>
 		<p>App Icons are immediately familiar to users as a source of navigation.  Use for navigation and content grouping.  Add a <code>span</code> around the image to add a badge to the app icon.</p>
@@ -275,9 +275,9 @@
    &lt;label&gt;Blog Posts&lt;/label&gt;
 &lt;/a&gt;</code></pre>
 
-	</article>
+	</section>
 
-	<article id="modal">
+	<section id="modal">
 
 		<h3>Modal</h3>
 		<p>A modal panel that is displayed to a user after clicking a triggering link. Add class <code>.fb-modal</code> to any element, and any link pointing to it's target id will trigger the modal. Add class <code>slide-right</code>, <code>slide-bottom</code>, <code>spin</code>, <code>super-scale</code>, or <code>full-screen</code> to the modal to define the effect used while showing/hiding.</p>
@@ -314,9 +314,9 @@
 &lt;div id="modal-super-scale" class="fb-modal super-scale"&gt;Modal&lt;/div&gt;
 &lt;div id="modal-full-screen" class="fb-modal full-screen"&gt;Modal&lt;/div&gt;</code></pre>
 
-	</article>
+	</section>
 
-	<article id="disclosure">
+	<section id="disclosure">
 
 		<h3>Disclosure</h3>
 		<p>A disclosure toggles the visibility of another element. Add class <code>.fb-disclosure</code> to a link, and a target element in the <code>href</code>.</p>
@@ -347,7 +347,7 @@
 		<pre class="example-code"><code class="language-markup">&lt;a class="fb-disclosure" href="#disclosed"&gt;Disclose Stuff&lt;/a&gt;
 &lt;div id="disclosed" style="display: none"&gt;&hellip;&lt;/div&gt;</code></pre>
 
-	</article>
+	</section>
 <!--
 	<article id="tab-view">
 

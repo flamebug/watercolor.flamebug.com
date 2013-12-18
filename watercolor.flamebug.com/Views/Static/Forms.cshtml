@@ -10,21 +10,21 @@
 		<script src="@Url.Content("~/Content/Scripts/prism.js")"></script>
 }
 
-<section id="forms-introduction" class="introduction">
+<header class="introduction">
 
-	<header class="container">
+	<div class="container">
 
 		<h2>Forms</h2>
 
 		<p>Forms in watercolor are pretty simple, yet tremendously flexible. Forms fields should be marked up as <code>div</code> elements with a <code>field</code> class. Form buttons should be enclosed in a <code>div</code> with a <code>buttons</code> class. With this basic markup and a little bit of help from the form @@mixins you can display your forms in a variety of ways.</p>
 
-	</header>
+	</div>
 
-</section>
+</header>
 
 <section id="forms" class="container">
 
-	<article id="mixins">
+	<section id="mixins">
 
 		<h3>Form Mixins</h3>
 
@@ -56,9 +56,9 @@
 
 		</table>
 
-	</article>
+	</section>
 
-	<article id="classes">
+	<section id="classes">
 
 		<h3>Form Classes</h3>
 
@@ -90,9 +90,9 @@
 
 		</table>
 
-	</article>
+	</section>
 
-	<article id="basic-form">
+	<section id="basic-form">
 
 		<h3>Basic Block Form</h3>
 		<p>This is a basic Watercolor form, which is styled by default in block layout. All below examples will use this same HTML markup, but with changes in the CSS. <code>fieldset</code> elements aren't required, but are included for the sake of these examples. Each form field is enclosed in a <code>div</code> element with <code>field</code> class. Form buttons are enclosed in a <code>div</code> element with <code>buttons</code> class. Each field can also have an optional <code>span</code> with class <code>hint</code> that pops up a field hint when the field is focused, and turns red if the field is invalid.</p>
@@ -270,9 +270,9 @@ be necessary if the default field type is overridden
    @@include field-block;
 }</code></pre>
 
-	</article>
+	</section>
 
-	<article id="inline-form">
+	<section id="inline-form">
 
 		<h3>Inline Form</h3>
 		<p>Each form field is displayed in an inline manner, with the label above the field.  The buttons are displayed below the form on a separate line.</p>
@@ -341,9 +341,9 @@ be necessary if the default field type is overridden
    @@include field-inline;
 }</code></pre>
 
-	</article>
+	</section>
 
-	<article id="align-form">
+	<section id="align-form">
 
 		<h3>Aligned Form</h3>
 		<p>Each form field is displayed on a separate line, with the field labels aligned to the left of the field.  The buttons are displayed below the form on a separate line.</p>
@@ -421,6 +421,6 @@ be necessary if the default field type is overridden
    }
 }</code></pre>
 
-	</article>
+	</section>
 
 </section>

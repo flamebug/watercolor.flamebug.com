@@ -6,6 +6,14 @@ typography.scss
 @import "../library/helpers.scss";
 
 //
+// Sections
+//
+
+#text > section {
+	@include max-column;
+}
+
+//
 // Introduction
 //
 
@@ -15,14 +23,6 @@ typography.scss
 	&:after {
 		border-top-color: #f5dd7e;
 	}
-}
-
-//
-// Articles
-//
-
-#text > article {
-	@include max-column();
 }
 
 //

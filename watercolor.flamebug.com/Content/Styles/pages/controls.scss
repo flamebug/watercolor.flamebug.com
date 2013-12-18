@@ -6,6 +6,14 @@ controls.scss
 @import "../library/helpers.scss";
 
 //
+// Sections
+//
+
+#controls > section {
+	@include max-column;
+}
+
+//
 // Introduction
 //
 
@@ -15,15 +23,6 @@ controls.scss
 	&:after {
 		border-top-color: #fc694d;
 	}
-}
-
-//
-// Articles
-//
-
-article {
-	@include max-column();
-	margin-bottom: $line-height * 1em;
 }
 
 //

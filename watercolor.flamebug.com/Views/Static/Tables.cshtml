@@ -10,9 +10,9 @@
 		<script src="@Url.Content("~/Content/Scripts/prism.js")"></script>
 }
 
-<section id="tables-introduction" class="introduction">
+<header class="introduction">
 
-	<header class="container">
+	<div class="container">
 
 		<h2>Tables</h2>
 
@@ -21,13 +21,13 @@
 			Mixins are provided to customize the look of the table, and classes are provided for convenience.  These mixins and classes can be combined for a striped, bordered, and padded table.
 		</p>
 
-	</header>
+	</div>
 
-</section>
+</header>
 
 <section id="tables" class="container">
 
-	<article id="mixins">
+	<section id="mixins">
 
 		<h3>Table Mixins</h3>
 
@@ -59,9 +59,9 @@
 
 		</table>
 
-	</article>
+	</section>
 
-	<article id="classes">
+	<section id="classes">
 
 		<h3>Table Classes</h3>
 
@@ -93,9 +93,9 @@
 
 		</table>
 
-	</article>
+	</section>
 
-	<article id="basic-table">
+	<section id="basic-table">
 
 		<h3>Basic Table</h3>
 		<p>This is a basic table, which is styled by default with horizontal dividers and bold headers. All below examples will use this same HTML markup, but with changes in the CSS.</p>
@@ -169,9 +169,9 @@
     &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
 
-	</article>
+	</section>
 
-	<article id="striped-table">
+	<section id="striped-table">
 
 		<h3>Striped Table</h3>
 		<p>Include the <code>table-striped</code> @@mixin to your table style, or add class <code>striped</code> to the table markup. This adds alternating striped lines to the target table.</p>
@@ -218,9 +218,9 @@
    @@include table-striped;
 }</code></pre>
 
-	</article>
+	</section>
 
-	<article id="bordered-table">
+	<section id="bordered-table">
 
 		<h3>Bordered Table</h3>
 		<p>Include the <code>table-bordered</code> @@mixin to your table style, or add class <code>bordered</code> to the table markup. This adds borders to the target table.</p>
@@ -267,9 +267,9 @@
    @@include table-bordered;
 }</code></pre>
 
-	</article>
+	</section>
 
-	<article id="padded-table">
+	<section id="padded-table">
 
 		<h3>Padded Table</h3>
 		<p>Include the <code>table-padded</code> @@mixin to your table style, or add class <code>padded</code> to the table markup. This adds extra padding to the target table's cells.</p>
@@ -318,9 +318,9 @@
    @@include table-padded;
 }</code></pre>
 
-	</article>
+	</section>
 
-	<article id="striped-bordered-padded-table">
+	<section id="striped-bordered-padded-table">
 
 		<h3>Striped, Bordered, & Padded Table</h3>
 		<p>Include the <code>table-striped</code>, <code>table-bordered</code>, or <code>table-padded</code> @@mixins to your table styles, or add the corresponding classes to the table markup. These can be added in any combination to customize the look of your tables.</p>
@@ -371,6 +371,6 @@
    @@include table-padded;
 }</code></pre>
 
-	</article>
+	</section>
 
 </section>
