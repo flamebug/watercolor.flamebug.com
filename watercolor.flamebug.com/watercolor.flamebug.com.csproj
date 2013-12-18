@@ -102,7 +102,8 @@
     <Content Include="Content\Images\Document-Basic.png" />
     <Content Include="Content\Images\Document-Enhanced.png" />
     <Content Include="Content\Images\error.svg" />
-    <Content Include="Content\Images\flamebug-Logo.png" />
+    <Content Include="Content\Images\flamebug-Logo-Black.png" />
+    <Content Include="Content\Images\flamebug-Logo-White.png" />
     <Content Include="Content\Images\Badges\HTML5.svg" />
     <Content Include="Content\Images\image.jpg" />
     <Content Include="Content\Images\right-arrow.png" />
@@ -128,7 +129,6 @@
     <Content Include="Views\Static\Tables.cshtml" />
     <Content Include="Content\Styles\pages\tables.scss" />
     <Content Include="Content\Styles\library\helpers.scss" />
-    <Content Include="Content\Images\flamebug.png" />
     <Content Include="Content\Scripts\Controls\flamebug.background.js" />
     <Content Include="Content\Scripts\Controls\flamebug.disclosure.js" />
     <Content Include="Content\Scripts\Controls\flamebug.dropdown.js" />
