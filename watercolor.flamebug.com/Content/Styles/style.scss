@@ -9,6 +9,7 @@
 // Optional Styles
 //
 
+@import "base/badge.scss";
 @import "base/button.scss";
 @import "base/form.scss";
 @import "base/label.scss";
@@ -19,7 +20,6 @@
 // Control Styles
 //
 
-@import "controls/fb-badge.scss";
 @import "controls/fb-disclosure.scss";
 @import "controls/fb-hint.scss";
 

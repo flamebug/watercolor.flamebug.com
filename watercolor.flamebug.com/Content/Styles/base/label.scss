@@ -6,4 +6,20 @@ base/label.scss
 
 .label {
 	@include label;
+
+	&.primary {
+		@include label-primary;
+	}
+
+	&.positive {
+		@include label-positive;
+	}
+
+	&.warning {
+		@include label-warning;
+	}
+
+	&.negative {
+		@include label-negative;
+	}
 }

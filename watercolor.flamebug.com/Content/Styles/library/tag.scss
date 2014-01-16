@@ -17,36 +17,40 @@
 	&:empty {
 		display: none;
 	}
-
-	&.primary {
-		background-color: #2a75d1;
-
-		&:hover {
-			background-color: #3a85e1;
-		}
+	
+	a.&:hover {
+		background-color: #aaa;
 	}
+}
 
-	&.positive {
-		background-color: #0eb249;
+@mixin tag-primary {
+	background-color: #2a75d1;
 
-		&:hover {
-			background-color: #1ec259;
-		}
+	a.&:hover {
+		background-color: #3a85e1;
 	}
+}
 
-	&.warning {
-		background-color: #fb0;
+@mixin tag-positive {
+	background-color: #0eb249;
 
-		&:hover {
-			background-color: #fa1;
-		}
+	a.&:hover {
+		background-color: #1ec259;
 	}
+}
 
-	&.negative {
-		background-color: #b44;
+@mixin tag-warning {
+	background-color: #fb0;
 
-		&:hover {
-			background-color: #c55;
-		}
+	a.&:hover {
+		background-color: #fa1;
+	}
+}
+
+@mixin tag-negative {
+	background-color: #b44;
+
+	a.&:hover {
+		background-color: #c55;
 	}
 }

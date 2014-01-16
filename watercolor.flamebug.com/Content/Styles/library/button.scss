@@ -1,4 +1,4 @@
-@import "../library/css3.scss";
+@import "../library/helper.scss";
 
 //
 // Button
@@ -87,7 +87,7 @@
 }
 
 @mixin button-large {
-	font-size: 1.0em;
+	font-size: 1em;
 	padding: 0.375em 1.5em;
 }
 

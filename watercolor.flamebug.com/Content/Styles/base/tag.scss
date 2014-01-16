@@ -6,4 +6,20 @@ base/tag.scss
 
 .tag {
 	@include tag;
+
+	&.primary {
+		@include tag-primary;
+	}
+
+	&.positive {
+		@include tag-positive;
+	}
+
+	&.warning {
+		@include tag-warning;
+	}
+
+	&.negative {
+		@include tag-negative;
+	}
 }

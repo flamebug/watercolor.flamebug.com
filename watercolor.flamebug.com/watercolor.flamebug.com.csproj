@@ -259,7 +259,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\controls\fb-badge.scss" />
+    <Content Include="Content\Styles\library\badge.scss" />
     <Content Include="Content\Styles\base\button.scss" />
     <Content Include="Content\Styles\controls\fb-disclosure.scss" />
     <Content Include="Content\Styles\controls\beta\fb-dropdown.scss" />
@@ -340,6 +340,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Styles\base\label.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\base\badge.scss" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

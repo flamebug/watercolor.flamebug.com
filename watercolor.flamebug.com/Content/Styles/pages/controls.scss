@@ -2,8 +2,10 @@
 controls.scss
 */
 
+@import "../global.scss";
 @import "../library/grid.scss";
 @import "../library/helper.scss";
+@import "../library/badge.scss";
 
 //
 // Sections
@@ -41,15 +43,17 @@ controls.scss
 .badge-image {
 	position: relative;
 	float: left;
-	width: 104px;
-	height: 104px;
+	width: 102px;
+	height: 102px;
+	border: 1px solid $border-color;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	& + & {
+		margin-left: $line-height * 1em;
+	}
 }
 
-.badge-image + .badge-image {
-	margin-left: $line-height * 1em;
-}
-
-.badge-image img {
-	display: block;
-	width: 100%;
-}
