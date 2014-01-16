@@ -233,6 +233,7 @@ pre.language-markup:before,
 pre.language-css:before {
 	position: absolute;
 	text-transform: uppercase;
+	text-shadow: none;
 	top: -1px;
 	left: -1px;
 	padding: .25em .5em;

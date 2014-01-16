@@ -8,7 +8,7 @@
 
 @section Scripts {
 		<script src="@Url.Content("~/Content/Scripts/prism.js")"></script>
-		<script src="@Url.Content("~/Content/Scripts/Controls/flamebug.disclosure.js")"></script>
+		<!--<script src="@Url.Content("~/Content/Scripts/Controls/flamebug.disclosure.js")"></script>-->
 		<script src="@Url.Content("~/Content/Scripts/Controls/flamebug.modal.js")"></script>
 }
 
@@ -35,63 +35,67 @@
 
 		<div class="example">
 
-			<span class="badge-image">
+			<span class="badge-image" id="badge-image-1">
 				<span class="badge">1</span>
-				<img src="/Content/Images/appicon.png" />
+				<img src="/Content/Images/flamebug-Logo-White.png" />
+			</span>
+
+			<span class="badge-image" id="badge-image-2">
+				<span class="badge bottom-right">2</span>
+				<img src="/Content/Images/flamebug-Logo-White.png" />
+			</span>
+
+			<span class="badge-image" id="badge-image-3">
+				<span class="badge top-left">3</span>
+				<img src="/Content/Images/flamebug-Logo-White.png" />
+			</span>
+
+			<span class="badge-image" id="badge-image-4">
+				<span class="badge bottom-left">4</span>
+				<img src="/Content/Images/flamebug-Logo-White.png" />
 			</span>
 
 		</div>
 
-		<pre class="example-code"><code class="language-markup">&lt;span style="position: relative"&gt;
+		<pre class="example-code"><code class="language-markup">&lt;span class="app"&gt;
    &lt;span class="badge"&gt;1&lt;/span&gt;
-   &lt;img src="appicon.png"/&gt;
+&lt;/span&gt;
+&lt;span class="app"&gt;
+   &lt;span class="badge bottom-right"&gt;2&lt;/span&gt;
+&lt;/span&gt;
+&lt;span class="app"&gt;
+   &lt;span class="badge top-left"&gt;3&lt;/span&gt;
+&lt;/span&gt;
+&lt;span class="app"&gt;
+   &lt;span class="badge bottom-left"&gt;4&lt;/span&gt;
 &lt;/span&gt;</code></pre>
 
-		<pre class="example-code"><code class="language-css">.badge {
+		<pre class="example-code"><code class="language-css">.app {
+    position: relative;
+    ...
+}
+.badge {
 	@@include badge;
+    &.top-right {
+        @@include badge-top-right;
+    }
+    &.bottom-right {
+        @@include badge-bottom-right;
+    }
+    &.bottom-left {
+        @@include badge-bottom-left;
+    }
+    &.top-left {
+        @@include badge-top-left;
+    }
 }</code></pre>
-
-		<table class="bordered">
-
-			<thead>
-				<tr>
-					<th>example</th>
-					<th>location</th>
-				</tr>
-			</thead>
-
-			<tbody>
-				<tr>
-					<td rowspan="9">
-						<span class="badge-image" style="display: block; float: none; margin: 1em auto;">
-							<span class="badge">1</span>
-							<span class="badge bottom-right">2</span>
-							<span class="badge bottom-left">3</span>
-							<span class="badge top-left">4</span>
-							<img src="/Content/Images/appicon.png" style="width: 100%; display: block;"/>
-						</span>
-					</td>
-					<td>1 - Top Right. Include @@mixin <code>badge-top-right</code> or use optional class <code>top-right</code>.</td>
-				</tr>
-				<tr>
-					<td>2 - Bottom Right. Include @@mixin <code>badge-bottom-right</code> or use optional class <code>bottom-right</code>.</td>
-				</tr>
-				<tr>
-					<td>3 - Bottom Left. Include @@mixin <code>badge-bottom-left</code> or use optional class <code>bottom-left</code>.</td>
-				</tr>
-				<tr>
-					<td>4 - Top Left. Include @@mixin <code>badge-top-left</code> or use optional class <code>top-left</code>.</td>
-				</tr>
-			</tbody>
-
-		</table>
 
 	</section>
 
 	<section id="button">
 
 		<h3>Button</h3>
-		<p>Having consistent button elements throughout your app is important. Include @@mixin <code>button</code> to turn any link into a button. Standard HTML buttons and input buttons are styled identically in <a href="/overview#typography">typography.scss</a>. Optional styles to provide a <code>button</code> class, and the various styles and sizes, are provided for convenience.</p>
+		<p>Having consistent button elements throughout your app is important. Include @@mixin <code>button</code> to turn any link into a button. Standard HTML buttons, and input buttons, are styled identically in <a href="/overview#typography">typography.scss</a>. Optional styles to provide a <code>button</code> class, and the various styles and sizes, are provided for convenience.</p>
 
 		<div class="example">
 
@@ -141,7 +145,7 @@
 
 		<p>Size classes can be added to the button to make it more prominent, or to indicate it is an alternate action such as a cancel button.</p>
 
-		<table class="bordered">
+		<table>
 
 			<thead>
 				<tr>
@@ -433,7 +437,7 @@
 
 			<h4>Options</h4>
 			<p>The toggle control has a few options for setting if the toggle is checked, and the labels to display for each state</p>
-			<table class="table bordered">
+			<table>
 				<thead>
 					<tr>
 						<th>Option</th>
