@@ -1,0 +1,9 @@
+/*
+base/label.scss
+*/
+
+@import "../library/label.scss";
+
+.label {
+	@include label;
+}

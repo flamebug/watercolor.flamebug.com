@@ -1,0 +1,9 @@
+/*
+base/tag.scss
+*/
+
+@import "../library/tag.scss";
+
+.tag {
+	@include tag;
+}

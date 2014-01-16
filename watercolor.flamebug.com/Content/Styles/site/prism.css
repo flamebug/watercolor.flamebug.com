@@ -57,6 +57,13 @@ pre[class*="language-"] {
 	opacity: .7;
 }
 
+/* added to fix styles added by the tag control */
+.token.tag {
+	background: none;
+	padding: 0;
+	text-shadow: none;
+}
+
 .token.property,
 .token.tag,
 .token.boolean,

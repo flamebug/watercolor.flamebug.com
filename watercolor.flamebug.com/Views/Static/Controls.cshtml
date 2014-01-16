@@ -8,15 +8,8 @@
 
 @section Scripts {
 		<script src="@Url.Content("~/Content/Scripts/prism.js")"></script>
-
 		<script src="@Url.Content("~/Content/Scripts/Controls/flamebug.disclosure.js")"></script>
 		<script src="@Url.Content("~/Content/Scripts/Controls/flamebug.modal.js")"></script>
-	<!--
-		<script src="@Url.Content("~/Content/Scripts/Controls/flamebug.slider.js")"></script>
-		<script src="@Url.Content("~/Content/Scripts/Controls/flamebug.tabview.js")"></script>
-		<script src="@Url.Content("~/Content/Scripts/Controls/flamebug.tagbox.js")"></script>
-		<script src="@Url.Content("~/Content/Scripts/Controls/flamebug.toggle.js")"></script>
-	-->
 }
 
 <header class="introduction">
@@ -38,25 +31,25 @@
 	<section id="button">
 
 		<h3>Button</h3>
-		<p>Having consistent button elements throughout your app is important. Add class <code>fb-button</code> to any <code>a</code>, <code>input</code>, or <code>button</code> element.</p>
+		<p>Having consistent button elements throughout your app is important. Add class <code>button</code> to any link, or use any standard <code>button</code> or <code>input</code> button element without the need for any classes.</p>
 
 		<div class="example">
 
-			<a href="#button" class="fb-button">Link Button</a>
-			<input type="button" class="fb-button" value="Input Button" />
-			<button class="fb-button">Button</button>
-			<a href="#button" class="fb-button" disabled>Disabled Link</a>
-			<input type="button" class="fb-button" value="Disabled Input" disabled />
-			<button class="fb-button" disabled>Disabled Button</button>
+			<a href="#button" class="button">Link Button</a>
+			<input type="button" value="Input Button" />
+			<button>Button</button>
+			<a href="#button" class="button" disabled>Disabled Link</a>
+			<input type="button" value="Disabled Input" disabled />
+			<button disabled>Disabled Button</button>
 
 		</div>
 
-		<pre class="example-code"><code class="language-markup">&lt;a class="fb-button"&gt;Link Button&lt;/a&gt;
-&lt;input type="button" class="fb-button" value="Input Button" /&gt;
-&lt;button class="fb-button"&gt;Button&lt;/button&gt;
-&lt;a class="fb-button" disabled&gt;Link Button&lt;/a&gt;
-&lt;input type="button" class="fb-button" value="Input Button" disabled /&gt;
-&lt;button class="fb-button" disabled&gt;Button&lt;/button&gt;</code></pre>
+		<pre class="example-code"><code class="language-markup">&lt;a class="button"&gt;Link Button&lt;/a&gt;
+&lt;input type="button" value="Input Button" /&gt;
+&lt;button&gt;Button&lt;/button&gt;
+&lt;a class="button" disabled&gt;Link Button&lt;/a&gt;
+&lt;input type="button" value="Input Button" disabled /&gt;
+&lt;button disabled&gt;Button&lt;/button&gt;</code></pre>
 
 		<h4>Button Styles</h4>
 		<p>A button style can be assigned to the button to provide visual clues to the user on the purpose of a button. Add class <code>primary</code>, <code>positive</code>, <code>warning</code>, or <code>negative</code> to any button.</p>
@@ -72,19 +65,19 @@
 
 			<tbody>
 				<tr>
-					<td><a class="fb-button primary" href="#button">Primary</a></td>
+					<td><a class="button primary" href="#button">Primary</a></td>
 					<td>Primary button style, use for the default form button. Add class <code>primary</code>.</td>
 				</tr>
 				<tr>
-					<td><a class="fb-button positive" href="#button">Positive</a></td>
+					<td><a class="button positive" href="#button">Positive</a></td>
 					<td>Positive, or success, button style, use for positive actions such as saving data. Add class <code>positive</code>.</td>
 				</tr>
 				<tr>
-					<td><a class="fb-button warning" href="#button">Warning</a></td>
+					<td><a class="button warning" href="#button">Warning</a></td>
 					<td>Warning button style, use for actions that require caution from the user. Add class <code>warning</code>.</td>
 				</tr>
 				<tr>
-					<td><a class="fb-button negative" href="#button">Negative</a></td>
+					<td><a class="button negative" href="#button">Negative</a></td>
 					<td>Negative button style, use for actions that delete data. Add class <code>negative</code>.</td>
 				</tr>
 			</tbody>
@@ -105,23 +98,23 @@
 
 			<tbody>
 				<tr>
-					<td><a class="fb-button hero" href="#button">Hero</a></td>
+					<td><a class="button hero" href="#button">Hero</a></td>
 					<td>Button sized for hero sections. Add class <code>hero</code>.</td>
 				</tr>
 				<tr>
-					<td><a class="fb-button large" href="#button">Large</a></td>
+					<td><a class="button large" href="#button">Large</a></td>
 					<td>Large button to give more emphasis over the default button. Add class <code>large</code>.</td>
 				</tr>
 				<tr>
-					<td><a class="fb-button" href="#button">Default</a></td>
+					<td><a class="button" href="#button">Default</a></td>
 					<td>Default button size.</td>
 				</tr>
 				<tr>
-					<td><a class="fb-button small" href="#button">Small</a></td>
+					<td><a class="button small" href="#button">Small</a></td>
 					<td>Smaller button to give lower emphasis over the default button. Add class <code>small</code>.</td>
 				</tr>
 				<tr>
-					<td><a class="fb-button link" href="#button">Link</a></td>
+					<td><a class="button link" href="#button">Link</a></td>
 					<td>Link style button, commonly used for alternate functions such as cancel. Add class <code>link</code>.</td>
 				</tr>
 			</tbody>
@@ -133,46 +126,46 @@
 	<section id="tag">
 
 		<h3>Tag</h3>
-		<p>Use tags to display additional information such as item counts or categories. Add class <code>fb-tag</code> to any span. Add class <code>primary</code>, <code>positive</code>, <code>warning</code>, or <code>negative</code> to any tag to modify the emphasis.</p>
+		<p>Use tags to display additional information such as item counts or categories. Add class <code>tag</code> to any span. Add class <code>primary</code>, <code>positive</code>, <code>warning</code>, or <code>negative</code> to any tag to modify the emphasis.</p>
 
 			<div class="example">
 
-				<span class="fb-tag">1 item</span>
-				<span class="fb-tag primary">2 new</span>
-				<span class="fb-tag positive">3 complete</span>
-				<span class="fb-tag warning">4 warnings</span>
-				<span class="fb-tag negative">5 errors</span>
+				<span class="tag">1 item</span>
+				<span class="tag primary">2 new</span>
+				<span class="tag positive">3 complete</span>
+				<span class="tag warning">4 warnings</span>
+				<span class="tag negative">5 errors</span>
 
 			</div>
 
-			<pre class="example-code"><code class="language-markup">&lt;span class="fb-tag"&gt;1 item&lt;/span&gt;
-&lt;span class="fb-tag primary"&gt;2 new&lt;/span&gt;
-&lt;span class="fb-tag positive"&gt;3 complete&lt;/span&gt;
-&lt;span class="fb-tag warning"&gt;4 warnings&lt;/span&gt;
-&lt;span class="fb-tag negative"&gt;5 errors&lt;/span&gt;</code></pre>
+			<pre class="example-code"><code class="language-markup">&lt;span class="tag"&gt;1 item&lt;/span&gt;
+&lt;span class="tag primary"&gt;2 new&lt;/span&gt;
+&lt;span class="tag positive"&gt;3 complete&lt;/span&gt;
+&lt;span class="tag warning"&gt;4 warnings&lt;/span&gt;
+&lt;span class="tag negative"&gt;5 errors&lt;/span&gt;</code></pre>
 
 	</section>
 
 	<section id="label">
 
 		<h3>Label</h3>
-		<p>Use labels to display requirements, or other important information. Add class <code>fb-label</code> to any span. Add class <code>primary</code>, <code>positive</code>, <code>warning</code>, or <code>negative</code> to any label to modify the emphasis.</p>
+		<p>Use labels to display requirements, or other important information. Add class <code>label</code> to any span. Add class <code>primary</code>, <code>positive</code>, <code>warning</code>, or <code>negative</code> to any label to modify the emphasis.</p>
 
 		<div class="example">
 
-			<span class="fb-label">info</span>
-			<span class="fb-label primary">required</span>
-			<span class="fb-label positive">success</span>
-			<span class="fb-label warning">warning</span>
-			<span class="fb-label negative">error</span>
+			<span class="label">info</span>
+			<span class="label primary">required</span>
+			<span class="label positive">success</span>
+			<span class="label warning">warning</span>
+			<span class="label negative">error</span>
 
 		</div>
 
-		<pre class="example-code"><code class="language-markup">&lt;span class="fb-label"&gt;info&lt;/span&gt;
-&lt;span class="fb-label primary"&gt;required&lt;/span&gt;
-&lt;span class="fb-label positive"&gt;success&lt;/span&gt;
-&lt;span class="fb-label warning"&gt;warning&lt;/span&gt;
-&lt;span class="fb-label negative"&gt;error&lt;/span&gt;</code></pre>
+		<pre class="example-code"><code class="language-markup">&lt;span class="label"&gt;info&lt;/span&gt;
+&lt;span class="label primary"&gt;required&lt;/span&gt;
+&lt;span class="label positive"&gt;success&lt;/span&gt;
+&lt;span class="label warning"&gt;warning&lt;/span&gt;
+&lt;span class="label negative"&gt;error&lt;/span&gt;</code></pre>
 
 	</section>
 
@@ -241,42 +234,6 @@
 
 	</section>
 
-	<section id="app-icon">
-
-		<h3>App Icon</h3>
-		<p>App Icons are immediately familiar to users as a source of navigation.  Use for navigation and content grouping.  Add a <code>span</code> around the image to add a badge to the app icon.</p>
-
-		<div class="example">
-
-			<a href="#app-icon" class="fb-app-icon" style="width: 104px">
-				<img src="/Content/Images/appicon.png"/>
-				<label>Blog Settings</label>
-			</a>
-
-			<a href="#app-icon" class="fb-app-icon" style="width: 104px; margin-right: 1.5em;">
-				<span>
-					<span class="fb-badge">50</span>
-					<img src="/Content/Images/appicon.png"/>
-				</span>
-				<label>Blog Posts</label>
-			</a>
-
-		</div>
-
-		<pre class="example-code"><code class="language-markup">&lt;a href="#app-icon" class="fb-app-icon" style="width: 104px"&gt;
-   &lt;img src="appicon.png" /&gt;
-   &lt;label&gt;Blog Settings&lt;/label&gt;
-&lt;/a&gt;
-&lt;a href="#app-icon" class="fb-app-icon" style="width: 104px"&gt;
-   &lt;span&gt;
-       &lt;span class="fb-badge"&gt;50&lt;/span&gt;
-       &lt;img src="appicon.png" /&gt;
-   &lt;/span&gt;
-   &lt;label&gt;Blog Posts&lt;/label&gt;
-&lt;/a&gt;</code></pre>
-
-	</section>
-
 	<section id="modal">
 
 		<h3>Modal</h3>
@@ -284,12 +241,12 @@
 
 		<div class="example">
 
-		   	<a class="fb-button" href="#modal-default">Default</a>
-			<a class="fb-button" href="#modal-slide-right">Slide Right</a>
-			<a class="fb-button" href="#modal-slide-bottom">Slide Bottom</a>
-			<a class="fb-button" href="#modal-spin">Spin</a>
-			<a class="fb-button" href="#modal-super-scale">Super Scale</a>
-			<a class="fb-button" href="#modal-full-screen">Full Screen</a>
+		   	<a class="button" href="#modal-default">Default</a>
+			<a class="button" href="#modal-slide-right">Slide Right</a>
+			<a class="button" href="#modal-slide-bottom">Slide Bottom</a>
+			<a class="button" href="#modal-spin">Spin</a>
+			<a class="button" href="#modal-super-scale">Super Scale</a>
+			<a class="button" href="#modal-full-screen">Full Screen</a>
 
 			<div id="modal-default" class="fb-modal" style="width: 20em; max-width: 50%; padding: 2em;">Modal</div>
 			<div id="modal-slide-right" class="fb-modal slide-right" style="width: 20em; max-width: 50%; padding: 2em;">Modal</div>
@@ -300,12 +257,12 @@
 
 		</div>
 
-		<pre class="example-code"><code class="language-markup">&lt;a class="fb-button" href="#modal-default"&gt;Default&lt;/a&gt;
-&lt;a class="fb-button" href="#modal-slide-right"&gt;Slide Right&lt;/a&gt;
-&lt;a class="fb-button" href="#modal-slide-bottom"&gt;Slide Bottom&lt;/a&gt;
-&lt;a class="fb-button" href="#modal-spin"&gt;Spin&lt;/a&gt;
-&lt;a class="fb-button" href="#modal-super-scale"&gt;Super Scale&lt;/a&gt;
-&lt;a class="fb-button" href="#modal-full-screen"&gt;Full Screen&lt;/a&gt;
+		<pre class="example-code"><code class="language-markup">&lt;a class="button" href="#modal-default"&gt;Default&lt;/a&gt;
+&lt;a class="button" href="#modal-slide-right"&gt;Slide Right&lt;/a&gt;
+&lt;a class="button" href="#modal-slide-bottom"&gt;Slide Bottom&lt;/a&gt;
+&lt;a class="button" href="#modal-spin"&gt;Spin&lt;/a&gt;
+&lt;a class="button" href="#modal-super-scale"&gt;Super Scale&lt;/a&gt;
+&lt;a class="button" href="#modal-full-screen"&gt;Full Screen&lt;/a&gt;
 
 &lt;div id="modal-default" class="fb-modal"&gt;Modal&lt;/div&gt;
 &lt;div id="modal-slide-right" class="fb-modal slide-right"&gt;Modal&lt;/div&gt;

@@ -5,7 +5,7 @@ site/site.scss
 @import "../global.scss";
 @import "../library/grid.scss";
 @import "../library/helpers.scss";
-@import "../library/tables.scss";
+@import "../library/table.scss";
 @import "prism.css";
 
 //
@@ -38,7 +38,6 @@ article > section {
 			@include font-size($h2-font-size);
 		}
 	}
-
 }
 
 //
@@ -66,7 +65,7 @@ table {
 // Button
 //
 
-a.button {
+a.hero-button {
 	display: inline-block;
 	padding: .5em .75em;
 	background: #0db2ac;
@@ -178,7 +177,7 @@ a.button {
 			letter-spacing: -4px;
 		}
 
-		a.button {
+		a.hero-button {
 			padding: 1em 1.5em;
 		}
 	}

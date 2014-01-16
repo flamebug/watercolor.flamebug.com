@@ -6,29 +6,32 @@
 @import "base/typography.scss";
 
 //
-// Non-Semantic Classes
+// Optional Styles
 //
 
-@import "base/classes.scss";
+@import "base/button.scss";
+@import "base/form.scss";
+@import "base/label.scss";
+@import "base/table.scss";
+@import "base/tag.scss";
 
 //
 // Control Styles
 //
 
-@import "controls/fb-app-icon.scss";
 @import "controls/fb-badge.scss";
-@import "controls/fb-button.scss";
 @import "controls/fb-disclosure.scss";
 @import "controls/fb-hint.scss";
-@import "controls/fb-label.scss";
+
 @import "controls/fb-modal.scss";
 @import "controls/fb-modal-effects.scss";
-@import "controls/fb-tag.scss";
 
 //
 // Beta Control Styles
 //
 
+//@import "controls/fb-animation.scss";
+//@import "controls/fb-app-icon.scss";
 //@import "controls/fb-dropdown.scss";
 //@import "controls/fb-help.scss";
 //@import "controls/fb-icon.scss";

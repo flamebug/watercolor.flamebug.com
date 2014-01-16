@@ -94,7 +94,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\document-basic.htm" />
+    <Content Include="Content\proposal.htm" />
     <Content Include="Content\Images\appicon.png" />
     <Content Include="Content\Images\Badges\CSS3.svg" />
     <Content Include="Content\Images\Badges\Sass.svg" />
@@ -109,9 +109,8 @@
     <Content Include="Content\Images\right-arrow.png" />
     <Content Include="Content\Scripts\Controls\flamebug.modal.js" />
     <Content Include="Content\Scripts\modernizr-2.6.3.min.js" />
-    <Content Include="Content\Styles\controls\fb-app-icon.scss" />
-    <Content Include="Content\Styles\controls\fb-tag.scss" />
-    <Content Include="Content\Styles\controls\fb-label.scss" />
+    <Content Include="Content\Styles\controls\beta\fb-app-icon.scss" />
+    <Content Include="Content\Styles\base\tag.scss" />
     <Content Include="Content\Styles\pages\typography.scss" />
     <Content Include="Content\Styles\library\grid.scss" />
     <Content Include="Content\Styles\pages\layout.scss" />
@@ -128,7 +127,7 @@
     <Content Include="Content\Styles\controls\fb-modal-effects.scss" />
     <Content Include="Views\Static\Tables.cshtml" />
     <Content Include="Content\Styles\pages\tables.scss" />
-    <Content Include="Content\Styles\library\helpers.scss" />
+    <Content Include="Content\Styles\library\helper.scss" />
     <Content Include="Content\Scripts\Controls\flamebug.background.js" />
     <Content Include="Content\Scripts\Controls\flamebug.disclosure.js" />
     <Content Include="Content\Scripts\Controls\flamebug.dropdown.js" />
@@ -261,7 +260,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Styles\controls\fb-badge.scss" />
-    <Content Include="Content\Styles\controls\fb-button.scss" />
+    <Content Include="Content\Styles\base\button.scss" />
     <Content Include="Content\Styles\controls\fb-disclosure.scss" />
     <Content Include="Content\Styles\controls\beta\fb-dropdown.scss" />
     <Content Include="Content\Styles\controls\beta\fb-help.scss" />
@@ -292,10 +291,10 @@
     <Content Include="Content\Styles\pages\error.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\library\tables.scss" />
+    <Content Include="Content\Styles\library\table.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\base\classes.scss" />
+    <Content Include="Content\Styles\base\form.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Navigation.cshtml" />
@@ -304,7 +303,7 @@
     <Content Include="Content\Styles\library\css3.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\library\forms.scss" />
+    <Content Include="Content\Styles\library\form.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Styles\controls\beta\fb-animation.scss" />
@@ -313,16 +312,34 @@
     <Content Include="Content\Styles\controls\fb-hint.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\document-enhanced.htm" />
+    <Content Include="Content\Styles\templates\document.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\pages\document.scss" />
+    <Content Include="Views\Shared\_Document.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Document-Enhanced.pdf" />
+    <Content Include="Views\Shared\_DocumentBasic.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Document-Basic.pdf" />
+    <Content Include="Views\Static\Document\Enhanced.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Static\Document\Basic.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\library\button.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\base\table.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\library\tag.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\library\label.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\base\label.scss" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

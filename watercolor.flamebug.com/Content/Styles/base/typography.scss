@@ -4,7 +4,8 @@ base/typography.scss
 
 @import "../global.scss";
 @import "../library/grid.scss";
-@import "../library/helpers.scss";
+@import "../library/helper.scss";
+@import "../library/button.scss";
 
 html {
 	font-size: $base-font-size * 1%;
@@ -291,92 +292,5 @@ button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-	display: inline-block; 
-	position: relative;
-	padding: 0 .75em;
-	margin: -1px 0;
-
-	border-radius: .4em;
-	box-shadow: inset 0 1px rgba(255,255,255,0.4), 0 1px .4em rgba(0,0,0,0.2);
-
-	font-size: 1em;
-	text-decoration: none;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-
-	line-height: inherit;
-	cursor: pointer;
-	text-align: center;
-	white-space: nowrap;
-
-	@include user-select(none);
-
-	color: #333;
-	border: 1px solid #a6a6a6;
-	background: #e8e8e8; /* Old browsers */
-	background: -moz-linear-gradient(top,  #e8e8e8 0%, #cfcfcf 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(100%,#cfcfcf)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #e8e8e8 0%,#cfcfcf 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #e8e8e8 0%,#cfcfcf 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #e8e8e8 0%,#cfcfcf 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #e8e8e8 0%,#cfcfcf 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#cfcfcf',GradientType=0 ); /* IE6-9 */
-
-	&:hover {
-		color: #444;
-		border: 1px solid #aaaaaa;
-		background: #ececec; /* Old browsers */
-		background: -moz-linear-gradient(top,  #ececec 0%, #d3d3d3 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ececec), color-stop(100%,#d3d3d3)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #ececec 0%,#d3d3d3 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #ececec 0%,#d3d3d3 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #ececec 0%,#d3d3d3 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #ececec 0%,#d3d3d3 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#d3d3d3',GradientType=0 ); /* IE6-9 */
-	}
-
-	&:active { 
-		top: 1px;
-	}
-
-	img {
-		vertical-align: middle;
-	}
-
-	span {
-		text-decoration: none;
-		vertical-align: middle;
-		white-space: nowrap;
-	}
-
-	img + span {
-		margin-left: .4em;
-	}
-
-	&[disabled] {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
-
-	&[disabled]:active {
-		top: 0;
-	}
-}
-
-button + button,
-button + input[type="button"],
-button + input[type="submit"],
-button + input[type="reset"],
-input[type="button"] + button,
-input[type="button"] + input[type="button"],
-input[type="button"] + input[type="submit"],
-input[type="button"] + input[type="reset"],
-input[type="submit"] + button,
-input[type="submit"] + input[type="button"],
-input[type="submit"] + input[type="submit"],
-input[type="submit"] + input[type="reset"],
-input[type="reset"] + button,
-input[type="reset"] + input[type="button"],
-input[type="reset"] + input[type="submit"],
-input[type="reset"] + input[type="reset"] {
-	margin-left: .25em;
+	@include button;
 }
