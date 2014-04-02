@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<!-- Metadata -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Document</title>
+
+		<!-- Stylesheets -->
+		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300|Open+Sans'>
+		<link rel="stylesheet" href="/Styles/style.scss">
+		<link rel="stylesheet" href="/Styles/templates/document.scss">
+
+		<style>
+			html, body {
+				padding: 0;
+				height: auto;
+				background-color: white;
+			}
+			.page-break	{ display: block; page-break-before: always; }
+			h2 {
+				margin-top: 1.25em;
+			}
+			#intro-page {
+				position: relative;
+				height: 70em;
+			}
+				#intro-page h2 {
+					margin-top: 1em;
+				}
+				#intro-page img {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 160px;
+					margin-left: -80px;
+					margin-top: -80px;
+					opacity: .2;
+				}
+
+				#intro-page h1 {
+					position: absolute;
+					top: 80%;
+					width: 100%;
+					text-align: center;
+					font-size: 2.5em;
+				}
+
+				#intro-page h2 {
+					position: absolute;
+					top: 86%;
+					width: 100%;
+					text-align: center;
+					font-size: 1.75em;
+					opacity: .5;
+				}
+			.total {
+				font-weight: bold;
+			}
+
+			#invoice h2 {
+				text-align: center;
+				border-bottom: 1px solid #ccc;
+			}
+
+			#invoice header {
+				overflow: hidden;
+			}
+
+			#vendor {
+				box-sizing: border-box;
+				float: left;
+				width: 50%;
+				padding-left: 1em;
+				color: #aaa;
+			}
+
+				#vendor img {
+					float: left;
+					width: 120px;
+					margin-right: 2em;
+					opacity: .2;
+				}
+
+				#vendor strong {
+					color: #666;
+					font-weight: normal;
+				}
+
+				#vendor address {
+					margin: 0;
+					font-style: normal;
+
+				}
+
+			#work-details {
+				box-sizing: border-box;
+				float: right;
+				width: 50%;
+				margin: 1em 0;
+				padding-right: 1em;
+				text-align: right;
+				color: #aaa;
+			}
+
+			#summary {
+				margin: 2em 1em 4em 1em;
+				overflow: hidden;
+			}
+
+			#billed-to {
+				float: left;
+			}
+
+				#billed-to label {
+					font-size: 1em;
+					color: #aaa;
+				}
+
+			#billed-to p {
+				margin: 0;
+			}
+
+			#billed-total {
+				float: right;
+				margin: 0;
+			}
+
+			#invoice table {
+				border: 0;
+			}
+
+			#invoice th {
+				color: #aaa;
+				font-weight: normal;
+			}
+
+			#invoice th, #invoice td {
+				border-left: none;
+			}
+
+		</style>
+
+    </head>
+
+    <body>
+
+		<div id="intro-page">
+
+			<img src="/Content/Images/flamebug-Logo-Black.png" />
+			<h1>Invoice</h1>
+			<h2>ultrabodycontouring.com</h2>
+
+		</div>
+
+		<div id="invoice">
+
+			<header>
+
+				<div id="vendor">
+					<img src="/Content/Images/flamebug-Logo-Black.png" />
+					<address>
+						<strong>Flamebug LLC</strong><br/>
+						352 S Jewel Ct<br/>
+						Palatine, IL 60074<br/>
+						708-369-7270
+					</address>
+				</div>
+
+				<div id="work-details">
+					March 28, 2014<br/>
+					ultrabodycontouring.com<br />
+					Invoice #126
+				</div>
+
+			</header>
+
+			<h2>Invoice</h2>
+
+			<div id="summary">
+
+				<div id="billed-to">
+					<label>Billed To</label>
+					<p>Ultra Body Contouring</p>
+				</div>
+
+				<h3 id="billed-total">$525.00</h3>
+
+			</div>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Item</th>
+						<th>Hrs / Qty</th>
+						<th>Rate / Price</th>
+						<th>Subtotal</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>ultrabodycontouring.com - Responsive Design</td>
+						<td>1</td>
+						<td>$525.00</td>
+						<td>$525.00</td>
+					</tr>
+					<tr class="total">
+						<td>Total</td>
+						<td>1</td>
+						<td>$525.00</td>
+						<td>$525.00</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+    </body>
+
+</html>
