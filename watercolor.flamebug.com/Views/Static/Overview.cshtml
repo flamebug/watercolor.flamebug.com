@@ -3,11 +3,11 @@
 }
 
 @section Styles {
-	<link rel="stylesheet" href="@Url.Content("~/Styles/Pages/overview.scss")">
+	<link rel="stylesheet" href="@Url.Content("~/Styles/Pages/overview.css")">
 }
 
 @section Scripts {
-		<script src="@Url.Content("~/Content/Scripts/prism.js")"></script>
+		<script src="@Url.Content("~/Scripts/prism.js")"></script>
 }
 
 <header class="introduction">
@@ -140,7 +140,7 @@
 
 		<p>Watercolor uses <a href="http://necolas.github.io/normalize.css/">normalize.css</a> as a baseline for consistent styling across browsers.  <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> has become the gold standard for beginning with a consistent cross-browser experience, which allows Watercolor to extend that consistent platform for a beautiful and consistent framework for your site.</p>
 
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Base/normalize.css")))</code></pre>
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Styles/Base/normalize.css")))</code></pre>
 
 	</section>
 
@@ -150,7 +150,7 @@
 
 		<p>All typographic base styles are defined in this file, most <code>@@import</code> settings from variables defined in <a href="#global">global.scss</a>.</p>
 
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Base/typography.scss")))</code></pre>
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Styles/Base/typography.scss")))</code></pre>
 
 	</section>
 
@@ -160,7 +160,7 @@
 
 		<p>All non-semantic classes are found in this file.</p>
 
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Base/classes.scss")))</code></pre>
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Styles/Base/classes.scss")))</code></pre>
 
 	</section>
 
@@ -170,7 +170,7 @@
 
 		<p>The grid library provides mixins and computed variables that your pages and theme would @@import for setting the structural and typographic grid of the site.</p>
 
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Library/grid.scss")))</code></pre>
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Styles/Library/grid.scss")))</code></pre>
 
 	</section>
 
@@ -180,7 +180,7 @@
 
 		<p>The helpers library provides mixins mainly to simplify styles such as cross-browser prefixes.</p>
 
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Library/helpers.scss")))</code></pre>
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Styles/Library/helpers.scss")))</code></pre>
 
 	</section>
 
@@ -190,7 +190,7 @@
 
 		<p>All table related mixins are defined in this file.</p>
 
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Library/tables.scss")))</code></pre>
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Styles/Library/tables.scss")))</code></pre>
 
 	</section>
 
@@ -200,7 +200,7 @@
 
 		<p>All templates should contain a template.scss file which includes all styles for the template.</p>
 
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Templates/template.scss")))</code></pre>
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Styles/Templates/template.scss")))</code></pre>
 
 	</section>
 
@@ -210,7 +210,7 @@
 
 		<p>This is where all site-wide common styles that are not related to the theme are stored.</p>
 
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/Site/site.scss")))</code></pre>
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Styles/Site/site.scss")))</code></pre>
 
 	</section>
 
@@ -220,7 +220,7 @@
 
 		<p>This is where the container breakpoints for the structural grid are defined.</p>
 
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/container.scss")))</code></pre>
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Styles/container.scss")))</code></pre>
 
 	</section>
 
@@ -230,7 +230,7 @@
 
 		<p>All globally referenced variables should be defined here. By default this contains variables for defining the structural and typographic grid, typographic elements, and other common variables that will be used throughout the site.</p>
 
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/global.scss")))</code></pre>
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Styles/global.scss")))</code></pre>
 
 	</section>
 
@@ -240,7 +240,7 @@
 
 		<p>This file pulls everything together into a single stylesheet for delivery to the browser.</p>
 
-		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Content/Styles/style.scss")))</code></pre>
+		<pre><code class="language-css">@Html.Raw(File.ReadAllText(Server.MapPath("~/Styles/style.scss")))</code></pre>
 
 	</section>
 

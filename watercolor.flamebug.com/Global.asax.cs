@@ -21,10 +21,10 @@ namespace design.flamebug.com
 		{
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-			routes.MapRoute("Scss",
-				"Styles/{*id}",
-				new { controller = "Scss", action = "Style", id = UrlParameter.Optional } // Parameter defaults
-			);
+			//routes.MapRoute("Scss",
+			//	"Styles/{*id}",
+			//	new { controller = "Scss", action = "Style", id = UrlParameter.Optional } // Parameter defaults
+			//);
 
 			routes.MapRoute("Static",
 				"{*path}",

@@ -21,7 +21,7 @@ namespace design.flamebug.com.Controllers
 				var timer = new Timer();
 				timer.Start();
 
-				var file = ((new Path("~/Content/Styles/")) + id).ToFile();
+				var file = ((new Path("~/Styles/")) + id).ToFile();
 
 				if (file.Exists())
 				{

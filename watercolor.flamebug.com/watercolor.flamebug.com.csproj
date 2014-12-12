@@ -8,7 +8,7 @@
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D1C688B2-1E0D-46B1-9CDE-F82598D445B6}</ProjectGuid>
-    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>design.flamebug.com</RootNamespace>
@@ -48,47 +48,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="flamebug, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\flamebug.dll</HintPath>
-    </Reference>
-    <Reference Include="flamebug.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\flamebug.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="flamebug.Web.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\flamebug.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Abstractions" />
-    <Reference Include="System.Web.Routing" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Xml.Linq" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Controllers\StaticController.cs" />
-    <Compile Include="Controllers\ScssController.cs" />
+    <None Include="Controllers\ScssController.cs.beta" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -97,52 +58,49 @@
   <ItemGroup>
     <Content Include="Content\invoice.htm" />
     <Content Include="Content\proposal.htm" />
-    <Content Include="Content\Images\appicon.png" />
-    <Content Include="Content\Images\Badges\CSS3.svg" />
-    <Content Include="Content\Images\Badges\Sass.svg" />
-    <Content Include="Content\Images\chrome-flat-browser-1600.png" />
-    <Content Include="Content\Images\Document-Basic.png" />
-    <Content Include="Content\Images\Document-Enhanced.png" />
-    <Content Include="Content\Images\error.svg" />
-    <Content Include="Content\Images\flamebug-Logo-Black.png" />
-    <Content Include="Content\Images\flamebug-Logo-White.png" />
-    <Content Include="Content\Images\Badges\HTML5.svg" />
-    <Content Include="Content\Images\image.jpg" />
-    <Content Include="Content\Images\right-arrow.png" />
-    <Content Include="Content\Scripts\Controls\flamebug.modal.js" />
-    <Content Include="Content\Scripts\modernizr-2.6.3.min.js" />
-    <Content Include="Content\Styles\controls\beta\fb-app-icon.scss" />
-    <Content Include="Content\Styles\base\tag.scss" />
-    <Content Include="Content\Styles\pages\typography.scss" />
-    <Content Include="Content\Styles\library\grid.scss" />
-    <Content Include="Content\Styles\pages\layout.scss" />
-    <Content Include="bin\flamebug.dll" />
-    <Content Include="bin\flamebug.Web.dll" />
-    <Content Include="bin\flamebug.Web.Mvc.dll" />
+    <Content Include="Images\appicon.png" />
+    <Content Include="Images\Badges\CSS3.svg" />
+    <Content Include="Images\Badges\Sass.svg" />
+    <Content Include="Images\chrome-flat-browser-1600.png" />
+    <Content Include="Images\Document-Basic.png" />
+    <Content Include="Images\Document-Enhanced.png" />
+    <Content Include="Images\error.svg" />
+    <Content Include="Images\flamebug-Logo-Black.png" />
+    <Content Include="Images\flamebug-Logo-White.png" />
+    <Content Include="Images\Badges\HTML5.svg" />
+    <Content Include="Images\image.jpg" />
+    <Content Include="Images\right-arrow.png" />
+    <Content Include="Scripts\Controls\flamebug.modal.js" />
+    <Content Include="Scripts\modernizr-2.6.3.min.js" />
+    <Content Include="Styles\controls\beta\fb-app-icon.scss" />
+    <Content Include="Styles\base\tag.scss" />
+    <Content Include="Styles\pages\typography.scss" />
+    <Content Include="Styles\library\grid.scss" />
+    <Content Include="Styles\pages\layout.scss" />
     <Content Include="Views\Static\Controls.cshtml" />
     <Content Include="Views\Static\Typography.cshtml" />
     <Content Include="Views\Static\Layout.cshtml" />
-    <Content Include="Content\Styles\pages\home.scss" />
-    <Content Include="Content\Styles\pages\controls.scss" />
-    <Content Include="Content\Styles\site\site.scss" />
-    <Content Include="Content\Styles\controls\fb-modal.scss" />
-    <Content Include="Content\Styles\controls\fb-modal-effects.scss" />
+    <Content Include="Styles\pages\home.scss" />
+    <Content Include="Styles\pages\controls.scss" />
+    <Content Include="Styles\site\site.scss" />
+    <Content Include="Styles\controls\fb-modal.scss" />
+    <Content Include="Styles\controls\fb-modal-effects.scss" />
     <Content Include="Views\Static\Tables.cshtml" />
-    <Content Include="Content\Styles\pages\tables.scss" />
-    <Content Include="Content\Styles\library\helper.scss" />
-    <Content Include="Content\Scripts\Controls\flamebug.background.js" />
-    <Content Include="Content\Scripts\Controls\flamebug.disclosure.js" />
-    <Content Include="Content\Scripts\Controls\flamebug.dropdown.js" />
-    <Content Include="Content\Scripts\Controls\flamebug.slider.js" />
-    <Content Include="Content\Scripts\Controls\flamebug.slider.v1.js" />
-    <Content Include="Content\Scripts\Controls\flamebug.tabview.js" />
-    <Content Include="Content\Scripts\Controls\flamebug.tagbox.js" />
-    <Content Include="Content\Scripts\Controls\flamebug.toggle.js" />
-    <Content Include="Content\Scripts\prism.js" />
-    <Content Include="Content\Styles\site\prism.css" />
+    <Content Include="Styles\pages\tables.scss" />
+    <Content Include="Styles\library\helper.scss" />
+    <Content Include="Scripts\Controls\flamebug.background.js" />
+    <Content Include="Scripts\Controls\flamebug.disclosure.js" />
+    <Content Include="Scripts\Controls\flamebug.dropdown.js" />
+    <Content Include="Scripts\Controls\flamebug.slider.js" />
+    <Content Include="Scripts\Controls\flamebug.slider.v1.js" />
+    <Content Include="Scripts\Controls\flamebug.tabview.js" />
+    <Content Include="Scripts\Controls\flamebug.tagbox.js" />
+    <Content Include="Scripts\Controls\flamebug.toggle.js" />
+    <Content Include="Scripts\prism.js" />
+    <Content Include="Styles\site\prism.css" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Content\Styles\base\normalize.css" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Styles\base\normalize.css" />
     <Content Include="System\Icons\Base\add\add.png" />
     <Content Include="System\Icons\Base\admin\Dashboard.png" />
     <Content Include="System\Icons\Base\advancedsettings\AdvancedSettings.png" />
@@ -250,71 +208,71 @@
     <Content Include="System\Icons\Base\users\icon.config" />
     <Content Include="System\Icons\Base\visual\icon.config" />
     <Content Include="System\Icons\IconStyles\-none-\iconstyle.config" />
-    <Content Include="Content\Styles\base\typography.scss" />
-    <Content Include="Content\Styles\style.scss" />
+    <Content Include="Styles\base\typography.scss" />
+    <Content Include="Styles\style.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\library\badge.scss" />
-    <Content Include="Content\Styles\base\button.scss" />
-    <Content Include="Content\Styles\controls\fb-disclosure.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-dropdown.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-help.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-icon.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-iconbutton.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-imagebutton.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-menu.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-notification.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-radiobuttonlist.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-selectionpanel.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-slider.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-tabview.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-tagbox.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-toggle.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-toolbar.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-toolbarbutton.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-toolbariconbutton.scss" />
-    <Content Include="Content\Styles\controls\beta\fb-tooltip.scss" />
-    <Content Include="Content\Styles\global.scss" />
-    <Content Include="Content\Styles\templates\template.scss" />
-    <Content Include="Content\Styles\container.scss" />
+    <Content Include="Styles\library\badge.scss" />
+    <Content Include="Styles\base\button.scss" />
+    <Content Include="Styles\controls\fb-disclosure.scss" />
+    <Content Include="Styles\controls\beta\fb-dropdown.scss" />
+    <Content Include="Styles\controls\beta\fb-help.scss" />
+    <Content Include="Styles\controls\beta\fb-icon.scss" />
+    <Content Include="Styles\controls\beta\fb-iconbutton.scss" />
+    <Content Include="Styles\controls\beta\fb-imagebutton.scss" />
+    <Content Include="Styles\controls\beta\fb-menu.scss" />
+    <Content Include="Styles\controls\beta\fb-notification.scss" />
+    <Content Include="Styles\controls\beta\fb-radiobuttonlist.scss" />
+    <Content Include="Styles\controls\beta\fb-selectionpanel.scss" />
+    <Content Include="Styles\controls\beta\fb-slider.scss" />
+    <Content Include="Styles\controls\beta\fb-tabview.scss" />
+    <Content Include="Styles\controls\beta\fb-tagbox.scss" />
+    <Content Include="Styles\controls\beta\fb-toggle.scss" />
+    <Content Include="Styles\controls\beta\fb-toolbar.scss" />
+    <Content Include="Styles\controls\beta\fb-toolbarbutton.scss" />
+    <Content Include="Styles\controls\beta\fb-toolbariconbutton.scss" />
+    <Content Include="Styles\controls\beta\fb-tooltip.scss" />
+    <Content Include="Styles\global.scss" />
+    <Content Include="Styles\templates\template.scss" />
+    <Content Include="Styles\container.scss" />
     <Content Include="Views\Static\Overview.cshtml" />
-    <Content Include="Content\Styles\pages\overview.scss" />
+    <Content Include="Styles\pages\overview.scss" />
     <Content Include="Views\Static\Forms.cshtml" />
-    <Content Include="Content\Styles\pages\forms.scss" />
+    <Content Include="Styles\pages\forms.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\pages\error.scss" />
+    <Content Include="Styles\pages\error.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\library\table.scss" />
+    <Content Include="Styles\library\table.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\base\form.scss" />
+    <Content Include="Styles\base\form.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Navigation.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\library\css3.scss" />
+    <Content Include="Styles\library\css3.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\library\form.scss" />
+    <Content Include="Styles\library\form.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\controls\beta\fb-animation.scss" />
+    <Content Include="Styles\controls\beta\fb-animation.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\controls\fb-hint.scss" />
+    <Content Include="Styles\controls\fb-hint.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\templates\document.scss" />
+    <Content Include="Styles\templates\document.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Document.cshtml" />
@@ -329,22 +287,70 @@
     <Content Include="Views\Static\Document\Basic.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\library\button.scss" />
+    <Content Include="Styles\library\button.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\base\table.scss" />
+    <Content Include="Styles\base\table.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\library\tag.scss" />
+    <Content Include="Styles\library\tag.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\library\label.scss" />
+    <Content Include="Styles\library\label.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\base\label.scss" />
+    <Content Include="Styles\base\label.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\base\badge.scss" />
+    <Content Include="Styles\base\badge.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

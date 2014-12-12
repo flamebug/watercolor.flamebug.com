@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.IO;
 
-using flamebug.Storage;
-
-namespace design.flamebug.com.Controllers
+namespace ultrabodycontouring.com.Controllers
 {
 	public class StaticController : Controller
 	{
@@ -15,12 +13,12 @@ namespace design.flamebug.com.Controllers
 			if (String.IsNullOrEmpty(path))
 				path = "index";
 
-			var file = new File("~/Views/Static/" + path + ".cshtml");
+			var html = "~/Views/Static/" + path + ".cshtml";
 
-			if (file.Exists())
-				return View("~/Views/Static/" + path + ".cshtml");
+			if (System.IO.File.Exists(Server.MapPath(html)))
+				return View(html);
 			else
-				return Content("not found");
+				return View("~/Views/Shared/404.cshtml");
 		}
 
 	}
