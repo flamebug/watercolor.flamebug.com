@@ -1,0 +1,119 @@
+/*
+forms.scss
+*/
+#inline-form .field {
+  position: relative;
+  float: left;
+  display: block;
+  margin: 1.625em 1.625em 0 0;
+  padding: 0;
+}
+#inline-form .field:last-child {
+  margin-bottom: 1.625em;
+}
+#inline-form .field label {
+  position: relative;
+  top: auto;
+  left: auto;
+  display: block;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#inline-form .field .hint {
+  top: 100%;
+  margin: 0;
+  margin-top: .75em;
+}
+#inline-form .field .hint:before {
+  top: -14px;
+  left: 50%;
+  margin-top: 0;
+  margin-left: -7px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: #444;
+}
+#inline-form .field input:invalid + .hint:before {
+  border-right-color: transparent;
+  border-bottom-color: red;
+}
+
+#align-form .field {
+  position: relative;
+  float: none;
+  display: block;
+  margin: 1.625em 0;
+  padding: 0;
+}
+#align-form .field label {
+  position: relative;
+  top: auto;
+  left: auto;
+  display: block;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#align-form .field .hint {
+  top: auto;
+  margin: 0;
+  margin-left: .75em;
+}
+#align-form .field .hint:before {
+  top: 1em;
+  left: -14px;
+  margin-top: -7px;
+  margin-left: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: #444;
+  border-bottom-color: transparent;
+}
+#align-form .field input:invalid + .hint:before {
+  border-right-color: red;
+  border-bottom-color: transparent;
+}
+@media screen and (min-width: 41.5rem) {
+  #align-form .field {
+    position: relative;
+    float: none;
+    display: block;
+    margin: 1.625em 0;
+    padding: 0 0 0 25%;
+  }
+  #align-form .field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 25%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #align-form .field .hint {
+    top: auto;
+    margin: 0;
+    margin-left: .75em;
+  }
+  #align-form .field .hint:before {
+    top: 1em;
+    left: -14px;
+    margin-top: -7px;
+    margin-left: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: #444;
+    border-bottom-color: transparent;
+  }
+  #align-form .field input:invalid + .hint:before {
+    border-right-color: red;
+    border-bottom-color: transparent;
+  }
+}
+
+/*# sourceMappingURL=forms.css.map */

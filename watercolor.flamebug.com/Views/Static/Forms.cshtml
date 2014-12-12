@@ -10,7 +10,7 @@
 		<script src="@Url.Content("~/Scripts/prism.js")"></script>
 }
 
-<header class="introduction">
+<header>
 
 	<div class="container">
 
@@ -22,9 +22,9 @@
 
 </header>
 
-<section id="forms" class="container">
+<section id="mixins">
 
-	<section id="mixins">
+    <div class="container">
 
 		<h3>Form Mixins</h3>
 
@@ -84,9 +84,13 @@
 
 		</table>
 
-	</section>
+    </div>
+    
+</section>
 
-	<section id="basic-form">
+<section id="basic-form">
+
+    <div class="container">
 
 		<h3>Basic Block Form</h3>
 		<p>This is a basic Watercolor form, which is styled by default in block layout. All below examples will use this same HTML markup, but with changes in the CSS. <code>fieldset</code> elements aren't required, but are included for the sake of these examples. Each form field is enclosed in a <code>div</code> element with <code>field</code> class. Form buttons are enclosed in a <code>div</code> element with <code>buttons</code> class. Each field can also have an optional <code>span</code> with class <code>hint</code> that pops up a field hint when the field is focused, and turns red if the field is invalid.</p>
@@ -146,7 +150,7 @@
 				<fieldset>
 
 					<legend>Personal Information</legend>
-					
+
 					<div class="field">
 						<label>Birthday:</label>
 						<input type="date" />
@@ -161,7 +165,7 @@
 						</select>
 						<span class="hint">Please choose your gender</span>
 					</div>
-					
+
 					<div class="field">
 						<label>Age:</label>
 						<input type="range" min="0" max="100" value="30" /> <output>30 years old</output>
@@ -257,16 +261,20 @@
 &lt;/form&gt;</code></pre>
 
 		<pre><code class="language-css">/*
-Block style is the default field type, this would only 
+Block style is the default field type, this would only
 be necessary if the default field type is overridden
 */
 .field {
    @@include field-block;
 }</code></pre>
 
-	</section>
+    </div>
 
-	<section id="inline-form">
+</section>
+
+<section id="inline-form">
+
+    <div class="container">
 
 		<h3>Inline Form</h3>
 		<p>Each form field is displayed in an inline manner, with the label above the field.  The buttons are displayed below the form on a separate line.</p>
@@ -335,9 +343,13 @@ be necessary if the default field type is overridden
    @@include field-inline;
 }</code></pre>
 
-	</section>
+    </div>
 
-	<section id="align-form">
+</section>
+
+<section id="align-form">
+
+    <div class="container">
 
 		<h3>Aligned Form</h3>
 		<p>Each form field is displayed on a separate line, with the field labels aligned to the left of the field.  The buttons are displayed below the form on a separate line.</p>
@@ -415,6 +427,6 @@ be necessary if the default field type is overridden
    }
 }</code></pre>
 
-	</section>
+    </div>
 
 </section>

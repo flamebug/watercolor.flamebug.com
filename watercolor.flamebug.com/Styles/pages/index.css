@@ -1,0 +1,226 @@
+/*
+index.scss
+*/
+#layout #infinite {
+  position: relative;
+  height: 20em;
+  margin: 3.25em auto 1em auto;
+  overflow: hidden;
+}
+#layout #infinite div {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 3.5rem;
+  margin-left: 0.75rem;
+  background: #ea9462;
+  opacity: .1;
+}
+#layout #infinite div:hover {
+  background: #8cbfde;
+  opacity: .5;
+}
+#layout .col2 {
+  margin-left: 5.75rem !important;
+}
+#layout .col3 {
+  margin-left: 10.75rem !important;
+}
+#layout .col4 {
+  margin-left: 15.75rem !important;
+}
+#layout .col5 {
+  margin-left: 20.75rem !important;
+}
+#layout .col6 {
+  margin-left: 25.75rem !important;
+}
+#layout .col7 {
+  margin-left: 30.75rem !important;
+}
+#layout .col8 {
+  margin-left: 35.75rem !important;
+}
+#layout .col9 {
+  margin-left: 40.75rem !important;
+}
+#layout .col10 {
+  margin-left: 45.75rem !important;
+}
+#layout .col11 {
+  margin-left: 50.75rem !important;
+}
+#layout .col12 {
+  margin-left: 55.75rem !important;
+}
+#layout .col13 {
+  margin-left: 60.75rem !important;
+}
+#layout .col14 {
+  margin-left: 65.75rem !important;
+}
+#layout .col15 {
+  margin-left: 70.75rem !important;
+}
+#layout .col16 {
+  margin-left: 75.75rem !important;
+}
+#layout .col17 {
+  margin-left: 80.75rem !important;
+}
+#layout .col18 {
+  margin-left: 85.75rem !important;
+}
+#layout .col19 {
+  margin-left: -4.25rem !important;
+}
+#layout .col20 {
+  margin-left: -9.25rem !important;
+}
+#layout .col21 {
+  margin-left: -14.25rem !important;
+}
+#layout .col22 {
+  margin-left: -19.25rem !important;
+}
+#layout .col23 {
+  margin-left: -24.25rem !important;
+}
+#layout .col24 {
+  margin-left: -29.25rem !important;
+}
+#layout .col25 {
+  margin-left: -34.25rem !important;
+}
+#layout .col26 {
+  margin-left: -39.25rem !important;
+}
+#layout .col27 {
+  margin-left: -44.25rem !important;
+}
+#layout .col28 {
+  margin-left: -49.25rem !important;
+}
+#layout .col29 {
+  margin-left: -54.25rem !important;
+}
+#layout .col30 {
+  margin-left: -59.25rem !important;
+}
+#layout .col31 {
+  margin-left: -64.25rem !important;
+}
+#layout .col32 {
+  margin-left: -69.25rem !important;
+}
+#layout .col33 {
+  margin-left: -74.25rem !important;
+}
+#layout .col34 {
+  margin-left: -79.25rem !important;
+}
+#layout .col35 {
+  margin-left: -84.25rem !important;
+}
+#layout .col36 {
+  margin-left: -89.25rem !important;
+}
+#layout .col1, #layout .col2, #layout .col19, #layout .col20 {
+  opacity: 1 !important;
+}
+@media screen and (min-width: 31.5rem) {
+  #layout .col3, #layout .col21 {
+    opacity: 1 !important;
+  }
+}
+@media screen and (min-width: 41.5rem) {
+  #layout #infinite {
+    height: 30em;
+  }
+  #layout .col4, #layout .col22 {
+    opacity: 1 !important;
+  }
+}
+@media screen and (min-width: 61.5rem) {
+  #layout .col5, #layout .col6, #layout .col23, #layout .col24 {
+    opacity: 1 !important;
+  }
+}
+@media screen and (min-width: 81.5rem) {
+  #layout .col7, #layout .col8, #layout .col25, #layout .col26 {
+    opacity: 1 !important;
+  }
+}
+
+#typography:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#typography figure {
+  display: block;
+  float: none;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  margin-top: 1.625em;
+  margin-bottom: 1.625em;
+}
+#typography .screenshot {
+  background: url(/Images/chrome-flat-browser-1600.png) no-repeat;
+  padding-top: 44px;
+  border-radius: .4em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+#typography #arrow {
+  width: 128px;
+  margin: 1.625em auto;
+  vertical-align: top;
+  opacity: .4;
+}
+#typography #arrow img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+@media screen and (min-width: 61.5rem) {
+  #typography figure {
+    display: inline;
+    float: left;
+    width: 23.5rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+  #typography #arrow {
+    display: inline;
+    float: left;
+    width: 8.5rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    margin-top: 16.25em;
+  }
+  #typography #arrow img {
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@media screen and (min-width: 81.5rem) {
+  #typography figure {
+    display: inline;
+    float: left;
+    width: 33.5rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+  #typography #arrow {
+    margin-top: 22.75em;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

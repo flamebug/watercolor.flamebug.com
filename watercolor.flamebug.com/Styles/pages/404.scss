@@ -1,0 +1,20 @@
+﻿/*
+index.scss
+*/
+
+@import "../global";
+
+//
+// Not Found
+//
+
+#not-found {
+
+    img {
+        display: block;
+        width: 200px;
+        margin: $line-height * 1em auto;
+        opacity: .1;
+    }
+
+}

@@ -1,28 +1,32 @@
 ﻿@{
     ViewBag.Title = "";
+    ViewBag.Description = "Website Design";
 }
 
 @section Styles {
-	<link rel="stylesheet" href="@Url.Content("~/Styles/Pages/home.css")">
+	<link rel="stylesheet" href="@Url.Content("~/Styles/Pages/index.css")">
 }
 
-<header class="introduction">
+<header>
 
 	<div class="container">
 
-		<img src="@Url.Content("~/Images/flamebug-Logo-White.png")" />
-		<h1>Watercolor</h1>
+		<a class="logo" href="/"></a>
 
-		<p>
-			<a class="hero-button" href="https://github.com/flamebug/watercolor.flamebug.com">Download Watercolor</a><br />
-			<a href="https://github.com/flamebug/watercolor.flamebug.com">View source on Github</a>
-		</p>
+		<h1>
+			Watercolor
+		</h1>
+
+        <p>
+            <a class="hero-button" href="https://github.com/flamebug/watercolor.flamebug.com">Download Watercolor</a><br />
+            <small><a href="https://github.com/flamebug/watercolor.flamebug.com">View source on Github</a></small>
+        </p>
 
 	</div>
 
 </header>
 
-<section id="basics">
+<section id="introduction">
 
 	<header class="container">
 
@@ -95,13 +99,13 @@
 	</header>
 
 	<div class="container">
-		
+
 		<figure class="screenshot">
 
 			<img src="/Images/Document-Basic.png" />
-		
+
 		</figure>
-		
+
 		<div id="arrow"><img src="/Images/right-arrow.png" /></div>
 
 		<figure class="screenshot">

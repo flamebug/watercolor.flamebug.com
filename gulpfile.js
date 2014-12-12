@@ -34,11 +34,11 @@ gulp.task('styles', function () {
 
 	return gulp.src(paths.styles.src)
         .pipe(sass({ style: 'expanded' }))
-        .pipe(prefix({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(minify())
+        //.pipe(prefix({
+        //    browsers: ['last 2 versions'],
+        //    cascade: false
+        //}))
+        //.pipe(minify())
         .pipe(gulp.dest(paths.styles.dest));
 
 });

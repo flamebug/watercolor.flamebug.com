@@ -1,0 +1,109 @@
+﻿@import "../global";
+
+$body-font-size-px: (($body-font-size) * ($base-font-size / 100) * 16);
+$body-line-height-px: ($body-font-size-px * $line-height);
+
+//
+// Breakpoints
+//
+
+@mixin breakpoint($point) {
+	$column-size: $column-width + $gutter-width;
+	$small-break: $column-size * 6 + $gutter-width;          // add extra gutter to deal with scrollbars included in viewport width
+	$medium-break: $column-size * 8 + $gutter-width;         // add extra gutter to deal with scrollbars included in viewport width
+	$large-break: $column-size * 12 + $gutter-width;         // add extra gutter to deal with scrollbars included in viewport width
+	$extra-large-break: $column-size * 16 + $gutter-width;   // add extra gutter to deal with scrollbars included in viewport width
+
+	@if $point == small {
+		@media screen and (min-width: $small-break) { @content; }
+	}
+	@else if $point == medium {
+		@media screen and (min-width: $medium-break) { @content; }
+	}
+	@else if $point == large {
+		@media screen and (min-width: $large-break)  { @content; }
+	}
+	@else if $point == extra-large {
+		@media screen and (min-width: $extra-large-break)  { @content; }
+	}
+}
+
+//
+// Structural Grid
+//
+
+@mixin page-width($cols) {
+	width: $cols * ($column-width + $gutter-width);
+}
+
+@mixin column($cols) {
+	display: inline;
+	float: left;
+	width: $cols * ($column-width + $gutter-width) - $gutter-width;
+	margin-left: $gutter-width / 2;
+	margin-right: $gutter-width / 2;
+}
+
+@mixin max-column() {
+	display: block;
+	float: none;
+	margin-left: $gutter-width / 2;
+	margin-right: $gutter-width / 2;
+}
+
+@mixin prefix($cols) {
+	margin-left: ($cols * ($column-width + $gutter-width)) + ($gutter-width / 2);
+}
+
+@mixin suffix($cols) {
+	margin-right: ($cols * ($column-width + $gutter-width)) + ($gutter-width / 2);
+}
+
+//
+// Typographic Grid
+//
+
+@mixin font-size($size) {
+	font-size: $size * 1em;
+	@include font-line-height($size);
+	@include font-margin-top($size);
+	@include font-margin-bottom($size);
+}
+
+@mixin font-line-height($size) {
+	line-height: (ceil(($body-font-size-px * $size) / ($line-height * $body-font-size-px)) * ($line-height * $body-font-size-px)) / ($size * $body-font-size-px);
+}
+
+@mixin font-margin-top($size, $adjust: 0) {
+	margin-top: ($line-height / $size - $adjust) * 1em;
+}
+
+@mixin font-margin-bottom($size, $adjust: 0) {
+	margin-bottom: ($line-height / $size - $adjust) * 1em;
+}
+
+//
+// clear-children
+//
+
+@mixin clear-children() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+//
+// Visual Grid
+//
+
+@mixin typographic-grid() {
+	background-position: center -1px;
+	background-size: 100% $body-line-height-px * 1px;
+	background-image: -moz-linear-gradient(top, #fbfbfb 1px, transparent 1px);
+	background-image: -webkit-linear-gradient(top, #fbfbfb 1px, transparent 1px);
+	background-image: -o-linear-gradient(top, #fbfbfb 1px, transparent 1px);
+	background-image: -ms-linear-gradient(top, #fbfbfb 1px, transparent 1px);
+	background-image: linear-gradient(to bottom, #fbfbfb 1px, transparent 1px);
+}

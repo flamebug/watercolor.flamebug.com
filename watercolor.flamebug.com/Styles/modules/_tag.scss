@@ -1,0 +1,25 @@
+/*
+modules/tag
+*/
+
+@import "../library/tag";
+
+.tag {
+	@include tag;
+
+	&.primary {
+		@include tag-primary;
+	}
+
+	&.positive {
+		@include tag-positive;
+	}
+
+	&.warning {
+		@include tag-warning;
+	}
+
+	&.negative {
+		@include tag-negative;
+	}
+}

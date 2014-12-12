@@ -1,0 +1,43 @@
+@import "../global";
+@import "grid";
+
+//
+// table-padded
+//
+
+@mixin table-padded() {
+	th,
+	td {
+		padding-top: ceil($body-line-height-px * 0.25 * 1px);
+		padding-bottom: floor($body-line-height-px * 0.25 * 1px);
+		padding-left: $line-height * 0.5em;
+		padding-right: $line-height * 0.5em;
+	}
+}
+
+//
+// table-bordered
+//
+
+@mixin table-bordered() {
+	margin-top: (($body-line-height-px - 1) / $body-line-height-px) * $line-height * 1em;
+	margin-bottom: (($body-line-height-px - 1) / $body-line-height-px) * $line-height * 1em;
+	border: 1px solid $border-color;
+	border-left: 0;
+
+	th,
+	td {
+		border-left: 1px solid $border-color;
+	}
+}
+
+//
+// table-striped
+//
+
+@mixin table-striped() {
+	tbody > tr:nth-child(odd) > td,
+	tbody > tr:nth-child(odd) > th {
+		background-color: rgba(0,0,0,0.01);
+	}
+}

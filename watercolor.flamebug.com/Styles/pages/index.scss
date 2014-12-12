@@ -1,15 +1,15 @@
 ﻿/*
-layout.scss
+index.scss
 */
 
 @import "../global";
 @import "../library/grid";
 
 //
-// Layout Demo
+// Layout
 //
 
-#layout-demo {
+#layout {
 
     @mixin infinite-column-left($cols) {
         margin-left: $cols * ($column-width + $gutter-width) + ($gutter-width / 2) !important;
@@ -107,85 +107,69 @@ layout.scss
 }
 
 //
-// Example
+// Typography
 //
 
-#example > header {
-    @include max-column();
-}
+#typography {
+    @include clear-children;
 
-#example-demo {
-    @include clear-children();
-}
-
-#example-demo .main,
-#example-demo .aside,
-#example-demo figure img,
-#example-demo header,
-#example-demo footer {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin-top: $line-height * 1em;
-    padding: 0 $line-height * 1em;
-    background: rgba(0,0,0,.01);
-    border: 1px solid $border-color;
-    @include max-column();
-}
-
-#example-demo header,
-#example-demo footer {
-    clear: both;
-}
-
-#example-demo figure {
-    @include clear-children();
-
-    img {
-        padding: 0;
-        @include column(2);
-    }
-}
-
-/* 6 column layout */
-@media screen and (min-width: 30rem) {
-    #example-demo figure img {
-        @include column(3);
-    }
-}
-
-/* 8 column layout */
-@media screen and (min-width: 40rem) {
-    #example-demo figure img {
-        @include column(2);
-    }
-}
-
-/* 12 column layout */
-@media screen and (min-width: 60rem) {
-    #example-demo .main {
-        @include column(8);
+    figure {
+        @include max-column;
+        margin-top: $line-height * 1em;
+        margin-bottom: $line-height * 1em;
     }
 
-    #example-demo .aside {
-        @include column(4);
+    .screenshot {
+        background: url(/Images/chrome-flat-browser-1600.png) no-repeat;
+        padding-top: 44px;
+        border-radius: .4em;
+        box-shadow: 0 0 20px rgba(0,0,0,0.08);
     }
 
-    #example-demo figure img {
-        @include column(3);
-    }
-}
-
-/* 16 column layout */
-@media screen and (min-width: 80rem) {
-    #example-demo .main {
-        @include column(10);
+    #arrow {
+        width: 128px;
+        margin: $line-height * 1em auto;
+        vertical-align: top;
+        opacity: .4;
     }
 
-    #example-demo .aside {
-        @include column(6);
+    #arrow img {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
     }
 
-    #example-demo figure img {
-        @include column(4);
+    @include breakpoint(large) {
+
+        figure {
+            @include column(5);
+        }
+
+        #arrow {
+            @include column(2);
+            margin-top: $line-height * 10em;
+        }
+
+        #arrow img {
+            -ms-transform: none;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    @include breakpoint(extra-large) {
+
+        figure {
+            @include column(7);
+        }
+
+        #arrow {
+            margin-top: $line-height * 14em;
+        }
     }
 }

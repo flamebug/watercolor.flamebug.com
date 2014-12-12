@@ -1,0 +1,42 @@
+/*
+tables.scss
+*/
+#basic-table table th,
+#basic-table table td {
+  background: none;
+}
+
+#basic-table table,
+#striped-table table {
+  margin-top: 1.625em;
+  margin-bottom: 1.625em;
+  border: 0;
+}
+#basic-table table th,
+#basic-table table td,
+#striped-table table th,
+#striped-table table td {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-left: 0;
+}
+
+#bordered-table table th,
+#bordered-table table td {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: none;
+}
+
+#padded-table table {
+  margin-top: 1.625em;
+  margin-bottom: 1.625em;
+  border: 0;
+}
+#padded-table table th,
+#padded-table table td {
+  border-left: 0;
+  background: none;
+}
+
+/*# sourceMappingURL=tables.css.map */
