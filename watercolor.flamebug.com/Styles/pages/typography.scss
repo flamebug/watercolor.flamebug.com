@@ -1,0 +1,16 @@
+﻿/*
+typography.scss
+*/
+
+@import "../global";
+@import "../library/grid";
+
+//
+// Formatting
+//
+
+.fifty-percent {
+    float: left;
+    width: 50%;
+    min-width: 16em;
+}

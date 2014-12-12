@@ -1,0 +1,23 @@
+﻿/*
+forms.scss
+*/
+
+@import "../global";
+@import "../library/grid";
+@import "../library/form";
+
+//
+// Form Examples
+//
+
+#inline-form .field {
+    @include field-inline;
+}
+
+#align-form .field {
+    @include field-block;
+
+    @include breakpoint(medium) {
+        @include field-align;
+    }
+}
