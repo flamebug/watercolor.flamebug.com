@@ -1,0 +1,13 @@
+﻿@import "../../library/modules/form";
+
+//
+// Forms
+//
+
+form .field {
+	@include field-block;
+}
+
+form .buttons {
+	@include form-buttons;
+}

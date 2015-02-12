@@ -1,0 +1,24 @@
+﻿@import "../../library/modules/css3";
+
+//
+// Buttons
+//
+
+a.button, button {
+	display: inline-block;
+	padding: .75em 1.25em;
+	background: $secondary-color;
+	color: #fff !important;
+	text-decoration: none !important;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+
+	@include transition(all, .1s);
+
+	&:hover {
+		background: darken($secondary-color, 10%);
+        border: none;
+	}
+}

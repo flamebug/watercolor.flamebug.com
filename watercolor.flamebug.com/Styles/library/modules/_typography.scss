@@ -1,0 +1,51 @@
+﻿//
+// Computations
+//
+
+$body-font-size-px: (($body-font-size) * ($base-font-size / 100) * 16);
+$body-line-height-px: ($body-font-size-px * $line-height);
+
+//
+// Define the font styles that position the font within the typographic grid
+//
+
+@mixin font-size($size) {
+	font-size: $size * 1em;
+	line-height: font-line-height($size);
+	margin-top: font-margin-top($size);
+	margin-bottom: font-margin-bottom($size);
+}
+
+//
+// Calculate the line height that will maintain vertical rhythm for the font size
+//
+
+@function font-line-height($size) {
+	@return (ceil(($body-font-size-px * $size) / ($line-height * $body-font-size-px)) * ($line-height * $body-font-size-px)) / ($size * $body-font-size-px);
+}
+
+//
+// Calculate the top margin to maintain vertical rhythm for the font size
+//
+
+@function font-margin-top($size, $adjust: 0) {
+	@return ($line-height / $size - $adjust) * 1em;
+}
+
+//
+// Calculate the bottom margin to maintain vertical rhythm for the font size
+//
+
+@function font-margin-bottom($size, $adjust: 0) {
+	@return ($line-height / $size - $adjust) * 1em;
+}
+
+//
+// Display the typographic grid (like notebook paper)
+//
+
+@mixin typographic-grid() {
+	background-position: center -1px;
+	background-size: 100% $body-line-height-px * 1px;
+	background-image: linear-gradient(to bottom, #fbfbfb 1px, transparent 1px);
+}

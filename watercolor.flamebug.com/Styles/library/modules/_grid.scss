@@ -1,10 +1,5 @@
-﻿@import "../global";
-
-$body-font-size-px: (($body-font-size) * ($base-font-size / 100) * 16);
-$body-line-height-px: ($body-font-size-px * $line-height);
-
-//
-// Breakpoints
+﻿//
+// Insert the given content within a media query given the breakpoint size (extra-small, small, medium, large, extra-large)
 //
 
 @mixin breakpoint($point) {
@@ -60,29 +55,6 @@ $body-line-height-px: ($body-font-size-px * $line-height);
 }
 
 //
-// Typographic Grid
-//
-
-@mixin font-size($size) {
-	font-size: $size * 1em;
-	@include font-line-height($size);
-	@include font-margin-top($size);
-	@include font-margin-bottom($size);
-}
-
-@mixin font-line-height($size) {
-	line-height: (ceil(($body-font-size-px * $size) / ($line-height * $body-font-size-px)) * ($line-height * $body-font-size-px)) / ($size * $body-font-size-px);
-}
-
-@mixin font-margin-top($size, $adjust: 0) {
-	margin-top: ($line-height / $size - $adjust) * 1em;
-}
-
-@mixin font-margin-bottom($size, $adjust: 0) {
-	margin-bottom: ($line-height / $size - $adjust) * 1em;
-}
-
-//
 // clear-children
 //
 
@@ -92,18 +64,4 @@ $body-line-height-px: ($body-font-size-px * $line-height);
 		display: table;
 		clear: both;
 	}
-}
-
-//
-// Visual Grid
-//
-
-@mixin typographic-grid() {
-	background-position: center -1px;
-	background-size: 100% $body-line-height-px * 1px;
-	background-image: -moz-linear-gradient(top, #fbfbfb 1px, transparent 1px);
-	background-image: -webkit-linear-gradient(top, #fbfbfb 1px, transparent 1px);
-	background-image: -o-linear-gradient(top, #fbfbfb 1px, transparent 1px);
-	background-image: -ms-linear-gradient(top, #fbfbfb 1px, transparent 1px);
-	background-image: linear-gradient(to bottom, #fbfbfb 1px, transparent 1px);
 }

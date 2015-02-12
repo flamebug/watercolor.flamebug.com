@@ -1,9 +1,13 @@
-﻿/*
-index.scss
-*/
+﻿@import "../global";
+@import "../library/modules/grid";
 
-@import "../global";
-@import "../library/grid";
+//
+// Header Links
+//
+
+h2 > a {
+	color: inherit;
+}
 
 //
 // Layout
@@ -110,18 +114,26 @@ index.scss
 // Typography
 //
 
-#typography {
+#typography, #forms, #tables {
     @include clear-children;
+
+	iframe {
+		width: 100%;
+		height: 100%;
+		border: 0;
+		overflow-y: hidden;
+	}
 
     figure {
         @include max-column;
+		height: 45em;
         margin-top: $line-height * 1em;
         margin-bottom: $line-height * 1em;
-    }
+		text-align: left;
 
-    .screenshot {
-        background: url(/Images/chrome-flat-browser-1600.png) no-repeat;
-        padding-top: 44px;
+		box-sizing: border-box;
+		background: url(/Images/chrome-flat-browser-1600.png) no-repeat;
+        padding: 44px 1em 0 1em;
         border-radius: .4em;
         box-shadow: 0 0 20px rgba(0,0,0,0.08);
     }
@@ -152,7 +164,7 @@ index.scss
 
         #arrow {
             @include column(2);
-            margin-top: $line-height * 10em;
+            margin-top: $line-height * 12em;
         }
 
         #arrow img {
@@ -169,7 +181,7 @@ index.scss
         }
 
         #arrow {
-            margin-top: $line-height * 14em;
+            margin-top: $line-height * 12em;
         }
     }
 }

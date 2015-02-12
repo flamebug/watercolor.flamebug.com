@@ -1,11 +1,4 @@
-/*
-modules/typography
-*/
-
-@import "../global";
-@import "../library/button";
-@import "../library/css3";
-@import "../library/grid";
+@import "../modules/typography";
 
 html {
 	font-size: $base-font-size * 1%;
@@ -14,8 +7,6 @@ html {
 body {
 	font-size: $body-font-size * 1em;
 	line-height: $line-height;
-	//text-rendering: $body-text-rendering;
-	-webkit-font-smoothing: $body-font-smoothing;
 	font-family: $body-font-family;
 	font-weight: $body-font-weight;
 	color: $body-font-color;
@@ -67,7 +58,7 @@ p {
 a {
 	color: $link-color;
 	text-decoration: none;
-	@include transition(all, 0.25s, linear);
+	transition: all 0.1s linear;
 
 	&:hover {
 		color: $link-hover-color;
@@ -89,7 +80,7 @@ dt {
 }
 
 dd + dt {
-	@include font-margin-top(1); //inherit font size from body tag
+	margin-top: font-margin-top(1); //inherit font size from body tag
 }
 
 //
@@ -97,8 +88,8 @@ dd + dt {
 //
 
 blockquote {
-	@include font-margin-top(1); //inherit font size from body tag
-	@include font-margin-bottom(1); //inherit font size from body tag
+	margin-top: font-margin-top(1); //inherit font size from body tag
+	margin-bottom: font-margin-bottom(1); //inherit font size from body tag
 	padding-left: 1em;
 	border-left: .25em solid $border-color;
 }
@@ -131,12 +122,12 @@ tt {
 }
 
 pre {
-	white-space: pre;
-	@include font-margin-top($mono-font-size, 1 / ($body-font-size * 16));
-	@include font-margin-bottom($mono-font-size, 1 / ($body-font-size * 16));
-	@include font-line-height($mono-font-size);
-
 	position: relative;
+	white-space: pre;
+	margin-top: font-margin-top($mono-font-size, 1 / ($body-font-size * 16));
+	margin-bottom: font-margin-bottom($mono-font-size, 1 / ($body-font-size * 16));
+	line-height: font-line-height($mono-font-size);
+
 	background: rgba(0,0,0,0.01);
 	border: 1px solid $border-color;
 	padding: 0 .5em;
@@ -189,7 +180,6 @@ table {
 	margin-top: $line-height * 1em;
 	margin-bottom: $line-height * 1em;
 	border-collapse: separate;
-	//*border-collapse: collapse;
 
 	th,
 	td {
@@ -230,7 +220,7 @@ table {
 
 form {
 	//margin: $line-height * 1em 0;  //TODO: Decide if this is needed or not, current thinking is form is a generic container so it shouldn't have a margin
-	@include clear-children();
+	//@include clear-children();     //TODO: Not sure if it is necessary to clear children automatically here
 }
 
 fieldset {
@@ -260,6 +250,7 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
+	box-sizing: border-box;
 	font: inherit;
 	padding: 0 .375em;
 	margin: -1px 0;
@@ -267,7 +258,6 @@ input[type="week"] {
 	background-color: #fff;
 	color: $input-color;
 	border-radius: .2em;
-	@include box-sizing(border-box);
 
 	&:focus {
 		color: $input-focus-color;
@@ -288,9 +278,9 @@ select {
 // Buttons
 //
 
-button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
-	@include button;
-}
+//button,
+//input[type="button"],
+//input[type="submit"],     <-- This code has been moved to the button partial
+//input[type="reset"] {
+//	@include button;
+//}

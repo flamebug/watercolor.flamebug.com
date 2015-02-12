@@ -1,8 +1,4 @@
-/*
-modules/button
-*/
-
-@import "../library/button";
+@import "../modules/button";
 
 .button {
 	@include button;

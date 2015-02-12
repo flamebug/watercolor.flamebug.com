@@ -137,6 +137,9 @@ App_Data/*.ldf
 node_modules/
 .sass-cache/
 
+# Visual Studio Hidden Folder
+.vs/
+
 # =========================
 # Windows detritus
 # =========================

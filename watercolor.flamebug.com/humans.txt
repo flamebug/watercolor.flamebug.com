@@ -1,0 +1,10 @@
+﻿/* TEAM */
+Developer: Clint Kolodziej
+Site: http://clintkolodziej.com
+Twitter: @clintkolodziej
+Location: Chicago, IL
+
+/* SITE */
+Standards: HTML5, CSS5, ASP.NET MVC
+Components: Modernizr, jQuery, ASP.NET MVC
+Software: Microsoft Visual Studio

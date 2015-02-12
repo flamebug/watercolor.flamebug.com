@@ -1,28 +1,28 @@
 //
-// Normalize and Typography
+// Globals
 //
 
-@import "modules/normalize";
-@import "modules/typography";
+@import "global";
 
 //
-// Optional Modules
+// Library Partials
 //
 
-@import "modules/badge";
-@import "modules/button";
-@import "modules/form";
-//@import "modules/label";
-//@import "modules/tag";
+@import "library/partials/normalize";
+@import "library/partials/typography";
+@import "library/partials/button";
+//@import "library/partials/beta_badge";
+//@import "library/partials/beta_label";
+//@import "library/partials/beta_tag";
 
 //
-// Template Styles
+// Template Partials
 //
 
-@import "templates/template";
+@import "templates/flamebug";
 
 //
-// Site Styles
+// Site Partials
 //
 
 @import "site/site";

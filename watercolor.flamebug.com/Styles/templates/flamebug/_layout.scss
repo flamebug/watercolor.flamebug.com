@@ -1,0 +1,66 @@
+@import "../../library/modules/grid";
+@import "../../library/modules/css3";
+
+//
+// Resets
+//
+
+body,
+#content,
+#footer {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	clear: both;
+}
+
+//
+// Body
+//
+
+body {
+	position: relative;
+	background-color: #fff;
+	background-image: none;
+	background-repeat: repeat;
+	background-attachment: scroll;
+	background-position: center top;
+	@include background-size(auto);
+	@include background-origin(padding-box);
+	@include background-clip(border-box);
+}
+
+//
+// Content
+//
+
+#content {
+	@include clear-children();
+}
+
+//
+// Footer
+//
+
+#footer {
+	padding: $line-height * 1em 0;
+	background-color: #f2f2f2;
+	text-align: center;
+	@include clear-children();
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	li {
+		display: inline-block;
+		width: 48px;
+		margin: 0 1em;
+		text-align: center;
+
+		img {
+			opacity: 0.1;
+		}
+	}
+}

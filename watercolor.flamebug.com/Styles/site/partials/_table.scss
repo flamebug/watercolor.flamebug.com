@@ -1,0 +1,11 @@
+﻿@import "../../library/modules/table";
+
+//
+// Tables
+//
+
+table {
+	@include table-padded;
+	@include table-bordered;
+	@include table-striped;
+}

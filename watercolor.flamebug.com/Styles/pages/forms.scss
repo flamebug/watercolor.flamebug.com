@@ -1,10 +1,37 @@
-﻿/*
-forms.scss
-*/
+﻿@import "../global";
+@import "../library/modules/grid";
+@import "../library/modules/form";
 
-@import "../global";
-@import "../library/grid";
-@import "../library/form";
+//
+// Form Defaults
+//
+
+.field,
+.block .field,
+fieldset.block .field,
+form div.field.block {
+	@include field-block;
+}
+
+.inline .field,
+fieldset.inline .field,
+form div.field.inline {
+	@include field-inline;
+}
+
+.align .field,
+fieldset.align .field,
+form div.field.align {
+	@include field-align;
+}
+
+.field.clear {
+	clear: both;
+}
+
+form .buttons {
+	@include form-buttons;
+}
 
 //
 // Form Examples

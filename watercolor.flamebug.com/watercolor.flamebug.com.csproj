@@ -54,10 +54,66 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Styles\library\partials\_beta_badge.scss" />
+    <Content Include="Styles\library\partials\_button.scss" />
+    <Content Include="Styles\library\partials\_beta_label.scss" />
+    <Content Include="Styles\library\partials\_normalize.scss" />
+    <Content Include="Styles\library\partials\_beta_tag.scss" />
+    <Content Include="Styles\library\partials\_typography.scss" />
+    <Content Include="Styles\pages\404.css" />
+    <Content Include="Styles\pages\forms.css" />
+    <Content Include="Styles\pages\getting-started.css" />
+    <Content Include="Styles\pages\index.css" />
+    <Content Include="Styles\pages\layout.css" />
+    <Content Include="Styles\pages\overview.css" />
+    <Content Include="Styles\pages\tables.css" />
+    <Content Include="Styles\pages\typography.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Styles\_global.scss" />
+    <Content Include="Styles\library\modules\_beta_badge.scss" />
+    <Content Include="Styles\library\modules\_button.scss" />
+    <Content Include="Styles\library\modules\_css3.scss" />
+    <Content Include="Styles\library\modules\_form.scss" />
+    <Content Include="Styles\library\modules\_grid.scss" />
+    <Content Include="Styles\library\modules\_beta_label.scss" />
+    <Content Include="Styles\library\modules\_table.scss" />
+    <Content Include="Styles\library\modules\_beta_tag.scss" />
+    <Content Include="Styles\pages\404.scss" />
+    <Content Include="Styles\pages\getting-started.scss" />
+    <Content Include="Styles\pages\index.scss" />
+    <Content Include="Styles\templates\_flamebug.scss" />
+    <Content Include="Views\Static\Getting-Started.cshtml" />
+    <Content Include="Views\Shared\404.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Analytics.cshtml" />
+    <Content Include="Views\Shared\_Unstyled.cshtml" />
+    <Content Include="Views\Static\Styled\Table.cshtml" />
+    <Content Include="Views\Static\Unstyled\Table.cshtml" />
+    <Content Include="Views\Shared\_Styled.cshtml" />
+    <Content Include="Views\Static\Styled\Forms.cshtml" />
+    <Content Include="Views\Static\Unstyled\Forms.cshtml" />
+    <Content Include="Views\Static\Unstyled\Typography.cshtml" />
+    <Content Include="Views\Static\Styled\Typography.cshtml" />
+    <Content Include="Styles\site\partials\_logo.scss" />
+    <Content Include="Styles\site\partials\_button.scss" />
+    <Content Include="Styles\site\partials\_form.scss" />
+    <Content Include="Styles\site\partials\_layout.scss" />
+    <Content Include="Styles\site\partials\_table.scss" />
+    <Content Include="Styles\site\partials\_example.scss" />
+    <Content Include="Styles\site\partials\_alert.scss" />
+    <Content Include="Styles\site\partials\_font.scss" />
+    <Content Include="Styles\site\_site.scss" />
+    <Content Include="Styles\templates\flamebug\_navigation.scss" />
+    <Content Include="Styles\templates\flamebug\_layout.scss" />
+    <Content Include="Styles\library\_defaults.scss" />
+    <Content Include="Styles\library\modules\_typography.scss" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="apple-touch-icon.png" />
     <Content Include="Content\invoice.htm" />
     <Content Include="Content\proposal.htm" />
+    <Content Include="favicon.ico" />
+    <Content Include="humans.txt" />
     <Content Include="Images\appicon.png" />
     <Content Include="Images\Badges\CSS3.svg" />
     <Content Include="Images\Badges\Sass.svg" />
@@ -70,24 +126,17 @@
     <Content Include="Images\Badges\HTML5.svg" />
     <Content Include="Images\image.jpg" />
     <Content Include="Images\right-arrow.png" />
+    <Content Include="robots.txt" />
     <Content Include="Scripts\Controls\flamebug.modal.js" />
     <Content Include="Scripts\modernizr-2.6.3.min.js" />
-    <Content Include="Styles\controls\beta\fb-app-icon.scss" />
-    <Content Include="Styles\base\tag.scss" />
+    <Content Include="sitemap.xml" />
     <Content Include="Styles\pages\typography.scss" />
-    <Content Include="Styles\library\grid.scss" />
     <Content Include="Styles\pages\layout.scss" />
     <Content Include="Views\Static\Controls.cshtml" />
     <Content Include="Views\Static\Typography.cshtml" />
     <Content Include="Views\Static\Layout.cshtml" />
-    <Content Include="Styles\pages\home.scss" />
-    <Content Include="Styles\pages\controls.scss" />
-    <Content Include="Styles\site\site.scss" />
-    <Content Include="Styles\controls\fb-modal.scss" />
-    <Content Include="Styles\controls\fb-modal-effects.scss" />
     <Content Include="Views\Static\Tables.cshtml" />
     <Content Include="Styles\pages\tables.scss" />
-    <Content Include="Styles\library\helper.scss" />
     <Content Include="Scripts\Controls\flamebug.background.js" />
     <Content Include="Scripts\Controls\flamebug.disclosure.js" />
     <Content Include="Scripts\Controls\flamebug.dropdown.js" />
@@ -97,10 +146,8 @@
     <Content Include="Scripts\Controls\flamebug.tagbox.js" />
     <Content Include="Scripts\Controls\flamebug.toggle.js" />
     <Content Include="Scripts\prism.js" />
-    <Content Include="Styles\site\prism.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Styles\base\normalize.css" />
     <Content Include="System\Icons\Base\add\add.png" />
     <Content Include="System\Icons\Base\admin\Dashboard.png" />
     <Content Include="System\Icons\Base\advancedsettings\AdvancedSettings.png" />
@@ -160,9 +207,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="sitemap.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="System\Icons\Base\add\icon.config" />
     <Content Include="System\Icons\Base\admin\icon.config" />
     <Content Include="System\Icons\Base\advancedsettings\icon.config" />
@@ -208,7 +252,6 @@
     <Content Include="System\Icons\Base\users\icon.config" />
     <Content Include="System\Icons\Base\visual\icon.config" />
     <Content Include="System\Icons\IconStyles\-none-\iconstyle.config" />
-    <Content Include="Styles\base\typography.scss" />
     <Content Include="Styles\style.scss" />
   </ItemGroup>
   <ItemGroup>
@@ -219,90 +262,13 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Styles\library\badge.scss" />
-    <Content Include="Styles\base\button.scss" />
-    <Content Include="Styles\controls\fb-disclosure.scss" />
-    <Content Include="Styles\controls\beta\fb-dropdown.scss" />
-    <Content Include="Styles\controls\beta\fb-help.scss" />
-    <Content Include="Styles\controls\beta\fb-icon.scss" />
-    <Content Include="Styles\controls\beta\fb-iconbutton.scss" />
-    <Content Include="Styles\controls\beta\fb-imagebutton.scss" />
-    <Content Include="Styles\controls\beta\fb-menu.scss" />
-    <Content Include="Styles\controls\beta\fb-notification.scss" />
-    <Content Include="Styles\controls\beta\fb-radiobuttonlist.scss" />
-    <Content Include="Styles\controls\beta\fb-selectionpanel.scss" />
-    <Content Include="Styles\controls\beta\fb-slider.scss" />
-    <Content Include="Styles\controls\beta\fb-tabview.scss" />
-    <Content Include="Styles\controls\beta\fb-tagbox.scss" />
-    <Content Include="Styles\controls\beta\fb-toggle.scss" />
-    <Content Include="Styles\controls\beta\fb-toolbar.scss" />
-    <Content Include="Styles\controls\beta\fb-toolbarbutton.scss" />
-    <Content Include="Styles\controls\beta\fb-toolbariconbutton.scss" />
-    <Content Include="Styles\controls\beta\fb-tooltip.scss" />
-    <Content Include="Styles\global.scss" />
-    <Content Include="Styles\templates\template.scss" />
-    <Content Include="Styles\container.scss" />
     <Content Include="Views\Static\Overview.cshtml" />
     <Content Include="Styles\pages\overview.scss" />
     <Content Include="Views\Static\Forms.cshtml" />
     <Content Include="Styles\pages\forms.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Styles\pages\error.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\library\table.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\base\form.scss" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Shared\_Navigation.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\library\css3.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\library\form.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\controls\beta\fb-animation.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\controls\fb-hint.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\templates\document.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\_Document.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\_DocumentBasic.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Static\Document\Enhanced.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Static\Document\Basic.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\library\button.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\base\table.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\library\tag.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\library\label.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\base\label.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\base\badge.scss" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">

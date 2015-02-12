@@ -1,10 +1,1 @@
-/*
-typography.scss
-*/
-.fifty-percent {
-  float: left;
-  width: 50%;
-  min-width: 16em;
-}
-
-/*# sourceMappingURL=typography.css.map */
+.fifty-percent{float:left;width:50%;min-width:16em}
