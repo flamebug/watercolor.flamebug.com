@@ -1,9 +1,9 @@
 ﻿//
-// Computations
+// Calculate body font-size and line-height in pixels for vertical rhythm calculations.
 //
 
-$body-font-size-px: (($body-font-size) * ($base-font-size / 100) * 16);
-$body-line-height-px: ($body-font-size-px * $line-height);
+$body-font-size-px: $body-font-size * 16;  // note: rem-based media queries are based on initial font-size so we are assuming an initial html element font-size of 100%/16px
+$body-line-height-px: $body-font-size-px * $line-height;
 
 //
 // Define the font styles that position the font within the typographic grid
@@ -28,16 +28,16 @@ $body-line-height-px: ($body-font-size-px * $line-height);
 // Calculate the top margin to maintain vertical rhythm for the font size
 //
 
-@function font-margin-top($size, $adjust: 0) {
-	@return ($line-height / $size - $adjust) * 1em;
+@function font-margin-top($size, $border-adjust: 0) {
+	@return ($line-height / $size - $border-adjust) * 1em;
 }
 
 //
 // Calculate the bottom margin to maintain vertical rhythm for the font size
 //
 
-@function font-margin-bottom($size, $adjust: 0) {
-	@return ($line-height / $size - $adjust) * 1em;
+@function font-margin-bottom($size, $border-adjust: 0) {
+	@return ($line-height / $size - $border-adjust) * 1em;
 }
 
 //

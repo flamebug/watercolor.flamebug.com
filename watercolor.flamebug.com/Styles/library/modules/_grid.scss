@@ -9,6 +9,8 @@
 	$large-break: $column-size * 12 + $gutter-width;         // add extra gutter to deal with scrollbars included in viewport width
 	$extra-large-break: $column-size * 16 + $gutter-width;   // add extra gutter to deal with scrollbars included in viewport width
 
+	//note: extra-small should be your default using mobile-first design methodology, so there is no need for a media-query
+
 	@if $point == small {
 		@media screen and (min-width: $small-break) { @content; }
 	}
@@ -24,12 +26,16 @@
 }
 
 //
-// Structural Grid
+// Set the width of the page container (for use in defining your site's container breakpoints)
 //
 
 @mixin page-width($cols) {
 	width: $cols * ($column-width + $gutter-width);
 }
+
+//
+// Set the number of columns an element spans on the grid
+//
 
 @mixin column($cols) {
 	display: inline;
@@ -39,6 +45,10 @@
 	margin-right: $gutter-width / 2;
 }
 
+//
+// Set the element to span the entire grid width
+//
+
 @mixin max-column() {
 	display: block;
 	float: none;
@@ -46,16 +56,24 @@
 	margin-right: $gutter-width / 2;
 }
 
+//
+// Set the number of empty columns that should prefix the element on the grid
+//
+
 @mixin prefix($cols) {
 	margin-left: ($cols * ($column-width + $gutter-width)) + ($gutter-width / 2);
 }
+
+//
+// Set the number of empty columns that should follow the element on the grid
+//
 
 @mixin suffix($cols) {
 	margin-right: ($cols * ($column-width + $gutter-width)) + ($gutter-width / 2);
 }
 
 //
-// clear-children
+// clear any children within the element
 //
 
 @mixin clear-children() {

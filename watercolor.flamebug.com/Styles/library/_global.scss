@@ -9,13 +9,12 @@ $gutter-width: 1.5rem !default;
 // Typography
 //
 
-$base-font-size: 100 !default;
 $line-height:  1.625 !default;
-$body-font-size: 1 !default;
 
+$body-font-size: 1 !default;
 $body-font-color: #4e585b !default;
-$body-font-family: 'Roboto', sans-serif !default;
-$body-font-weight: 300 !default;
+$body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$body-font-weight: normal !default;
 
 $h1-font-size: 3.4375 !default;
 $h2-font-size: 2.625 !default;
@@ -24,27 +23,18 @@ $h4-font-size: 1.625 !default;
 $h5-font-size: 1.3125 !default;
 $h6-font-size: 1 !default;
 $header-font-color: inherit !default;
-$header-font-family: 'Roboto', sans-serif !default;
-$header-font-weight: 500 !default;
+$header-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$header-font-weight: normal !default;
 
 $mono-font-size: 1 !default;
 $mono-font-color: inherit !default;
 $mono-font-family: monospace, sans-serif !default;
 $mono-font-weight: normal !default;
 
-//
-// Palette
-//
-
-$primary-color: #ea9462 !default;
-$secondary-color: #8cbfde !default;
-
-//
-// Common Styles
-//
-
-$border-color: #eee !default;
 $link-color: #25AAE1 !default;
 $link-hover-color: #058Ac1 !default;
+
 $input-color: #777 !default;
 $input-focus-color: #000 !default;
+
+$border-color: #eee !default;

@@ -2,18 +2,16 @@
 // Globals
 //
 
-@import "global";
+@import "library/global";					//  <<--NEED TO DECIDE IF SEPARATE H* VARIABLES ARE NEEDED OR IF ONE IS OK
+@import "site/global";						//  <<--DONE
 
 //
 // Library Partials
 //
 
-@import "library/partials/normalize";
-@import "library/partials/typography";
-@import "library/partials/button";
-//@import "library/partials/beta_badge";
-//@import "library/partials/beta_label";
-//@import "library/partials/beta_tag";
+@import "library/partials/normalize";		//  <<--DONE
+@import "library/partials/typography";		//  <<--NEED TO DECIDE IF SEPARATE H* VARIABLES ARE NEEDED OR IF ONE IS OK
+@import "library/partials/button";			//  <<--NEED TO DECIDE OUT-OF-THE-BOX FUNCTIONALITY, NON-BASIC CODE IS COMMENTED OUT
 
 //
 // Template Partials

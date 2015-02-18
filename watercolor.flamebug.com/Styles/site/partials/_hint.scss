@@ -1,0 +1,9 @@
+﻿@import "../../library/modules/hint";
+
+//
+// Hint
+//
+
+.hint {
+	@include hint;
+}

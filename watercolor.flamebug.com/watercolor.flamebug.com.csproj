@@ -54,11 +54,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="Styles\library\partials\_beta_badge.scss" />
+    <Content Include="Styles\site\partials\_beta_badge.scss" />
     <Content Include="Styles\library\partials\_button.scss" />
-    <Content Include="Styles\library\partials\_beta_label.scss" />
+    <Content Include="Styles\site\partials\_beta_label.scss" />
     <Content Include="Styles\library\partials\_normalize.scss" />
-    <Content Include="Styles\library\partials\_beta_tag.scss" />
+    <Content Include="Styles\site\partials\_beta_tag.scss" />
     <Content Include="Styles\library\partials\_typography.scss" />
     <Content Include="Styles\pages\404.css" />
     <Content Include="Styles\pages\forms.css" />
@@ -69,7 +69,6 @@
     <Content Include="Styles\pages\tables.css" />
     <Content Include="Styles\pages\typography.css" />
     <Content Include="Styles\style.css" />
-    <Content Include="Styles\_global.scss" />
     <Content Include="Styles\library\modules\_beta_badge.scss" />
     <Content Include="Styles\library\modules\_button.scss" />
     <Content Include="Styles\library\modules\_css3.scss" />
@@ -105,8 +104,11 @@
     <Content Include="Styles\site\_site.scss" />
     <Content Include="Styles\templates\flamebug\_navigation.scss" />
     <Content Include="Styles\templates\flamebug\_layout.scss" />
-    <Content Include="Styles\library\_defaults.scss" />
+    <Content Include="Styles\library\_global.scss" />
     <Content Include="Styles\library\modules\_typography.scss" />
+    <Content Include="Styles\library\modules\_hint.scss" />
+    <Content Include="Styles\site\_global.scss" />
+    <Content Include="Styles\site\partials\_hint.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="apple-touch-icon.png" />

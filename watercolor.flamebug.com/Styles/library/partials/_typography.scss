@@ -1,14 +1,10 @@
 @import "../modules/typography";
 
-html {
-	font-size: $base-font-size * 1%;
-}
-
 body {
 	font-size: $body-font-size * 1em;
-	line-height: $line-height;
 	font-family: $body-font-family;
 	font-weight: $body-font-weight;
+	line-height: $line-height;
 	color: $body-font-color;
 }
 
@@ -48,7 +44,7 @@ h6 {
 }
 
 p {
-	@include font-size(1); //inherit font size from body tag
+	@include font-size(1);
 }
 
 //
@@ -72,7 +68,7 @@ a {
 ul,
 ol,
 dl {
-	@include font-size(1); //inherit font size from body tag
+	@include font-size(1);
 }
 
 dt {
@@ -80,7 +76,7 @@ dt {
 }
 
 dd + dt {
-	margin-top: font-margin-top(1); //inherit font size from body tag
+	margin-top: font-margin-top(1);
 }
 
 //
@@ -88,8 +84,8 @@ dd + dt {
 //
 
 blockquote {
-	margin-top: font-margin-top(1); //inherit font size from body tag
-	margin-bottom: font-margin-bottom(1); //inherit font size from body tag
+	margin-top: font-margin-top(1);
+	margin-bottom: font-margin-bottom(1);
 	padding-left: 1em;
 	border-left: .25em solid $border-color;
 }
@@ -107,9 +103,11 @@ tt {
 	direction: ltr;
 	text-align: left;
 	word-spacing: normal;
+
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
+
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
 	-ms-hyphens: none;
@@ -123,10 +121,10 @@ tt {
 
 pre {
 	position: relative;
-	white-space: pre;
 	margin-top: font-margin-top($mono-font-size, 1 / ($body-font-size * 16));
 	margin-bottom: font-margin-bottom($mono-font-size, 1 / ($body-font-size * 16));
 	line-height: font-line-height($mono-font-size);
+	white-space: pre;
 
 	background: rgba(0,0,0,0.01);
 	border: 1px solid $border-color;
@@ -273,14 +271,3 @@ select {
 	//unlike other form inputs a select doesn't use line-height, we need to add padding to get it there
 	padding: (2 / ($body-font-size * 16) * 1em) 0 (1 / ($body-font-size * 16) * 1em) .375em;
 }
-
-//
-// Buttons
-//
-
-//button,
-//input[type="button"],
-//input[type="submit"],     <-- This code has been moved to the button partial
-//input[type="reset"] {
-//	@include button;
-//}

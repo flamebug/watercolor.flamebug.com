@@ -1,14 +1,18 @@
 @import "../modules/button";
 
-.button {
-	@include button;
-}
-
-.button,
+//.button,
 button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
+
+	@include button;
+
+	//
+	// Not sure if these styles should be site-specific or provided out-of the box
+	//
+
+	/*
 	&.hero {
 		@include button-hero;
 	}
@@ -40,4 +44,5 @@ input[type="reset"] {
 	&.negative {
 		@include button-negative;
 	}
+	*/
 }
