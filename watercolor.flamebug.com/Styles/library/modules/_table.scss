@@ -1,9 +1,21 @@
 //
+// Modules
+//
+
+@import "grid";
+@import "typography";
+
+//
+// Defaults
+//
+
+@import "../defaults/table";
+
+//
 // Calculate body font-size and line-height in pixels for vertical rhythm calculations.
 //
 
-$body-font-size-px: $body-font-size * 16;  // note: rem-based media queries are based on initial font-size so we are assuming an initial html element font-size of 100%/16px
-$body-line-height-px: $body-font-size-px * $line-height;
+$body-line-height-px: $body-font-size * $line-height * 16;
 
 //
 // Display the table with padding

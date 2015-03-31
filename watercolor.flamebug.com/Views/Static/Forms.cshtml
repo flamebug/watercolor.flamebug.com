@@ -16,19 +16,16 @@
 
 		<h2>Forms</h2>
 
-		<p>Forms in watercolor are pretty simple, yet tremendously flexible. Forms fields should be marked up as <code>div</code> elements with a <code>field</code> class. Form buttons should be enclosed in a <code>div</code> with a <code>buttons</code> class. With this basic markup and a little bit of help from the form @@mixins you can display your forms in a variety of ways.</p>
+		<p>Forms in Watercolor are pretty simple, yet tremendously flexible. Forms fields should be marked up as <code>div</code> elements with a <code>field</code> class. Form buttons should be enclosed in a <code>div</code> with a <code>buttons</code> class. With this basic markup and a little bit of help from the form @@mixins you can display your forms in a variety of ways.</p>
 
 	</div>
 
 </header>
 
-<section id="mixins">
-
-    <div class="container">
+<section id="mixins" class="container">
 
 		<h3>Form Mixins</h3>
-
-		<p>The form @@mixins are defined in <a href="/overview#forms">forms.scss</a> and provide @@mixins for styling forms depending on your site's needs.</p>
+		<p>The form @@mixins are defined in <code>modules/form.scss</code> and provide @@mixins for styling forms depending on your site's needs.</p>
 
 		<table>
 
@@ -52,45 +49,89 @@
 					<td><code>field-align</code></td>
 					<td>Each form field is displayed on a separate line, with the field labels aligned to the left of the field.  The buttons are displayed below the form on a separate line.</td>
 				</tr>
-			</tbody>
-
-		</table>
-
-		<p>The following optional classes are also provided if you prefer to use them instead of using @@mixins.</p>
-
-		<table>
-
-			<thead>
 				<tr>
-					<th style="width: 25%">class</th>
-					<th>description</th>
-				</tr>
-			</thead>
-
-			<tbody>
-				<tr>
-					<td><code>block</code></td>
-					<td>Each form field is displayed on a separate line, with the label above the field. This is the default form type.</td>
-				</tr>
-				<tr>
-					<td><code>inline</code></td>
-					<td>Each form field is displayed in an inline manner, with the label above the field.  The buttons are displayed below the form on a separate line.</td>
-				</tr>
-				<tr>
-					<td><code>align</code></td>
-					<td>Each form field is displayed on a separate line, with the field labels aligned to the left of the field.  The buttons are displayed below the form on a separate line.</td>
+					<td><code>field-hint</code></td>
+					<td>Mixin to set up the form hint element.</td>
 				</tr>
 			</tbody>
 
 		</table>
 
-    </div>
-    
 </section>
 
-<section id="basic-form">
+<section id="partials" class="container">
 
-    <div class="container">
+	<h3>Form Partials</h3>
+	<p>A form partial is provided in <code>partials/form.scss</code> and uses the standard @@mixins to set up the standard classes used in form markup. You can include this partial in your project, or code your own if you prefer a different style.</p>
+
+	<pre><code class="language-css">.field {
+	@@include field-block;
+}
+.hint {
+	@@include hint;
+}</code></pre>
+
+</section>
+
+<section id="standard-markup" class="container">
+
+	<h3>Standard Markup</h3>
+	<p>The following is an example of the standard markup of a Watercolor form. The highlights are that fields need a containing div with class <code>field</code>, and you can add hints on each field to better aid users in completing your form.</p>
+
+	<div class="example">
+
+		<form>
+
+			<fieldset>
+
+				<legend>Legend</legend>
+
+				<div class="field">
+					<label>Field 1:</label>
+					<input type="text" />
+					<span class="hint">Form hint</span>
+				</div>
+
+				<div class="field">
+					<label>Field 2:</label>
+					<input type="text" />
+					<span class="hint">Form hint</span>
+				</div>
+
+			</fieldset>
+
+			<p>
+				<input type="submit" /> <input type="reset" value="Reset" />
+			</p>
+
+		</form>
+
+	</div>
+
+	<pre class="example-code"><code class="language-markup">&lt;form&gt;
+   &lt;fieldset&gt;
+      &lt;legend&gt;Legend&lt;/legend&gt;
+      &lt;div class="field"&gt;
+         &lt;label&gt;Field 1:&lt;/label&gt;
+         &lt;input type="text" /&gt;
+         &lt;span class="hint"&gt;Form hint&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="field"&gt;
+         &lt;label&gt;Field 2:&lt;/label&gt;
+         &lt;input type="text" /&gt;
+         &lt;span class="hint"&gt;Form hint&lt;/span&gt;
+      &lt;/div&gt;
+   &lt;/fieldset&gt;
+   &lt;p&gt;
+      &lt;input type="submit" /&gt;
+      &lt;input type="reset" value="Reset" /&gt;
+   &lt;/p&gt;
+&lt;/form&gt;</code></pre>
+
+</section>
+
+
+<section id="basic-form" class="container">
 
 		<h3>Basic Block Form</h3>
 		<p>This is a basic Watercolor form, which is styled by default in block layout. All below examples will use this same HTML markup, but with changes in the CSS. <code>fieldset</code> elements aren't required, but are included for the sake of these examples. Each form field is enclosed in a <code>div</code> element with <code>field</code> class. Form buttons are enclosed in a <code>div</code> element with <code>buttons</code> class. Each field can also have an optional <code>span</code> with class <code>hint</code> that pops up a field hint when the field is focused, and turns red if the field is invalid.</p>
@@ -146,72 +187,10 @@
 					</div>
 
 				</fieldset>
-<!--
-				<fieldset>
 
-					<legend>Personal Information</legend>
-
-					<div class="field">
-						<label>Birthday:</label>
-						<input type="date" />
-						<span class="hint">Please choose your birthday</span>
-					</div>
-
-					<div class="field">
-						<label>Gender:</label>
-						<select>
-							<option value="1">Male</option>
-							<option value="2">Female</option>
-						</select>
-						<span class="hint">Please choose your gender</span>
-					</div>
-
-					<div class="field">
-						<label>Age:</label>
-						<input type="range" min="0" max="100" value="30" /> <output>30 years old</output>
-					</div>
-
-					<div class="field">
-						<label>Do you have siblings?:</label>
-						<input type="radio" name="sex" value="male" checked="checked" /> Yes
-						<input type="radio" name="sex" value="female" /> No
-					</div>
-
-					<div class="field">
-						<label>Number of siblings?:</label>
-						<input type="number" value="0" />
-						<span class="hint">Please select the number of siblings that you have</span>
-					</div>
-
-					<div class="field">
-						<label>Favorite Color:</label>
-						<input type="color" />
-						<span class="hint">Please choose your favorite color</span>
-					</div>
-
-				</fieldset>
-
-				<fieldset>
-
-					<legend>Optional Information</legend>
-
-					<div class="field clear">
-						<label>Receive Emails:</label>
-						<input type="checkbox" />
-						<span class="hint">Please check the box if you would like to receive emails from us</span>
-					</div>
-
-					<div class="field">
-						<label>Comments:</label>
-						<textarea placeholder="Comments"></textarea>
-						<span class="hint">Please enter any comments that you may have</span>
-					</div>
-
-				</fieldset>
--->
-				<div class="buttons">
+				<p>
 					<input type="submit" /> <input type="reset" value="Reset" />
-				</div>
+				</p>
 
 			</form>
 
@@ -254,12 +233,11 @@
          &lt;span class="hint"&gt;Please enter your website address in the format: http://domain.com&lt;/span&gt;
       &lt;/div&gt;
    &lt;/fieldset&gt;
-   &lt;div class="buttons"&gt;
+   &lt;p&gt;
       &lt;input type="submit" /&gt;
       &lt;input type="reset" value="Reset" /&gt;
-   &lt;/div&gt;
+   &lt;/p&gt;
 &lt;/form&gt;</code></pre>
-
 		<pre><code class="language-css">/*
 Block style is the default field type, this would only
 be necessary if the default field type is overridden
@@ -268,13 +246,9 @@ be necessary if the default field type is overridden
    @@include field-block;
 }</code></pre>
 
-    </div>
-
 </section>
 
-<section id="inline-form">
-
-    <div class="container">
+<section id="inline-form" class="container">
 
 		<h3>Inline Form</h3>
 		<p>Each form field is displayed in an inline manner, with the label above the field.  The buttons are displayed below the form on a separate line.</p>
@@ -331,9 +305,9 @@ be necessary if the default field type is overridden
 
 				</fieldset>
 
-				<div class="buttons">
+				<p>
 					<input type="submit" /> <input type="reset" value="Reset" />
-				</div>
+				</p>
 
 			</form>
 
@@ -343,13 +317,9 @@ be necessary if the default field type is overridden
    @@include field-inline;
 }</code></pre>
 
-    </div>
-
 </section>
 
-<section id="align-form">
-
-    <div class="container">
+<section id="align-form" class="container">
 
 		<h3>Aligned Form</h3>
 		<p>Each form field is displayed on a separate line, with the field labels aligned to the left of the field.  The buttons are displayed below the form on a separate line.</p>
@@ -407,9 +377,9 @@ be necessary if the default field type is overridden
 
 				</fieldset>
 
-				<div class="buttons">
+				<p>
 					<input type="submit" /> <input type="reset" value="Reset" />
-				</div>
+				</p>
 
 			</form>
 
@@ -426,7 +396,5 @@ be necessary if the default field type is overridden
       @@include field-align;
    }
 }</code></pre>
-
-    </div>
 
 </section>

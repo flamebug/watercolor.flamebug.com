@@ -1,0 +1,54 @@
+//
+// Modules
+//
+
+@import "../../modules/typography";
+
+//
+// Preformatted Text and Code
+//
+
+pre,
+code,
+kbd,
+samp,
+tt {
+	font-size: $mono-font-size * 1em;
+	font-family: $mono-font-family;
+	font-weight: $mono-font-weight;
+	color: $mono-font-color;
+	direction: ltr;
+	text-align: left;
+	word-spacing: normal;
+	tab-size: 4;
+	hyphens: none;
+
+	// fix wierd bug with monospace text messing up line-height on pre elements
+	// ref: http://alexmansfield.com/css/font-size-line-height-pre-code-monospace
+	// if font size is less than 1 then go with vertical-align: middle
+	vertical-align: top;
+}
+
+pre {
+	position: relative;
+	margin-top: font-margin-top($mono-font-size, 1 / ($body-font-size * 16));
+	margin-bottom: font-margin-bottom($mono-font-size, 1 / ($body-font-size * 16));
+	line-height: font-line-height($mono-font-size);
+	white-space: pre;
+	background: rgba(0,0,0,0.01);
+	border: 1px solid $border-color;
+	padding: 0 .5em;
+	overflow: auto;
+
+	code {
+		padding: 0;
+		border: 0;
+		background: transparent;
+	}
+}
+
+code {
+	padding: .1666em .3333em;
+	background: rgba(0,0,0,0.01);
+	border: 1px solid $border-color;
+}

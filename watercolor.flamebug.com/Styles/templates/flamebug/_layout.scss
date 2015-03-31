@@ -1,5 +1,9 @@
+//
+// Modules
+//
+
 @import "../../library/modules/grid";
-@import "../../library/modules/css3";
+@import "../../library/modules/typography";
 
 //
 // Resets
@@ -25,9 +29,9 @@ body {
 	background-repeat: repeat;
 	background-attachment: scroll;
 	background-position: center top;
-	@include background-size(auto);
-	@include background-origin(padding-box);
-	@include background-clip(border-box);
+	background-size: auto;
+	background-origin: padding-box;
+	background-clip: border-box;
 }
 
 //

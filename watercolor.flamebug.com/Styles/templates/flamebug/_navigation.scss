@@ -1,5 +1,9 @@
+//
+// Modules
+//
+
 @import "../../library/modules/grid";
-@import "../../library/modules/css3";
+@import "../../library/modules/typography";
 
 //
 // Navigation
@@ -12,10 +16,10 @@
 	right: 0;
 	background: rgba(255,255,255,0.95);
 	box-shadow: 0 1px 10px rgba(0,0,0,0.07);
+	transition: all 0.25s;
 	z-index: 999;
 
 	@include clear-children();
-	@include transition(all, 0.25s);
 
 	&:hover {
 		box-shadow: 0 1px 12px rgba(0,0,0,0.10);
@@ -147,7 +151,7 @@
 		width: 1em;
 		line-height: 1;
 		font-style: normal;
-		@include transition(all, 0.1s);
+		transition: all 0.1s;
 	}
 
 	i.open {

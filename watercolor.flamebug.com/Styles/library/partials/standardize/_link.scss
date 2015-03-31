@@ -1,0 +1,19 @@
+//
+// Modules
+//
+
+@import "../../modules/typography";
+
+//
+// Link
+//
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	transition: all 0.1s linear;
+
+	&:hover {
+		color: $link-hover-color;
+	}
+}

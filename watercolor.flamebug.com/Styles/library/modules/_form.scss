@@ -1,4 +1,17 @@
 //
+// Modules
+//
+
+@import "grid";
+@import "typography";
+
+//
+// Defaults
+//
+
+@import "../defaults/form";
+
+//
 // Block Field
 //
 
@@ -32,13 +45,13 @@
 			margin-left: 0;
 			border-top-color: transparent;
 			border-left-color: transparent;
-			border-right-color: #444;
+			border-right-color: $hint-background-color;
 			border-bottom-color: transparent;
 		}
 	}
 
 	input:invalid + .hint:before {
-		border-right-color: red;
+		border-right-color: $hint-invalid-background-color;
 		border-bottom-color: transparent;
 	}
 }
@@ -82,13 +95,13 @@
 			border-top-color: transparent;
 			border-left-color: transparent;
 			border-right-color: transparent;
-			border-bottom-color: #444;
+			border-bottom-color: $hint-background-color;
 		}
 	}
 
 	input:invalid + .hint:before {
 		border-right-color: transparent;
-		border-bottom-color: red;
+		border-bottom-color: $hint-invalid-background-color;
 	}
 }
 
@@ -126,24 +139,69 @@
 			margin-left: 0;
 			border-top-color: transparent;
 			border-left-color: transparent;
-			border-right-color: #444;
+			border-right-color: $hint-background-color;
 			border-bottom-color: transparent;
 		}
 	}
 
 	input:invalid + .hint:before {
-		border-right-color: red;
+		border-right-color: $hint-invalid-background-color;
 		border-bottom-color: transparent;
 	}
 }
 
 //
-// Form Buttons
+// Form Field Hint
 //
 
-@mixin form-buttons() {
-	margin-top: $line-height * 1em;
-	margin-bottom: $line-height * 1em;
-	text-align: left;
-	clear: both;
+@mixin field-hint() {
+
+	box-sizing: border-box;
+	position: absolute;
+	display: inline-block;
+	visibility: hidden;
+	opacity: 0;
+	background: $hint-background-color;
+	color: $hint-color;
+	padding: .25em .5em;
+	margin-left: .75em;
+	text-align: center;
+	transition: all .25s linear;
+	z-index: 1;
+
+	&:before {
+		content: " ";
+		position: absolute;
+		top: 1em;
+		left: -1em;
+		opacity: 0;
+		width: 0;
+		height: 0;
+		margin-top: -.5em;
+		border-width: .5em;
+		border-style: solid;
+		border-color: $hint-background-color;
+		border-top-color: transparent;
+		border-left-color: transparent;
+		border-bottom-color: transparent;
+		transition: all .25s linear;
+	}
+
+	*:invalid + & {
+		color: $hint-invalid-color;
+		background: $hint-invalid-background-color;
+
+		&:before {
+			border-right-color: $hint-invalid-background-color;
+		}
+	}
+
+	*:focus + & {
+		visibility: visible;
+		opacity: 1;
+
+		&:before {
+			opacity: 1;
+		}
+	}
 }

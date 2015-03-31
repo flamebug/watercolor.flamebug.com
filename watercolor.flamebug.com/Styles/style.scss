@@ -1,26 +1,23 @@
-//
-// Globals
-//
-
-@import "library/global";					//  <<--NEED TO DECIDE IF SEPARATE H* VARIABLES ARE NEEDED OR IF ONE IS OK
-@import "site/global";						//  <<--DONE
-
-//
-// Library Partials
+﻿//
+// Settings
 //
 
-@import "library/partials/normalize";		//  <<--DONE
-@import "library/partials/typography";		//  <<--NEED TO DECIDE IF SEPARATE H* VARIABLES ARE NEEDED OR IF ONE IS OK
-@import "library/partials/button";			//  <<--NEED TO DECIDE OUT-OF-THE-BOX FUNCTIONALITY, NON-BASIC CODE IS COMMENTED OUT
+@import "site/settings";
 
 //
-// Template Partials
+// Standardize
+//
+
+@import "library/partials/standardize";
+
+//
+// Template
 //
 
 @import "templates/flamebug";
 
 //
-// Site Partials
+// Site
 //
 
 @import "site/site";

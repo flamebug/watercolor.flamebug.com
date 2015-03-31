@@ -1,5 +1,14 @@
-﻿@import "../../library/modules/css3";
+﻿//
+// Modules
+//
+
 @import "../../library/modules/grid";
+
+//
+// Fonts
+//
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100);
 
 //
 // Container
@@ -45,8 +54,7 @@ section {
 
 #content > header {
 	position: relative;
-	padding: $line-height * 3.5em 0;
-	padding-bottom: $line-height * 1em;
+	padding: $line-height * 4em 0 $line-height * 1em 0;
 	background-color: $primary-color;
 	color: #fff;
 	text-align: center;

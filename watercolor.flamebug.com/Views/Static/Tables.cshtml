@@ -17,8 +17,8 @@
 		<h2>Tables</h2>
 
 		<p>
-			Tables by default are set up with bold headers, horizontal row lines, and no outer border.
-			Mixins are provided to customize the look of the table, and classes are provided for convenience.  These mixins and classes can be combined for a striped, bordered, and padded table.
+			Tables are styled by default with bold headers, horizontal row lines, and no outer border.
+			Mixins are provided to customize the look of the table and can be combined for a striped, bordered, and padded table.
 		</p>
 
 	</div>
@@ -31,7 +31,7 @@
 
 		<h3>Table Mixins</h3>
 
-		<p>The table @@mixins are defined in <a href="/overview#tables">tables.scss</a> and provide @@mixins for styling tables depending on your site's needs.</p>
+		<p>Table @@mixins are defined in <code>modules/table.scss</code> and are provided to style tables depending on your site's needs.</p>
 
 		<table class="bordered">
 
@@ -58,41 +58,25 @@
 			</tbody>
 
 		</table>
+		
+	</section>
 
-		<p>The following optional classes are also provided if you prefer to use them instead of using @@mixins.</p>
+	<section id="partials">
+		<h3>Table Partials</h3>
+		<p>A table partial is provided in <code>partials/table.scss</code> and uses the standard @@mixins to add borders, striping, and padding to your tables. You can include this partial in your project, or code your own if you prefer a different style.</p>
 
-		<table class="bordered">
-
-			<thead>
-				<tr>
-					<th style="width: 25%">class</th>
-					<th>description</th>
-				</tr>
-			</thead>
-
-			<tbody>
-				<tr>
-					<td><code>striped</code></td>
-					<td>Adds alternating striped lines to the target table.</td>
-				</tr>
-				<tr>
-					<td><code>bordered</code></td>
-					<td>Adds borders to any table.</td>
-				</tr>
-				<tr>
-					<td><code>padded</code></td>
-					<td>Adds extra padding to any table.</td>
-				</tr>
-			</tbody>
-
-		</table>
+		<pre><code class="language-css">table {
+   @@include table-striped;
+   @@include table-bordered;
+   @@include table-padded;
+}</code></pre>
 
 	</section>
 
 	<section id="basic-table">
 
 		<h3>Basic Table</h3>
-		<p>This is a basic table, which is styled by default with horizontal dividers and bold headers. All below examples will use this same HTML markup, but with changes in the CSS.</p>
+		<p>This is a basic table, which is styled by default with horizontal dividers and bold headers. All below examples will use this same HTML markup, but with changes in the SCSS.</p>
 
 		<div class="example">
 
@@ -168,7 +152,7 @@
 	<section id="striped-table">
 
 		<h3>Striped Table</h3>
-		<p>Include the <code>table-striped</code> @@mixin to your table style, or add class <code>striped</code> to the table markup. This adds alternating striped lines to the target table.</p>
+		<p>Include the <code>table-striped</code> @@mixin to your table style to add alternating striped lines.</p>
 
 		<div class="example">
 
@@ -217,7 +201,7 @@
 	<section id="bordered-table">
 
 		<h3>Bordered Table</h3>
-		<p>Include the <code>table-bordered</code> @@mixin to your table style, or add class <code>bordered</code> to the table markup. This adds borders to the target table.</p>
+		<p>Include the <code>table-bordered</code> @@mixin to your table style to add outer borders.</p>
 
 		<div class="example">
 
@@ -266,7 +250,7 @@
 	<section id="padded-table">
 
 		<h3>Padded Table</h3>
-		<p>Include the <code>table-padded</code> @@mixin to your table style, or add class <code>padded</code> to the table markup. This adds extra padding to the target table's cells.</p>
+		<p>Include the <code>table-padded</code> @@mixin to your table style to add extra padding to it's cells.</p>
 
 		<div class="example">
 
@@ -317,7 +301,7 @@
 	<section id="striped-bordered-padded-table">
 
 		<h3>Striped, Bordered, & Padded Table</h3>
-		<p>Include the <code>table-striped</code>, <code>table-bordered</code>, or <code>table-padded</code> @@mixins to your table styles, or add the corresponding classes to the table markup. These can be added in any combination to customize the look of your tables.</p>
+		<p>Include the <code>table-striped</code>, <code>table-bordered</code>, or <code>table-padded</code> @@mixins to your table styles to customize the look of your tables in any combination you like.</p>
 
 		<div class="example">
 

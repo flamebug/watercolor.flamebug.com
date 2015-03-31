@@ -1,7 +1,18 @@
-@import "css3";
+//
+// Modules
+//
+
+@import "grid";
+@import "typography";
 
 //
-// button
+// Defaults
+//
+
+@import "../defaults/button";
+
+//
+// Button
 //
 
 @mixin button {
@@ -10,44 +21,29 @@
 	padding: 0 .75em;
 	margin: -1px 0;
 
-	border-radius: .4em;
-	box-shadow: inset 0 1px rgba(255,255,255,0.4), 0 1px .4em rgba(0,0,0,0.2);
+	border-radius: $button-border-radius;
+	box-shadow: $button-box-shadow;
 
 	font-size: inherit;
 	font-weight: inherit;
 	text-decoration: none;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+	text-shadow: $button-text-shadow;
 
 	line-height: $line-height;
 
 	cursor: pointer;
 	text-align: center;
 	white-space: nowrap;
+	user-select: none;
 
-	@include user-select(none);
-
-	color: #333;
-	border: 1px solid #a6a6a6;
-	background: #e8e8e8;
-	background: -moz-linear-gradient(top,  #e8e8e8 0%, #cfcfcf 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(100%,#cfcfcf));
-	background: -webkit-linear-gradient(top,  #e8e8e8 0%,#cfcfcf 100%);
-	background: -o-linear-gradient(top,  #e8e8e8 0%,#cfcfcf 100%);
-	background: -ms-linear-gradient(top,  #e8e8e8 0%,#cfcfcf 100%);
-	background: linear-gradient(to bottom,  #e8e8e8 0%,#cfcfcf 100%);
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#cfcfcf',GradientType=0 );
+	color: $button-color;
+	border: 1px solid $button-border-color;
+	background: $button-background;
 
 	&:hover {
-		color: #444;
-		border: 1px solid #aaaaaa;
-		background: #ececec;
-		background: -moz-linear-gradient(top,  #ececec 0%, #d3d3d3 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ececec), color-stop(100%,#d3d3d3));
-		background: -webkit-linear-gradient(top,  #ececec 0%,#d3d3d3 100%);
-		background: -o-linear-gradient(top,  #ececec 0%,#d3d3d3 100%);
-		background: -ms-linear-gradient(top,  #ececec 0%,#d3d3d3 100%);
-		background: linear-gradient(to bottom,  #ececec 0%,#d3d3d3 100%);
-		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#d3d3d3',GradientType=0 );
+		color: $button-hover-color;
+		border: 1px solid $button-hover-border-color;
+		background: $button-hover-background;
 	}
 
 	&:active {
@@ -122,109 +118,53 @@
 //
 
 @mixin button-primary {
-	color: #fcfcfc;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-	border-color: #27587a;
-	background: #4da5e8;
-	background: -moz-linear-gradient(top,  #4da5e8 0%, #2a75d1 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4da5e8), color-stop(100%,#2a75d1));
-	background: -webkit-linear-gradient(top,  #4da5e8 0%,#2a75d1 100%);
-	background: -o-linear-gradient(top,  #4da5e8 0%,#2a75d1 100%);
-	background: -ms-linear-gradient(top,  #4da5e8 0%,#2a75d1 100%);
-	background: linear-gradient(to bottom,  #4da5e8 0%,#2a75d1 100%);
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4da5e8', endColorstr='#2a75d1',GradientType=0 );
+	color: $button-primary-color;
+	text-shadow: $button-primary-text-shadow;
+	border-color: $button-primary-border-color;
+	background: $button-primary-background;
 
 	&:hover {
-		color: #fff;
-		border-color: #2b5c7e;
-		background: #51a9ec;
-		background: -moz-linear-gradient(top,  #51a9ec 0%, #2e79d5 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#51a9ec), color-stop(100%,#2e79d5));
-		background: -webkit-linear-gradient(top,  #51a9ec 0%,#2e79d5 100%);
-		background: -o-linear-gradient(top,  #51a9ec 0%,#2e79d5 100%);
-		background: -ms-linear-gradient(top,  #51a9ec 0%,#2e79d5 100%);
-		background: linear-gradient(to bottom,  #51a9ec 0%,#2e79d5 100%);
-		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#51a9ec', endColorstr='#2e79d5',GradientType=0 );
+		color: $button-primary-hover-color;
+		border-color: $button-primary-hover-border-color;
+		background: $button-primary-hover-background;
 	}
 }
 
 @mixin button-positive {
-	color: #fcfcfc;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-	border-color: #277a58;
-	background: #2ed269;
-	background: -moz-linear-gradient(top,  #2ed269 0%, #0eb249 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2ed269), color-stop(100%,#0eb249));
-	background: -webkit-linear-gradient(top,  #2ed269 0%,#0eb249 100%);
-	background: -o-linear-gradient(top,  #2ed269 0%,#0eb249 100%);
-	background: -ms-linear-gradient(top,  #2ed269 0%,#0eb249 100%);
-	background: linear-gradient(to bottom,  #2ed269 0%,#0eb249 100%);
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ed269', endColorstr='#0eb249',GradientType=0 );
+	color: $button-positive-color;
+	text-shadow: $button-positive-text-shadow;
+	border-color: $button-positive-border-color;
+	background: $button-positive-background;
 
 	&:hover {
-		color: #fff;
-		border-color: #2b7e5c;
-		background: #32d66d;
-		background: -moz-linear-gradient(top,  #32d66d 0%, #12b64d 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#32d66d), color-stop(100%,#12b64d));
-		background: -webkit-linear-gradient(top,  #32d66d 0%,#12b64d 100%);
-		background: -o-linear-gradient(top,  #32d66d 0%,#12b64d 100%);
-		background: -ms-linear-gradient(top,  #32d66d 0%,#12b64d 100%);
-		background: linear-gradient(to bottom,  #32d66d 0%,#12b64d 100%);
-		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32d66d', endColorstr='#12b64d',GradientType=0 );
+		color: $button-positive-hover-color;
+		border-color: $button-positive-hover-border-color;
+		background: $button-positive-hover-background;
 	}
 }
 
 @mixin button-warning {
-	color: #fcfcfc;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-	border-color: #c80;
-	background: #fb0;
-	background: -moz-linear-gradient(top,  #fb0 0%, #e8a000 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fb0), color-stop(100%,#e8a000));
-	background: -webkit-linear-gradient(top,  #fb0 0%,#e8a000 100%);
-	background: -o-linear-gradient(top,  #fb0 0%,#e8a000 100%);
-	background: -ms-linear-gradient(top,  #fb0 0%,#e8a000 100%);
-	background: linear-gradient(to bottom,  #fb0 0%,#e8a000 100%);
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb0', endColorstr='#e8a000',GradientType=0 );
+	color: $button-warning-color;
+	text-shadow: $button-warning-text-shadow;
+	border-color: $button-warning-border-color;
+	background: $button-warning-background;
 
 	&:hover {
-		color: #fff;
-		border-color: #c90;
-		background: #fc0;
-		background: -moz-linear-gradient(top,  #ffbf00 0%, #e8a400 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffbf00), color-stop(100%,#e8a400));
-		background: -webkit-linear-gradient(top,  #ffbf00 0%,#e8a400 100%);
-		background: -o-linear-gradient(top,  #ffbf00 0%,#e8a400 100%);
-		background: -ms-linear-gradient(top,  #ffbf00 0%,#e8a400 100%);
-		background: linear-gradient(to bottom,  #ffbf00 0%,#e8a400 100%);
-		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbf00', endColorstr='#e8a400',GradientType=0 );
+		color: $button-warning-hover-color;
+		border-color: $button-warning-hover-border-color;
+		background: $button-warning-hover-background;
 	}
 }
 
 @mixin button-negative {
-	color: #fcfcfc;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-	border-color: #7a2758;
-	background: #d84e49;
-	background: -moz-linear-gradient(top,  #d84e49 0%, #b82e29 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d84e49), color-stop(100%,#b82e29));
-	background: -webkit-linear-gradient(top,  #d84e49 0%,#b82e29 100%);
-	background: -o-linear-gradient(top,  #d84e49 0%,#b82e29 100%);
-	background: -ms-linear-gradient(top,  #d84e49 0%,#b82e29 100%);
-	background: linear-gradient(to bottom,  #d84e49 0%,#b82e29 100%);
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d84e49', endColorstr='#b82e29',GradientType=0 );
+	color: $button-negative-color;
+	text-shadow: $button-negative-text-shadow;
+	border-color: $button-negative-border-color;
+	background: $button-negative-background;
 
 	&:hover {
-		color: #fff;
-		border-color: #7e2b5c;
-		background: #dc524d;
-		background: -moz-linear-gradient(top,  #dc524d 0%, #bc322d 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dc524d), color-stop(100%,#bc322d));
-		background: -webkit-linear-gradient(top,  #dc524d 0%,#bc322d 100%);
-		background: -o-linear-gradient(top,  #dc524d 0%,#bc322d 100%);
-		background: -ms-linear-gradient(top,  #dc524d 0%,#bc322d 100%);
-		background: linear-gradient(to bottom,  #dc524d 0%,#bc322d 100%);
-		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc524d', endColorstr='#bc322d',GradientType=0 );
+		color: $button-negative-hover-color;
+		border-color: $button-negative-hover-border-color;
+		background: $button-negative-hover-background;
 	}
 }

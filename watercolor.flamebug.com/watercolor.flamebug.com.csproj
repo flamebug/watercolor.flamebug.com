@@ -54,12 +54,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="Styles\site\partials\_beta_badge.scss" />
-    <Content Include="Styles\library\partials\_button.scss" />
-    <Content Include="Styles\site\partials\_beta_label.scss" />
-    <Content Include="Styles\library\partials\_normalize.scss" />
-    <Content Include="Styles\site\partials\_beta_tag.scss" />
-    <Content Include="Styles\library\partials\_typography.scss" />
+    <Content Include="Styles\library\beta-partials\_badge.scss" />
+    <Content Include="Styles\library\beta-partials\_label.scss" />
+    <Content Include="Styles\library\partials\standardize\_normalize.scss" />
+    <Content Include="Styles\library\beta-partials\_tag.scss" />
+    <Content Include="Styles\library\partials\_standardize.scss" />
     <Content Include="Styles\pages\404.css" />
     <Content Include="Styles\pages\forms.css" />
     <Content Include="Styles\pages\getting-started.css" />
@@ -68,18 +67,17 @@
     <Content Include="Styles\pages\overview.css" />
     <Content Include="Styles\pages\tables.css" />
     <Content Include="Styles\pages\typography.css" />
-    <Content Include="Styles\style.css" />
-    <Content Include="Styles\library\modules\_beta_badge.scss" />
+    <Content Include="Styles\library\beta-modules\_badge.scss" />
     <Content Include="Styles\library\modules\_button.scss" />
-    <Content Include="Styles\library\modules\_css3.scss" />
     <Content Include="Styles\library\modules\_form.scss" />
     <Content Include="Styles\library\modules\_grid.scss" />
-    <Content Include="Styles\library\modules\_beta_label.scss" />
+    <Content Include="Styles\library\beta-modules\_label.scss" />
     <Content Include="Styles\library\modules\_table.scss" />
-    <Content Include="Styles\library\modules\_beta_tag.scss" />
+    <Content Include="Styles\library\beta-modules\_tag.scss" />
     <Content Include="Styles\pages\404.scss" />
     <Content Include="Styles\pages\getting-started.scss" />
     <Content Include="Styles\pages\index.scss" />
+    <Content Include="Styles\style.css" />
     <Content Include="Styles\templates\_flamebug.scss" />
     <Content Include="Views\Static\Getting-Started.cshtml" />
     <Content Include="Views\Shared\404.cshtml" />
@@ -93,22 +91,36 @@
     <Content Include="Views\Static\Unstyled\Forms.cshtml" />
     <Content Include="Views\Static\Unstyled\Typography.cshtml" />
     <Content Include="Views\Static\Styled\Typography.cshtml" />
-    <Content Include="Styles\site\partials\_logo.scss" />
-    <Content Include="Styles\site\partials\_button.scss" />
-    <Content Include="Styles\site\partials\_form.scss" />
+    <Content Include="Styles\site\partials\controls\_logo.scss" />
     <Content Include="Styles\site\partials\_layout.scss" />
-    <Content Include="Styles\site\partials\_table.scss" />
-    <Content Include="Styles\site\partials\_example.scss" />
-    <Content Include="Styles\site\partials\_alert.scss" />
-    <Content Include="Styles\site\partials\_font.scss" />
+    <Content Include="Styles\site\partials\controls\_example.scss" />
+    <Content Include="Styles\site\partials\_controls.scss" />
     <Content Include="Styles\site\_site.scss" />
     <Content Include="Styles\templates\flamebug\_navigation.scss" />
     <Content Include="Styles\templates\flamebug\_layout.scss" />
-    <Content Include="Styles\library\_global.scss" />
     <Content Include="Styles\library\modules\_typography.scss" />
-    <Content Include="Styles\library\modules\_hint.scss" />
-    <Content Include="Styles\site\_global.scss" />
-    <Content Include="Styles\site\partials\_hint.scss" />
+    <Content Include="Styles\site\_settings.scss" />
+    <Content Include="Styles\library\defaults\_typography.scss" />
+    <Content Include="Styles\library\defaults\_grid.scss" />
+    <Content Include="Styles\library\modules\_alert.scss" />
+    <Content Include="Styles\library\defaults\_alert.scss" />
+    <Content Include="Styles\library\defaults\_button.scss" />
+    <Content Include="Styles\library\defaults\_form.scss" />
+    <Content Include="Styles\library\partials\standardize\_text.scss" />
+    <Content Include="Styles\library\partials\standardize\_link.scss" />
+    <Content Include="Styles\library\partials\standardize\_list.scss" />
+    <Content Include="Styles\library\partials\standardize\_quote.scss" />
+    <Content Include="Styles\library\partials\standardize\_code.scss" />
+    <Content Include="Styles\library\partials\standardize\_image.scss" />
+    <Content Include="Styles\library\partials\standardize\_table.scss" />
+    <Content Include="Styles\library\partials\standardize\_form.scss" />
+    <Content Include="Styles\library\partials\standardize\_button.scss" />
+    <Content Include="Styles\library\defaults\_table.scss" />
+    <Content Include="Styles\library\partials\_table.scss" />
+    <Content Include="Styles\site\partials\controls\_alert.scss" />
+    <Content Include="Styles\site\partials\controls\_button.scss" />
+    <Content Include="Styles\library\partials\_form.scss" />
+    <Content Include="Styles\style.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="apple-touch-icon.png" />
@@ -254,11 +266,11 @@
     <Content Include="System\Icons\Base\users\icon.config" />
     <Content Include="System\Icons\Base\visual\icon.config" />
     <Content Include="System\Icons\IconStyles\-none-\iconstyle.config" />
-    <Content Include="Styles\style.scss" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
     <Folder Include="Models\" />
+    <Folder Include="Styles\library\beta-defaults\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
