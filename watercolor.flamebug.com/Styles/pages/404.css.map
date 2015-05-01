@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";;;AAYI,cAAI;EACA,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,YAAuB;EAC/B,OAAO,EAAE,EAAE",
-"sources": ["../../pages/404.scss"],
-"names": [],
-"file": "404.css"
-}

@@ -1,10 +1,11 @@
-var gulp     = require('gulp'),
-    rename   = require('gulp-rename'),
-    sass     = require('gulp-ruby-sass'),
-    prefix   = require('gulp-autoprefixer'),
-    minify   = require('gulp-minify-css'),
-    uglify   = require('gulp-uglify'),
-    jshint   = require('gulp-jshint');
+var gulp       = require('gulp'),
+    rename     = require('gulp-rename'),
+    sass       = require('gulp-ruby-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    prefix     = require('gulp-autoprefixer'),
+    minify     = require('gulp-minify-css'),
+    uglify     = require('gulp-uglify'),
+    jshint     = require('gulp-jshint');
 
 //
 // Project Paths
@@ -15,7 +16,7 @@ var base = "watercolor.flamebug.com";
 var paths = {
 
     styles: {
-        src: [base + "/Styles/**/*.scss"],
+        src: base + "/Styles/",
         dest: base + "/Styles/"
     },
 
@@ -26,20 +27,30 @@ var paths = {
 
 };
 
+var sassOpts = {
+
+    parameters: {
+        sourcemap: true,
+        style: "expanded"
+    },
+    error: function(err) {
+        console.error('Error!', err.message);
+    }
+
+};
+
 //
 // Stylesheet Optimization
 //
 
 gulp.task('styles', function () {
 
-	return gulp.src(paths.styles.src)
-        .pipe(sass({ style: 'expanded' }))
-        //.pipe(prefix({
-        //    browsers: ['last 2 versions'],
-        //    cascade: false
-        //}))
-        //.pipe(minify())
-        .pipe(gulp.dest(paths.styles.dest));
+    return sass(paths.styles.src, sassOpts.parameters)
+        .on('error', sassOpts.error)
+        .pipe(prefix())
+        .pipe(minify())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(paths.styles.dest))
 
 });
 

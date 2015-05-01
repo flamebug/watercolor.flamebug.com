@@ -1,10 +1,16 @@
-﻿/* TEAM */
+﻿/* AGENCY */
+Agency: Flamebug, LLC
+Site: http://flamebug.com
+Twitter: @flamebug
+Location: Rockford, IL
+
+/* TEAM */
 Developer: Clint Kolodziej
 Site: http://clintkolodziej.com
 Twitter: @clintkolodziej
-Location: Chicago, IL
+Location: Rockford, IL
 
 /* SITE */
-Standards: HTML5, CSS5, ASP.NET MVC
-Components: Modernizr, jQuery, ASP.NET MVC
+Standards: HTML, SASS, ASP.NET MVC
+Components: jQuery, ASP.NET MVC
 Software: Microsoft Visual Studio
