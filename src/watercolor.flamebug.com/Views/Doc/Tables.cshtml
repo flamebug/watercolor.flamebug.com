@@ -1,0 +1,354 @@
+﻿@{
+    ViewBag.Title = "Tables";
+}
+
+@section Styles {
+	<link rel="stylesheet" href="~/styles/pages/tables.css">
+}
+
+@section Scripts {
+		<script src="~/lib/prism/prism.js"></script>
+}
+
+<header class="introduction">
+
+	<div class="container">
+
+		<h2>Tables</h2>
+
+		<p>
+			Tables are styled by default with bold headers, horizontal row lines, and no outer border.
+			Mixins are provided to customize the look of the table and can be combined for a striped, bordered, and padded table.
+		</p>
+
+	</div>
+
+</header>
+
+<section id="tables" class="container">
+
+	<section id="mixins">
+
+		<h3>Table Mixins</h3>
+
+		<p>Table @@mixins are defined in <code>modules/table.scss</code> and are provided to style tables depending on your site's needs.</p>
+
+		<table class="bordered">
+
+			<thead>
+				<tr>
+					<th style="width: 25%">mixin</th>
+					<th>description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td><code>table-striped</code></td>
+					<td>Adds alternating striped lines to the target table.</td>
+				</tr>
+				<tr>
+					<td><code>table-bordered</code></td>
+					<td>Adds borders to any table.</td>
+				</tr>
+				<tr>
+					<td><code>table-padded</code></td>
+					<td>Adds extra padding to any table.</td>
+				</tr>
+			</tbody>
+
+		</table>
+		
+	</section>
+
+	<section id="partials">
+		<h3>Table Partials</h3>
+		<p>A table partial is provided in <code>partials/table.scss</code> and uses the standard @@mixins to add borders, striping, and padding to your tables. You can include this partial in your project, or code your own if you prefer a different style.</p>
+
+		<pre><code class="language-css">table {
+   @@include table-striped;
+   @@include table-bordered;
+   @@include table-padded;
+}</code></pre>
+
+	</section>
+
+	<section id="basic-table">
+
+		<h3>Basic Table</h3>
+		<p>This is a basic table, which is styled by default with horizontal dividers and bold headers. All below examples will use this same HTML markup, but with changes in the SCSS.</p>
+
+		<div class="example">
+
+			<table>
+
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Team</th>
+						<th>Division</th>
+						<th>Record</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Chicago</td>
+						<td>North</td>
+						<td>10-6</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Green Bay</td>
+						<td>North</td>
+						<td>9-7</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Detroit</td>
+						<td>North</td>
+						<td>8-8</td>
+					</tr>
+				</tbody>
+
+			</table>
+
+		</div>
+
+		<pre><code class="language-markup">&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;Team&lt;/th&gt;
+            &lt;th&gt;Division&lt;/th&gt;
+            &lt;th&gt;Record&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Chicago&lt;/td&gt;
+            &lt;td&gt;North&lt;/td&gt;
+            &lt;td&gt;10-6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Green Bay&lt;/td&gt;
+            &lt;td&gt;North&lt;/td&gt;
+            &lt;td&gt;9-7&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;Detroit&lt;/td&gt;
+            &lt;td&gt;North&lt;/td&gt;
+            &lt;td&gt;8-8&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+	</section>
+
+	<section id="striped-table">
+
+		<h3>Striped Table</h3>
+		<p>Include the <code>table-striped</code> @@mixin to your table style to add alternating striped lines.</p>
+
+		<div class="example">
+
+			<table class="striped">
+
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Team</th>
+						<th>Division</th>
+						<th>Record</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Chicago</td>
+						<td>North</td>
+						<td>10-6</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Green Bay</td>
+						<td>North</td>
+						<td>9-7</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Detroit</td>
+						<td>North</td>
+						<td>8-8</td>
+					</tr>
+				</tbody>
+
+			</table>
+
+		</div>
+
+		<pre><code class="language-css">table {
+   @@include table-striped;
+}</code></pre>
+
+	</section>
+
+	<section id="bordered-table">
+
+		<h3>Bordered Table</h3>
+		<p>Include the <code>table-bordered</code> @@mixin to your table style to add outer borders.</p>
+
+		<div class="example">
+
+			<table class="bordered">
+
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Team</th>
+						<th>Division</th>
+						<th>Record</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Chicago</td>
+						<td>North</td>
+						<td>10-6</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Green Bay</td>
+						<td>North</td>
+						<td>9-7</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Detroit</td>
+						<td>North</td>
+						<td>8-8</td>
+					</tr>
+				</tbody>
+
+			</table>
+		
+		</div>
+
+		<pre><code class="language-css">table {
+   @@include table-bordered;
+}</code></pre>
+
+	</section>
+
+	<section id="padded-table">
+
+		<h3>Padded Table</h3>
+		<p>Include the <code>table-padded</code> @@mixin to your table style to add extra padding to it's cells.</p>
+
+		<div class="example">
+
+			<table class="padded">
+
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Team</th>
+						<th>Division</th>
+						<th>Record</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Chicago</td>
+						<td>North</td>
+						<td>10-6</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Green Bay</td>
+						<td>North</td>
+						<td>9-7</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Detroit</td>
+						<td>North</td>
+						<td>8-8</td>
+					</tr>
+				</tbody>
+
+			</table>
+
+			<p><small>Note: Padded tables with even numbers of rows (including header) will fit with the vertical rhythm, while odd numbers will be half a line off.</small></p>
+
+		</div>
+
+		<pre><code class="language-css">table {
+   @@include table-padded;
+}</code></pre>
+
+	</section>
+
+	<section id="striped-bordered-padded-table">
+
+		<h3>Striped, Bordered, & Padded Table</h3>
+		<p>Include the <code>table-striped</code>, <code>table-bordered</code>, or <code>table-padded</code> @@mixins to your table styles to customize the look of your tables in any combination you like.</p>
+
+		<div class="example">
+
+			<table class="striped bordered padded">
+
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Team</th>
+						<th>Division</th>
+						<th>Record</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Chicago</td>
+						<td>North</td>
+						<td>10-6</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Green Bay</td>
+						<td>North</td>
+						<td>9-7</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Detroit</td>
+						<td>North</td>
+						<td>8-8</td>
+					</tr>
+				</tbody>
+
+			</table>
+
+			<p><small>Note: Padded tables with even numbers of rows (including header) will fit with the vertical rhythm, while odd numbers will be half a line off.</small></p>
+
+		</div>
+
+		<pre><code class="language-css">table {
+   @@include table-striped;
+   @@include table-bordered;
+   @@include table-padded;
+}</code></pre>
+
+	</section>
+
+</section>

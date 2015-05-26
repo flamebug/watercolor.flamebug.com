@@ -1,0 +1,28 @@
+//
+// Extends
+//
+
+@import "../extends/badge";
+
+//
+// Label
+//
+
+@mixin badge($options...) {
+
+    @each $option in $options {
+
+        @if $option == top-right {
+            @extend %badge-top-right
+        }
+        @else if $option == top-left {
+            @extend %badge-top-left
+        }
+        @else if $option == bottom-right {
+            @extend %badge-bottom-right
+        }
+        @else if $option == bottom-left {
+            @extend %badge-bottom-left
+        }
+    }
+}

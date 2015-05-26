@@ -1,0 +1,46 @@
+﻿@import "../site/settings";
+@import "../library/modules/grid";
+@import "../library/modules/form";
+
+//
+// Form Defaults
+//
+
+.field,
+.block .field,
+fieldset.block .field,
+form div.field.block {
+	@include field(block);
+}
+
+.inline .field,
+fieldset.inline .field,
+form div.field.inline {
+	@include field(inline);
+}
+
+.align .field,
+fieldset.align .field,
+form div.field.align {
+	@include field(align);
+}
+
+.field.clear {
+	clear: both;
+}
+
+//
+// Form Examples
+//
+
+#inline-form .field {
+    @include field(inline);
+}
+
+#align-form .field {
+    @include field(block);
+
+    @include breakpoint(medium) {
+        @include field(align);
+    }
+}

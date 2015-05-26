@@ -1,0 +1,59 @@
+//
+// Modules
+//
+
+@import "../modules/grid";
+@import "../modules/typography";
+
+//
+// Defaults
+//
+
+@import "../defaults/table";
+
+//
+// Calculate body font-size and line-height in pixels for vertical rhythm calculations.
+//
+
+$body-line-height-px: $body-font-size * $line-height * 16;
+
+//
+// Display the table with padding
+//
+
+%table-padded {
+	th,
+	td {
+		padding-top: ceil($body-line-height-px * 0.25 * 1px);
+		padding-bottom: floor($body-line-height-px * 0.25 * 1px);
+		padding-left: $line-height * 0.5em;
+		padding-right: $line-height * 0.5em;
+	}
+}
+
+//
+// Display the table with a border
+//
+
+%table-bordered {
+	margin-top: (($body-line-height-px - 1) / $body-line-height-px) * $line-height * 1em;
+	margin-bottom: (($body-line-height-px - 1) / $body-line-height-px) * $line-height * 1em;
+	border: 1px solid $border-color;
+	border-left: 0;
+
+	th,
+	td {
+		border-left: 1px solid $border-color;
+	}
+}
+
+//
+// Display the table with odd columns having a background color
+//
+
+%table-striped {
+	tbody > tr:nth-child(odd) > td,
+	tbody > tr:nth-child(odd) > th {
+		background-color: rgba(0,0,0,0.01);
+	}
+}

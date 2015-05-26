@@ -1,0 +1,25 @@
+//
+// Extends
+//
+
+@import "../extends/table";
+
+//
+// Table
+//
+
+@mixin table($options...) {
+
+    @each $option in $options {
+
+        @if $option == padded {
+            @extend %table-padded
+        }
+        @else if $option == bordered {
+            @extend %table-bordered
+        }
+        @else if $option == striped {
+            @extend %table-striped
+        }
+    }
+}

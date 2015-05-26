@@ -1,0 +1,185 @@
+﻿@import "../site/settings";
+@import "../library/modules/grid";
+@import "../library/modules/typography";
+
+//
+// Layout Demo
+//
+
+#layout-demo {
+
+    @mixin infinite-column-left($cols) {
+        margin-left: $cols * ($column-width + $gutter-width) + ($gutter-width / 2) !important;
+    }
+
+    #infinite {
+        position: relative;
+        height: 20em;
+        margin: $line-height * 2em auto 1em auto;
+        overflow: hidden;
+
+        div {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: $column-width;
+            margin-left: ($gutter-width / 2);
+            background: $primary-color;
+            opacity: .1;
+
+            &:hover {
+                background: $secondary-color;
+                opacity: .5;
+            }
+        }
+    }
+
+    .col2 { @include infinite-column-left(1); }
+    .col3 { @include infinite-column-left(2); }
+    .col4 { @include infinite-column-left(3); }
+    .col5 { @include infinite-column-left(4); }
+    .col6 { @include infinite-column-left(5); }
+    .col7 { @include infinite-column-left(6); }
+    .col8 { @include infinite-column-left(7); }
+    .col9 { @include infinite-column-left(8); }
+    .col10 { @include infinite-column-left(9); }
+    .col11 { @include infinite-column-left(10); }
+    .col12 { @include infinite-column-left(11); }
+    .col13 { @include infinite-column-left(12); }
+    .col14 { @include infinite-column-left(13); }
+    .col15 { @include infinite-column-left(14); }
+    .col16 { @include infinite-column-left(15); }
+    .col17 { @include infinite-column-left(16); }
+    .col18 { @include infinite-column-left(17); }
+    .col19 { @include infinite-column-left(-1); }
+    .col20 { @include infinite-column-left(-2); }
+    .col21 { @include infinite-column-left(-3); }
+    .col22 { @include infinite-column-left(-4); }
+    .col23 { @include infinite-column-left(-5); }
+    .col24 { @include infinite-column-left(-6); }
+    .col25 { @include infinite-column-left(-7); }
+    .col26 { @include infinite-column-left(-8); }
+    .col27 { @include infinite-column-left(-9); }
+    .col28 { @include infinite-column-left(-10); }
+    .col29 { @include infinite-column-left(-11); }
+    .col30 { @include infinite-column-left(-12); }
+    .col31 { @include infinite-column-left(-13); }
+    .col32 { @include infinite-column-left(-14); }
+    .col33 { @include infinite-column-left(-15); }
+    .col34 { @include infinite-column-left(-16); }
+    .col35 { @include infinite-column-left(-17); }
+    .col36 { @include infinite-column-left(-18); }
+
+    .col1,.col2,.col19,.col20 {
+        opacity: 1 !important;
+    }
+
+    @include breakpoint(small) {
+        .col3,.col21 {
+            opacity: 1 !important;
+        }
+    }
+
+    @include breakpoint(medium) {
+        #infinite {
+            height: 30em;
+        }
+        .col4,.col22 {
+            opacity: 1 !important;
+        }
+    }
+
+    @include breakpoint(large) {
+        .col5,.col6,.col23,.col24 {
+            opacity: 1 !important;
+        }
+    }
+
+    @include breakpoint(extra-large) {
+        .col7,.col8,.col25,.col26 {
+            opacity: 1 !important;
+        }
+    }
+}
+
+//
+// Example
+//
+
+#example > header {
+    @include max-column();
+}
+
+#example-demo {
+    margin: 0;
+    @include clear-children();
+
+    .main,
+    .aside,
+    figure img,
+    header,
+    footer {
+        box-sizing: border-box;
+        margin-top: $line-height * 1em;
+        padding: 0 $line-height * 1em;
+        background: rgba(0,0,0,.01);
+        border: 1px solid $border-color;
+        @include max-column();
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    header,
+    footer {
+        clear: both;
+    }
+
+    .main {
+
+        @include breakpoint(large) {
+            @include column(8);
+        }
+
+        @include breakpoint(extra-large) {
+            @include column(10);
+        }
+    }
+
+    .aside {
+        
+        @include breakpoint(large) {
+            @include column(4);
+        }
+        @include breakpoint(extra-large) {
+            @include column(6);
+        }
+    }
+
+    figure {
+        @include clear-children();
+
+        img {
+            padding: 0;
+            @include column(2);
+
+            @include breakpoint(small) {
+                @include column(3);
+            }
+
+            @include breakpoint(medium) {
+                @include column(2);
+            }
+
+            @include breakpoint(large) {
+                @include column(3);
+            }
+
+            @include breakpoint(extra-large) {
+                @include column(4);
+            }
+        }
+    }
+}

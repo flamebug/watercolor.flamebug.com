@@ -1,0 +1,81 @@
+﻿@inject IOptions<AppSettings> AppSettings
+
+@{
+    var title = String.IsNullOrEmpty(ViewBag.Title) ? AppSettings.Options.sitename : ViewBag.Title + " - " + AppSettings.Options.sitename;
+    var description = String.IsNullOrEmpty(ViewBag.Description) ? AppSettings.Options.sitename : ViewBag.Description;
+    var twitter = AppSettings.Options.sitetwitter;
+    var url = "http://" + AppSettings.Options.domain;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!-- Page Metadata -->
+    <meta charset="utf-8">
+    <title>@title</title>
+    <meta name="description" content="@description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="~/images/favicon/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" href="~/images/favicon/apple-touch-icon.png" />
+
+    <!-- Sitemap, Humans.txt -->
+    <link rel="sitemap" type="application/xml" href="~/sitemap.xml" />
+    <link rel="author" type="text/plain" href="~/humans.txt" />
+
+    <!-- Facebook Metadata -->
+    <meta property="og:title" content="@title" />
+    <meta property="og:description" content="@description" />
+    <meta property="og:type" content="@description" />
+    <meta property="og:url" content="@url" />
+    <meta property="og:image" content="~/images/favicon/apple-touch-icon.png" />
+
+    <!-- Twitter Metadata -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="@title" />
+    <meta name="twitter:description" content="@description" />
+    <meta name="twitter:site" content="@twitter" />
+    <meta name="twitter:creator" content="@twitter" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="~/styles/style.css" />
+
+    @RenderSection("Styles", required: false)
+
+</head>
+
+<body>
+
+    <div id="content" role="main">
+
+        @RenderBody()
+
+    </div>
+
+    <!-- jQuery -->
+    <environment names="Development">
+
+        <script src="~/lib/jquery/jquery.js"></script>
+
+    </environment>
+
+    <environment names="Staging,Production">
+
+        <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-1.10.2.min.js" asp-fallback-src="~/lib/jquery/jquery.min.js" asp-fallback-test="window.jQuery"></script>
+
+    </environment>
+
+    <!-- Scripts -->
+    @RenderSection("Scripts", required: false)
+
+    <!-- Analytics -->
+    @Html.Partial("_Analytics")
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+﻿//
+// Modules
+//
+
+@import "../../../library/modules/alert";
+
+//
+// Alert
+//
+
+.alert {
+    @include alert;
+
+    &.success {
+        @include alert(success)
+    }
+
+    &.error {
+        @include alert(error)
+    }
+}

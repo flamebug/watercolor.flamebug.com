@@ -1,0 +1,45 @@
+//
+// Defaults
+//
+
+@import "../defaults/label";
+
+//
+// Label
+//
+
+%label {
+	display: inline-block;
+	overflow: visible;
+	padding: $label-padding;
+
+	background-color: $label-background-color;
+	border-radius: $label-border-radius;
+
+	color: $label-color;
+	text-decoration: none;
+
+	&:empty {
+		display: none;
+	}
+}
+
+%label-primary {
+	background-color: $label-primary-background-color;
+    color: $label-primary-color;
+}
+
+%label-positive {
+	background-color: $label-positive-background-color;
+    color: $label-positive-color;
+}
+
+%label-warning {
+	background-color: $label-warning-background-color;
+    color: $label-warning-color;
+}
+
+%label-negative {
+	background-color: $label-negative-background-color;
+    color: $label-negative-color;
+}

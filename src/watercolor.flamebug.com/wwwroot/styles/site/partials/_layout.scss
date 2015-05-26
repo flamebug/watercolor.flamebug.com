@@ -1,0 +1,142 @@
+﻿//
+// Modules
+//
+
+@import "../../library/modules/grid";
+@import "../../library/modules/typography";
+
+//
+// Fonts
+//
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100);
+
+//
+// Container
+//
+
+.container {
+	margin: 0 auto;
+
+    @include page-width(4);
+
+	@include breakpoint(small) {
+		@include page-width(6);
+	}
+
+	@include breakpoint(medium) {
+		@include page-width(8);
+	}
+
+	@include breakpoint(large) {
+		@include page-width(12);
+	}
+
+	@include breakpoint(extra-large) {
+		@include page-width(16);
+	}
+}
+
+//
+// Section
+//
+
+section {
+	border-bottom: 1px solid $border-color;
+
+	&:last-child {
+		border: 0;
+	}
+}
+
+//
+// Content Header
+//
+
+#content > header {
+	position: relative;
+	padding: $line-height * 4em 0 $line-height * 1em 0;
+	background-color: $primary-color;
+	color: #fff;
+	text-align: center;
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		bottom: $line-height * -2em;
+		margin-left: $line-height * -1em;
+		border-width: $line-height * 1em;
+		border-style: solid;
+		border-color: transparent;
+		border-top-color: $primary-color;
+	}
+
+	h1 {
+		line-height: 1.1;
+		letter-spacing: -2px;
+		color: inherit;
+	}
+
+	h1 small {
+		display: block;
+		font-size: .5em;
+		letter-spacing: 0;
+		opacity: .5;
+	}
+
+    p, h1 {
+        @include max-column;
+    }
+
+	a {
+		color: #fff;
+		text-decoration: underline;
+
+		&:hover {
+			color: rgba(255,255,255,0.6);
+		}
+	}
+}
+
+//
+// Content Section
+//
+
+#content section {
+	padding: $line-height * 1em 0;
+	text-align: center;
+}
+
+//
+// Footer Section
+//
+
+#footer {
+
+    .social {
+      display: inline-block;
+      height: 2em;
+      width: 2em;
+      text-indent: -9999px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: .5;
+
+      & + .social {
+          margin-left: .25em;
+      }
+    }
+
+    .twitter {
+      background-image: url("/Images/Social/twitter-circle.svg");
+    }
+
+    .facebook {
+      background-image: url("/Images/Social/facebook-circle.svg");
+    }
+
+    .linkedin {
+      background-image: url("/Images/Social/linkedin-circle.svg");
+    }
+}

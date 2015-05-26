@@ -1,0 +1,60 @@
+﻿@import "../site/settings";
+@import "../library/modules/typography";
+
+//
+// Error
+//
+
+section#error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	position: relative;
+    height: 100vh;
+    padding: 0;
+	background-color: $primary-color;
+	color: #fff;
+	text-align: center;
+    
+    .container {
+        animation-name: slide-in;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    img {
+        display: block;
+        width: 200px;
+        margin: $line-height * 1em auto;
+        opacity: .1;
+    }
+
+	h1 {
+		line-height: 1.1;
+		letter-spacing: -2px;
+		color: inherit;
+
+        @include max-column;
+
+        small {
+            display: block;
+		    font-size: .5em;
+		    letter-spacing: 0;
+		    opacity: .5;
+        }
+	}
+}
+
+/* Standard syntax */
+@keyframes slide-in {
+
+    from {
+        opacity: 0;
+        transform: translate(0, -100%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+}

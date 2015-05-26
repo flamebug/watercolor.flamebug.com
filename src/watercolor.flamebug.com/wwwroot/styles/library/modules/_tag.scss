@@ -1,0 +1,28 @@
+//
+// Extends
+//
+
+@import "../extends/tag";
+
+//
+// Tag
+//
+
+@mixin tag($options...) {
+
+    @each $option in $options {
+
+        @if $option == primary {
+            @extend %tag-primary
+        }
+        @else if $option == positive {
+            @extend %tag-positive
+        }
+        @else if $option == warning {
+            @extend %tag-warning
+        }
+        @else if $option == negative {
+            @extend %tag-negative
+        }
+    }
+}

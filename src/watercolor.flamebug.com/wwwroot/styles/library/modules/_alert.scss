@@ -1,0 +1,23 @@
+//
+// Extends
+//
+
+@import "../extends/alert";
+
+//
+// Alert
+//
+
+@mixin alert($options...) {
+    @extend %alert;
+
+    @each $option in $options {
+
+        @if $option == success {
+            @extend %alert-success;
+        }
+        @else if $option == error {
+            @extend %alert-error;
+        }
+    }
+}

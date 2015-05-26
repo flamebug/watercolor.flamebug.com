@@ -1,0 +1,141 @@
+﻿@{
+    ViewBag.Title = "Overview";
+}
+
+@section Styles {
+	<link rel="stylesheet" href="~/styles/pages/overview.css">
+}
+
+@section Scripts {
+		<script src="~/lib/prism/prism.js"></script>
+}
+
+<header>
+
+	<div class="container">
+
+		<h2>Overview</h2>
+
+		<p>
+			Watercolor is built with <a href="http://sass-lang.com/">SCSS</a> to allow it to be modular, efficiently coded, and semantic.  All of the code is organized in modular pieces that minimize the amount of code that you need to write for each new site. Watercolor provides a built-in semantic adaptive grid, a typographic grid, default typographic styles to make your text look great, as well as built in styles for forms, tables, buttons, and a variety of other controls. The aim is to make it easy for you to bring up a new site, letting you focus on HTML semantics and content organization, allowing the site to look great with minimal effort.
+		</p>
+
+	</div>
+
+</header>
+
+<section id="folders">
+
+    <div class="container">
+
+        <h3>Folder Overview</h3>
+
+        <p>The various <a href="http://sass-lang.com/">SCSS</a> files included in Watercolor are organized into folders based on their usage.  Here is a breakdown of the folders, and how they are used:</p>
+
+        <table class="bordered">
+
+        	<thead>
+        		<tr>
+        			<th style="width: 25%">folder</th>
+        			<th>description</th>
+        		</tr>
+        	</thead>
+
+        	<tbody>
+
+        		<tr>
+        			<td>/</td>
+        			<td>All global and site specific files should be stored here. By default this folder contains <a href="#style">style.scss</a>, <a href="#site">site.scss</a>, and <a href="#global">global.scss</a>.</td>
+        		</tr>
+        		<tr>
+        			<td>/base</td>
+        			<td>All stylesheet base files should be stored here, such as global style resets, typographic base styles, and container styles. By default this folder contains <a href="#container">container.scss</a>, <a href="#normalize">normalize.scss</a>, and <a href="#typography">typography.scss</a>.</td>
+        		</tr>
+        		<tr>
+        			<td>/library</td>
+        			<td>All @@mixin libraries should be stored here. Nothing in this folder should generate static code, the files should only contain computed variables or @@mixins.  By default this folder contains <a href="#grid">grid.scss</a>, and <a href="#helpers">helpers.scss</a>.</td>
+        		</tr>
+        		<tr>
+        			<td>/theme</td>
+        			<td>All theme specific files should be stored here. By default we've included a <a href="#theme">theme.scss</a> file, as well as layout.scss, controls.scss, and typography.scss for use by the theme.</td>
+        		</tr>
+
+        	</tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<section id="files">
+
+    <div class="container">
+
+        <h3>File Overview</h3>
+
+        <p>Here is a breakdown of the files included in watercolor, and how they are used:</p>
+
+        <table class="bordered">
+
+        	<thead>
+        		<tr>
+        			<th style="width: 25%">file</th>
+        			<th>description</th>
+        		</tr>
+        	</thead>
+
+        	<tbody>
+
+        		<tr>
+        			<td>base/normalize.css</td>
+        			<td>Watercolor uses <a href="#normalize">normalize.css</a> as a baseline for consistent styling across browsers.</td>
+        		</tr>
+        		<tr>
+        			<td>base/typography.scss</td>
+        			<td>All typographic base styles are defined in this file, most <code>@@import</code> settings from variables defined in <a href="#global">global.scss</a>.</td>
+        		</tr>
+        		<tr>
+        			<td>base/classes.scss</td>
+        			<td>All non-semantic classes are found in this file.</td>
+        		</tr>
+        		<tr>
+        			<td>library/grid.scss</td>
+        			<td>The grid library provides mixins and computed variables that your pages and theme would @@import for setting the structural and typographic grid of the site.</td>
+        		</tr>
+        		<tr>
+        			<td>library/helpers.scss</td>
+        			<td>The helpers library provides mixins mainly to simplify styles such as cross-browser prefixes.</td>
+        		</tr>
+        		<tr>
+        			<td>library/tables.scss</td>
+        			<td>All table related mixins are defined in this file.</td>
+        		</tr>
+        		<tr>
+        			<td>templates/template.scss</td>
+        			<td>All templates should contain a <a href="#theme">template.scss</a> file which includes all styles for the template.</td>
+        		</tr>
+        		<tr>
+        			<td>site/site.scss</td>
+        			<td>This is where all site-wide common styles that are not related to the theme are stored.</td>
+        		</tr>
+        		<tr>
+        			<td>container.scss</td>
+        			<td>This is where the container breakpoints for the structural grid are defined.</td>
+        		</tr>
+        		<tr>
+        			<td>global.scss</td>
+        			<td>All globally referenced variables should be defined here. By default this contains variables for defining the structural and typographic grid, typographic elements, and other common variables that will be used throughout the site.</td>
+        		</tr>
+        		<tr>
+        			<td>style.scss</td>
+        			<td>This file pulls everything together into a single stylesheet for delivery to the browser.</td>
+        		</tr>
+
+        	</tbody>
+
+        </table>
+
+    </div>
+
+</section>

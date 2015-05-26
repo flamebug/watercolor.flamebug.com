@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "watercolor.flamebug.com", "watercolor.flamebug.com\watercolor.flamebug.com.csproj", "{D1C688B2-1E0D-46B1-9CDE-F82598D445B6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{71857D11-54FB-4AA6-A03D-85D7D7D10BD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C4F96D59-74F3-4783-819C-C772F5003C90}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "watercolor.flamebug.com", "src\watercolor.flamebug.com\watercolor.flamebug.com.xproj", "{FB303612-753C-4188-B615-E728D6FCC24C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +18,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D1C688B2-1E0D-46B1-9CDE-F82598D445B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1C688B2-1E0D-46B1-9CDE-F82598D445B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1C688B2-1E0D-46B1-9CDE-F82598D445B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1C688B2-1E0D-46B1-9CDE-F82598D445B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB303612-753C-4188-B615-E728D6FCC24C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB303612-753C-4188-B615-E728D6FCC24C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB303612-753C-4188-B615-E728D6FCC24C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB303612-753C-4188-B615-E728D6FCC24C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB303612-753C-4188-B615-E728D6FCC24C} = {71857D11-54FB-4AA6-A03D-85D7D7D10BD1}
 	EndGlobalSection
 EndGlobal
