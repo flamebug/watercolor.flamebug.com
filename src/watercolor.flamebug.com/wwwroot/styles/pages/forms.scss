@@ -1,10 +1,15 @@
-﻿@import "../site/settings";
-@import "../library/modules/grid";
-@import "../library/modules/form";
+﻿@import "site/settings";
+@import "watercolor/modules/grid";
+@import "watercolor/elements/field";
+@import "watercolor/elements/hint";
 
 //
 // Form Defaults
 //
+
+.hint {
+    @include hint(block);
+}
 
 .field,
 .block .field,
@@ -41,6 +46,6 @@ form div.field.align {
     @include field(block);
 
     @include breakpoint(medium) {
-        @include field(align);
+        //@include field(align);
     }
 }

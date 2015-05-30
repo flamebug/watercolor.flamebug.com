@@ -1,0 +1,18 @@
+//
+// Modules
+//
+
+@import "../../modules/grid";
+
+//
+// Image and Divider
+//
+
+img {
+	max-width: 100%;
+}
+
+img,
+hr {
+	border-color: $border-color;
+}

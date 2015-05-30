@@ -1,0 +1,60 @@
+//
+// Modules
+//
+
+@import "../../modules/grid";
+
+//
+// Preformatted Text and Code
+//
+
+pre,
+code,
+kbd,
+samp,
+tt {
+	font-size: $mono-font-size * 1em;
+	font-family: $mono-font-family;
+	font-weight: $mono-font-weight;
+	color: $mono-font-color;
+	direction: ltr;
+	text-align: left;
+	word-spacing: normal;
+	tab-size: 4;
+	hyphens: none;
+
+	// fix wierd bug with monospace text messing up line-height on pre elements
+	// ref: http://alexmansfield.com/css/font-size-line-height-pre-code-monospace
+	// if font size is less than 1 then go with vertical-align: middle
+	
+	@if $mono-font-size < 1 {
+		vertical-align: middle;
+	}
+	@else {
+		vertical-align: top;
+	}
+}
+
+pre {
+	position: relative;
+	margin-top: $line-height / $mono-font-size - em(1) * 1em;		//subtract 1px border
+	margin-bottom: $line-height / $mono-font-size - em(1) * 1em;	//subtract 1px border
+	line-height: font-line-height($mono-font-size);
+	white-space: pre;
+	background: $pre-background-color;
+	border: 1px solid $border-color;
+	padding: 0 .5em;
+	overflow: auto;
+
+	code {
+		padding: 0;
+		border: 0;
+		background: transparent;
+	}
+}
+
+code {
+	padding: .1666em .3333em;
+	background: $code-background-color;
+	border: 1px solid $border-color;
+}

@@ -1,0 +1,95 @@
+﻿@import "site/settings";
+@import "watercolor/modules/grid";
+
+@import "watercolor/elements/alert";
+@import "watercolor/elements/badge";
+@import "watercolor/elements/label";
+@import "watercolor/elements/tag";
+
+//
+// Alert
+//
+
+.alert {
+    @include alert;
+
+    &.success {
+        @include alert(success)
+    }
+
+    &.error {
+        @include alert(error)
+    }
+}
+
+//
+// Badge
+//
+
+.badge {
+	@include badge;
+
+	&.top-right {
+		@include badge(top-right);
+	}
+
+	&.top-left {
+		@include badge(top-left);
+	}
+
+	&.bottom-right {
+		@include badge(bottom-right);
+	}
+
+	&.bottom-left {
+		@include badge(bottom-left);
+	}
+}
+
+//
+// Label
+//
+
+.label {
+	@include label;
+
+	&.primary {
+		@include label(primary);
+	}
+
+	&.positive {
+		@include label(positive);
+	}
+
+	&.warning {
+		@include label(warning);
+	}
+
+	&.negative {
+		@include label(negative);
+	}
+}
+
+//
+// Tag
+//
+
+.tag {
+	@include tag;
+
+	&.primary {
+		@include tag(primary);
+	}
+
+	&.positive {
+		@include tag(positive);
+	}
+
+	&.warning {
+		@include tag(warning);
+	}
+
+	&.negative {
+		@include tag(negative);
+	}
+}

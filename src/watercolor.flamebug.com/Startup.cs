@@ -40,7 +40,7 @@ namespace watercolor.flamebug.com
         }
 
         //
-        // 3.  Run ConfigureServices
+        // 3.  Run Configure
         //
         //          Add console logging
         //          Add the error page/handler depending on environment

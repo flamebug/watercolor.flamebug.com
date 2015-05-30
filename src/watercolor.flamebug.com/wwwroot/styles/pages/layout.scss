@@ -1,6 +1,5 @@
-﻿@import "../site/settings";
-@import "../library/modules/grid";
-@import "../library/modules/typography";
+﻿@import "site/settings";
+@import "watercolor/modules/grid";
 
 //
 // Layout Demo
@@ -108,7 +107,7 @@
 //
 
 #example > header {
-    @include max-column();
+    @include column(max);
 }
 
 #example-demo {
@@ -124,8 +123,8 @@
         margin-top: $line-height * 1em;
         padding: 0 $line-height * 1em;
         background: rgba(0,0,0,.01);
-        border: 1px solid $border-color;
-        @include max-column();
+        border: 1px solid #eee;
+        @include column(max);
     }
 
     figure {

@@ -1,0 +1,29 @@
+﻿//
+// Social
+//
+
+.social {
+	display: inline-block;
+	height: 2em;
+	width: 2em;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: .5;
+
+	& + & {
+		margin-left: .25em;
+	}
+
+	&.twitter {
+		background-image: url("/Images/Social/twitter-circle.svg");
+	}
+	
+	&.facebook {
+		background-image: url("/Images/Social/facebook-circle.svg");
+	}
+	
+	&.linkedin {
+		background-image: url("/Images/Social/linkedin-circle.svg");
+	}
+}

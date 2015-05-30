@@ -14,10 +14,11 @@ eval("var project = " + fs.readFileSync("./project.json"));
 
 var paths = {
 
-    bower: "./bower_components/",
-    lib: "./" + project.webroot + "/lib/",
-    styles: project.webroot + "/styles/",
-    scripts: project.webroot + "/scripts/"
+    bower:   "./bower_components/",
+ 
+    lib:     project.webroot + "/lib/",   
+    scripts: project.webroot + "/scripts/",
+    styles:  project.webroot + "/styles/"
 
 };
 
@@ -25,7 +26,11 @@ var sassOpts = {
 
     parameters: {
         sourcemap: true,
-        style: "expanded"
+        style: "expanded",
+        loadPath: [
+            paths.lib,
+            paths.styles
+        ]
     },
     error: function (err) {
         console.error('Error!', err.message);
@@ -66,7 +71,8 @@ gulp.task("copy", ["clean"], function () {
 
     var bower = {
         "jquery": "jquery/jquery*.{js,map}",
-        "prism": "prism/prism.js"
+        "prism": "prism/prism.js",
+        "normalize.css": "normalize.css/normalize.css"
     }
 
     for (var destinationDir in bower) {

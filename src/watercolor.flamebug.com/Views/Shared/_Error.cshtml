@@ -43,19 +43,28 @@
     <meta name="twitter:creator" content="@twitter" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="~/styles/style.css" />
-
-    @RenderSection("Styles", required: false)
+    <link rel="stylesheet" href="~/styles/site/site.css" />
+    <link rel="stylesheet" href="~/styles/pages/error.css">
 
 </head>
 
 <body>
 
-    <div id="content" role="main">
+    <main id="main" role="main">
 
-        @RenderBody()
+        <section id="error">
+        
+            <div class="container">
+        
+                <a class="logo" href="/"></a>
+        
+                @RenderBody()
+        
+            </div>
+        
+        </section>
 
-    </div>
+    </main>
 
     <!-- jQuery -->
     <environment names="Development">

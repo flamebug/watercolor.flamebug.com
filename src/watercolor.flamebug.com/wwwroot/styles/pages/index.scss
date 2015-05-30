@@ -1,6 +1,5 @@
-﻿@import "../site/settings";
-@import "../library/modules/grid";
-@import "../library/modules/typography";
+﻿@import "site/settings";
+@import "watercolor/modules/grid";
 
 //
 // Header Links
@@ -126,7 +125,7 @@ h2 > a {
 	}
 
     figure {
-        @include max-column;
+        @include column(max);
 		height: 45em;
         margin-top: $line-height * 1em;
         margin-bottom: $line-height * 1em;
@@ -150,10 +149,6 @@ h2 > a {
         display: block;
         width: 50%;
         margin: 0 auto;
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
         transform: rotate(90deg);
     }
 
@@ -169,8 +164,6 @@ h2 > a {
         }
 
         #arrow img {
-            -ms-transform: none;
-            -webkit-transform: none;
             transform: none;
         }
     }

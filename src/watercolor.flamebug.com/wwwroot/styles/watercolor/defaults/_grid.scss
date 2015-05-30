@@ -1,0 +1,21 @@
+//
+// Grid Defaults
+//
+
+$column-width: 3.5rem !default;
+$gutter-width: 1.5rem !default;
+
+$base-font-size: 1 !default;
+$line-height:  1.625 !default;
+
+//
+// Breakpoints
+//
+
+$breakpoints: (
+	default: 4,
+	small: 6,
+	medium: 8,
+	large: 12,
+	extra-large: 16
+) !default;

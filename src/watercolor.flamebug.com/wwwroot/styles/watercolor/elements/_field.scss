@@ -1,0 +1,23 @@
+//
+// Extends
+//
+
+@import "../extends/field";
+
+//
+// Field
+//
+
+@mixin field($type: block) {
+    @extend %field;
+
+    @if $type == block {
+        @extend %field-block;
+    }
+    @else if $type == inline {
+        @extend %field-inline;
+    }
+    @else if $type == aligned {
+        @extend %field-aligned;
+    }
+}

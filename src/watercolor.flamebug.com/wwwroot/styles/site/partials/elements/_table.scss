@@ -1,0 +1,13 @@
+﻿//
+// Modules
+//
+
+@import "watercolor/elements/table";
+
+//
+// Table
+//
+
+table {
+	@include table(padded, bordered, striped);
+}

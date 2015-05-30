@@ -1,0 +1,23 @@
+//
+// Extends
+//
+
+@import "../extends/hint";
+
+//
+// Hint
+//
+
+@mixin hint($type: block) {
+    @extend %hint;
+
+    @if $type == block {
+        @extend %hint-block;
+    }
+    @else if $type == inline {
+        @extend %hint-inline;
+    }
+    @else if $type == aligned {
+        @extend %hint-aligned;
+    }
+}

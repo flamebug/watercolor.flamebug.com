@@ -139,8 +139,9 @@ node_modules/
 bower_components/
 .sass-cache/
 
-# Visual Studio Hidden Folder
+# Visual Studio Hidden Folders
 .vs/
+.settings/
 
 # =========================
 # Windows detritus

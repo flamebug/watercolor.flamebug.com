@@ -1,25 +1,11 @@
 ﻿@model watercolor.flamebug.com.Models.Error
 
 @{
-        Layout = "_Error";
-        ViewBag.Title = Model.Status;
+    Layout = "_Error";
+    ViewBag.Title = Model.Status;
 }
 
-@section Styles {
-	<link rel="stylesheet" href="~/styles/pages/error.css">
-}
-
-<section id="error">
-
-	<div class="container">
-
-		<a class="logo" href="/"></a>
-
-		<h1>
-			@Model.Status - @Model.Description
-			<small>We're sorry, we'll try harder next time!</small>
-		</h1>
-
-	</div>
-
-</section>
+<h1>
+	@Model.Status - @Model.Description
+	<small>We're sorry, we'll try harder next time!</small>
+</h1>

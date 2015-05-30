@@ -43,7 +43,7 @@
         <meta name="twitter:creator" content="@twitter" />
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="~/styles/style.css" />
+        <link rel="stylesheet" href="~/styles/site/site.css" />
 
         @RenderSection("Styles", required: false)
 
@@ -58,11 +58,23 @@
 
         </nav>
 
-        <div id="content" role="main">
+        <header id="header" role="banner">
+
+            <div class="container">
+                
+                @Html.Partial("_Header")
+
+                @RenderSection("Header", required: false)
+            
+            </div>
+            
+        </header>
+                      
+        <main id="main" role="main">
 
             @RenderBody()
 
-        </div>
+        </main>
 
         <footer id="footer" role="contentinfo">
 

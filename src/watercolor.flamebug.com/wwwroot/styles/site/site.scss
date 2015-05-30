@@ -1,0 +1,29 @@
+//
+// Settings
+//
+
+@import "settings";
+
+//
+// Standardize
+//
+
+@import "watercolor/partials/standardize";
+
+//
+// Base Layout & Style
+//
+
+@import "partials/base/fonts";
+@import "partials/base/layout";
+@import "partials/base/navigation";
+
+//
+// Elements
+//
+
+@import "partials/elements/button";
+@import "partials/elements/example";
+@import "partials/elements/logo";
+@import "partials/elements/social";
+@import "partials/elements/table";

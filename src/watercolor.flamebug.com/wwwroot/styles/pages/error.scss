@@ -1,5 +1,5 @@
-﻿@import "../site/settings";
-@import "../library/modules/typography";
+﻿@import "site/settings";
+@import "watercolor/modules/grid";
 
 //
 // Error
@@ -34,7 +34,7 @@ section#error {
 		letter-spacing: -2px;
 		color: inherit;
 
-        @include max-column;
+        @include column(max);
 
         small {
             display: block;

@@ -1,0 +1,53 @@
+//
+// Modules
+//
+
+@import "../modules/grid";
+
+//
+// Defaults
+//
+
+@import "../defaults/table";
+
+//
+// Table
+//
+
+%table-padded {
+	th,
+	td {
+		padding-top: $line-height * $table-padded-padding-vertical;
+		padding-bottom: $line-height * $table-padded-padding-vertical;
+		padding-left: $line-height * $table-padded-padding-horizontal;
+		padding-right: $line-height * $table-padded-padding-horizontal;
+	}
+}
+
+%table-bordered {
+	
+	//
+	// Subtract the border from the top and bottom margins
+	//
+	//  $line-height * 16 - 1
+	//  ---------------------- * $line-height * 1em
+	//  $line-height * 16     
+	//
+	
+	margin-top: ((($line-height * 16) - 1) / ($line-height * 16)) * $line-height * 1em;
+	margin-bottom: ((($line-height * 16) - 1) / ($line-height * 16)) * $line-height * 1em;
+	border: 1px solid $border-color;
+	border-left: 0;
+
+	th,
+	td {
+		border-left: 1px solid $border-color;
+	}
+}
+
+%table-striped {
+	tbody > tr:nth-child(odd) > td,
+	tbody > tr:nth-child(odd) > th {
+		background-color: $table-striped-background-color;
+	}
+}
