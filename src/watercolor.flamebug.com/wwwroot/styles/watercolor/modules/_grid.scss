@@ -90,7 +90,7 @@
 
 @mixin font-size($size) {
 	font-size: $size * 1em;
-	line-height: font-line-height($size);
+	line-height: line-height($size);
 	margin-top: $line-height / $size * 1em;
 	margin-bottom: $line-height / $size * 1em;
 }
@@ -99,7 +99,7 @@
 // Calculate the line height that will maintain vertical rhythm for the font size
 //
 
-@function font-line-height($size) {
+@function line-height($size) {
 	$lines-needed: ceil($size / $line-height);
 
 	@return ($line-height / $size * $lines-needed);

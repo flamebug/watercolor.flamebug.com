@@ -9,6 +9,7 @@
 //
 
 @mixin label($options...) {
+    @extend %label;
 
     @each $option in $options {
 

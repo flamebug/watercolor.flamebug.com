@@ -1,4 +1,10 @@
 //
+// Border Defaults
+//
+
+$border-color: #eee !default;
+
+//
 // Text Defaults
 //
 
@@ -46,7 +52,16 @@ $mono-font-color: inherit !default;
 $mono-font-family: monospace, sans-serif !default;
 $mono-font-weight: normal !default;
 
+$pre-border-width: 1px !default;
+$pre-border-style: solid !default;
+$pre-border-color: $border-color !default;
+$pre-border-radius: 0 !default;
 $pre-background-color: rgba(0,0,0,0.01) !default;
+
+$code-border-width: 1px !default;
+$code-border-style: solid !default;
+$code-border-color: $border-color !default;
+$code-border-radius: 0 !default;
 $code-background-color: rgba(0,0,0,0.01) !default;
 
 //
@@ -62,14 +77,41 @@ $link-hover-color: #058Ac1 !default;
 // Form Defaults
 //
 
+$input-border-width: 1px !default;
+$input-border-style: solid !default;
+$input-border-color: $border-color !default;
+$input-border-radius: .2em !default;
 $input-background-color: #fff !default;
 $input-color: #777 !default;
 $input-focus-color: #000 !default;
-
 $input-invalid-border-color: red !default;
 
 //
-// Border Defaults
+// Image Defaults
 //
 
-$border-color: #eee !default;
+$img-border-color: $border-color !default;
+
+//
+// Divider Defaults
+//
+
+$hr-border-color: $border-color !default;
+
+//
+// Quote Defaults
+//
+
+$quote-border-width: .25em !default;
+$quote-border-style: solid !default;
+$quote-border-color: $border-color !default;
+$quote-border-radius: 0 !default;
+
+//
+// Table Defaults
+//
+
+$table-cell-border-width: 1px !default;
+$table-cell-border-style: solid !default;
+$table-cell-border-color: $border-color !default;
+$table-nested-background-color: #fff !default;

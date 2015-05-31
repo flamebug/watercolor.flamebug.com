@@ -18,10 +18,12 @@ table {
 	th,
 	td {
 		padding: 0 $line-height * 0.5em;
-		line-height: $line-height - em(1);   ///TODO: what about when the table is within an element with a different font size than the base
+		line-height: $line-height - em(1);			//subtract 1px border
+		border-top-width: $table-cell-border-width;
+		border-top-style: $table-cell-border-style;
+		border-top-color: $table-cell-border-color;
 		text-align: left;
 		vertical-align: top;
-		border-top: 1px solid $border-color;
 	}
 
 	th {
@@ -40,10 +42,12 @@ table {
 	}
 
 	tbody + tbody {
-		border-top: 2px solid $border-color;
+		border-top-width: $table-cell-border-width * 2;
+		border-top-style: $table-cell-border-style;
+		border-top-color: $table-cell-border-color;
 	}
 
 	table {
-		background-color: #ffffff;
+		background-color: $table-nested-background-color;
 	}
 }

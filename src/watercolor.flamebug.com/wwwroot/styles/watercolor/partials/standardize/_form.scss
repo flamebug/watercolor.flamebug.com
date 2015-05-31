@@ -36,13 +36,15 @@ input[type="time"],
 input[type="url"],
 input[type="week"] {
 	box-sizing: border-box;
-	font: inherit;
-	padding: 0 .375em;
 	margin: -1px 0;
-	border: 1px solid $border-color;
+	padding: 0 .375em;
+	border-width: $input-border-width;
+	border-style: $input-border-style;
+	border-color: $input-border-color;
+	border-radius: $input-border-radius;
 	background-color: $input-background-color;
+	font: inherit;
 	color: $input-color;
-	border-radius: .2em;
 
 	&:focus {
 		color: $input-focus-color;

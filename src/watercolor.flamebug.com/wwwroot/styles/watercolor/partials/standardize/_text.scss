@@ -9,10 +9,10 @@
 //
 
 body {
+	line-height: $line-height;
 	font-size: $body-font-size * 1em;
 	font-family: $body-font-family;
 	font-weight: $body-font-weight;
-	line-height: $line-height;
 	color: $body-font-color;
 }
 

@@ -37,14 +37,17 @@ tt {
 
 pre {
 	position: relative;
+	overflow: auto;
 	margin-top: $line-height / $mono-font-size - em(1) * 1em;		//subtract 1px border
 	margin-bottom: $line-height / $mono-font-size - em(1) * 1em;	//subtract 1px border
-	line-height: font-line-height($mono-font-size);
-	white-space: pre;
-	background: $pre-background-color;
-	border: 1px solid $border-color;
 	padding: 0 .5em;
-	overflow: auto;
+	line-height: line-height($mono-font-size);
+	border-width: $pre-border-width;
+	border-style: $pre-border-style;
+	border-color: $pre-border-color;
+	border-radius: $pre-border-radius;
+	background: $pre-background-color;
+	white-space: pre;
 
 	code {
 		padding: 0;
@@ -55,6 +58,9 @@ pre {
 
 code {
 	padding: .1666em .3333em;
+	border-width: $code-border-width;
+	border-style: $code-border-style;
+	border-color: $code-border-color;
+	border-radius: $code-border-radius;
 	background: $code-background-color;
-	border: 1px solid $border-color;
 }

@@ -9,6 +9,7 @@
 //
 
 @mixin tag($options...) {
+    @extend %tag;
 
     @each $option in $options {
 

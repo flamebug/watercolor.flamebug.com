@@ -10,9 +10,9 @@
 
 img {
 	max-width: 100%;
+	border-color: $img-border-color;
 }
 
-img,
 hr {
-	border-color: $border-color;
+	border-color: $hr-border-color;
 }
