@@ -106,13 +106,10 @@
 // Example
 //
 
-#example > header {
-    @include column(max);
-}
-
 #example-demo {
     margin: 0;
-    @include clear-children();
+    @include flex-container;
+    @include clear-children;
 
     .main,
     .aside,
@@ -125,10 +122,6 @@
         background: rgba(0,0,0,.01);
         border: 1px solid #eee;
         @include column(max);
-    }
-
-    figure {
-        margin: 0;
     }
 
     header,
@@ -158,7 +151,9 @@
     }
 
     figure {
-        @include clear-children();
+        margin: 0;
+        @include flex-container;
+        @include clear-children;
 
         img {
             padding: 0;

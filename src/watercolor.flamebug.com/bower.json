@@ -1,5 +1,6 @@
 {
-  "name": "ASP.NET",
+  "name": "watercolor.flamebug.com",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "jquery": "1.10.2",
