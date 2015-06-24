@@ -19,7 +19,8 @@ var paths = {
  
     lib:     project.webroot + "/lib/",   
     scripts: project.webroot + "/scripts/",
-    styles:  project.webroot + "/styles/"
+    sass:    project.webroot + "/sass/",
+    css:     project.webroot + "/css/"
 
 };
 
@@ -30,7 +31,7 @@ var sassOpts = {
         style: "expanded",
         loadPath: [
             paths.lib,
-            paths.styles
+            paths.sass
         ]
     },
     error: function (err) {
@@ -45,12 +46,12 @@ var sassOpts = {
 
 gulp.task('styles', function () {
 
-    return sass(paths.styles, sassOpts.parameters)
+    return sass(paths.sass, sassOpts.parameters)
         .on('error', sassOpts.error)
         .pipe(prefix())
         //.pipe(minify())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(paths.styles))
+        .pipe(gulp.dest(paths.css))
 
 });
 
@@ -72,7 +73,7 @@ gulp.task("copy", ["clean"], function () {
 
     var bower = {
         "jquery": "jquery/jquery*.{js,map}",
-        "prism": "prism/prism.js",
+        "prism": "prism/**/prism.{js,css}",
         "normalize.css": "normalize.css/normalize.css"
     }
 
@@ -91,7 +92,7 @@ gulp.task("copy", ["clean"], function () {
 
 gulp.task('watch', function () {
 
-    return gulp.watch(paths.styles + "**/*.scss", ['styles']);
+    return gulp.watch(paths.sass + "**/*.scss", ['styles']);
 
 });
 

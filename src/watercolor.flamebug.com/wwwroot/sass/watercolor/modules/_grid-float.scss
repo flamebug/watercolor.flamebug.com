@@ -11,25 +11,13 @@
 @mixin column($cols: max, $prefix: 0, $suffix: 0) {
 	
 	@if $cols == max {
-		//display: block;
-		//float: none;
-		
-	//Flexbox Stuff Begin
-		flex-grow: 1;
-		flex-shrink: 1;
-	//Flexbox stuff end
-	
+		display: block;
+		float: none;
 	}
 	@else {
-	//Flexbox Stuff Begin
-		flex-grow: 1;
-		flex-shrink: 1;
-		flex-basis: $cols * ($column-width + $gutter-width) - $gutter-width;
-		//max-width: $cols * ($column-width + $gutter-width) - $gutter-width;
-	//Flexbox stuff end
-		//display: inline;
-		//float: left;
-		//width: $cols * ($column-width + $gutter-width) - $gutter-width;
+		display: inline;
+		float: left;
+		width: $cols * ($column-width + $gutter-width) - $gutter-width;	
 	}
 	
 	@include column-prefix($prefix);
@@ -53,36 +41,11 @@
 }
 
 //
-// Flex Container
-//
-
-@mixin flex-container() {
-	display: flex;
-	flex-wrap: wrap;
-	margin-right: $gutter-width * -0.5;
-	margin-left: $gutter-width * -0.5;
-}
-
-//
 // Build the container based on the breakpoint settings
 //
 
 @mixin container() {
 	margin: 0 auto;
-
-//Flexbox Stuff Begin
-	box-sizing: border-box;
-	display: flex;
-	flex-grow: 0;
-	flex-shrink: 0;
-	flex-basis: auto;
-	flex-direction: row;
-	flex-wrap: wrap;
-	padding-right: $gutter-width * 0.5;
-	padding-left: $gutter-width * 0.5;
-	//margin-right: $gutter-width * -0.5;
-	//margin-left: $gutter-width * -0.5;
-//Flexbox stuff end
 
 	@each $size, $cols in $breakpoints {
 				

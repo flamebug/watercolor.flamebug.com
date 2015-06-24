@@ -1,0 +1,535 @@
+﻿@import "site/settings";
+@import "watercolor/modules/grid";
+
+//
+// Layout Demo
+//
+
+#layout-demo {
+
+    @mixin infinite-column-left($cols) {
+        margin-left: $cols * ($column-width + $gutter-width) + ($gutter-width / 2) !important;
+    }
+
+    #infinite {
+        position: relative;
+        height: 20em;
+        margin: $line-height * 2em auto 1em auto;
+        overflow: hidden;
+
+        div {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: $column-width;
+            margin-left: ($gutter-width / 2);
+            background: $primary-color;
+            opacity: .1;
+
+            &:hover {
+                background: $secondary-color;
+                opacity: .5;
+            }
+        }
+    }
+
+    .col2 { @include infinite-column-left(1); }
+    .col3 { @include infinite-column-left(2); }
+    .col4 { @include infinite-column-left(3); }
+    .col5 { @include infinite-column-left(4); }
+    .col6 { @include infinite-column-left(5); }
+    .col7 { @include infinite-column-left(6); }
+    .col8 { @include infinite-column-left(7); }
+    .col9 { @include infinite-column-left(8); }
+    .col10 { @include infinite-column-left(9); }
+    .col11 { @include infinite-column-left(10); }
+    .col12 { @include infinite-column-left(11); }
+    .col13 { @include infinite-column-left(12); }
+    .col14 { @include infinite-column-left(13); }
+    .col15 { @include infinite-column-left(14); }
+    .col16 { @include infinite-column-left(15); }
+    .col17 { @include infinite-column-left(16); }
+    .col18 { @include infinite-column-left(17); }
+    .col19 { @include infinite-column-left(-1); }
+    .col20 { @include infinite-column-left(-2); }
+    .col21 { @include infinite-column-left(-3); }
+    .col22 { @include infinite-column-left(-4); }
+    .col23 { @include infinite-column-left(-5); }
+    .col24 { @include infinite-column-left(-6); }
+    .col25 { @include infinite-column-left(-7); }
+    .col26 { @include infinite-column-left(-8); }
+    .col27 { @include infinite-column-left(-9); }
+    .col28 { @include infinite-column-left(-10); }
+    .col29 { @include infinite-column-left(-11); }
+    .col30 { @include infinite-column-left(-12); }
+    .col31 { @include infinite-column-left(-13); }
+    .col32 { @include infinite-column-left(-14); }
+    .col33 { @include infinite-column-left(-15); }
+    .col34 { @include infinite-column-left(-16); }
+    .col35 { @include infinite-column-left(-17); }
+    .col36 { @include infinite-column-left(-18); }
+
+    .col1,.col2,.col19,.col20 {
+        opacity: 1 !important;
+    }
+
+    @include breakpoint(small) {
+        .col3,.col21 {
+            opacity: 1 !important;
+        }
+    }
+
+    @include breakpoint(medium) {
+        #infinite {
+            height: 30em;
+        }
+        .col4,.col22 {
+            opacity: 1 !important;
+        }
+    }
+
+    @include breakpoint(large) {
+        .col5,.col6,.col23,.col24 {
+            opacity: 1 !important;
+        }
+    }
+
+    @include breakpoint(extra-large) {
+        .col7,.col8,.col25,.col26 {
+            opacity: 1 !important;
+        }
+    }
+}
+
+//
+// Example
+//
+
+#example-demo {
+    margin: 0;
+    @include grid-container;
+    @include clear-children;
+
+    .main,
+    .aside,
+    header,
+    footer {
+        box-sizing: border-box;
+        margin-bottom: $line-height * 1em;
+        padding: 0 $line-height * 1em;
+        background: rgba(0,0,0,.01);
+        border: 1px solid #eee;
+        @include column(max);
+    }
+
+    header,
+    footer {
+        clear: both;
+    }
+
+    .main {
+
+        @include breakpoint(large) {
+            @include column(8);
+        }
+
+        @include breakpoint(extra-large) {
+            @include column(10);
+        }
+    }
+
+    .aside {
+        
+        @include breakpoint(large) {
+            @include column(4);
+        }
+        @include breakpoint(extra-large) {
+            @include column(6);
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include grid;
+
+        li {
+            margin: 0;
+            margin-bottom: $line-height * 1em;
+            padding: 0;
+            @include column(max);
+
+            @include breakpoint(small) {
+                @include column(3);
+            }
+
+            @include breakpoint(medium) {
+                @include column(4);
+            }
+        }
+        
+        img {
+            display: block;
+            max-width: 100%;
+            min-width: 100%;
+        }
+    }
+}
+
+#example-columns-container {
+    margin: 0;
+    @include grid-container;
+    
+    div {
+        display: none;
+        box-sizing: border-box;
+        margin-bottom: $line-height * 1em;
+        padding: $line-height * .25em $line-height * .5em;
+        background: $primary-color;
+    }
+
+    #one-a {@include column(1);}
+    #two-a {@include column(2);}
+    #three-a {@include column(3);}
+    #four-a {@include column(4);}
+
+    #one-b {@include column(3);}
+    #two-b {@include column(2);}
+    #three-b {@include column(1);}
+    
+    #one-a,
+    #two-a,
+    #three-a,
+    #four-a,
+    #one-b,
+    #two-b,
+    #three-b {display: block;}
+        
+    @include breakpoint(small) {
+        #five-a {@include column(5);}
+        #six-a {@include column(6);}
+        
+        #one-b {@include column(5);}
+        #two-b {@include column(4);}
+        #three-b {@include column(3);}
+        #four-b {@include column(2);}
+        #five-b {@include column(1);}   
+        
+        #five-a,
+        #six-a,
+        #four-b,
+        #five-b {display: block;}
+    }
+
+    @include breakpoint(medium) {
+        #seven-a {@include column(7);}
+        #eight-a {@include column(8);}
+    
+        #one-b {@include column(7);}
+        #two-b {@include column(6);}
+        #three-b {@include column(5);}
+        #four-b {@include column(4);}
+        #five-b {@include column(3);}
+        #six-b {@include column(2);}
+        #seven-b {@include column(1);}
+        
+        #seven-a,
+        #eight-a,
+        #six-b,
+        #seven-b {display: block;}
+    }
+     
+    @include breakpoint(large) {
+        #nine-a {@include column(9);}
+        #ten-a {@include column(10);}
+        #eleven-a {@include column(11);}
+        #twelve-a {@include column(12);}
+    
+        #one-b {@include column(11);}
+        #two-b {@include column(10);}
+        #three-b {@include column(9);}
+        #four-b {@include column(8);}
+        #five-b {@include column(7);}
+        #six-b {@include column(6);}
+        #seven-b {@include column(5);}
+        #eight-b {@include column(4);}
+        #nine-b {@include column(3);}
+        #ten-b {@include column(2);}
+        #eleven-b {@include column(1);}
+        
+        #nine-a,
+        #ten-a,
+        #eleven-a,
+        #twelve-a,     
+        #eight-b,
+        #nine-b,
+        #ten-b,
+        #eleven-b {display: block;}
+    }
+        
+    @include breakpoint(extra-large) {
+        #thirteen-a {@include column(13);}
+        #fourteen-a {@include column(14);}
+        #fifteen-a {@include column(15);}
+        #sixteen-a {@include column(16);}
+    
+        #one-b {@include column(15);}
+        #two-b {@include column(14);}
+        #three-b {@include column(13);}
+        #four-b {@include column(12);}
+        #five-b {@include column(11);}
+        #six-b {@include column(10);}
+        #seven-b {@include column(9);}
+        #eight-b {@include column(8);}
+        #nine-b {@include column(7);}
+        #ten-b {@include column(6);}
+        #eleven-b {@include column(5);}
+        #twelve-b {@include column(4);}
+        #thirteen-b {@include column(3);}
+        #fourteen-b {@include column(2);}
+        #fifteen-b {@include column(1);}
+        
+        #thirteen-a,
+        #fourteen-a,
+        #fifteen-a,
+        #sixteen-a,     
+        #twelve-b,
+        #thirteen-b,
+        #fourteen-b,
+        #fifteen-b {display: block;}
+    }
+}
+
+#example-prefix-container {
+    margin: 0;
+    @include grid-container;
+    
+    div {
+        display: none;
+        box-sizing: border-box;
+        margin-bottom: $line-height * 1em;
+        padding: $line-height * .25em $line-height * .5em;
+        background: $primary-color;
+    }
+        
+    #one-prefix {@include column(1, $prefix: 3);}
+    #two-prefix {@include column(2, $prefix: 2);}
+    #three-prefix {@include column(3, $prefix: 1);}
+    #four-prefix {@include column(4, $prefix: 0);}
+    
+    #one-prefix, 
+    #two-prefix,
+    #three-prefix,
+    #four-prefix {display: block;}
+        
+    @include breakpoint(small) {
+        #one-prefix {@include column(1, $prefix: 5);}
+        #two-prefix {@include column(2, $prefix: 4);}
+        #three-prefix {@include column(3, $prefix: 3);}
+        #four-prefix {@include column(4, $prefix: 2);}
+        #five-prefix {@include column(5, $prefix: 1);}
+        #six-prefix {@include column(6, $prefix: 0);}
+        
+        #five-prefix, 
+        #six-prefix {display: block;}
+    
+    }
+
+    @include breakpoint(medium) {
+        #one-prefix {@include column(1, $prefix: 7);}
+        #two-prefix {@include column(2, $prefix: 6);}
+        #three-prefix {@include column(3, $prefix: 5);}
+        #four-prefix {@include column(4, $prefix: 4);}
+        #five-prefix {@include column(5, $prefix: 3);}
+        #six-prefix {@include column(6, $prefix: 2);}
+        #seven-prefix {@include column(7, $prefix: 1);}
+        #eight-prefix {@include column(8, $prefix: 0);}
+        
+        #seven-prefix, 
+        #eight-prefix {display: block;}
+    
+    }
+     
+    @include breakpoint(large) {       
+        #one-prefix {@include column(1, $prefix: 11);}
+        #two-prefix {@include column(2, $prefix: 10);}
+        #three-prefix {@include column(3, $prefix: 9);}
+        #four-prefix {@include column(4, $prefix: 8);}
+        #five-prefix {@include column(5, $prefix: 7);}
+        #six-prefix {@include column(6, $prefix: 6);}
+        #seven-prefix {@include column(7, $prefix: 5);}
+        #eight-prefix {@include column(8, $prefix: 4);}
+        #nine-prefix {@include column(9, $prefix: 3);}
+        #ten-prefix {@include column(10, $prefix: 2);}
+        #eleven-prefix {@include column(11, $prefix: 1);}
+        #twelve-prefix {@include column(12, $prefix: 0);}
+        
+        #nine-prefix, 
+        #ten-prefix,
+        #eleven-prefix,
+        #twelve-prefix {display: block;}
+    
+    }
+        
+    @include breakpoint(extra-large) {
+        #one-prefix {@include column(1, $prefix: 15);}
+        #two-prefix {@include column(2, $prefix: 14);}
+        #three-prefix {@include column(3, $prefix: 13);}
+        #four-prefix {@include column(4, $prefix: 12);}
+        #five-prefix {@include column(5, $prefix: 11);}
+        #six-prefix {@include column(6, $prefix: 10);}
+        #seven-prefix {@include column(7, $prefix: 9);}
+        #eight-prefix {@include column(8, $prefix: 8);}
+        #nine-prefix {@include column(9, $prefix: 7);}
+        #ten-prefix {@include column(10, $prefix: 6);}
+        #eleven-prefix {@include column(11, $prefix: 5);}
+        #twelve-prefix {@include column(12, $prefix: 4);}
+        #thirteen-prefix {@include column(13, $prefix: 3);}
+        #fourteen-prefix {@include column(14, $prefix: 2);}
+        #fifteen-prefix {@include column(15, $prefix: 1);}
+        #sixteen-prefix {@include column(16, $prefix: 0);}
+        
+        #thirteen-prefix, 
+        #fourteen-prefix,
+        #fifteen-prefix,
+        #sixteen-prefix {display: block;}
+    }
+}
+
+#example-suffix-container {
+    margin: 0;
+    @include grid-container;
+    
+    div {
+        display: none;
+        box-sizing: border-box;
+        margin-bottom: $line-height * 1em;
+        padding: $line-height * .25em $line-height * .5em;
+        background: $primary-color;
+    }
+        
+    #one-suffix {@include column(1, $suffix: 3);}
+    #two-suffix {@include column(2, $suffix: 2);}
+    #three-suffix {@include column(3, $suffix: 1);}
+    #four-suffix {@include column(4, $suffix: 0);}
+    
+    #one-suffix, 
+    #two-suffix,
+    #three-suffix,
+    #four-suffix {display: block;}
+        
+    @include breakpoint(small) {
+        #one-suffix {@include column(1, $suffix: 5);}
+        #two-suffix {@include column(2, $suffix: 4);}
+        #three-suffix {@include column(3, $suffix: 3);}
+        #four-suffix {@include column(4, $suffix: 2);}
+        #five-suffix {@include column(5, $suffix: 1);}
+        #six-suffix {@include column(6, $suffix: 0);}
+        
+        #five-suffix, 
+        #six-suffix {display: block;}
+    
+    }
+
+    @include breakpoint(medium) {
+        #one-suffix {@include column(1, $suffix: 7);}
+        #two-suffix {@include column(2, $suffix: 6);}
+        #three-suffix {@include column(3, $suffix: 5);}
+        #four-suffix {@include column(4, $suffix: 4);}
+        #five-suffix {@include column(5, $suffix: 3);}
+        #six-suffix {@include column(6, $suffix: 2);}
+        #seven-suffix {@include column(7, $suffix: 1);}
+        #eight-suffix {@include column(8, $suffix: 0);}
+        
+        #seven-suffix, 
+        #eight-suffix {display: block;}
+    
+    }
+     
+    @include breakpoint(large) {       
+        #one-suffix {@include column(1, $suffix: 11);}
+        #two-suffix {@include column(2, $suffix: 10);}
+        #three-suffix {@include column(3, $suffix: 9);}
+        #four-suffix {@include column(4, $suffix: 8);}
+        #five-suffix {@include column(5, $suffix: 7);}
+        #six-suffix {@include column(6, $suffix: 6);}
+        #seven-suffix {@include column(7, $suffix: 5);}
+        #eight-suffix {@include column(8, $suffix: 4);}
+        #nine-suffix {@include column(9, $suffix: 3);}
+        #ten-suffix {@include column(10, $suffix: 2);}
+        #eleven-suffix {@include column(11, $suffix: 1);}
+        #twelve-suffix {@include column(12, $suffix: 0);}
+        
+        #nine-suffix, 
+        #ten-suffix,
+        #eleven-suffix,
+        #twelve-suffix {display: block;}
+    
+    }
+        
+    @include breakpoint(extra-large) {
+        #one-suffix {@include column(1, $suffix: 15);}
+        #two-suffix {@include column(2, $suffix: 14);}
+        #three-suffix {@include column(3, $suffix: 13);}
+        #four-suffix {@include column(4, $suffix: 12);}
+        #five-suffix {@include column(5, $suffix: 11);}
+        #six-suffix {@include column(6, $suffix: 10);}
+        #seven-suffix {@include column(7, $suffix: 9);}
+        #eight-suffix {@include column(8, $suffix: 8);}
+        #nine-suffix {@include column(9, $suffix: 7);}
+        #ten-suffix {@include column(10, $suffix: 6);}
+        #eleven-suffix {@include column(11, $suffix: 5);}
+        #twelve-suffix {@include column(12, $suffix: 4);}
+        #thirteen-suffix {@include column(13, $suffix: 3);}
+        #fourteen-suffix {@include column(14, $suffix: 2);}
+        #fifteen-suffix {@include column(15, $suffix: 1);}
+        #sixteen-suffix {@include column(16, $suffix: 0);}
+        
+        #thirteen-suffix, 
+        #fourteen-suffix,
+        #fifteen-suffix,
+        #sixteen-suffix {display: block;}
+    }
+}
+
+#example-auto-container-1,
+#example-auto-container-2,
+#example-auto-container-3,
+#example-auto-container-4,
+#example-auto-container-5 {
+    margin: 0;
+    @include grid-container;
+    
+    div {
+        box-sizing: border-box;
+        margin-bottom: $line-height * 1em;
+        padding: $line-height * .25em $line-height * .5em;
+        background: $primary-color;
+        @include column(auto);
+    }
+}
+
+#example-nested-container-1 {
+    margin: 0;
+    @include grid-container;
+    
+    figure {
+        margin: 0;
+        @include grid-container; 
+        
+        div {
+            margin-bottom: 0;
+        }
+    }
+    
+    div {
+        box-sizing: border-box;
+        margin-bottom: $line-height * 1em;
+        padding: $line-height * .5em;
+        line-height: .5;
+        background: rgba($primary-color, 0.3);
+        @include column(auto);
+    }
+}
