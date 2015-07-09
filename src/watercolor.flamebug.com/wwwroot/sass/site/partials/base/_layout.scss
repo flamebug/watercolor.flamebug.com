@@ -92,7 +92,7 @@ body,
 //
 
 #main {
-	@include clear-children;
+	//@include clear-children;
 	
 	section {
 		padding: $line-height * 2em 0;
@@ -113,5 +113,5 @@ body,
 	padding: $line-height * 1em 0;
 	background-color: #f2f3f5;
 	text-align: center;
-	@include clear-children;
+	//@include clear-children;
 }

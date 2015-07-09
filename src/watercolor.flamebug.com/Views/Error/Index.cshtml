@@ -1,9 +1,11 @@
-﻿@{
+﻿@model watercolor.flamebug.com.Models.Error
+
+@{
     Layout = "_Error";
-    ViewBag.Title = "Kablammo!!";
+    ViewBag.Title = Model.Status;
 }
 
 <h1>
-    Kablammo!!
-    <small>The server exploded, sorry!</small>
+	@Model.Status
+	<small>@Model.Description</small>
 </h1>

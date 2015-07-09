@@ -5,16 +5,16 @@ using watercolor.flamebug.com.Models;
 
 namespace watercolor.flamebug.com.Controllers
 {
+    [Route("Error")]
     public class ErrorController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        [Route("{id?}")]
+        public IActionResult Index(int id = 0)
+        {         
+            if (id == 0)
+                return View(new Error { Status = "Kablammo!!!", Description = "We're sorry, we'll try harder next time!" });
 
-        public IActionResult Status(int id)
-        {
-            return View(new Error { Status = id.ToString(), Description = ReasonPhrases.GetReasonPhrase(id) });
+            return View(new Error { Status = id.ToString() + " - " + ReasonPhrases.GetReasonPhrase(id), Description = "We're sorry, we'll try harder next time!" });
         }
     }
 }

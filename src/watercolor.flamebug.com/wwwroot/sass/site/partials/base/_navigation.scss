@@ -18,7 +18,7 @@
 	transition: all 0.25s;
 	z-index: 999;
 
-	@include clear-children();
+	//@include clear-children;
 
 	&:hover {
 		box-shadow: 0 1px 12px rgba(0,0,0,0.10);

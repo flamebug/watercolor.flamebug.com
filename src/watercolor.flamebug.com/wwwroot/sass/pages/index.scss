@@ -23,28 +23,16 @@ h2 > a {
 //
 
 #introduction {
-    
-    header {
-        @include column(max);
-    }
-    
+        
     ul {
         list-style: none;
         margin: 0;
         padding: 0;
-        @include clear-children;
-        
-        li {
-            box-sizing: border-box;
+        @include grid;
+
+        li {       
             @include column(max);
-            
-            @include breakpoint(medium) {
-                float: left;
-                width: 33.3%;
-                margin: $line-height * 1em 0;
-                padding: $gutter-width;
-            }
-            
+                     
             h3 {
                 margin-bottom: 0;
             }
@@ -52,6 +40,14 @@ h2 > a {
             p {
                 margin-top: 0;
             }
+            
+            @include breakpoint(medium) {
+                @include column-cols(auto);
+            }
+        }
+                
+        @include breakpoint(medium) {
+            @include grid-wrap(no-wrap);
         }
     }
 }
@@ -64,44 +60,39 @@ h2 > a {
     background-color: #2f383d;
     color: #fff;
     
-    header {
-        @include column(max);
-    }
-    
     ul {
         list-style: none;
         margin: $line-height * 1em 0;
         padding: 0;
-        @include clear-children;
-        
+        @include grid();
+
         li {
             position: relative;
-            box-sizing: border-box;
-            float: left;
-            width: 50%;
-            height: 10em;
-            padding: $gutter-width;
-            margin: $line-height * .5em 0;
+            margin-top: $line-height * 1em;
+            @include column(2, $align: center);
             
             img {
-                position: absolute;
-                top: 50%;
-                left: 50%;
                 width: 6em;
                 opacity: .8;
-                transform: translate(-50%,-50%);
+            }
+ 
+            @include breakpoint(small) {
+                @include column-cols(3);
+            }
+                       
+            @include breakpoint(medium) {
+                @include column-cols(auto);
             }
             
-            @include breakpoint(small) {
+            @include breakpoint(large) {
                 img {
                     width: 7em;
                 }
             }
-            
-            @include breakpoint(large) {
-                width: 25%;
-                margin: $line-height * 1em 0;
-            }
+        }
+        
+        @include breakpoint(medium) {
+            @include grid-wrap(no-wrap);
         }
     }
     

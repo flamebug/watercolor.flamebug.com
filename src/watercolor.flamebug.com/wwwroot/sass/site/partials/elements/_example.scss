@@ -20,7 +20,7 @@
 	background-size: 100% $base-font-size * $line-height * 16px;
 	background-image: linear-gradient(to bottom, #fbfbfb 1px, transparent 1px);
 	
-	@include clear-children;
+	//@include clear-children;
 	
 	&:before {
 		content: "Example";

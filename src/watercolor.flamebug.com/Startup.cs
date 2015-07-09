@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Hosting;
-using Microsoft.Framework.ConfigurationModel;
+using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
+using Microsoft.Framework.Runtime;
 
 namespace watercolor.flamebug.com
 {
@@ -18,11 +19,12 @@ namespace watercolor.flamebug.com
         //          Register environment variables
         //
 
-        public Startup(IHostingEnvironment env)
-        {
-            Configuration = new Configuration()
+        public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
+        {               
+            Configuration = new ConfigurationBuilder(appEnv.ApplicationBasePath)
                 .AddJsonFile("config.json")
-                .AddEnvironmentVariables();
+                .AddEnvironmentVariables()
+                .Build();
         }
 
         //
@@ -34,7 +36,7 @@ namespace watercolor.flamebug.com
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<AppSettings>(Configuration.GetSubKey("AppSettings"));
+            services.Configure<AppSettings>(Configuration.GetConfigurationSection("AppSettings"));
 
             services.AddMvc();
         }
@@ -63,7 +65,7 @@ namespace watercolor.flamebug.com
                 app.UseErrorHandler("/error");
             }
 
-            app.UseStatusCodePagesWithReExecute("/error/status/{0}");
+            app.UseStatusCodePagesWithReExecute("/error/{0}");
 
             app.UseStaticFiles();
 
