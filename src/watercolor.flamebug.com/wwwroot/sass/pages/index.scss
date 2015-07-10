@@ -1,23 +1,6 @@
 ﻿@import "site/settings";
 @import "watercolor/modules/grid";
-
-//
-// Header Links
-//
-
-h2 > a {
-	color: inherit;
-}
-
-//
-// Buttons
-//
-
-#header .button {
-    font-size: 1.125em;
-    font-weight: bold;
-}
-
+   
 //
 // Introduction
 //
@@ -28,10 +11,10 @@ h2 > a {
         list-style: none;
         margin: 0;
         padding: 0;
-        @include grid;
+        @include grid($type: column, $wrap: no-wrap);
 
         li {       
-            @include column(max);
+            @include column;
                      
             h3 {
                 margin-bottom: 0;
@@ -40,14 +23,10 @@ h2 > a {
             p {
                 margin-top: 0;
             }
-            
-            @include breakpoint(medium) {
-                @include column-cols(auto);
-            }
         }
                 
         @include breakpoint(medium) {
-            @include grid-wrap(no-wrap);
+            @include grid-type(row);
         }
     }
 }
@@ -64,52 +43,29 @@ h2 > a {
         list-style: none;
         margin: $line-height * 1em 0;
         padding: 0;
-        @include grid();
+        @include grid($align-items: center);
 
         li {
             position: relative;
             margin-top: $line-height * 1em;
-            @include column(2, $align: center);
+            @include column;
             
             img {
                 width: 6em;
                 opacity: .8;
-            }
- 
-            @include breakpoint(small) {
-                @include column-cols(3);
-            }
-                       
-            @include breakpoint(medium) {
-                @include column-cols(auto);
-            }
-            
-            @include breakpoint(large) {
-                img {
+                
+                @include breakpoint(small) {
+                    width: 5em;
+                }
+                
+                @include breakpoint(medium) {
+                    width: 6em;
+                }
+                
+                @include breakpoint(large) {
                     width: 7em;
                 }
             }
         }
-        
-        @include breakpoint(medium) {
-            @include grid-wrap(no-wrap);
-        }
-    }
-    
-    .button {
-        font-size: 1.125em;
-        font-weight: bold;
-        background-color: $primary-color;
-    }
-}
-
-//
-// Contribute
-//
-
-#contribute {
-    .button {
-        font-size: 1.125em;
-        font-weight: bold;
     }
 }

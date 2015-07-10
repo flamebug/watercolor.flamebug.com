@@ -11,11 +11,21 @@
     border: none;
     border-radius: 0;
     box-shadow: none;
+	font-size: 1.125em;
+    font-weight: 500;
     text-shadow: none;
 	transition: all, .1s;
 
 	&:hover {
-		background: darken($secondary-color, 10%);
+		background: desaturate($secondary-color, 15%);
         border: none;
 	}
+	
+    &.alternate {
+        background-color: $primary-color;
+        
+        &:hover {
+            background-color: desaturate($primary-color, 15%);
+        }
+    }
 }

@@ -20,36 +20,18 @@
 	background-size: 100% $base-font-size * $line-height * 16px;
 	background-image: linear-gradient(to bottom, #fbfbfb 1px, transparent 1px);
 	
-	//@include clear-children;
-	
-	&:before {
-		content: "Example";
-	}
-	
-	~ pre {
-		position: relative;
-		margin-top: 0;
-        margin-bottom: 0;
-		padding-top: $line-height * 1em;
-		border-top: 0;
-		
-		&:last-child {
-			margin-bottom: $line-height * 1em;
-		}
-	}
+	@include clear-children;
 }
 
-pre.language-markup:before {
-	content: "HTML";
-}
-
-pre.language-css:before {
-	content: "CSS";
+pre[class*="language-"] {
+	position: relative;
+	margin-top: $line-height * 1em;
+	margin-bottom: 0;
+	padding-top: $line-height * 1em;
 }
 
 .example:before,
-pre.language-markup:before,
-pre.language-css:before {
+pre[class*="language-"]:before {
 	position: absolute;
 	text-transform: uppercase;
 	text-shadow: none;
@@ -61,4 +43,23 @@ pre.language-css:before {
 	color: #cacaca;
 	font-size: 12px;
 	font-family: Helvetica, Arial, sans-serif;
+}
+
+.example ~ pre[class*="language-"],
+pre[class*="language-"] ~ pre[class*="language-"]
+ {
+	margin-top: 0;
+	border-top: 0;
+}
+
+.example:before {
+	content: "HTML";
+}
+
+pre.language-markup:before {
+	content: "HTML";
+}
+
+pre.language-css:before {
+	content: "SCSS";
 }

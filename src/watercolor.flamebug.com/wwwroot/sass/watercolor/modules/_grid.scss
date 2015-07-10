@@ -216,26 +216,27 @@
 			margin-right: $gutter-width * -0.5;
 			margin-left: $gutter-width * -0.5;
 		}
-		@else if $type == column {
-			margin-top: $gutter-width * -0.5;
-			margin-bottom: $gutter-width * -0.5;
-		}
+		///TODO: NOT SURE IF THIS SHOULD BE A THING OR NOT, PERHAPS THIS OPTION ISNT RELEVANT TO COLUMN GRIDS SINCE THERE IS NO TOP/BOTTOM MARGIN ON THE CONTAINER
+		//@else if $type == column {
+		//	margin-top: $gutter-width * -0.5;
+		//	margin-bottom: $gutter-width * -0.5;
+		//}
 	}
 }
 
 //
 // Set the number of columns an element spans on the grid and other behaviors such as prefix, suffix, grow, shrink, align, and order
 //
-// $cols: the number of columns the element should span [values: #, auto, max] [default: max]
+// $cols: the number of columns the element should span [values: #, auto, max] [default: auto]
 // $prefix: the number of columns that should prefix the element [values: #] [default: 0]
 // $suffix: the number of columns that should suffix the element [values: #] [default: 0]
-// $grow: boolean or scaling factor whether the column should grow or not or by what factor [values: true, false, #] [default: true]
-// $shrink: boolean or scaling factor whether the column should shrink or not or by what factor [values: true, false, #] [default: true]
+// $grow: boolean or scaling factor whether the column should grow or not or by what factor [values: true, false, #] [default: false]
+// $shrink: boolean or scaling factor whether the column should shrink or not or by what factor [values: true, false, #] [default: false]
 // $align: alignment method for the column on the cross axis (basically vertical align) [values: auto, start, end, center, baseline, stretch] [default: auto]
 // $order: numeric order to apply to the column order [values: #] [default: 0]
 //
 
-@mixin column($cols: max, $prefix: 0, $suffix: 0, $grow: true, $shrink: true, $align: auto, $order: 0) {
+@mixin column($cols: auto, $prefix: 0, $suffix: 0, $grow: false, $shrink: false, $align: auto, $order: 0) {
 	
 	//
 	// force grow and shrink to true if a scaling number isnt provided ($cols: max/auto does not allow grow/shrink == 0/false)
@@ -264,10 +265,10 @@
 //
 // Set the number of columns an element spans on the grid
 //
-// $cols: the number of columns the element should span [values: #, auto, max] [default: max]
+// $cols: the number of columns the element should span [values: #, auto, max] [default: auto]
 //
 
-@mixin column-cols($cols: max) {
+@mixin column-cols($cols: auto) {
 	
 	@if $cols == max {
 		flex-basis: 100%;
