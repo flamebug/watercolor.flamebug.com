@@ -162,8 +162,36 @@ figure {
 #wrap-example figure {
     @include grid;
     
+    &.justify {
+		@include grid($justify: between);
+	}
+    
     div {
         @include column(2);
+    }
+}
+
+#grow-and-shrink-example {
+    figure.grow {
+        @include grid;
+        
+        div {
+    		@include column(2, $grow: true);
+    	}
+    }
+    figure.shrink {
+        @include grid($wrap: no-wrap);
+        
+        div {
+    		@include column(2, $shrink: true);
+    	}
+    }
+    figure.grow-and-shrink {
+        @include grid($wrap: no-wrap);
+        
+        div {
+    		@include column(2, $shrink: true, $grow: true);
+    	}
     }
 }
 

@@ -199,8 +199,13 @@
     <div class="container">
 
 		<header>
-			<h3>Automatic-Width Columns</h3>
+			<h3>Automatic Width Columns</h3>
 		</header>
+		
+		<p>
+			Automatic width columns are probably the most common need and they are super simple.
+			Just add <code>@@include grid</code> to a container element and add <code>@@include column</code> to the child elements and you are all set.
+		</p>
 			
 		<figure>
 			
@@ -232,6 +237,26 @@
 			
 		</figure>
 		
+		<pre><code class="language-markup">
+&lt;figure&gt;
+	&lt;div&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;div&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;div&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;div&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;
+&lt;/figure&gt;</code></pre>
+		
 		<pre><code class="language-css">
 figure {
 	@@include grid;
@@ -250,9 +275,15 @@ figure {
     <div class="container">
 
 		<header>
-			<h3>Fixed-Width Columns</h3>
+			<h3>Fixed Width Columns</h3>
 		</header>
-
+		
+		<p>
+			Fixed width columns are nearly as easy as automatic width columns and allow situations where you want to fix a column to a particular size.
+			Just add <code>@@include grid</code> to a container element and add <code>@@include column(x)</code>, where <code>x</code> is the number of columns, to the child elements and you are all set.
+			Fixed width columns work perfectly along side automatic width columns, just set one column as fixed and the other as automatic and the latter will fill the remaining space on the row.
+		</p>
+			
 		<figure>
 
 			<div class="one">&nbsp;</div>
@@ -280,6 +311,24 @@ figure {
 			<div>&nbsp;</div>
 			
 		</figure>
+		
+		<pre><code class="language-markup">
+&lt;figure&gt;
+	&lt;div class="one"&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;div class="two"&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;div class="three"&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;div class="four"&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;
+&lt;/figure&gt;</code></pre>
 		
 		<pre><code class="language-css">
 figure {
@@ -323,6 +372,11 @@ figure {
 			<h3>Column Wrapping</h3>
 		</header>
 
+		<p>
+			Column wrapping comes free without any extra code. If you have a number of elements such as a list of images that you want to wrap there is nothing extra you need to do.
+			Just add <code>@@include grid</code> to a container element and add <code>@@include column(x)</code>, where <code>x</code> is the number of columns, to the child elements and you are all set.
+		</p>
+			
 		<figure>
 
 			<div>&nbsp;</div>
@@ -336,10 +390,43 @@ figure {
 			
 		</figure>
 
+		<p>
+			If you want the last line of elements to be aligned differently check out the <code>$justify</code> parameter on the <code>grid</code> mixin.
+			You can use values: <code>start</code>, <code>end</code>, <code>center</code>, <code>between</code>, and <code>around</code> to make the last line of items look exactly how you want.
+		</p>
+			
+		<figure class="justify">
+
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			
+		</figure>
+		
+		<pre><code class="language-markup">
+&lt;figure&gt;
+	&lt;div&gt;&lt;/div&gt;
+    &hellip;
+	&lt;div&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure class="justify"&gt;
+	&lt;div&gt;&lt;/div&gt;
+    &hellip;
+	&lt;div&gt;&lt;/div&gt;
+&lt;/figure&gt;</code></pre>
+
 		<pre><code class="language-css">
 figure {
 	@@include grid;
 	
+	&.justify {
+		@@include grid($justify: between);
+	}
 	div {
 		@@include column(2);
 	}
@@ -349,7 +436,103 @@ figure {
 
 </section>
 
+<section id="grow-and-shrink-example">
 
+    <div class="container">
+
+		<header>
+			<h3>Growing and Shrinking Columns</h3>
+		</header>
+
+		<p>
+			There may be some cases when you don't have enough elements to fit the entire line and want them to grow to fit the empty space.
+			In this case you can add the <code>$grow: true</code> parameter to your <code>column</code> and the browser will take care of the rest.
+			Note that if there isn't enough space on the line the elements will wrap (and wrapped items will expand as needed to fill the whole line), but if there is excess space the elements will expand to fill it.
+		</p>
+			
+		<figure class="grow">
+
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			
+		</figure>
+		
+		<p>
+			Other cases may pop up when you have more elements than would fit on a line, but simply want them to shrink to fit, rather than wrap.
+			In this case you can add the <code>$wrap: false</code> parameter to your <code>grid</code> and <code>$shrink: true</code> to your <code>column</code> and let the browser do the heavy lifting.
+			Note that if you don't have enough elements to fit the entire row the elements won't expand by default.
+		</p>
+			
+		<figure class="shrink">
+
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+						
+		</figure>
+				
+		<p>
+			One final case could be where at some screen sizes you have too many elements to fit, but at others the elements are too small.  
+			In this case you can combine the previous two parameters to have your elements both shrink and grow as needed.
+			Note that behind the scenes the automatic width sizing included on the basic <code>@@include column</code> sets both of these parameters to true, so it is always cleaner to avoid setting both in code and just let the defaults do the job.
+		</p>
+			
+		<figure class="grow-and-shrink">
+
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			
+		</figure>
+		
+		<pre><code class="language-markup">
+&lt;figure class="grow"&gt;
+	&lt;div&gt;&lt;/div&gt;
+    &hellip;
+	&lt;div&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure class="shrink"&gt;
+	&lt;div&gt;&lt;/div&gt;
+    &hellip;
+	&lt;div&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure class="grow-and-shrink"&gt;
+	&lt;div&gt;&lt;/div&gt;
+    &hellip;
+	&lt;div&gt;&lt;/div&gt;
+&lt;/figure&gt;</code></pre>
+
+		<pre><code class="language-css">
+figure.grow {
+    @@include grid;
+    
+    div {
+		@@include column(2, $grow: true);
+	}
+}
+figure.shrink {
+    @@include grid($wrap: no-wrap);
+    
+    div {
+		@@include column(2, $shrink: true);
+	}
+}
+figure.grow-and-shrink {
+    @@include grid($wrap: no-wrap);
+    
+    div {
+		/* for example purposes only, better to use '@@include column' parameter-less */
+		@@include column(2, $shrink: true, $grow: true);
+	}
+}</code></pre>
+
+    </div>
+
+</section>
 
 <section id="nested-example">
 
@@ -359,6 +542,12 @@ figure {
 			<h3>Nested Columns</h3>
 		</header>
 	
+		<p>
+			Nested columns are just a matter of nesting a grid element inside of any column element.  
+			The nested grid will automatically contain the same number of columns as the parent element.  
+			Any grid or column parameters can be applied to the nested grid and will function just the same as a normal grid.
+		</p>
+		
 		<figure>
 			
 			<div>
@@ -391,15 +580,30 @@ figure {
 			</div>
 			
 		</figure>
-
+		
+		<p>
+			Note: If the parent column of the nested grid has any padding that will cause the child grid to not contain the same number of columns.
+			In that case it is usually safest to define the nested grid columns as automatic width columns to save yourself headaches.
+		</p>
+		
 		<pre><code class="language-markup">
-figure {
-	@@include grid;
-	
-	div {
-		@@include column;
-	}
-}</code></pre>
+&lt;figure&gt;
+	&lt;div&gt;
+		&lt;figure&gt;
+			&lt;div&gt;
+				&lt;figure&gt;
+					&lt;div&gt;&lt;/div&gt;
+					&lt;div&gt;&lt;/div&gt;
+				&lt;/figure&gt;				
+			&lt;/div&gt;
+			&lt;div&gt;
+				&lt;figure&gt;
+					&lt;div&gt;&lt;/div&gt;
+				&lt;/figure&gt;
+			&lt;/div&gt;
+		&lt;/figure&gt;
+	&lt;/div&gt;
+&lt;/figure&gt;</code></pre>
 		
 		<pre><code class="language-css">
 figure {
