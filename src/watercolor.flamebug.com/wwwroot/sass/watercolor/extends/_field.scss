@@ -1,18 +1,18 @@
-//
-// Modules
-//
+////
+///
+/// Field placeholders
+///
+/// @group field
+/// @author Clint Kolodziej
+///
+////
 
 @import "../modules/grid";
-
-//
-// Defaults
-//
-
 @import "../defaults/field";
 
-//
-// Field
-//
+///
+/// Field default
+///
 
 %field {
 	position: relative;
@@ -27,7 +27,7 @@
 }
 
 //
-// Block Field
+// Field shown in block display
 //
 
 %field-block {
@@ -44,7 +44,7 @@
 }
 
 //
-// Inline Field
+// Field shown in inline display
 //
 
 %field-inline {
@@ -65,7 +65,7 @@
 }
 
 //
-// Aligned Field
+// Field shown in aligned display
 //
 
 %field-align {

@@ -62,10 +62,15 @@
 
             <div class="container">
                 
-                @Html.Partial("_Header")
-
-                @RenderSection("Header", required: false)
-            
+                @if (IsSectionDefined("Header"))
+                {
+                    @RenderSection("Header")
+                }
+                else
+                {
+                    @Html.Partial("_Header")
+                }
+                
             </div>
             
         </header>

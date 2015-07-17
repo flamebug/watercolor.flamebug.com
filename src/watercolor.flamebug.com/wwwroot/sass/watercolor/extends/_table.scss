@@ -1,18 +1,18 @@
-//
-// Modules
-//
+////
+///
+/// Table placeholders
+///
+/// @group table
+/// @author Clint Kolodziej
+///
+////
 
 @import "../modules/grid";
-
-//
-// Defaults
-//
-
 @import "../defaults/table";
 
-//
-// Table
-//
+///
+/// Table with padding
+///
 
 %table-padded {
 	th,
@@ -23,6 +23,10 @@
 		padding-right: $line-height * $table-padded-padding-horizontal;
 	}
 }
+
+///
+/// Table with borders
+///
 
 %table-bordered {
 	margin-top: $line-height - em(1) * 1em;			//subtract 1px border
@@ -35,6 +39,10 @@
 		border-left: 1px solid $border-color;
 	}
 }
+
+///
+/// Table with even/odd striping
+///
 
 %table-striped {
 	tbody > tr:nth-child(odd) > td,

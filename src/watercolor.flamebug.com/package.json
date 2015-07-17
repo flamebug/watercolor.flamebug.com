@@ -11,6 +11,8 @@
     "gulp-ruby-sass": "^1.0.1",
     "gulp-sourcemaps": "^1.5.1",
     "gulp-uglify": "^1.2.0",
-    "rimraf": "2.2.8"
+    "rimraf": "2.2.8",
+    "sassdoc": "^2.1.15",
+    "sassdoc-theme-neat": "0.0.2"
   }
 }

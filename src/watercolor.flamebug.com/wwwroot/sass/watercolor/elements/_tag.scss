@@ -1,12 +1,24 @@
-//
-// Extends
-//
+////
+///
+/// Tag element
+///
+/// @group tag
+/// @author Clint Kolodziej
+///
+////
 
 @import "../extends/tag";
 
-//
-// Tag
-//
+///
+/// Alert element
+///
+/// @parameter {string} $options - Define an element as a tag with specified options. Options: `primary`, `positive`, `warning`, `negative`
+///
+/// @example scss - Usage
+///		.tag {
+///			@include tag(positive);
+///		}
+///
 
 @mixin tag($options...) {
     @extend %tag;

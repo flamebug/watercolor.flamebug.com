@@ -1,11 +1,16 @@
-//
-// Defaults
-//
+////
+///
+/// Label placeholders
+///
+/// @group label
+/// @author Clint Kolodziej
+///
+////
 
 @import "../defaults/label";
 
 //
-// Label
+// Label default
 //
 
 %label {
@@ -24,20 +29,36 @@
 	}
 }
 
+///
+/// Label with primary coloring
+///
+
 %label-primary {
 	background-color: $label-primary-background-color;
     color: $label-primary-color;
 }
+
+///
+/// Label with positive coloring
+///
 
 %label-positive {
 	background-color: $label-positive-background-color;
     color: $label-positive-color;
 }
 
+///
+/// Label with warning coloring
+///
+
 %label-warning {
 	background-color: $label-warning-background-color;
     color: $label-warning-color;
 }
+
+///
+/// Label with negative coloring
+///
 
 %label-negative {
 	background-color: $label-negative-background-color;

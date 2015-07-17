@@ -1,12 +1,24 @@
-//
-// Extends
-//
+////
+///
+/// Button element
+///
+/// @group button
+/// @author Clint Kolodziej
+///
+////
 
 @import "../extends/button";
 
-//
-// Button
-//
+///
+/// Button element
+///
+/// @parameter {string} $options - Define an element as a button with specified options. Options: `hero`, `large`, `small`, `link`, `primary`, `positive`, `warning`, `negative`
+///
+/// @example scss - Usage
+///		.button {
+///			@include button(large);
+///		}
+///
 
 @mixin button($options...) {
     @extend %button;

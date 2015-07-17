@@ -1,17 +1,17 @@
-//
-// Modules
-//
+////
+///
+/// Hint placeholders
+///
+/// @group hint
+/// @author Clint Kolodziej
+///
+////
 
 @import "../modules/grid";
-
-//
-// Defaults
-//
-
 @import "../defaults/hint";
 
 //
-// Hint
+// Hint default
 //
 
 %hint {
@@ -67,7 +67,7 @@
 }
 
 //
-// Hint Block
+// Hint in block display
 //
 
 %hint-block {
@@ -94,7 +94,7 @@
 }
 
 //
-// Hint Inline
+// Hint in inline display
 //
 
 %hint-inline {
@@ -121,7 +121,7 @@
 }
 
 //
-// Hint Aligned
+// Hint in aligned display
 //
 
 %hint-align {

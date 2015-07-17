@@ -1,18 +1,18 @@
-//
-// Modules
-//
+////
+///
+/// Button placeholders
+///
+/// @group button
+/// @author Clint Kolodziej
+///
+////
 
 @import "../modules/grid";
-
-//
-// Defaults
-//
-
 @import "../defaults/button";
 
-//
-// Button
-//
+///
+/// Button default
+///
 
 %button {
 	display: inline-block;
@@ -73,23 +73,35 @@
 	}
 }
 
-//
-// button sizes
-//
+///
+/// Button hero sized
+///
 
 %button-hero {
 	font-size: 1.5em;
 	padding: 0.375em 1.5em;
 }
 
+///
+/// Button large sized
+///
+
 %button-large {
 	font-size: 1em;
 	padding: 0.375em 1.5em;
 }
 
+///
+/// Button small sized
+///
+
 %button-small {
 	font-size: .75em;
 }
+
+///
+/// Button displayed as a link
+///
 
 %button-link {
 	padding-left: 0;
@@ -112,9 +124,9 @@
 	}
 }
 
-//
-// button styles
-//
+///
+/// Button with primary coloring
+///
 
 %button-primary {
 	color: $button-primary-color;
@@ -129,6 +141,10 @@
 	}
 }
 
+///
+/// Button with positive coloring
+///
+
 %button-positive {
 	color: $button-positive-color;
 	text-shadow: $button-positive-text-shadow;
@@ -142,6 +158,10 @@
 	}
 }
 
+///
+/// Button with warning coloring
+///
+
 %button-warning {
 	color: $button-warning-color;
 	text-shadow: $button-warning-text-shadow;
@@ -154,6 +174,10 @@
 		background: $button-warning-hover-background;
 	}
 }
+
+///
+/// Button with negative coloring
+///
 
 %button-negative {
 	color: $button-negative-color;

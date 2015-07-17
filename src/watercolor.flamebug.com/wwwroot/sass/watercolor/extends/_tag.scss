@@ -1,11 +1,16 @@
-//
-// Defaults
-//
+////
+///
+/// Tag placeholders
+///
+/// @group tag
+/// @author Clint Kolodziej
+///
+////
 
 @import "../defaults/tag";
 
 //
-// Tag
+// Tag default
 //
 
 %tag {
@@ -24,20 +29,36 @@
 	}
 }
 
+///
+/// Tag with primary coloring
+///
+
 %tag-primary {
 	background-color: $tag-primary-background-color;
     color: $tag-primary-color;
 }
+
+///
+/// Tag with positive coloring
+///
 
 %tag-positive {
 	background-color: $tag-positive-background-color;
     color: $tag-positive-color;
 }
 
+///
+/// Tag with warning coloring
+///
+
 %tag-warning {
 	background-color: $tag-warning-background-color;
     color: $tag-warning-color;
 }
+
+///
+/// Tag with negative coloring
+///
 
 %tag-negative {
 	background-color: $tag-negative-background-color;

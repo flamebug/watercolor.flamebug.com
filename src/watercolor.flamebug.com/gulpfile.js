@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     rimraf = require("rimraf"),
     rename = require('gulp-rename'),
     sass = require('gulp-ruby-sass'),
+    sassdoc = require('sassdoc'),
     sourcemaps = require('gulp-sourcemaps'),
     prefix = require('gulp-autoprefixer'),
     minify = require('gulp-minify-css'),
@@ -24,18 +25,20 @@ var paths = {
 
 };
 
-var sassOpts = {
+var options = {
 
-    parameters: {
-        sourcemap: true,
-        style: "expanded",
-        loadPath: [
-            paths.lib,
-            paths.sass
-        ]
-    },
-    error: function (err) {
-        console.error('Error!', err.message);
+    sass: {
+        parameters: {
+            sourcemap: true,
+            style: "expanded",
+            loadPath: [
+                paths.lib,
+                paths.sass
+            ]
+        },
+        error: function (err) {
+            console.error('Error!', err.message);
+        }
     }
 
 };
@@ -46,13 +49,24 @@ var sassOpts = {
 
 gulp.task('styles', function () {
 
-    return sass(paths.sass, sassOpts.parameters)
-        .on('error', sassOpts.error)
+    return sass(paths.sass, options.sass.parameters)
+        .on('error', options.sass.error)
         .pipe(prefix())
         //.pipe(minify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.css))
 
+});
+
+//
+// Generate Sass Documentation
+//
+
+gulp.task('sassdoc', function () {
+    
+  return gulp.src(paths.sass + "**/*.scss")
+    .pipe(sassdoc());
+    
 });
 
 //
@@ -149,6 +163,12 @@ gulp.task('build', ['styles', 'bump'], function () {});
 //
 
 gulp.task('release', ['styles', 'bump-minor'], function () {});
+
+//
+// Prepare
+//
+
+gulp.task('prepare', ['copy', 'styles'], function () {});
 
 //
 // Default

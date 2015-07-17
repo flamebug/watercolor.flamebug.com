@@ -14,8 +14,10 @@
 
 	<div class="container">
 
-		<h2>Layout</h2>
-
+		<header>
+			<h2>Layout</h2>
+		</header>
+		
 		<p>
 			Watercolor is based on an adaptive grid that allows a content-first approach to website design on a variety of screen sizes and devices.
 			Unlike traditional responsive grids, which have a fixed number of columns, adaptive grids allow columns to be added as additional
@@ -73,11 +75,16 @@
 
     <div class="container">
 
-		<h3>Grid Settings</h3>
+		<header>
+			<h3>Grid Settings</h3>
+		</header>
+		
+		<p>
+			Default column and gutter sizes are defined in <code>defaults/_grid.scss</code> and are the basis for the structural grid.  
+			By default one column, including the gutter, is <code>5rem</code> wide, or 80px at the default base font size.
+		</p>
 
-		<p>Default column and gutter sizes are defined in <a href="/overview#global">global.scss</a> and are the basis for the structural grid.  By default one column, including the gutter, is <code>5rem</code> wide, or 80px at the default 100% body font size.</p>
-
-		<table class="bordered">
+		<table>
 
 			<thead>
 				<tr>
@@ -95,8 +102,11 @@
 					<td><code>$gutter-width</code></td>
 					<td>This defines the width of the gutter. Usually it looks best if the gutter is about half the width of the column. Default value: <code>1.5rem</code>.</td>
 				</tr>
+				<tr>
+					<td><code>$breakpoints</code></td>
+					<td>This defines the breakpoints that the page container will resize at. By default the following sizes are defined: <code>default</code>, <code>small</code>, <code>medium</code>, <code>large</code>, <code>extra-large</code>. See below for more information on the container breakpoints.</td>
+				</tr>
 			</tbody>
-
 		</table>
 
     </div>
@@ -107,11 +117,17 @@
 
     <div class="container">
 
-		<h3>Grid Mixins</h3>
+		<header>
+			<h3>Grid Mixins</h3>
+		</header>
+		
+		<p>
+			The grid @@mixins are defined in <code>modules/_grid.scss</code> and provide all of the functionality you should need for displaying your content in a standardized grid.
+			The @@mixins listed below are the most important, but many helper @@mixins are also defined that can help you write more efficient code, especially when overriding column definitions at specific breakpoints.
+			If you would like to see more on those feel free to check out the code on GitHub (eventually we'll add more doc for those also).
+		</p>
 
-		<p>The grid @@mixins are defined in <a href="/overview#grid">grid.scss</a> and provide two main @@mixins for sizing content.  The third @@mixin is used in <a href="/overview#container">container.scss</a> for defining the container breakpoints.</p>
-
-		<table class="bordered">
+		<table>
 
 			<thead>
 				<tr>
@@ -122,16 +138,20 @@
 
 			<tbody>
 				<tr>
-					<td><code>column($cols)</code></td>
-					<td>This is the main @@mixin for sizing content. The <code>$cols</code> parameter defines how many columns the content takes up in the grid.</td>
-				</tr>
-					<tr>
-					<td><code>max-column</code></td>
-					<td>This @@mixin allows the content fill the entire grid, regardless of the number of columns. This would commonly be used as a default content size at smaller breakpoints, or for block elements that need to always fill the container width, such as headers and footers.</td>
+					<td><code>grid</code></td>
+					<td>This is the @@mixin for declaring the grid container.</td>
 				</tr>
 				<tr>
-					<td><code>page-width($cols)</code></td>
-					<td>This @@mixin is used to size the <code>container</code> class at various breakpoints. The <code>$cols</code> parameter defines how many columns make up the container.</td>
+					<td><code>column</code></td>
+					<td>This is the @@mixin for declaring how column elements behave.</td>
+				</tr>
+				<tr>
+					<td><code>container</code></td>
+					<td>This is the @@mixin for declaring the page container that resizes at each breakpoint.</td>
+				</tr>
+				<tr>
+					<td><code>breakpoint</code></td>
+					<td>This is the @@mixin for declaring what content to apply to an element when a certain breakpoint is reached.</td>
 				</tr>
 			</tbody>
 
@@ -145,51 +165,70 @@
 
     <div class="container">
 
-		<h3>Container Breakpoints</h3>
+		<header>
+			<h3>Container Breakpoints</h3>
+		</header>
+		
+		<p>
+			Default breakpoints are defined in <code>defaults/_grid.scss</code> and provided to adapt to common devices, orientations, and resolutions.
+			While the defaults should work for most, feel free to redefine the <code>$breakpoints</code> map as needed, things should work just fine.
+		</p>
 
-		<p>Default breakpoints are defined in <a href="/overview#container">container.scss</a> and provided to adapt to common devices, orientations, and resolutions.  The defaults are based on a default body font size of 100%, or 16px, which makes the math pretty easy as most common resolutions are a multiple of that in size.  If you change the base font size you'll want to adjust the default container definitions accordingly.</p>
-
-		<table class="bordered">
+		<table>
 
 			<thead>
 				<tr>
+					<th>size</th>
 					<th>cols</th>
-					<th>rems</th>
-					<th>device</th>
+					<th>target</th>
 				</tr>
 			</thead>
 
 			<tbody>
 
 				<tr>
+					<td>default</td>
 					<td>4</td>
-					<td>20rem</td>
 					<td>Mobile Portrait</td>
 				</tr>
 				<tr>
+					<td>small</td>
 					<td>6</td>
-					<td>30rem</td>
 					<td>Mobile Landscape</td>
 				</tr>
 				<tr>
+					<td>medium</td>
 					<td>8</td>
-					<td>40rem</td>
 					<td>Tablet Portrait</td>
 				</tr>
 				<tr>
+					<td>large</td>
 					<td>12</td>
-					<td>60rem</td>
-					<td>Tablet Landscape / Small Desktop</td>
+					<td>Tablet Landscape / Desktop</td>
 				</tr>
 				<tr>
+					<td>extra-large</td>
 					<td>16</td>
-					<td>80rem</td>
 					<td>Large Desktop</td>
 				</tr>
 			</tbody>
 
 		</table>
 
+		<pre><code class="language-css">
+//
+// Custom Breakpoints
+//
+
+$breakpoints: (
+	default: 4,
+	small: 6,
+	medium: 8,
+	large: 12,
+	extra-large: 16,
+	mega-super-large: 24 // <-- custom: 120ems wide
+)</code></pre>
+		
     </div>
 
 </section>
@@ -626,15 +665,69 @@ figure {
 			<h3>Column Prefixes</h3>
 		</header>
 		
+		<p>
+			Column prefixes can come in handy if you want the element to align to the right with blank space prefixing it to the left.
+			To do this just add the <code>$prefix: x</code> parameter to your column definition, where <code>x</code> is the number of columns.
+			This works quite easily when using a grid with only one column.
+			When you have multiple columns it isn't that more difficult but you need to keep in mind your total row size at any given breakpoint to prevent wrapping (unless of course you disabled wrapping on the grid element).
+		</p>
+		
 		<figure>
 			
-			<div id="one-prefix">&nbsp;</div>
-			<div id="two-prefix">&nbsp;</div>
-			<div id="three-prefix">&nbsp;</div>
-			<div id="four-prefix">&nbsp;</div>
+			<div class="prefix-3">&nbsp;</div>
 			
 		</figure>	
 
+		<figure>
+			
+			<div class="prefix-2">&nbsp;</div>
+			
+		</figure>	
+	
+		<figure>
+			
+			<div class="prefix-1">&nbsp;</div>
+			
+		</figure>	
+		
+		<figure>
+			
+			<div class="prefix-0">&nbsp;</div>
+			
+		</figure>	
+		
+		<pre><code class="language-markup">
+&lt;figure&gt;
+	&lt;div class="prefix-3"&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;div class="prefix-2"&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;div class="prefix-1"&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;div class="prefix-0"&gt;&lt;/div&gt;
+&lt;/figure&gt;</code></pre>
+		
+		<pre><code class="language-css">
+figure {
+    @@include grid;
+            
+    .prefix-3 {
+		@@include column($prefix: 3);
+	}
+    .prefix-2 {
+		@@include column($prefix: 2);
+	}
+    .prefix-1 {
+		@@include column($prefix: 1);
+	}
+    .prefix-0 {
+		@@include column;
+	}
+}</code></pre>
+		
     </div>
 
 </section>
@@ -647,15 +740,69 @@ figure {
 			<h3>Column Suffixes</h3>
 		</header>
 		
+		<p>
+			This is basically the same as using a prefix, but the empty space will trail the column.
+			To do this just add the <code>$suffix: x</code> parameter to your column definition, where <code>x</code> is the number of columns.  
+			This works quite easily when using a grid with only one column.
+			When you have multiple columns it isn't that more difficult but you need to keep in mind your total row size at any given breakpoint to prevent wrapping (unless of course you disabled wrapping on the grid element).
+		</p>
+		
 		<figure>
 			
-			<div id="one-suffix">&nbsp;</div>
-			<div id="two-suffix">&nbsp;</div>
-			<div id="three-suffix">&nbsp;</div>
-			<div id="four-suffix">&nbsp;</div>
+			<div class="suffix-3">&nbsp;</div>
+				
+		</figure>
+		
+		<figure>
+			
+			<div class="suffix-2">&nbsp;</div>
+				
+		</figure>
+		
+		<figure>
+			
+			<div class="suffix-1">&nbsp;</div>
+				
+		</figure>
+		
+		<figure>
+			
+			<div class="suffix-0">&nbsp;</div>
 				
 		</figure>
 
+		<pre><code class="language-markup">
+&lt;figure&gt;
+	&lt;div class="suffix-3"&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;div class="suffix-2"&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;div class="suffix-1"&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;div class="suffix-0"&gt;&lt;/div&gt;
+&lt;/figure&gt;</code></pre>
+		
+		<pre><code class="language-css">
+figure {
+    @@include grid;
+            
+    .suffix-3 {
+		@@include column($suffix: 3);
+	}
+    .suffix-2 {
+		@@include column($suffix: 2);
+	}
+    .suffix-1 {
+		@@include column($suffix: 1);
+	}
+    .suffix-0 {
+		@@include column;
+	}
+}</code></pre>
+		
     </div>
 
 </section>

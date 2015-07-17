@@ -1,12 +1,22 @@
-﻿//
-// Defaults
-//
+﻿////
+///
+/// Grid related mixins to help style the grid container, columns, and text
+///
+/// @group grid
+/// @author Clint Kolodziej
+///
+////
 
 @import "../defaults/grid";
 
-//
-// Build the container based on the breakpoint settings (default breakpoints are: default, small, medium, large, extra-large)
-//
+///
+/// Build the container based on the breakpoint settings (default breakpoints are: default, small, medium, large, extra-large)
+///
+/// @example scss - Usage
+///		.container {
+///			@include container;
+///		}
+///
 
 @mixin container() {
 	box-sizing: border-box;
@@ -27,11 +37,18 @@
 	}	
 }
 
-//
-// Insert the given content within a media query given the breakpoint size
-//
-// $point: the breakpoint that the content should be applied to [values: default, small, medium, large, extra-large (if using grid defaults)]
-//
+///
+/// Insert the given content within a media query given the breakpoint size
+///
+/// @parameter {number} $point - The breakpoint that the content should be applied to. Values: `default`, `small`, `medium`, `large`, `extra-large` (if using grid defaults)
+///
+/// @example scss - Usage
+///		div {
+///			@include breakpoint(large) {
+///				color: red;
+///			}
+///		}
+///
 
 @mixin breakpoint($point) {
 	$break: ($column-width + $gutter-width) * map-get($breakpoints, $point) + $gutter-width;
@@ -41,17 +58,22 @@
 	}
 }
 
-//
-// Set the element as a grid container with given type, direction, margin-adjustment, wrapping, justification, and alignment
-//
-// $type: type of grid [values: row, column] [default: row]
-// $direction: direction that the grid items should follow [values: forward, reverse] [default: forward]
-// $wrap: should the content be wrapped or not [values: wrap, no-wrap, reverse] [default: wrap]
-// $justify: how to justify the columns within the available space [values: start, end, center, between, around] [default: start]
-// $align-items: alignment method for child columns on the cross axis (basically vertical align for child columns) [values: stretch, start, end, center, baseline] [default: stretch]
-// $align-content: alignment method for the grid content on the cross axis (basically vertical align for the entire content of the grid) [values: stretch, start, end, center, between, around] [default: stretch]
-// $margin-adjust: boolean on whether the grid should adjust the outer margin to allow it to align with non-grid content [values: true, false] [default: true]
-//
+///
+/// Set the element as a grid container with given type, direction, margin-adjustment, wrapping, justification, and alignment
+///
+/// @parameter {string} $type [row] - Type of grid. Values: `row`, `column`
+/// @parameter {string} $direction [forward] - Direction that the grid items should follow. Values: `forward`, `reverse`
+/// @parameter {string} $wrap [wrap] - Should the content be wrapped or not. Values: `wrap`, `no-wrap`, `reverse`
+/// @parameter {string} $justify [start] - How to justify the columns within the available space. Values: `start`, `end`, `center`, `between`, `around`
+/// @parameter {string} $align-items [stretch] - Alignment method for child columns on the cross axis (basically vertical align for child columns). Values: `stretch`, `start`, `end`, `center`, `baseline`
+/// @parameter {string} $align-content [stretch] - Alignment method for the grid content on the cross axis (basically vertical align for the entire content of the grid). Values: `stretch`, `start`, `end`, `center`, `between`, `around`
+/// @parameter {boolean} $margin-adjust [true] - Whether the grid should adjust the outer margin to allow it to align with non-grid content. Values: `true`, `false`
+///
+/// @example scss - Usage
+///		section {
+///			@include grid;
+///		}
+///
 
 @mixin grid($type: row, $direction: forward, $wrap: wrap, $justify: start, $align-items: stretch, $align-content: stretch, $margin-adjust: true) {
 	@include grid-type($type, $direction);
@@ -62,12 +84,17 @@
 	@include grid-margin-adjust($type, $margin-adjust);
 }
 
-//
-// Set the element as a specific grid type and direction
-//
-// $type: type of grid [values: row, column] [default: row]
-// $direction: direction that the grid items should follow [values: forward, reverse] [default: forward]
-//
+///
+/// Set the element as a specific grid type and direction
+///
+/// @parameter {string} $type [row] - Type of grid. Values: `row`, `column`
+/// @parameter {string} $direction [forward] - Direction that the grid items should follow. Values: `forward`, `reverse`
+///
+/// @example scss - Usage
+///		section {
+///			@include grid-type($type: row, $direction: reverse);
+///		}
+///
 
 @mixin grid-type($type: row, $direction: forward) {
 	
@@ -93,11 +120,16 @@
 	}
 }
 
-//
-// Set how the grid will deal with content that is longer than one line
-//
-// $wrap: should the content be wrapped or not [values: wrap, no-wrap, reverse] [default: wrap]
-//
+///
+/// Set how the grid will deal with content that is longer than one line
+///
+/// @parameter {string} $wrap [wrap] - Should the content be wrapped or not. Values: `wrap`, `no-wrap`, `reverse`
+///
+/// @example scss - Usage
+///		section {
+///			@include grid-wrap(no-wrap);
+///		}
+///
 
 @mixin grid-wrap($wrap: wrap) {
 	
@@ -112,11 +144,16 @@
 	}
 }
 
-//
-// Set how the grid will justify content when there is unused space on a line
-//
-// $justify: how to justify the columns within the available space [values: start, end, center, between, around] [default: start]
-//
+///
+/// Set how the grid will justify content when there is unused space on a line
+///
+/// @parameter {string} $justify [start] - How to justify the columns within the available space. Values: `start`, `end`, `center`, `between`, `around`
+///
+/// @example scss - Usage
+///		section {
+///			@include grid-justify(center);
+///		}
+///
 
 @mixin grid-justify($justify: start) {
 	
@@ -137,23 +174,33 @@
 	}
 }
 
-//
-// Set how the grid will vertically align child elements by default and how the entire grid content vertically aligns when there is extra space
-//
-// $align-items: alignment method for child columns on the cross axis (basically vertical align for child columns) [values: stretch, start, end, center, baseline] [default: stretch]
-// $align-content: alignment method for the grid content on the cross axis (basically vertical align for the entire content of the grid) [values: stretch, start, end, center, between, around] [default: stretch]
-//
+///
+/// Set how the grid will vertically align child elements by default and how the entire grid content vertically aligns when there is extra space
+///
+/// @parameter {string} $align-items [stretch] - Alignment method for child columns on the cross axis (basically vertical align for child columns). Values: `stretch`, `start`, `end`, `center`, `baseline`
+/// @parameter {string} $align-content [stretch] - Alignment method for the grid content on the cross axis (basically vertical align for the entire content of the grid). Values: `stretch`, `start`, `end`, `center`, `between`, `around`
+///
+/// @example scss - Usage
+///		section {
+///			@include grid-align(center, center);
+///		}
+///
 
 @mixin grid-align($align-items: stretch, $align-content: stretch) {	
 	@include grid-align-items($align-items);
 	@include grid-align-content($align-content);
 }
 	
-//
-// Set how the grid will vertically align child elements by default
-//
-// $align: alignment method for child columns on the cross axis (basically vertical align for child columns) [values: stretch, start, end, center, baseline] [default: stretch]
-//
+///
+/// Set how the grid will vertically align child elements by default
+///
+/// @parameter {string} $align [stretch] - Alignment method for child columns on the cross axis (basically vertical align for child columns). Values: `stretch`, `start`, `end`, `center`, `baseline`
+///
+/// @example scss - Usage
+///		section {
+///			@include grid-align-items(end);
+///		}
+///
 
 @mixin grid-align-items($align: stretch) {
 	
@@ -174,11 +221,16 @@
 	}
 }
 
-//
-// Set how the entire grid content vertically aligns when there is extra space
-//
-// $align: alignment method for the grid content on the cross axis (basically vertical align for the entire content of the grid) [values: stretch, start, end, center, between, around] [default: stretch]
-//
+///
+/// Set how the entire grid content vertically aligns when there is extra space
+///
+/// @parameter {string} $align [stretch] - Alignment method for the grid content on the cross axis (basically vertical align for the entire content of the grid). Values: `stretch`, `start`, `end`, `center`, `between`, `around`
+///
+/// @example scss - Usage
+///		section {
+///			@include grid-align-content(center);
+///		}
+///
 
 @mixin grid-align-content($align: stretch) {
 	
@@ -202,11 +254,16 @@
 	}
 }
 
-//
-// Set how the grid adjusts the margin to allow it to align with non-grid content
-//
-// $margin-adjust: boolean on whether the grid should adjust the outer margin to allow it to align with non-grid content [values: true, false] [default: true]
-//
+///
+/// Set how the grid adjusts the margin to allow it to align with non-grid content
+///
+/// @parameter {boolean} $margin-adjust [true] - Whether the grid should adjust the outer margin to allow it to align with non-grid content. Values: `true`, `false`
+///
+/// @example scss - Usage
+///		section {
+///			@include grid-margin-adjust($type: row, $margin-adjust: false);
+///		}
+///
 
 @mixin grid-margin-adjust($type: row, $margin-adjust: true) {
 	
@@ -224,17 +281,22 @@
 	}
 }
 
-//
-// Set the number of columns an element spans on the grid and other behaviors such as prefix, suffix, grow, shrink, align, and order
-//
-// $cols: the number of columns the element should span [values: #, auto, max] [default: auto]
-// $prefix: the number of columns that should prefix the element [values: #] [default: 0]
-// $suffix: the number of columns that should suffix the element [values: #] [default: 0]
-// $grow: boolean or scaling factor whether the column should grow or not or by what factor [values: true, false, #] [default: false]
-// $shrink: boolean or scaling factor whether the column should shrink or not or by what factor [values: true, false, #] [default: false]
-// $align: alignment method for the column on the cross axis (basically vertical align) [values: auto, start, end, center, baseline, stretch] [default: auto]
-// $order: numeric order to apply to the column order [values: #] [default: 0]
-//
+///
+/// Set the number of columns an element spans on the grid and other behaviors such as prefix, suffix, grow, shrink, align, and order
+///
+/// @parameter {number|string} $cols [auto] - The number of columns the element should span. Values: `auto`, `max`, `#`
+/// @parameter {number} $prefix [0] - The number of columns that should prefix the element
+/// @parameter {number} $suffix [0] - The number of columns that should suffix the element
+/// @parameter {boolean|number} $grow [false] - Whether the column should grow or not or by what factor. Values: `true`, `false`, `#`
+/// @parameter {boolean|number} $shrink [false] - Whether the column should shrink or not or by what factor. Values: `true`, `false`, `#`
+/// @parameter {string} $align [auto] - Alignment method for the column on the cross axis (basically vertical align). Values: `auto`, `start`, `end`, `center`, `baseline`, `stretch`
+/// @parameter {boolean} $order [0] - Order to apply to the column order.
+///
+/// @example scss - Usage
+///		div {
+///			@include column;
+///		}
+///
 
 @mixin column($cols: auto, $prefix: 0, $suffix: 0, $grow: false, $shrink: false, $align: auto, $order: 0) {
 	
@@ -262,11 +324,16 @@
 	@include column-order($order);
 }
 
-//
-// Set the number of columns an element spans on the grid
-//
-// $cols: the number of columns the element should span [values: #, auto, max] [default: auto]
-//
+///
+/// Set the number of columns an element spans on the grid
+///
+/// @parameter {number|string} $cols [auto] - The number of columns the element should span. Values: `auto`, `max`, `#`
+///
+/// @example scss - Usage
+///		div {
+///			@include column-cols(2);
+///		}
+///
 
 @mixin column-cols($cols: auto) {
 	
@@ -281,31 +348,46 @@
 	}
 }
 
-//
-// Set the number of empty columns that should prefix the element on the grid
-//
-// $prefix: the number of columns that should prefix the element [values: #]
-//
+///
+/// Set the number of empty columns that should prefix the element on the grid
+///
+/// @parameter {number} $prefix [0] - The number of columns that should prefix the element
+///
+/// @example scss - Usage
+///		div {
+///			@include column-prefix(2);
+///		}
+///
 
-@mixin column-prefix($cols) {
+@mixin column-prefix($cols: 0) {
 	margin-left: ($cols * ($column-width + $gutter-width)) + ($gutter-width / 2);
 }
 
-//
-// Set the number of empty columns that should follow the element on the grid
-//
-// $suffix: the number of columns that should suffix the element [values: #]
-//
+///
+/// Set the number of empty columns that should follow the element on the grid
+///
+/// @parameter {number} $suffix [0] - The number of columns that should suffix the element
+///
+/// @example scss - Usage
+///		div {
+///			@include column-suffix(2);
+///		}
+///
 
-@mixin column-suffix($cols) {
+@mixin column-suffix($cols: 0) {
 	margin-right: ($cols * ($column-width + $gutter-width)) + ($gutter-width / 2);
 }
 
-//
-// Set the column to automatically grow when there is available space
-//
-// $grow: boolean or scaling factor whether the column should grow or not or by what factor [values: true, false, #] [default: true]
-//
+///
+/// Set the column to automatically grow when there is available space
+///
+/// @parameter {boolean|number} $grow [true] - Whether the column should grow or not or by what factor. Values: `true`, `false`, `#`
+///
+/// @example scss - Usage
+///		div {
+///			@include column-grow(false);
+///		}
+///
 
 @mixin column-grow($grow: true) {
 	
@@ -320,11 +402,16 @@
 	}
 }
 
-//
-// Set the column to automatically shrink when there is not enough available space
-//
-// $shrink: boolean or scaling factor whether the column should shrink or not or by what factor [values: true, false, #] [default: true]
-//
+///
+/// Set the column to automatically shrink when there is not enough available space
+///
+/// @parameter {boolean|number} $shrink [true] - Whether the column should shrink or not or by what factor. Values: `true`, `false`, `#`
+///
+/// @example scss - Usage
+///		div {
+///			@include column-shrink(false);
+///		}
+///
 
 @mixin column-shrink($shrink: true) {
 	
@@ -339,11 +426,16 @@
 	}
 }
 
-//
-// Set the alignment on the column, this will override the default alignment on the grid container
-//
-// $align: alignment method for the column on the cross axis (basically vertical align) [values: auto, start, end, center, baseline, stretch] [default: auto]
-//
+///
+/// Set the alignment on the column, this will override the default alignment on the grid container
+///
+/// @parameter {string} $align [auto] - Alignment method for the column on the cross axis (basically vertical align). Values: `auto`, `start`, `end`, `center`, `baseline`, `stretch`
+///
+/// @example scss - Usage
+///		div {
+///			@include column-align(center);
+///		}
+///
 
 @mixin column-align($align: auto) {
 	
@@ -367,11 +459,16 @@
 	}
 }
 
-//
-// Set the order of the column to override the normal ordering
-//
-// $order: numeric order to apply to the column order [values: #] [default: 0]
-//
+///
+/// Set the order of the column to override the normal ordering
+///
+/// @parameter {boolean} $order [0] - Order to apply to the column order.
+///
+/// @example scss - Usage
+///		div {
+///			@include column-order(-1);
+///		}
+///
 
 @mixin column-order($order: 0) {
 	
@@ -384,11 +481,16 @@
 	}
 }
 
-//
-// Define the font styles that position the font within the typographic grid
-//
-// $size: numeric font size in unitless format [values: # (unitless)]
-//
+///
+/// Define the font styles that position the font within the typographic grid
+///
+/// @parameter {number} $size - Numeric font size in unitless format
+///
+/// @example scss - Usage
+///		h3 {
+///			@include font-size(2);
+///		}
+///
 
 @mixin font-size($size) {
 	font-size: $size * 1em;
@@ -397,11 +499,16 @@
 	margin-bottom: $line-height / $size * 1em;
 }
 
-//
-// Calculate the line height that will maintain vertical rhythm for the font size
-//
-// $size: numeric line height in unitless format [values: # (unitless)]
-//
+///
+/// Calculate the line height that will maintain vertical rhythm for the font size
+///
+/// @parameter {number} $size - Numeric font size in unitless format
+///
+/// @example scss - Usage
+///		h3 {
+///			@include line-height(2);
+///		}
+///
 
 @function line-height($size) {
 	$lines-needed: ceil($size / $line-height);
@@ -409,30 +516,46 @@
 	@return ($line-height / $size * $lines-needed);
 }
 
-//
-// Convert Pixels to Em units (unitless)
-//
-// $pixels: numeric number of pixels in unitless format [values: # (unitless)]
-// $base: numeric base font size in unitless format [values: # (unitless)] [default: $base-font-size]
-//
+///
+/// Convert Pixels to Em units (unitless)
+///
+/// @parameter {number} $pixels - Numeric number of pixels in unitless format
+/// @parameter {number} $base [$base-font-size] - Numeric base font size in unitless format
+///
+/// @example scss - Usage
+///		select {
+///			padding-top: em(2) * 1em; // 0.125em
+///		}
+///
 
 @function em($pixels, $base: $base-font-size) {
 	@return $pixels / ($base * 16);
 }
 
-//
-// Convert Em units to Pixels (unitless)
-//
-// $ems: numeric number of ems in unitless format [values: # (unitless)]
-// $base: numeric base font size in unitless format [values: # (unitless)] [default: $base-font-size]
+///
+/// Convert Em units to Pixels (unitless)
+///
+/// @parameter {number} $ems - Numeric number of ems in unitless format
+/// @parameter {number} $base [$base-font-size] - Numeric base font size in unitless format
+///
+/// @example scss - Usage
+///		select {
+///			padding-top: px(0.125) * 1px; // 2px
+///		}
+///
 
 @function px($ems, $base: $base-font-size) {
 	@return $ems * $base * 16;
 }
 
-//
-// clear any children within the element
-//
+///
+/// Clear any children within the element
+///
+/// @example scss - Usage
+///		section {
+///			@include clear-children;
+///		}
+///
 
 @mixin clear-children() {
 	&:after {

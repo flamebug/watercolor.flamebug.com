@@ -1,0 +1,44 @@
+{
+  "dest": "wwwroot/doc",
+  "basePath": "https://github.com/flamebug/watercolor",
+  "shortcutIcon": "http://flamebug.com/favicon.ico",
+
+  "display": {
+    "access": ["public", "private"],
+    "alias": false,
+    "watermark": false
+  },
+
+  "package": "package.json",
+  "theme": "default",
+  
+  "groups": {
+    "undefined": "General"
+  },
+  
+  "googleAnalytics": "UA-XXXXX-X",
+  
+  "view": {
+    "baseSourcePath": "https://github.com/flamebug/watercolor/tree/master",
+    "faviconPath": "http://watercolor.flamebug.com/favicon.ico",
+    "library": {
+      "homepage": "//watercolor.flamebug.com",
+      "name": "watercolor"
+    },
+    "logoPath": "http://flamebug.com/Images/Logo/flamebug-logo-white.svg",
+    "company": {
+      "name": "Flamebug, LLC",
+      "logoPath": "http://flamebug.com/Images/Logo/flamebug-logo-white.svg",
+      "homepage": "https://flamebug.com",
+      "trademarkYears": "2015"
+    },
+    "links": {
+      "github": "https://github.com/flamebug/watercolor",
+      "twitter": "https://twitter.com/flamebug"
+    },
+    "analytics": {
+      "account": "UA-XXXXX-X",
+      "domain": "domain.com"
+    }
+  }
+}

@@ -1,12 +1,24 @@
-//
-// Extends
-//
+////
+///
+/// Field element
+///
+/// @group field
+/// @author Clint Kolodziej
+///
+////
 
 @import "../extends/field";
 
-//
-// Field
-//
+///
+/// Field element
+///
+/// @parameter {string} $options - Define an element as a field with specified options. Options: `block`, `inline`, `aligned`
+///
+/// @example scss - Usage
+///		.field {
+///			@include field(aligned);
+///		}
+///
 
 @mixin field($type: block) {
     @extend %field;

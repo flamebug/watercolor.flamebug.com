@@ -5,11 +5,11 @@
 .button {
 	display: inline-block;
 	padding: .75em 1.25em;
-	background: $secondary-color;
+	background-color: $secondary-color;
 	color: #fff !important;
 	text-decoration: none !important;
     border: none;
-    border-radius: 0;
+    border-radius: .25em;
     box-shadow: none;
 	font-size: 1.125em;
     font-weight: 500;
@@ -17,15 +17,30 @@
 	transition: all, .1s;
 
 	&:hover {
-		background: desaturate($secondary-color, 15%);
-        border: none;
+        background-color: $primary-color;
 	}
 	
     &.alternate {
         background-color: $primary-color;
         
         &:hover {
-            background-color: desaturate($primary-color, 15%);
+            background-color: $secondary-color;
+        }
+    }
+    
+    &.ghost {
+        padding: .5em 1em;
+        border-width: .125em;
+        border-style: solid;
+        border-color: rgba(255,255,255,0.6);
+        font-weight: 700;
+        background-color: transparent;
+        text-shadow: 0 .1em .1em rgba(0,0,0,0.1);
+        
+        &:hover {
+            background-color: #fff;
+            color: #555 !important;
+            text-shadow: none;
         }
     }
 }

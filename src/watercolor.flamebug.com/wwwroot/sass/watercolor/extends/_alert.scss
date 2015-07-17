@@ -1,12 +1,17 @@
-//
-// Defaults
-//
+////
+///
+/// Alert placeholders
+///
+/// @group alert
+/// @author Clint Kolodziej
+///
+////
 
 @import "../defaults/alert";
 
-//
-// Alert
-//
+///
+/// Alert default
+///
 
 %alert {
 	display: none;
@@ -23,11 +28,19 @@
 	}
 }
 
+///
+/// Alert success
+///
+
 %alert-success {
 	  color: $alert-success-color;
 	  background-color: $alert-success-background-color;
 	  border-color: $alert-success-border-color;
 }
+
+///
+/// Alert error
+///
 
 %alert-error {
 	  color: $alert-error-color;

@@ -1,12 +1,17 @@
-//
-// Defaults
-//
+////
+///
+/// Badge placeholders
+///
+/// @group badge
+/// @author Clint Kolodziej
+///
+////
 
 @import "../defaults/badge";
 
-//
-// Badge
-//
+///
+/// Badge default
+///
 
 %badge {
 	display: inline-block;
@@ -35,6 +40,10 @@
 	}
 }
 
+///
+/// Badge top right placement
+///
+
 %badge-top-right {
 	position: absolute;
 	top: $badge-offset;
@@ -42,6 +51,10 @@
 	right: $badge-offset;
 	left: auto;
 }
+
+///
+/// Badge top left placement
+///
 
 %badge-top-left {
 	position: absolute;
@@ -51,6 +64,10 @@
 	left: $badge-offset;
 }
 
+///
+/// Badge bottom right placement
+///
+
 %badge-bottom-right {
 	position: absolute;
 	top: auto;
@@ -58,6 +75,10 @@
 	right: $badge-offset;
 	left: auto;
 }
+
+///
+/// Badge bottom left placement
+///
 
 %badge-bottom-left {
 	position: absolute;

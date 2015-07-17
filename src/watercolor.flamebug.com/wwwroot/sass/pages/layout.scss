@@ -206,74 +206,34 @@ figure {
 
 #prefix-example figure {
     @include grid;
-           
-    #one-prefix {@include column(1, $prefix: 3);}
-    #two-prefix {@include column(2, $prefix: 2);}
-    #three-prefix {@include column(3, $prefix: 1);}
-    #four-prefix {@include column(4, $prefix: 0);}
-        
-    @include breakpoint(small) {
-        #one-prefix {@include column(2, $prefix: 4);}
-        #two-prefix {@include column(3, $prefix: 3);}
-        #three-prefix {@include column(4, $prefix: 2);}
-        #four-prefix {@include column(5, $prefix: 1);}
-    }
 
-    @include breakpoint(medium) {
-        #one-prefix {@include column(4, $prefix: 4);}
-        #two-prefix {@include column(5, $prefix: 3);}
-        #three-prefix {@include column(6, $prefix: 2);}
-        #four-prefix {@include column(7, $prefix: 1);}
+    .prefix-3 {
+        @include column($prefix: 3);
     }
-     
-    @include breakpoint(large) {       
-        #one-prefix {@include column(6, $prefix: 6);}
-        #two-prefix {@include column(7, $prefix: 5);}
-        #three-prefix {@include column(8, $prefix: 4);}
-        #four-prefix {@include column(9, $prefix: 3);}
+    .prefix-2 {
+        @include column($prefix: 2);
     }
-        
-    @include breakpoint(extra-large) {
-        #one-prefix {@include column(8, $prefix: 8);}
-        #two-prefix {@include column(9, $prefix: 7);}
-        #three-prefix {@include column(10, $prefix: 6);}
-        #four-prefix {@include column(11, $prefix: 5);}
+    .prefix-1 {
+        @include column($prefix: 1);
+    }
+    .prefix-0 {
+        @include column;
     }
 }
 
 #suffix-example figure {
     @include grid;
 
-    #one-suffix {@include column(1, $suffix: 3);}
-    #two-suffix {@include column(2, $suffix: 2);}
-    #three-suffix {@include column(3, $suffix: 1);}
-    #four-suffix {@include column(4, $suffix: 0);}
-        
-    @include breakpoint(small) {
-        #one-suffix {@include column(2, $suffix: 4);}
-        #two-suffix {@include column(3, $suffix: 3);}
-        #three-suffix {@include column(4, $suffix: 2);}
-        #four-suffix {@include column(5, $suffix: 1);}
+    .suffix-3 {
+        @include column($suffix: 3);
     }
-
-    @include breakpoint(medium) {
-        #one-suffix {@include column(4, $suffix: 4);}
-        #two-suffix {@include column(5, $suffix: 3);}
-        #three-suffix {@include column(6, $suffix: 2);}
-        #four-suffix {@include column(7, $suffix: 1);}
+    .suffix-2 {
+        @include column($suffix: 2);
     }
-     
-    @include breakpoint(large) {       
-        #one-suffix {@include column(6, $suffix: 6);}
-        #two-suffix {@include column(7, $suffix: 5);}
-        #three-suffix {@include column(8, $suffix: 4);}
-        #four-suffix {@include column(9, $suffix: 3);}
+    .suffix-1 {
+        @include column($suffix: 1);
     }
-        
-    @include breakpoint(extra-large) {
-        #one-suffix {@include column(8, $suffix: 8);}
-        #two-suffix {@include column(9, $suffix: 7);}
-        #three-suffix {@include column(10, $suffix: 6);}
-        #four-suffix {@include column(11, $suffix: 5);}
+    .suffix-0 {
+        @include column;
     }
 }
