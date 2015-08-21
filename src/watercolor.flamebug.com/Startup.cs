@@ -20,11 +20,19 @@ namespace watercolor.flamebug.com
         //
 
         public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
-        {               
-            Configuration = new ConfigurationBuilder(appEnv.ApplicationBasePath)
+        {
+            var builder = new ConfigurationBuilder(appEnv.ApplicationBasePath)
                 .AddJsonFile("config.json")
-                .AddEnvironmentVariables()
-                .Build();
+                .AddJsonFile($"config.{env.EnvironmentName}.json", optional: true);
+
+			if (env.IsDevelopment())
+			{
+				builder.AddUserSecrets();
+			}
+
+			builder.AddEnvironmentVariables()
+
+            Configuration = builder.Build();
         }
 
         //
@@ -49,13 +57,13 @@ namespace watercolor.flamebug.com
         //          Add the status code pages for 404/500 type errors
         //          Add static files
         //          Add MVC and define routes
-        //          
+        //
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory log)
         {
             log.AddConsole();
 
-            if (env.IsEnvironment("Development"))
+            if (env.IsDevelopment())
             {
                 app.UseBrowserLink();
                 app.UseErrorPage();
