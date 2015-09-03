@@ -4,7 +4,7 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
-using Microsoft.Framework.Runtime;
+using Microsoft.Dnx.Runtime;
 
 namespace watercolor.flamebug.com
 {
@@ -30,7 +30,7 @@ namespace watercolor.flamebug.com
 				builder.AddUserSecrets();
 			}
 
-			builder.AddEnvironmentVariables()
+			builder.AddEnvironmentVariables();
 
             Configuration = builder.Build();
         }
@@ -44,7 +44,7 @@ namespace watercolor.flamebug.com
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<AppSettings>(Configuration.GetConfigurationSection("AppSettings"));
+			services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             services.AddMvc();
         }
