@@ -7560,12 +7560,12 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Microsoft.AspNet.Server.Kestrel >= 1.0.0-*",
       "Microsoft.AspNet.Diagnostics >= 1.0.0-beta7",
       "Microsoft.AspNet.Mvc >= 6.0.0-beta7",
       "Microsoft.AspNet.Mvc.TagHelpers >= 6.0.0-beta7",
       "Microsoft.AspNet.Server.IIS >= 1.0.0-beta7",
       "Microsoft.AspNet.Server.WebListener >= 1.0.0-beta7",
+      "Microsoft.AspNet.Server.Kestrel >= 1.0.0-*",
       "Microsoft.AspNet.StaticFiles >= 1.0.0-beta7",
       "Microsoft.AspNet.Tooling.Razor >= 1.0.0-beta7",
       "Microsoft.Dnx.Runtime.Abstractions >= 1.0.0-beta7",

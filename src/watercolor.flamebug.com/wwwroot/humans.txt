@@ -14,3 +14,6 @@ Location: Rockford, IL
 Standards: HTML, SASS, ASP.NET MVC
 Components: jQuery, ASP.NET MVC
 Software: Microsoft Visual Studio
+
+/* CREDITS */
+Hero Image: Sergei Zolkin (https://unsplash.com/szolkin - https://images.unsplash.com/photo-1433840496881-cbd845929862?q=80&fm=jpg&s=c9a1a21dbf8a9d16477ea4b54afc8a48)

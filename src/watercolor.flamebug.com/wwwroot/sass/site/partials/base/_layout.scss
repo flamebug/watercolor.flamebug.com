@@ -24,7 +24,7 @@ body {
 // Container
 //
 
-.container {	
+.container {
 	@include container;
 }
 
@@ -49,7 +49,7 @@ body,
 	position: relative;
 	padding: $line-height * 4em 0 $line-height * 4em 0;
 	//background-color: $primary-color;
-	background-image: url("/images/photo-1433840496881-cbd845929862.jpg");
+	background-image: url("/images/background.jpg");
 	background-position: center;
 	background-size: 150%;
 	color: #fff;
@@ -100,12 +100,12 @@ body,
 
 #main {
 	//@include clear-children;
-	
+
 	section {
 		padding: $line-height * 2em 0;
 		border-bottom: 1px solid $border-color;
 		text-align: center;
-		
+
 		&:last-child {
 			border: 0;
 		}

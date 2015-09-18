@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Builder;
+﻿using Microsoft.AspNet.Antiforgery;
+using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Hosting;
 using Microsoft.Framework.Configuration;
@@ -47,6 +48,8 @@ namespace watercolor.flamebug.com
 			services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             services.AddMvc();
+
+			services.AddAntiforgery();
         }
 
         //
