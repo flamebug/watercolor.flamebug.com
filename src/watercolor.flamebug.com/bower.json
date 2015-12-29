@@ -1,9 +1,10 @@
 {
   "name": "watercolor.flamebug.com",
-  "version": "0.1.1",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "jquery": "1.10.2",
-    "prism": "*"
+    "jquery": "*",
+    "prism": "*",
+    "watercolor": "*"
   }
 }

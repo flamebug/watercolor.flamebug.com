@@ -1,10 +1,10 @@
 ﻿@inject IOptions<AppSettings> AppSettings
 
 @{
-    var title = String.IsNullOrEmpty(ViewBag.Title) ? AppSettings.Options.sitename : ViewBag.Title + " - " + AppSettings.Options.sitename;
-    var description = String.IsNullOrEmpty(ViewBag.Description) ? AppSettings.Options.sitename : ViewBag.Description;
-    var twitter = AppSettings.Options.sitetwitter;
-    var url = "http://" + AppSettings.Options.domain;
+    var title = String.IsNullOrEmpty(ViewBag.Title) ? AppSettings.Value.sitename : ViewBag.Title + " - " + AppSettings.Value.sitename;
+    var description = String.IsNullOrEmpty(ViewBag.Description) ? AppSettings.Value.sitename : ViewBag.Description;
+    var twitter = AppSettings.Value.sitetwitter;
+    var url = "//" + AppSettings.Value.domain;
 }
 
 <!DOCTYPE html>
@@ -43,7 +43,7 @@
         <meta name="twitter:creator" content="@twitter" />
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="~/css/site/site.css" />
+        <link rel="stylesheet" href="~/styles/css/site/site.css" />
 
         @RenderSection("Styles", required: false)
 
@@ -61,7 +61,7 @@
         <header id="header" role="banner">
 
             <div class="container">
-                
+
                 @if (IsSectionDefined("Header"))
                 {
                     @RenderSection("Header")
@@ -70,11 +70,11 @@
                 {
                     @Html.Partial("_Header")
                 }
-                
+
             </div>
-            
+
         </header>
-                      
+
         <main id="main" role="main">
 
             @RenderBody()
@@ -114,7 +114,7 @@
 				});
 
 			});
-            
+
 
         </script>
 

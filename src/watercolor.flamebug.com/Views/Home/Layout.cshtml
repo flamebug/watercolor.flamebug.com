@@ -3,7 +3,7 @@
 }
 
 @section Styles {
-	<link rel="stylesheet" href="~/css/pages/layout.css">
+	<link rel="stylesheet" href="~/styles/css/pages/layout.css">
 }
 
 @section Scripts {
@@ -17,7 +17,7 @@
 		<header>
 			<h2>Layout</h2>
 		</header>
-		
+
 		<p>
 			Watercolor is based on an adaptive grid that allows a content-first approach to website design on a variety of screen sizes and devices.
 			Unlike traditional responsive grids, which have a fixed number of columns, adaptive grids allow columns to be added as additional
@@ -27,7 +27,7 @@
 		</p>
 
 	</div>
-	
+
 	<figure id="infinite">
 
 		<div class="col1"></div>
@@ -78,9 +78,9 @@
 		<header>
 			<h3>Grid Settings</h3>
 		</header>
-		
+
 		<p>
-			Default column and gutter sizes are defined in <code>defaults/_grid.scss</code> and are the basis for the structural grid.  
+			Default column and gutter sizes are defined in <code>defaults/_grid.scss</code> and are the basis for the structural grid.
 			By default one column, including the gutter, is <code>5rem</code> wide, or 80px at the default base font size.
 		</p>
 
@@ -120,7 +120,7 @@
 		<header>
 			<h3>Grid Mixins</h3>
 		</header>
-		
+
 		<p>
 			The grid @@mixins are defined in <code>modules/_grid.scss</code> and provide all of the functionality you should need for displaying your content in a standardized grid.
 			The @@mixins listed below are the most important, but many helper @@mixins are also defined that can help you write more efficient code, especially when overriding column definitions at specific breakpoints.
@@ -168,7 +168,7 @@
 		<header>
 			<h3>Container Breakpoints</h3>
 		</header>
-		
+
 		<p>
 			Default breakpoints are defined in <code>defaults/_grid.scss</code> and provided to adapt to common devices, orientations, and resolutions.
 			While the defaults should work for most, feel free to redefine the <code>$breakpoints</code> map as needed, things should work just fine.
@@ -228,7 +228,7 @@ $breakpoints: (
 	extra-large: 16,
 	mega-super-large: 24 // <-- custom: 120ems wide
 )</code></pre>
-		
+
     </div>
 
 </section>
@@ -240,42 +240,42 @@ $breakpoints: (
 		<header>
 			<h3>Automatic Width Columns</h3>
 		</header>
-		
+
 		<p>
 			Automatic width columns are probably the most common need and they are super simple.
 			Just add <code>@@include grid</code> to a container element and add <code>@@include column</code> to the child elements and you are all set.
 		</p>
-			
+
 		<figure>
-			
+
 			<div>&nbsp;</div>
 
 		</figure>
 
 		<figure>
-			
+
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
-				
+
 		</figure>
-		
+
 		<figure>
-			
+
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
-			
+
 		</figure>
-	
+
 		<figure>
-			
+
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
-			
+
 		</figure>
-		
+
 		<pre><code class="language-markup">
 &lt;figure&gt;
 	&lt;div&gt;&lt;/div&gt;
@@ -295,16 +295,16 @@ $breakpoints: (
 	&lt;div&gt;&lt;/div&gt;
 	&lt;div&gt;&lt;/div&gt;
 &lt;/figure&gt;</code></pre>
-		
+
 		<pre><code class="language-css">
 figure {
 	@@include grid;
-	
+
 	div {
 		@@include column;
 	}
 }</code></pre>
-			
+
     </div>
 
 </section>
@@ -316,13 +316,13 @@ figure {
 		<header>
 			<h3>Fixed Width Columns</h3>
 		</header>
-		
+
 		<p>
 			Fixed width columns are nearly as easy as automatic width columns and allow situations where you want to fix a column to a particular size.
 			Just add <code>@@include grid</code> to a container element and add <code>@@include column(x)</code>, where <code>x</code> is the number of columns, to the child elements and you are all set.
 			Fixed width columns work perfectly along side automatic width columns, just set one column as fixed and the other as automatic and the latter will fill the remaining space on the row.
 		</p>
-			
+
 		<figure>
 
 			<div class="one">&nbsp;</div>
@@ -334,23 +334,23 @@ figure {
 
 			<div class="two">&nbsp;</div>
 			<div>&nbsp;</div>
-			
+
 		</figure>
-		
+
 		<figure>
 
 			<div class="three">&nbsp;</div>
 			<div>&nbsp;</div>
-			
+
 		</figure>
-		
+
 		<figure>
 
 			<div class="four">&nbsp;</div>
 			<div>&nbsp;</div>
-			
+
 		</figure>
-		
+
 		<pre><code class="language-markup">
 &lt;figure&gt;
 	&lt;div class="one"&gt;&lt;/div&gt;
@@ -368,14 +368,14 @@ figure {
 	&lt;div class="four"&gt;&lt;/div&gt;
 	&lt;div&gt;&lt;/div&gt;
 &lt;/figure&gt;</code></pre>
-		
+
 		<pre><code class="language-css">
 figure {
 	@@include grid;
-	
+
 	div {
 		@@include column;
-		
+
 		&.one {
 			@@include column(1);
 		}
@@ -385,15 +385,15 @@ figure {
 		&.three {
 			@@include column(3);
 		}
-		&.four { 
+		&.four {
 			@@include column(4);
-            
+
             ~ div {
                 display: none;
-        
+
                 @@include breakpoint(small) {
                     display: block;
-                }     
+                }
             }
 		}
 	}
@@ -415,7 +415,7 @@ figure {
 			Column wrapping comes free without any extra code. If you have a number of elements such as a list of images that you want to wrap there is nothing extra you need to do.
 			Just add <code>@@include grid</code> to a container element and add <code>@@include column(x)</code>, where <code>x</code> is the number of columns, to the child elements and you are all set.
 		</p>
-			
+
 		<figure>
 
 			<div>&nbsp;</div>
@@ -426,14 +426,14 @@ figure {
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
-			
+
 		</figure>
 
 		<p>
 			If you want the last line of elements to be aligned differently check out the <code>$justify</code> parameter on the <code>grid</code> mixin.
 			You can use values: <code>start</code>, <code>end</code>, <code>center</code>, <code>between</code>, and <code>around</code> to make the last line of items look exactly how you want.
 		</p>
-			
+
 		<figure class="justify">
 
 			<div>&nbsp;</div>
@@ -444,9 +444,9 @@ figure {
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
-			
+
 		</figure>
-		
+
 		<pre><code class="language-markup">
 &lt;figure&gt;
 	&lt;div&gt;&lt;/div&gt;
@@ -462,7 +462,7 @@ figure {
 		<pre><code class="language-css">
 figure {
 	@@include grid;
-	
+
 	&.justify {
 		@@include grid($justify: between);
 	}
@@ -488,22 +488,22 @@ figure {
 			In this case you can add the <code>$grow: true</code> parameter to your <code>column</code> and the browser will take care of the rest.
 			Note that if there isn't enough space on the line the elements will wrap (and wrapped items will expand as needed to fill the whole line), but if there is excess space the elements will expand to fill it.
 		</p>
-			
+
 		<figure class="grow">
 
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
-			
+
 		</figure>
-		
+
 		<p>
 			Other cases may pop up when you have more elements than would fit on a line, but simply want them to shrink to fit, rather than wrap.
 			In this case you can add the <code>$wrap: false</code> parameter to your <code>grid</code> and <code>$shrink: true</code> to your <code>column</code> and let the browser do the heavy lifting.
 			Note that if you don't have enough elements to fit the entire row the elements won't expand by default.
 		</p>
-			
+
 		<figure class="shrink">
 
 			<div>&nbsp;</div>
@@ -511,23 +511,23 @@ figure {
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
-						
+
 		</figure>
-				
+
 		<p>
-			One final case could be where at some screen sizes you have too many elements to fit, but at others the elements are too small.  
+			One final case could be where at some screen sizes you have too many elements to fit, but at others the elements are too small.
 			In this case you can combine the previous two parameters to have your elements both shrink and grow as needed.
 			Note that behind the scenes the automatic width sizing included on the basic <code>@@include column</code> sets both of these parameters to true, so it is always cleaner to avoid setting both in code and just let the defaults do the job.
 		</p>
-			
+
 		<figure class="grow-and-shrink">
 
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
 			<div>&nbsp;</div>
-			
+
 		</figure>
-		
+
 		<pre><code class="language-markup">
 &lt;figure class="grow"&gt;
 	&lt;div&gt;&lt;/div&gt;
@@ -548,21 +548,21 @@ figure {
 		<pre><code class="language-css">
 figure.grow {
     @@include grid;
-    
+
     div {
 		@@include column(2, $grow: true);
 	}
 }
 figure.shrink {
     @@include grid($wrap: no-wrap);
-    
+
     div {
 		@@include column(2, $shrink: true);
 	}
 }
 figure.grow-and-shrink {
     @@include grid($wrap: no-wrap);
-    
+
     div {
 		/* for example purposes only, better to use '@@include column' parameter-less */
 		@@include column(2, $shrink: true, $grow: true);
@@ -580,51 +580,51 @@ figure.grow-and-shrink {
 		<header>
 			<h3>Nested Columns</h3>
 		</header>
-	
+
 		<p>
-			Nested columns are just a matter of nesting a grid element inside of any column element.  
-			The nested grid will automatically contain the same number of columns as the parent element.  
+			Nested columns are just a matter of nesting a grid element inside of any column element.
+			The nested grid will automatically contain the same number of columns as the parent element.
 			Any grid or column parameters can be applied to the nested grid and will function just the same as a normal grid.
 		</p>
-		
+
 		<figure>
-			
+
 			<div>
-				
+
 				<figure>
-			
+
 					<div>
-						
+
 						<figure>
-					
+
 							<div>&nbsp;</div>
 							<div>&nbsp;</div>
-							
-						</figure>	
-									
-					</div>
-					
-					<div>
-						
-						<figure>
-					
-							<div>&nbsp;</div>
-							
+
 						</figure>
-						
+
 					</div>
-					
+
+					<div>
+
+						<figure>
+
+							<div>&nbsp;</div>
+
+						</figure>
+
+					</div>
+
 				</figure>
-				
+
 			</div>
-			
+
 		</figure>
-		
+
 		<p>
 			Note: If the parent column of the nested grid has any padding that will cause the child grid to not contain the same number of columns.
 			In that case it is usually safest to define the nested grid columns as automatic width columns to save yourself headaches.
 		</p>
-		
+
 		<pre><code class="language-markup">
 &lt;figure&gt;
 	&lt;div&gt;
@@ -633,7 +633,7 @@ figure.grow-and-shrink {
 				&lt;figure&gt;
 					&lt;div&gt;&lt;/div&gt;
 					&lt;div&gt;&lt;/div&gt;
-				&lt;/figure&gt;				
+				&lt;/figure&gt;
 			&lt;/div&gt;
 			&lt;div&gt;
 				&lt;figure&gt;
@@ -643,16 +643,16 @@ figure.grow-and-shrink {
 		&lt;/figure&gt;
 	&lt;/div&gt;
 &lt;/figure&gt;</code></pre>
-		
+
 		<pre><code class="language-css">
 figure {
 	@@include grid;
-	
+
 	div {
 		@@include column;
 	}
 }</code></pre>
-			
+
     </div>
 
 </section>
@@ -664,38 +664,38 @@ figure {
 		<header>
 			<h3>Column Prefixes</h3>
 		</header>
-		
+
 		<p>
 			Column prefixes can come in handy if you want the element to align to the right with blank space prefixing it to the left.
 			To do this just add the <code>$prefix: x</code> parameter to your column definition, where <code>x</code> is the number of columns.
 			This works quite easily when using a grid with only one column.
 			When you have multiple columns it isn't that more difficult but you need to keep in mind your total row size at any given breakpoint to prevent wrapping (unless of course you disabled wrapping on the grid element).
 		</p>
-		
-		<figure>
-			
-			<div class="prefix-3">&nbsp;</div>
-			
-		</figure>	
 
 		<figure>
-			
+
+			<div class="prefix-3">&nbsp;</div>
+
+		</figure>
+
+		<figure>
+
 			<div class="prefix-2">&nbsp;</div>
-			
-		</figure>	
-	
+
+		</figure>
+
 		<figure>
-			
+
 			<div class="prefix-1">&nbsp;</div>
-			
-		</figure>	
-		
+
+		</figure>
+
 		<figure>
-			
+
 			<div class="prefix-0">&nbsp;</div>
-			
-		</figure>	
-		
+
+		</figure>
+
 		<pre><code class="language-markup">
 &lt;figure&gt;
 	&lt;div class="prefix-3"&gt;&lt;/div&gt;
@@ -709,11 +709,11 @@ figure {
 &lt;figure&gt;
 	&lt;div class="prefix-0"&gt;&lt;/div&gt;
 &lt;/figure&gt;</code></pre>
-		
+
 		<pre><code class="language-css">
 figure {
     @@include grid;
-            
+
     .prefix-3 {
 		@@include column($prefix: 3);
 	}
@@ -727,7 +727,7 @@ figure {
 		@@include column;
 	}
 }</code></pre>
-		
+
     </div>
 
 </section>
@@ -739,36 +739,36 @@ figure {
 		<header>
 			<h3>Column Suffixes</h3>
 		</header>
-		
+
 		<p>
 			This is basically the same as using a prefix, but the empty space will trail the column.
-			To do this just add the <code>$suffix: x</code> parameter to your column definition, where <code>x</code> is the number of columns.  
+			To do this just add the <code>$suffix: x</code> parameter to your column definition, where <code>x</code> is the number of columns.
 			This works quite easily when using a grid with only one column.
 			When you have multiple columns it isn't that more difficult but you need to keep in mind your total row size at any given breakpoint to prevent wrapping (unless of course you disabled wrapping on the grid element).
 		</p>
-		
+
 		<figure>
-			
+
 			<div class="suffix-3">&nbsp;</div>
-				
+
 		</figure>
-		
+
 		<figure>
-			
+
 			<div class="suffix-2">&nbsp;</div>
-				
+
 		</figure>
-		
+
 		<figure>
-			
+
 			<div class="suffix-1">&nbsp;</div>
-				
+
 		</figure>
-		
+
 		<figure>
-			
+
 			<div class="suffix-0">&nbsp;</div>
-				
+
 		</figure>
 
 		<pre><code class="language-markup">
@@ -784,11 +784,11 @@ figure {
 &lt;figure&gt;
 	&lt;div class="suffix-0"&gt;&lt;/div&gt;
 &lt;/figure&gt;</code></pre>
-		
+
 		<pre><code class="language-css">
 figure {
     @@include grid;
-            
+
     .suffix-3 {
 		@@include column($suffix: 3);
 	}
@@ -802,7 +802,7 @@ figure {
 		@@include column;
 	}
 }</code></pre>
-		
+
     </div>
 
 </section>

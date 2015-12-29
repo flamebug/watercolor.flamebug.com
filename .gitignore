@@ -134,14 +134,16 @@ UpgradeLog*.htm
 App_Data/*.mdf
 App_Data/*.ldf
 
-# Node Folders
+# Build Folders
 node_modules/
 bower_components/
 .sass-cache/
 
-# Visual Studio Hidden Folders
+# Lib Folders
+lib/
+
+# Visual Studio Hidden Folder
 .vs/
-.settings/
 
 # =========================
 # Windows detritus

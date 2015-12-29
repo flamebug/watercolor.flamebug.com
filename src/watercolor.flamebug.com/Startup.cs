@@ -2,10 +2,10 @@
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Hosting;
-using Microsoft.Framework.Configuration;
-using Microsoft.Framework.DependencyInjection;
-using Microsoft.Framework.Logging;
 using Microsoft.Dnx.Runtime;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace watercolor.flamebug.com
 {
@@ -16,31 +16,28 @@ namespace watercolor.flamebug.com
         //
         // 1.  Run Startup
         //
-        //          Register config.json
+        //          Register appsettings.json
         //          Register environment variables
         //
 
-        public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
+        public Startup(IHostingEnvironment env)
         {
-            var builder = new ConfigurationBuilder(appEnv.ApplicationBasePath)
-                .AddJsonFile("config.json")
-                .AddJsonFile($"config.{env.EnvironmentName}.json", optional: true);
-
-			if (env.IsDevelopment())
-			{
-				builder.AddUserSecrets();
-			}
-
-			builder.AddEnvironmentVariables();
+            var builder = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
 
             Configuration = builder.Build();
         }
+
+		public AppSettings AppSettings { get; } = new AppSettings();
 
         //
         // 2.  Run ConfigureServices
         //
         //          Register AppSettings as a service
         //          Register MVC as a service
+        //          Register Antiforgery as a service
         //
 
         public void ConfigureServices(IServiceCollection services)
@@ -68,12 +65,11 @@ namespace watercolor.flamebug.com
 
             if (env.IsDevelopment())
             {
-                app.UseBrowserLink();
-                app.UseErrorPage();
+                app.UseDeveloperExceptionPage();
             }
             else
             {
-                app.UseErrorHandler("/error");
+                app.UseExceptionHandler("/error");
             }
 
             app.UseStatusCodePagesWithReExecute("/error/{0}");
