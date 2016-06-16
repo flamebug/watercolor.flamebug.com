@@ -7,72 +7,109 @@
 	<link rel="stylesheet" href="~/styles/css/pages/start.css">
 }
 
+@section Header {
+
+	<a class="logo" href="/"></a>
+
+	<h1>
+		Getting Started
+	</h1>
+
+	<p>
+		Watercolor is based on Sass, which needs to be built before publishing your website.  We'll step you through a common build environment, but feel free to use your own if you have one already set up.
+	</p>
+
+}
+
 <section id="getting-started">
 
-	<div class="container">
+    <div class="container">
 
-		<h2>
-			Getting Started
-		</h2>
+		<article>
 
-        <p>
-            Watercolor is a SCSS-based front-end framework for rapidly developing great looking websites.
-            Getting started is really easy, just download or clone the git repository and copy into your website, then start building your site.
-        </p>
+			<h2>Navigate to your project folder</h2>
 
-	</div>
+			<p>
+				Start out by opening a terminal or command prompt and navigating to the project folder you want to work in, that will make things much smoother and allow saving your environment to config files to rebuild it later if you are using source control.
 
-</section>
+				<pre><code>cd /my/project</code></pre>
+			</p>
 
-<section id="getting-started-1">
+			<h2>Install all the things</h2>
 
-    <header class="container">
+			<p>
+				Watercolor is based on Sass, which needs to be compiled into CSS. To do that we'll install the following things.  I'll make it as brief as possible to get you up and running quickly.
+			</p>
 
-		<h2>Download Watercolor</h2>
+			<ul>
+				<li><a href="#install-nodejs">Install Node.js</a></li>
+				<li><a href="#install-ruby">Install Ruby</a></li>
+				<li><a href="#install-sass">Install Sass</a></li>
+				<li><a href="#install-gulp">Install Gulp and Bower</a></li>
+				<li><a href="#install-watercolor">Install Watercolor</a></li>
+			</ul>
 
-        <p>
-            Download Watercolor from the download link below or clone the GitHub repository to your computer.
-        </p>
+			<h3 id="install-nodejs">Install Node.js and Ruby</h3>
 
-        <p>
-            <a class="button" href="https://github.com/flamebug/watercolor.flamebug.com">Download Watercolor</a><br/>
-			<small><a href="https://github.com/flamebug/watercolor.flamebug.com">View on GitHub</a></small>
-            <br/>
-        </p>
+			<p>
+				<a href="https://nodejs.org">Node.js</a> is a popular lightweight language based on Javascript.  Gulp and Bower are built on Node.js.
+				<br/><br/>
+				<a href="https://nodejs.org">https://nodejs.org</a>
+				<a href="https://www.ruby-lang.org">https://www.ruby-lang.org</a>
+			</p>
 
-    </header>
+			<h3 id="install-ruby">Install Ruby</h3>
 
-</section>
+			<p>
+				<a href="https://www.ruby-lang.org">Ruby</a> is a popular cross-platform language.  Sass is built on Ruby.
+				<br/><br/>
 
-<section id="getting-started-2">
+			</p>
 
-    <header class="container">
+			<h3 id="install-sass">Install Sass</h3>
 
-        <h2>Copy Into Your Website</h2>
+			<p>
+				<a href="http://sass-lang.com/">Sass</a> is an extremely popular css extension language which Watercolor is written in, we'll be using it to compile the website style sheets. <a href="http://sass-lang.com/install">Install it</a> with the Ruby gem command.
 
-        <p>
-            Extract the compressed archive or cloned repository files into your website. We generally use the /Styles folder but it should work in any location you choose.
-            <br/>
-        </p>
+				<pre><code>gem install sass</code></pre>
 
-        <img src="/Images/Getting-Started/Styles.png" alt="Copy Flamebug Watercolor into your website"/>
+				<small>
+					Note: If you run into trouble on Mac or Linux machines installing this, use the <code>sudo</code> command to install.  On Windows open the command prompt as administrator if you have trouble.
+				</small>
+			</p>
 
-    </header>
+			<h3 id="install-gulp">Install Gulp and Bower</h3>
 
-</section>
+			<p>
+				<a href="http://gulpjs.com/">Gulp</a> is a popular build automation language. <a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md">Install it</a> with the Node.js npm command.
 
-<section id="getting-started-3">
+				<pre><code>npm install -g gulp bower</code></pre>
 
-    <header class="container">
+			</p>
 
-        <h2>Design Your Website</h2>
+			<p>
+				Once installed, navigate to your project folder and initialize <a href="http://bower.io">Bower</a> with the following command.  This will create a <code>bower.json</code> file that will keep track of your project dependencies.
 
-        <p>
-            Create your website by editing the style.scss file to opt in to any modules you require, create or customize any page layout templates, and create and page-specific styles. For more information on the various files please see the <a href="/Overview">overview</a> for more details.
-        </p>
+				<pre><code>bower init</code></pre>
 
-        <img src="/Images/Getting-Started/Design.png" alt="Design your website"/>
+			</p>
 
-    </header>
+			<p>
+				<small>
+					Note: If you prefer not to use <a href="http://bower.io">Bower</a> you can clone the <a href="https://github.com/flamebug/watercolor">Watercolor GitHub repository</a> or <a href="https://github.com/flamebug/watercolor/archive/master.zip">download the current release</a> and copy Watercolor into your website's Sass <code>/lib</code> folder.  If you choose to do this you can jump down to the build section.
+				</small>
+			</p>
+
+			<h3 id="install-watercolor">Install Watercolor</h3>
+
+			<p>
+				Once <a href="http://bower.io">Bower</a> is installed and initialized you are one command away from installing Watercolor.  The <code>--save</code> parameter tells <a href="http://bower.io">Bower</a> to save the package as a dependency.
+
+<pre><code>bower install watercolor --save</code></pre>
+			</p>
+
+		</article>
+
+    </div>
 
 </section>
