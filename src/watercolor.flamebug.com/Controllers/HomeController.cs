@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNet.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace watercolor.flamebug.com.Controllers
 {
@@ -10,7 +10,7 @@ namespace watercolor.flamebug.com.Controllers
         {
             return View();
         }
-        
+
         public IActionResult Controls()
         {
             return View();
@@ -25,7 +25,7 @@ namespace watercolor.flamebug.com.Controllers
         {
             return View();
         }
-        
+
         public IActionResult Layout()
         {
             return View();
@@ -45,7 +45,7 @@ namespace watercolor.flamebug.com.Controllers
         {
             return View();
         }
-        
+
         public IActionResult Doc()
         {
             return Redirect(Url.Content( "/doc/index.html" ));

@@ -1,5 +1,4 @@
 {
-	"webroot": "wwwroot",
 	"server": "Microsoft.AspNet.Server.Kestrel",
-	"server.urls": "http://*:8080"
+	"server.urls": "http://*:5001"
 }
