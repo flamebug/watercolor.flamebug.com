@@ -24,10 +24,10 @@ form div.field.inline {
 	@include field(inline);
 }
 
-.align .field,
-fieldset.align .field,
-form div.field.align {
-	@include field(align);
+.aligned .field,
+fieldset.aligned .field,
+form div.field.aligned {
+	@include field(aligned);
 }
 
 .field.clear {
@@ -42,10 +42,10 @@ form div.field.align {
     @include field(inline);
 }
 
-#align-form .field {
-    @include field(block);
+#aligned-form .field {
+    @include field(aligned);
 
     @include breakpoint(medium) {
-        //@include field(align);
+        //@include field(aligned);
     }
 }
